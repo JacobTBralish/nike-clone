@@ -10,6 +10,7 @@ const fs = require('fs')
 const cors = require('cors');
 
 
+const cart_controller = require('./controllers/cart_controller')
 
 
 app.use(cors());
@@ -55,12 +56,10 @@ app.get('/auth/callback', (req,res) => {
   function tradeCodeForAccessToken(){console.log('traded code for access token')
       return axios.post(`https://${process.env.REACT_APP_AUTH0_DOMAIN}/oauth/token`, payload)
   }
-
    function tradeAccessTokenForUserInfo(accessTokenResponse){
        const accessToken = accessTokenResponse.data.access_token;
        return axios.get(`https://${process.env.REACT_APP_AUTH0_DOMAIN}/userinfo/?access_token=${accessToken}`);
    }
-
   function storeUserInfoInDatabase(response){console.log('Stored user info in db')
       const auth0Id = response.data.sub;
       console.log(auth0Id,'-------Auth0ID-------')
@@ -100,6 +99,10 @@ app.get('/auth/callback', (req,res) => {
   })
 })
 
+
+// =========================================== Controller Endpoints ================================== \\
+
+// app.post('/api/cart-data/:id', cart_controller.addToCart)
 
 // ================================================ Auth0 Login ====================================== \\
 

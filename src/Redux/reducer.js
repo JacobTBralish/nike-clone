@@ -2,16 +2,21 @@ import axios from 'axios';
 
 const initialState = {
     user: [],
-
+    cart: [], 
 }
 
 const UPDATE_USER_INFO = 'UPDATE_USER_INFO';
+const ADD_TO_CART = 'ADD_TO_CART';
 
 export default function reducer (state = initialState, action){
+    // console.log(action.payload)
     switch(action.type){
         case `${UPDATE_USER_INFO}_FULFILLED`:
         // console.log('reduxer', action.payload)
             return {...state, user:action.payload}
+        case ADD_TO_CART+`_FULFILLED`:
+        // console.log('reduxer', action.payload)
+            return {...state, cart:action.payload}
         default:
             return state
     }
@@ -29,3 +34,22 @@ export function updateUser(){
         })
     }
 }
+export function addToCart(item){
+    console.log('addToCart fired -- item', item)
+    return {
+        type: ADD_TO_CART,
+        payload: item
+    }
+}
+// export function addToCart(item){
+//     console.log('addToCart fired -- item', item)
+//     return {
+//         type: ADD_TO_CART,
+//         payload: axios.post('/api/cart-data', {item}).then(response => {
+//             console.log('cart response.data', response.data)
+//             return response.data
+//             }).catch(error => {
+//           console.log('error', error)
+//         })
+//     }
+// }
