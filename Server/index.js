@@ -5,25 +5,14 @@ const bodyParser = require('body-parser');
 const axios = require('axios');
 const massive = require('massive');
 const session = require('express-session');
+const fs = require('fs')
+// const request = require('request');
+const cors = require('cors');
 
-// app.use(function (req, res, next) {
 
-//     // Website you wish to allow to connect
-//     res.setHeader('Access-Control-Allow-Origin', '*');
- 
-//     // Request methods you wish to allow
-//     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
- 
-//     // Request headers you wish to allow
-//     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
- 
-//     // Set to true if you need the website to include cookies in the requests sent
-//     // to the API (e.g. in case you use sessions)
-//     res.setHeader('Access-Control-Allow-Credentials', true);
- 
-//     // Pass to next layer of middleware
-//     next();
-//  });
+
+
+app.use(cors());
 app.use(bodyParser.json());
 app.use(session({
     secret: process.env.SESSION_SECRET,
@@ -34,14 +23,47 @@ app.use(session({
     }
 }))
 
+
+
+// axios.get('https://store.nike.com/html-services/gridwallData?gridwallPath=mens-training-shoes%2F7puZ9hkZoi3&country=US&lang_locale=en_US&pn=1').then(response => {
+//     return fs.writeFile('./nikeMensTrainingShoesPg1.json', JSON.stringify(response.data.sections[0].items), /* { flag: 'a+' }, */ (err) => {
+//         if (err){
+//             console.log(err)
+//             return response.data.sections[0].items
+//         }
+//     })
+// })
+
 massive(process.env.CONNECTION_STRING).then(database => {
     console.log('Hooked up to your database bruh.🤙')
     app.set('db',database);
 }).catch(error => { console.log(error, 'Error with your db in index.js')})
 
+// module.exports = {
+
+// getAllShoes: (req,res) => {
+//     axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=men-shoes/7puZoneZoi3&pn=1', { headers: {
+//         "authority": "store.nike.com",
+//         "method": "GET",
+//         "path": "/html-services/gridwallData?gridwallPath=mens-shoes%2F7puZoi3&country=US&lang_locale=en_US",
+//         "scheme": "https",
+//         "accept": "application/json, text/javascript, */*; q=0.01",
+//         "accept-encoding": "gzip, deflate, br",
+//         "accept-language": "en-US,en;q=0.9",
+//         "referer": "https://store.nike.com/us/en_us/pw/mens-lifestyle-shoes/7puZoneZoi3",
+
+//     }}).then(response => {
+//         res.status(200).json(response)
+//         }).catch(error => {
+//             res.status(500).json(error)
+//             console.log('error: ', error);
+//         })
+//     }
+// }
+
 // app.get('/', (req, res) => {
-// res.send('endpoint live')
-// });
+// res.send('endpoint live')/
+// });*/
 
 const PORT = 5000;
 app.listen(PORT, ()=> console.log(`Server listening on port ${PORT} 🏄`));
