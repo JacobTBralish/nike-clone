@@ -10,8 +10,7 @@ class Home extends Component {
     render() { 
         return ( 
             <div>
-                <Link to='/'>Home</Link>
-                <Link to='/mensshoes'>Mens Shoes</Link>
+                
             </div>
          );
     }
