@@ -42,6 +42,8 @@ class Nav extends Component {
         return (
             <div className='navTest'>
                 <h1>Rendered</h1>
+                <Link to='/'>Home</Link>
+                <Link to='/mensshoes'>Mens Shoes</Link>
                 {/* <button onClick={}>Log in / Register</button> */}
                 {user ? <li onClick={()=>this.logout()}><Link to='/'>Logout</Link></li> : <li onClick={() => {this.login()}}>Login / Register</li>}
             </div>
