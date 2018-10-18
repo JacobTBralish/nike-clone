@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const axios = require('axios');
 const massive = require('massive');
 const session = require('express-session');
+const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY)
 const fs = require('fs')
 
 // const request = require('request');
@@ -12,7 +13,6 @@ const cors = require('cors');
 
 
 const cart_controller = require('./controllers/cart_controller')
-
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -114,36 +114,41 @@ app.get('/api/user-data', (req, res) => {
 });
 
 // ================================================= Auth0 Logout ===================================== \\
-// module.exports = {
-
-// getAllShoes: (req,res) => {
-//     axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=men-shoes/7puZoneZoi3&pn=1', { headers: {
-//         "authority": "store.nike.com",
-//         "method": "GET",
-//         "path": "/html-services/gridwallData?gridwallPath=mens-shoes%2F7puZoi3&country=US&lang_locale=en_US",
-//         "scheme": "https",
-//         "accept": "application/json, text/javascript, */*; q=0.01",
-//         "accept-encoding": "gzip, deflate, br",
-//         "accept-language": "en-US,en;q=0.9",
-//         "referer": "https://store.nike.com/us/en_us/pw/mens-lifestyle-shoes/7puZoneZoi3",
-
-//     }}).then(response => {
-//         res.status(200).json(response)
-//         }).catch(error => {
-//             res.status(500).json(error)
-//             console.log('error: ', error);
-//         })
-//     }
-// }
-
-// app.get('/', (req, res) => {
-// res.send('endpoint live')/
-// });*/
 
 app.post('/api/auth/logout', (req, res) => {
     req.session.destroy()
     res.send()
 });
+
+// ================================================= Stripe config ===================================== \\
+// Set your secret key: remember to change this to your live secret key in production
+// See your keys here: https://dashboard.stripe.com/account/apikeys
+app.post('save-stripe-token', async (req,res)=> {
+    let { token, amount } = req.body;
+    let { email, id } = token;
+    console.log('VALUES FROM STRIPE CONFIG', email, id, amount.toFixed(0));
+
+    try {
+        let { status } = await Stripe.customers.create({
+            email,
+            source: id
+        }).then(customer => stripe.charges.create({
+            amount: amount.toFixed(0),
+            description: "Sample Charge",
+            currency: "usd",
+            customer: customer.id
+        })).then(charge => {
+            req.session.cart = [];
+            req.session.total = 0;
+            res.send(charge)
+        }).catch(error => {
+            console.log(error, "Error in create charge");
+        })
+    } catch (error) {
+        res.status(500).end
+    }
+})
+
 
 const PORT = 5000;
 app.listen(PORT, ()=> console.log(`Server listening on port ${PORT} 🏄`));

@@ -7,7 +7,6 @@ import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
 import store from './Redux/store';
 
-// import { AppContainer } from 'react-hot-loader';
 
 ReactDOM.render(
     <Provider store={store}>
@@ -22,13 +21,3 @@ document.getElementById('root'));
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: http://bit.ly/CRA-PWA
 serviceWorker.unregister();
-
-
-// render();
-
-
-// if (module.hot) {
-//     module.hot.accept('./App', () => {
-//       render();
-//     });
-//   }

@@ -13,11 +13,11 @@ class DetailedShoe extends Component {
     }
  
     render() {
-        let {price, title, category, productImg} = this.props.location.state;
-        console.log('this.props.location.state: ', this.props);
+        let {price, title, category, productImg } = this.props.location.state;
+        
 
-        let {user, cart, addToCart } = this.props;
-        console.log('cart: ', cart);
+        let { addToCart } = this.props;
+        
 
         return ( 
             <div>
@@ -26,7 +26,7 @@ class DetailedShoe extends Component {
                 <p>{price}</p>
                 <p>{category}</p>
 
-                <button onClick={() => addToCart(title)}>Add To Cart</button>
+                <button onClick={() => addToCart([{title: title, category: category, price: price, productImg: productImg}])}>Add To Cart</button>
                 <Link to={{pathname:`/cart`, state:{title: title, category: category, price: price, productImg: productImg}}}>To Cart</Link>
                 </div>
          );

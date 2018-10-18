@@ -4,7 +4,7 @@ import Home from './Components/Home/Home';
 import Cart from './Components/Cart/Cart';
 import MensShoes from './Components/MensShoe/MensShoeContainer';
 import DetailedShoe from './Components/MensShoe/DetailedShoe';
-import Checkout from './Components/Checkout/Checkout';
+import Checkout from './Components/Checkout/CheckoutForm';
 
 export default (
     <Switch>
