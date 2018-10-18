@@ -38,13 +38,10 @@ class CheckoutForm extends Component {
 
     getTotal = () => {
         let { cart, total } = this.props;
-        console.log('cart: ', cart);
 
        if(cart.length > 0) {
-           console.log('cart: ', cart);
            cart.forEach(item => {
             let fixedPrice = parseInt(item.price.split('').splice(1, item.price.length - 1).join(''), 10);
-            console.log('fixedPrice: ', parseInt(fixedPrice, 10));
                 total += fixedPrice 
             })
         }
@@ -92,7 +89,7 @@ class CheckoutForm extends Component {
 
 
     render() { 
-        let { total, user } = this.props;
+        let {  total, user } = this.props;
         console.log('total: ', total);
         let { SameShippingAsBilling, taxRate, chosenState } = this.state;
         console.log('taxRate: ', taxRate);

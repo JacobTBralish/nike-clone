@@ -20,9 +20,8 @@ class Cart extends Component {
     }
 
     getTotal = () => {
-        let { cart/* , total */ } = this.props;
-        let { total } = this.state;
-
+        let { cart, total } = this.props;
+        
         if(cart.length > 0) {
             console.log('cart: ', cart);
             cart.forEach(item => {
@@ -31,13 +30,14 @@ class Cart extends Component {
                 total += fixedPrice 
             })
         }
-        this.setState({total}) 
+        console.log('total: ', total);
+        return total
     }
     
 
-componentDidMount() {
-    this.getTotal();
-}
+    componentDidMount() {
+        this.getTotal();
+    }
 
     deleteFromCart = title => {
         
@@ -57,9 +57,9 @@ componentDidMount() {
             fontSize: "10px"
         }
 
-        const {cart} = this.props
-        let { orderComplete, total } = this.state;
-        // let { total } = this.props;
+        let { cart, total } = this.props
+        console.log('total: ', total);
+        let { orderComplete } = this.state;
         // const { totalPrice } = this;
         console.log('cart: ', cart);
 
