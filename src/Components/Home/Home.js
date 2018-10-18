@@ -7,13 +7,6 @@ class Home extends Component {
         super(props);
         this.state = {  }
     }
-
-    componentDidMount() {
-        axios.get('https://www.nike.com/us/en_us/retail/en/api/v2/stores.json').then(response => {
-            console.log(response.data.stores[0].latitude);
-            console.log(response.data.stores[0].longitude);
-        })
-    }
     render() { 
         return ( 
             <div>

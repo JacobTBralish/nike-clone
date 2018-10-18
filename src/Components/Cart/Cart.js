@@ -93,7 +93,7 @@ componentDidMount() {
                     <h2>*Total: ${(total).toFixed(2)}</h2>
                     <p style={disclaimerText}>*Tax will be included after shipping details are input</p>
                     {console.log('total: ', total)}
-                    <Link style={checkoutLinkStlyle} to={{pathname:'/checkout', state:{total:total}}}>CHECKOUT</Link>
+                    <Link style={checkoutLinkStlyle} to='/checkout'>CHECKOUT</Link>
                 </div>
             }
 
