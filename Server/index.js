@@ -6,6 +6,7 @@ const axios = require('axios');
 const massive = require('massive');
 const session = require('express-session');
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY)
+const pC = require('./controllers/paymentcontroller');
 const fs = require('fs')
 
 // const request = require('request');
@@ -105,6 +106,10 @@ app.get('/auth/callback', (req,res) => {
 
 // app.post('/api/cart-data/:id', cart_controller.addToCart)
 
+// =========================================== Payment Endpoints ================================== \\
+app.post('/api/payment', pC.processPayment);
+// app.post('/api/order', pC.createOrder);
+app.post('/api/email', pC.sendConfirmation);
 
 // ================================================ Auth0 Login ====================================== \\
 

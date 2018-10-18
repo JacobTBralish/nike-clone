@@ -12,7 +12,7 @@ class MensShoe extends Component {
     
     render() { 
         let mappedShoes = MensShoes.map((shoe, index) => {
-            console.log('shoe: ', shoe);
+            // console.log('shoe: ', shoe);
             return <div key={index}>
                 <Link to={{pathname:`/product/${shoe.title}`, state:{title: shoe.title, category: shoe.subtitle, price: shoe.localPrice, productImg: shoe.spriteSheet}}} ><img src={shoe.spriteSheet} alt={shoe.title}></img>
                 <p>{shoe.title}</p>
