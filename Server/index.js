@@ -30,11 +30,11 @@ app.use(session({
 
 
 
-// axios.get('https://store.nike.com/html-services/gridwallData?gridwallPath=mens-training-shoes%2F7puZ9hkZoi3&country=US&lang_locale=en_US&pn=1').then(response => {
-//     return fs.writeFile('./nikeMensTrainingShoesPg1.json', JSON.stringify(response.data.sections[0].items), /* { flag: 'a+' }, */ (err) => {
+// axios.get('https://www.nike.com/us/en_us/retail/en/api/v2/stores.json').then(response => {
+//     return fs.writeFile('./src/data/nikeStoreLocations.json', JSON.stringify(response.data.stores), /* { flag: 'a+' }, */ (err) => {
 //         if (err){
 //             console.log(err)
-//             return response.data.sections[0].items
+//             return response.data.stores
 //         }
 //     })
 // })

@@ -13,13 +13,14 @@ const SET_CART = 'SET_CART';
 const SET_TOTAL = 'SET_TOTAL';
 
 export default function reducer (state = initialState, action){
-    // console.log('action.type: ', action.type);
+    console.log('action.type: ', action.payload);
     
     switch(action.type){
         case `${UPDATE_USER_INFO}_FULFILLED`:
             return {...state, user:action.payload}
         case ADD_TO_CART:
-            return {...state, cart:action.payload}
+        let oldCart = [...state.cart, action.payload]
+            return {...state, cart:oldCart}
         case SET_CART:
             return {...state, cart:action.payload}
         case SET_TOTAL:
@@ -45,11 +46,11 @@ export function updateUser(){
     }
 }
 
-export function addToCart(item){
-    
+export function addToCart(product){
+    // let { product } = 
     return {
         type: ADD_TO_CART,
-        payload: item
+        payload: product
     }
 }
 

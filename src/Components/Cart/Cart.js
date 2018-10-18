@@ -39,22 +39,25 @@ componentDidMount() {
     this.getTotal();
 }
 
-    // this.setState({
-    //     total : total
-    // });
-
+    deleteFromCart = title => {
+        
+    }
 
 
     render() {
         let checkoutLinkStlyle = {
             textDecoration: "none",
             color: "white",
-            background: "orange",
+            background: "tomato",
             fontWeight: "bold",
 
         }
 
-        const cart = [this.props.location.state]
+        let disclaimerText = {
+            fontSize: "10px"
+        }
+
+        const {cart} = this.props
         let { orderComplete, total } = this.state;
         // let { total } = this.props;
         // const { totalPrice } = this;
@@ -87,7 +90,8 @@ componentDidMount() {
                 <div>
                     <h1>Cart Rendered </h1>
                     {mappedCart}
-                    <h3>Total: ${(total *= 1.06).toFixed(2)}</h3>
+                    <h2>*Total: ${(total).toFixed(2)}</h2>
+                    <p style={disclaimerText}>*Tax will be included after shipping details are input</p>
                     {console.log('total: ', total)}
                     <Link style={checkoutLinkStlyle} to={{pathname:'/checkout', state:{total:total}}}>CHECKOUT</Link>
                 </div>

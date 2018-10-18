@@ -21,12 +21,13 @@ class DetailedShoe extends Component {
 
         return ( 
             <div>
+                <div><Link to='/mensshoes'>Back to Shoes</Link></div>
                 <img src={productImg} alt={title}></img>
                 <p>{title}</p>
                 <p>{price}</p>
                 <p>{category}</p>
 
-                <button onClick={() => addToCart([{title: title, category: category, price: price, productImg: productImg}])}>Add To Cart</button>
+                <button onClick={() => addToCart({title: title, category: category, price: price, productImg: productImg})}>Add To Cart</button>
                 <Link to={{pathname:`/cart`, state:{title: title, category: category, price: price, productImg: productImg}}}>To Cart</Link>
                 </div>
          );
@@ -37,6 +38,7 @@ class DetailedShoe extends Component {
 const mapStateToProps = state => {
     return {
         cart: state.cart,
+        item: state.cart,
         user: state.user
         }
 }
