@@ -9,6 +9,7 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY)
 const pC = require('./controllers/paymentcontroller');
 const fs = require('fs')
 
+
 // const request = require('request');
 const cors = require('cors');
 
@@ -101,6 +102,31 @@ app.get('/auth/callback', (req,res) => {
   })
 })
 
+// =========================================== Mapbox ==================================================== \\
+
+// stylesService.getStyle({..})
+//   .send()
+//   .then(resp => {
+//     const style = resp.body;
+//     // Do something with the style.
+//   })
+
+// // Get the next page of results.
+// tilesetsService.listTilesets()
+//   .send()
+//   .then(resp => {
+//     if (resp.hasNextPage()) {
+//       const nextPageReq = resp.nextPage();
+//       nextPageReq.send().then();
+//     }
+//   })
+
+// // Check the headers.
+// tilesetsService.listTilesets()
+//   .send()
+//   .then(resp => {
+//     console.log(resp.headers);
+//   });
 
 // =========================================== Controller Endpoints ================================== \\
 

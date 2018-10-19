@@ -5,9 +5,11 @@ import Cart from './Components/Cart/Cart';
 import MensShoes from './Components/MensShoe/MensShoeContainer';
 import DetailedShoe from './Components/MensShoe/DetailedShoe';
 import Checkout from './Components/Checkout/CheckoutForm';
+import FindStore from './Components/FindStore/FindStore'
 
 export default (
     <Switch>
+        <Route path='/storelocator' component={FindStore} />
         <Route path='/mensshoes' component={MensShoes} />
         <Route path="/product/:id" component={DetailedShoe} />
         <Route path="/cart" component={Cart} />
