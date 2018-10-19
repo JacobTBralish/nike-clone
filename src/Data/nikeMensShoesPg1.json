@@ -1,4 +1,5 @@
-[{
+[
+  {
     "inWallContentCard": false,
     "rawPrice": 190,
     "localPrice": "$190",
@@ -27,7 +28,7 @@
     "showColorways": false,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "null",
+    "ratingCount": null,
     "rating": null,
     "teamName": null,
     "maxAge": null,
@@ -36,9 +37,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 210,
     "localPrice": "$210",
@@ -63,7 +67,8 @@
     "numberOfColors": 5,
     "showNumberOfColors": true,
     "itemIndex": 2,
-    "colorways": [{
+    "colorways": [
+      {
         "inWallContentCard": false,
         "rawPrice": 210,
         "localPrice": "$210",
@@ -76,9 +81,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Blue",
-        "salesChannel": ["Nike.com legacy"],
+        "salesChannel": [
+          "Nike.com legacy"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 210,
         "localPrice": "$210",
@@ -91,9 +99,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Green",
-        "salesChannel": ["Nike.com legacy"],
+        "salesChannel": [
+          "Nike.com legacy"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 210,
         "localPrice": "$210",
@@ -106,9 +117,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com legacy"],
+        "salesChannel": [
+          "Nike.com legacy"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 210,
         "localPrice": "$210",
@@ -121,9 +135,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Grey",
-        "salesChannel": ["Nike.com legacy"],
+        "salesChannel": [
+          "Nike.com legacy"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 210,
         "localPrice": "$210",
@@ -136,13 +153,16 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Purple",
-        "salesChannel": ["Nike.com legacy"],
+        "salesChannel": [
+          "Nike.com legacy"
+        ],
         "abTest": null
-    }],
+      }
+    ],
     "showColorways": true,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "null",
+    "ratingCount": null,
     "rating": null,
     "teamName": null,
     "maxAge": null,
@@ -151,9 +171,12 @@
     "segmentNumber": "",
     "customizationtype": "Full Customization",
     "customizable": true,
-    "salesChannel": ["Nike.com legacy"],
+    "salesChannel": [
+      "Nike.com legacy"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 100,
     "localPrice": "$100",
@@ -178,7 +201,8 @@
     "numberOfColors": 3,
     "showNumberOfColors": true,
     "itemIndex": 3,
-    "colorways": [{
+    "colorways": [
+      {
         "inWallContentCard": false,
         "rawPrice": 100,
         "localPrice": "$100",
@@ -191,9 +215,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 100,
         "localPrice": "$100",
@@ -206,9 +233,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "White",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 100,
         "localPrice": "$100",
@@ -221,13 +251,16 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Green",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }],
+      }
+    ],
     "showColorways": true,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "null",
+    "ratingCount": null,
     "rating": null,
     "teamName": null,
     "maxAge": null,
@@ -236,9 +269,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 150,
     "localPrice": "$150",
@@ -263,7 +299,8 @@
     "numberOfColors": 2,
     "showNumberOfColors": true,
     "itemIndex": 4,
-    "colorways": [{
+    "colorways": [
+      {
         "inWallContentCard": false,
         "rawPrice": 150,
         "localPrice": "$150",
@@ -276,9 +313,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 150,
         "localPrice": "$150",
@@ -291,13 +331,16 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Cream",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }],
+      }
+    ],
     "showColorways": true,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "null",
+    "ratingCount": null,
     "rating": null,
     "teamName": null,
     "maxAge": null,
@@ -306,9 +349,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 110,
     "localPrice": "$110",
@@ -333,7 +379,8 @@
     "numberOfColors": 2,
     "showNumberOfColors": true,
     "itemIndex": 5,
-    "colorways": [{
+    "colorways": [
+      {
         "inWallContentCard": false,
         "rawPrice": 110,
         "localPrice": "$110",
@@ -346,9 +393,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "White",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 110,
         "localPrice": "$110",
@@ -361,13 +411,16 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Blue",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }],
+      }
+    ],
     "showColorways": true,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "null",
+    "ratingCount": null,
     "rating": null,
     "teamName": null,
     "maxAge": null,
@@ -376,9 +429,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 100,
     "localPrice": "$100",
@@ -403,7 +459,8 @@
     "numberOfColors": 5,
     "showNumberOfColors": true,
     "itemIndex": 6,
-    "colorways": [{
+    "colorways": [
+      {
         "inWallContentCard": false,
         "rawPrice": 100,
         "localPrice": "$100",
@@ -416,9 +473,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Blue",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 100,
         "localPrice": "$100",
@@ -431,9 +491,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 100,
         "localPrice": "$100",
@@ -446,9 +509,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Red",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 100,
         "localPrice": "$100",
@@ -461,9 +527,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "White",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 100,
         "localPrice": "$100",
@@ -476,13 +545,16 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Gold",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }],
+      }
+    ],
     "showColorways": true,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "null",
+    "ratingCount": null,
     "rating": null,
     "teamName": null,
     "maxAge": null,
@@ -491,9 +563,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 120,
     "localPrice": "$120",
@@ -518,7 +593,8 @@
     "numberOfColors": 4,
     "showNumberOfColors": true,
     "itemIndex": 7,
-    "colorways": [{
+    "colorways": [
+      {
         "inWallContentCard": false,
         "rawPrice": 120,
         "localPrice": "$120",
@@ -531,9 +607,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com legacy"],
+        "salesChannel": [
+          "Nike.com legacy"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 120,
         "localPrice": "$120",
@@ -546,9 +625,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "White",
-        "salesChannel": ["Nike.com legacy"],
+        "salesChannel": [
+          "Nike.com legacy"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 120,
         "localPrice": "$120",
@@ -561,9 +643,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Silver",
-        "salesChannel": ["Nike.com legacy"],
+        "salesChannel": [
+          "Nike.com legacy"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 120,
         "localPrice": "$120",
@@ -576,13 +661,16 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Green",
-        "salesChannel": ["Nike.com legacy"],
+        "salesChannel": [
+          "Nike.com legacy"
+        ],
         "abTest": null
-    }],
+      }
+    ],
     "showColorways": true,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "null",
+    "ratingCount": null,
     "rating": null,
     "teamName": null,
     "maxAge": null,
@@ -591,9 +679,12 @@
     "segmentNumber": "",
     "customizationtype": "Full Customization",
     "customizable": true,
-    "salesChannel": ["Nike.com legacy"],
+    "salesChannel": [
+      "Nike.com legacy"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 150,
     "localPrice": "$150",
@@ -618,7 +709,8 @@
     "numberOfColors": 15,
     "showNumberOfColors": true,
     "itemIndex": 8,
-    "colorways": [{
+    "colorways": [
+      {
         "inWallContentCard": false,
         "rawPrice": 150,
         "localPrice": "$150",
@@ -631,9 +723,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Blue",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 150,
         "localPrice": "$150",
@@ -646,9 +741,13 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "White",
-        "salesChannel": ["Bootroom", "Nike.com"],
+        "salesChannel": [
+          "Bootroom",
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 150,
         "localPrice": "$150",
@@ -661,9 +760,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Orange",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 150,
         "localPrice": "$150",
@@ -676,9 +778,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Grey",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 150,
         "localPrice": "$150",
@@ -691,9 +796,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 150,
         "localPrice": "$150",
@@ -706,9 +814,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Green",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 150,
         "localPrice": "$150",
@@ -721,9 +832,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "White",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 150,
         "localPrice": "$150",
@@ -736,9 +850,13 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "White",
-        "salesChannel": ["Bootroom", "Nike.com"],
+        "salesChannel": [
+          "Bootroom",
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 150,
         "localPrice": "$150",
@@ -751,9 +869,13 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Bootroom", "Nike.com"],
+        "salesChannel": [
+          "Bootroom",
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 150,
         "localPrice": "$150",
@@ -766,9 +888,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 150,
         "localPrice": "$150",
@@ -781,9 +906,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Red",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 150,
         "localPrice": "$150",
@@ -796,9 +924,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Grey",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 150,
         "localPrice": "$150",
@@ -811,9 +942,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "White",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 150,
         "localPrice": "$150",
@@ -826,9 +960,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 150,
         "localPrice": "$150",
@@ -841,13 +978,16 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }],
+      }
+    ],
     "showColorways": true,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "null",
+    "ratingCount": null,
     "rating": null,
     "teamName": null,
     "maxAge": null,
@@ -856,9 +996,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 190,
     "localPrice": "$190",
@@ -883,7 +1026,8 @@
     "numberOfColors": 7,
     "showNumberOfColors": true,
     "itemIndex": 9,
-    "colorways": [{
+    "colorways": [
+      {
         "inWallContentCard": false,
         "rawPrice": 190,
         "localPrice": "$190",
@@ -896,9 +1040,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Blue",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 190,
         "localPrice": "$190",
@@ -911,9 +1058,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Khaki",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 190,
         "localPrice": "$190",
@@ -926,9 +1076,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Grey",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 190,
         "localPrice": "$190",
@@ -941,9 +1094,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Brown",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 190,
         "localPrice": "$190",
@@ -956,9 +1112,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "White",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 190,
         "localPrice": "$190",
@@ -971,9 +1130,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 190,
         "localPrice": "$190",
@@ -986,13 +1148,16 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "White",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }],
+      }
+    ],
     "showColorways": true,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "32",
+    "ratingCount": 32,
     "rating": 3.4,
     "teamName": null,
     "maxAge": null,
@@ -1001,9 +1166,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 170,
     "localPrice": "$170",
@@ -1028,7 +1196,8 @@
     "numberOfColors": 2,
     "showNumberOfColors": true,
     "itemIndex": 10,
-    "colorways": [{
+    "colorways": [
+      {
         "inWallContentCard": false,
         "rawPrice": 170,
         "localPrice": "$170",
@@ -1041,9 +1210,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 170,
         "localPrice": "$170",
@@ -1056,13 +1228,16 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Silver",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }],
+      }
+    ],
     "showColorways": true,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "null",
+    "ratingCount": null,
     "rating": null,
     "teamName": null,
     "maxAge": null,
@@ -1071,9 +1246,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 160,
     "localPrice": "$160",
@@ -1098,7 +1276,8 @@
     "numberOfColors": 8,
     "showNumberOfColors": true,
     "itemIndex": 11,
-    "colorways": [{
+    "colorways": [
+      {
         "inWallContentCard": false,
         "rawPrice": 160,
         "localPrice": "$160",
@@ -1111,9 +1290,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 160,
         "localPrice": "$160",
@@ -1126,9 +1308,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Grey",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 160,
         "localPrice": "$160",
@@ -1141,9 +1326,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "White",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 160,
         "localPrice": "$160",
@@ -1156,9 +1344,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Blue",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 160,
         "localPrice": "$160",
@@ -1171,9 +1362,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 119.97,
         "localPrice": "$119.97",
@@ -1186,9 +1380,13 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "White",
-        "salesChannel": ["Bootroom", "Nike.com"],
+        "salesChannel": [
+          "Bootroom",
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 135.97,
         "localPrice": "$135.97",
@@ -1201,9 +1399,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Green",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 160,
         "localPrice": "$160",
@@ -1216,13 +1417,16 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Silver",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }],
+      }
+    ],
     "showColorways": true,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "7",
+    "ratingCount": 7,
     "rating": 4.6,
     "teamName": null,
     "maxAge": null,
@@ -1231,9 +1435,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 170,
     "localPrice": "$170",
@@ -1258,7 +1465,8 @@
     "numberOfColors": 2,
     "showNumberOfColors": true,
     "itemIndex": 12,
-    "colorways": [{
+    "colorways": [
+      {
         "inWallContentCard": false,
         "rawPrice": 170,
         "localPrice": "$170",
@@ -1271,9 +1479,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 170,
         "localPrice": "$170",
@@ -1286,13 +1497,16 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Yellow",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }],
+      }
+    ],
     "showColorways": true,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "1",
+    "ratingCount": 1,
     "rating": 5,
     "teamName": null,
     "maxAge": null,
@@ -1301,9 +1515,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 190,
     "localPrice": "$190",
@@ -1328,7 +1545,8 @@
     "numberOfColors": 3,
     "showNumberOfColors": true,
     "itemIndex": 13,
-    "colorways": [{
+    "colorways": [
+      {
         "inWallContentCard": false,
         "rawPrice": 190,
         "localPrice": "$190",
@@ -1341,9 +1559,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "White",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 190,
         "localPrice": "$190",
@@ -1356,9 +1577,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "White",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 190,
         "localPrice": "$190",
@@ -1371,13 +1595,16 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }],
+      }
+    ],
     "showColorways": true,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "3",
+    "ratingCount": 3,
     "rating": 4,
     "teamName": null,
     "maxAge": null,
@@ -1386,9 +1613,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 90,
     "localPrice": "$90",
@@ -1413,7 +1643,8 @@
     "numberOfColors": 2,
     "showNumberOfColors": true,
     "itemIndex": 14,
-    "colorways": [{
+    "colorways": [
+      {
         "inWallContentCard": false,
         "rawPrice": 90,
         "localPrice": "$90",
@@ -1426,9 +1657,15 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "White",
-        "salesChannel": ["Bootroom", "Nike.com"],
-        "abTest": ["Lifestyle"]
-    }, {
+        "salesChannel": [
+          "Bootroom",
+          "Nike.com"
+        ],
+        "abTest": [
+          "Lifestyle"
+        ]
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 90,
         "localPrice": "$90",
@@ -1441,13 +1678,18 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
-        "abTest": ["Lifestyle"]
-    }],
+        "salesChannel": [
+          "Nike.com"
+        ],
+        "abTest": [
+          "Lifestyle"
+        ]
+      }
+    ],
     "showColorways": true,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "39",
+    "ratingCount": 39,
     "rating": 4.5,
     "teamName": null,
     "maxAge": null,
@@ -1456,9 +1698,15 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Bootroom", "Nike.com"],
-    "abTest": ["Lifestyle"]
-}, {
+    "salesChannel": [
+      "Bootroom",
+      "Nike.com"
+    ],
+    "abTest": [
+      "Lifestyle"
+    ]
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 95,
     "localPrice": "$95",
@@ -1483,7 +1731,8 @@
     "numberOfColors": 2,
     "showNumberOfColors": true,
     "itemIndex": 15,
-    "colorways": [{
+    "colorways": [
+      {
         "inWallContentCard": false,
         "rawPrice": 95,
         "localPrice": "$95",
@@ -1496,9 +1745,15 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "White",
-        "salesChannel": ["Bootroom", "Nike.com"],
-        "abTest": ["Lifestyle"]
-    }, {
+        "salesChannel": [
+          "Bootroom",
+          "Nike.com"
+        ],
+        "abTest": [
+          "Lifestyle"
+        ]
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 95,
         "localPrice": "$95",
@@ -1511,13 +1766,19 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Bootroom", "Nike.com"],
-        "abTest": ["Lifestyle"]
-    }],
+        "salesChannel": [
+          "Bootroom",
+          "Nike.com"
+        ],
+        "abTest": [
+          "Lifestyle"
+        ]
+      }
+    ],
     "showColorways": true,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "11",
+    "ratingCount": 11,
     "rating": 4.5,
     "teamName": null,
     "maxAge": null,
@@ -1526,9 +1787,15 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Bootroom", "Nike.com"],
-    "abTest": ["Lifestyle"]
-}, {
+    "salesChannel": [
+      "Bootroom",
+      "Nike.com"
+    ],
+    "abTest": [
+      "Lifestyle"
+    ]
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 120,
     "localPrice": "$120",
@@ -1553,7 +1820,8 @@
     "numberOfColors": 5,
     "showNumberOfColors": true,
     "itemIndex": 16,
-    "colorways": [{
+    "colorways": [
+      {
         "inWallContentCard": false,
         "rawPrice": 120,
         "localPrice": "$120",
@@ -1566,9 +1834,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "White",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 120,
         "localPrice": "$120",
@@ -1581,9 +1852,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 89.97,
         "localPrice": "$89.97",
@@ -1596,9 +1870,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Red",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 120,
         "localPrice": "$120",
@@ -1611,9 +1888,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Grey",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 120,
         "localPrice": "$120",
@@ -1626,13 +1906,16 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }],
+      }
+    ],
     "showColorways": true,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "30",
+    "ratingCount": 30,
     "rating": 4.2,
     "teamName": null,
     "maxAge": null,
@@ -1641,9 +1924,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 200,
     "localPrice": "$200",
@@ -1668,7 +1954,8 @@
     "numberOfColors": 2,
     "showNumberOfColors": true,
     "itemIndex": 17,
-    "colorways": [{
+    "colorways": [
+      {
         "inWallContentCard": false,
         "rawPrice": 200,
         "localPrice": "$200",
@@ -1681,9 +1968,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "White",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 200,
         "localPrice": "$200",
@@ -1696,13 +1986,16 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }],
+      }
+    ],
     "showColorways": true,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "null",
+    "ratingCount": null,
     "rating": null,
     "teamName": null,
     "maxAge": null,
@@ -1711,9 +2004,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 120,
     "localPrice": "$120",
@@ -1742,7 +2038,7 @@
     "showColorways": false,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "0",
+    "ratingCount": 0,
     "rating": 0,
     "teamName": null,
     "maxAge": null,
@@ -1751,9 +2047,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 115,
     "localPrice": "$115",
@@ -1778,7 +2077,8 @@
     "numberOfColors": 2,
     "showNumberOfColors": true,
     "itemIndex": 19,
-    "colorways": [{
+    "colorways": [
+      {
         "inWallContentCard": false,
         "rawPrice": 115,
         "localPrice": "$115",
@@ -1791,9 +2091,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Brown",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 73.97,
         "localPrice": "$73.97",
@@ -1806,13 +2109,16 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Cream",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }],
+      }
+    ],
     "showColorways": true,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "null",
+    "ratingCount": null,
     "rating": null,
     "teamName": null,
     "maxAge": null,
@@ -1821,9 +2127,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 130,
     "localPrice": "$130",
@@ -1848,7 +2157,8 @@
     "numberOfColors": 3,
     "showNumberOfColors": true,
     "itemIndex": 20,
-    "colorways": [{
+    "colorways": [
+      {
         "inWallContentCard": false,
         "rawPrice": 130,
         "localPrice": "$130",
@@ -1861,9 +2171,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Brown",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 130,
         "localPrice": "$130",
@@ -1876,9 +2189,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 130,
         "localPrice": "$130",
@@ -1891,13 +2207,16 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Grey",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }],
+      }
+    ],
     "showColorways": true,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "null",
+    "ratingCount": null,
     "rating": null,
     "teamName": null,
     "maxAge": null,
@@ -1906,9 +2225,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 170,
     "localPrice": "$170",
@@ -1933,7 +2255,8 @@
     "numberOfColors": 2,
     "showNumberOfColors": true,
     "itemIndex": 21,
-    "colorways": [{
+    "colorways": [
+      {
         "inWallContentCard": false,
         "rawPrice": 170,
         "localPrice": "$170",
@@ -1946,9 +2269,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Brown",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 170,
         "localPrice": "$170",
@@ -1961,13 +2287,16 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }],
+      }
+    ],
     "showColorways": true,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "null",
+    "ratingCount": null,
     "rating": null,
     "teamName": null,
     "maxAge": null,
@@ -1976,9 +2305,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 140,
     "localPrice": "$140",
@@ -2003,7 +2335,8 @@
     "numberOfColors": 6,
     "showNumberOfColors": true,
     "itemIndex": 22,
-    "colorways": [{
+    "colorways": [
+      {
         "inWallContentCard": false,
         "rawPrice": 140,
         "localPrice": "$140",
@@ -2016,9 +2349,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Gold",
-        "salesChannel": ["Nike.com legacy"],
+        "salesChannel": [
+          "Nike.com legacy"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 140,
         "localPrice": "$140",
@@ -2031,9 +2367,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Grey",
-        "salesChannel": ["Nike.com legacy"],
+        "salesChannel": [
+          "Nike.com legacy"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 140,
         "localPrice": "$140",
@@ -2046,9 +2385,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Khaki",
-        "salesChannel": ["Nike.com legacy"],
+        "salesChannel": [
+          "Nike.com legacy"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 140,
         "localPrice": "$140",
@@ -2061,9 +2403,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Red",
-        "salesChannel": ["Nike.com legacy"],
+        "salesChannel": [
+          "Nike.com legacy"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 140,
         "localPrice": "$140",
@@ -2076,9 +2421,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Olive",
-        "salesChannel": ["Nike.com legacy"],
+        "salesChannel": [
+          "Nike.com legacy"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 140,
         "localPrice": "$140",
@@ -2091,13 +2439,16 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Brown",
-        "salesChannel": ["Nike.com legacy"],
+        "salesChannel": [
+          "Nike.com legacy"
+        ],
         "abTest": null
-    }],
+      }
+    ],
     "showColorways": true,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "null",
+    "ratingCount": null,
     "rating": null,
     "teamName": null,
     "maxAge": null,
@@ -2106,9 +2457,12 @@
     "segmentNumber": "",
     "customizationtype": "Full Customization",
     "customizable": true,
-    "salesChannel": ["Nike.com legacy"],
+    "salesChannel": [
+      "Nike.com legacy"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 150,
     "localPrice": "$150",
@@ -2133,7 +2487,8 @@
     "numberOfColors": 6,
     "showNumberOfColors": true,
     "itemIndex": 23,
-    "colorways": [{
+    "colorways": [
+      {
         "inWallContentCard": false,
         "rawPrice": 150,
         "localPrice": "$150",
@@ -2146,9 +2501,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Cream",
-        "salesChannel": ["Nike.com legacy"],
+        "salesChannel": [
+          "Nike.com legacy"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 150,
         "localPrice": "$150",
@@ -2161,9 +2519,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Khaki",
-        "salesChannel": ["Nike.com legacy"],
+        "salesChannel": [
+          "Nike.com legacy"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 150,
         "localPrice": "$150",
@@ -2176,9 +2537,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Gold",
-        "salesChannel": ["Nike.com legacy"],
+        "salesChannel": [
+          "Nike.com legacy"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 150,
         "localPrice": "$150",
@@ -2191,9 +2555,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Blue",
-        "salesChannel": ["Nike.com legacy"],
+        "salesChannel": [
+          "Nike.com legacy"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 150,
         "localPrice": "$150",
@@ -2206,9 +2573,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Brown",
-        "salesChannel": ["Nike.com legacy"],
+        "salesChannel": [
+          "Nike.com legacy"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 150,
         "localPrice": "$150",
@@ -2221,13 +2591,16 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Red",
-        "salesChannel": ["Nike.com legacy"],
+        "salesChannel": [
+          "Nike.com legacy"
+        ],
         "abTest": null
-    }],
+      }
+    ],
     "showColorways": true,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "null",
+    "ratingCount": null,
     "rating": null,
     "teamName": null,
     "maxAge": null,
@@ -2236,9 +2609,12 @@
     "segmentNumber": "",
     "customizationtype": "Full Customization",
     "customizable": true,
-    "salesChannel": ["Nike.com legacy"],
+    "salesChannel": [
+      "Nike.com legacy"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 105,
     "localPrice": "$105",
@@ -2263,7 +2639,8 @@
     "numberOfColors": 6,
     "showNumberOfColors": true,
     "itemIndex": 24,
-    "colorways": [{
+    "colorways": [
+      {
         "inWallContentCard": false,
         "rawPrice": 105,
         "localPrice": "$105",
@@ -2276,9 +2653,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Brown",
-        "salesChannel": ["Nike.com legacy"],
+        "salesChannel": [
+          "Nike.com legacy"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 105,
         "localPrice": "$105",
@@ -2291,9 +2671,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Green",
-        "salesChannel": ["Nike.com legacy"],
+        "salesChannel": [
+          "Nike.com legacy"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 105,
         "localPrice": "$105",
@@ -2306,9 +2689,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Khaki",
-        "salesChannel": ["Nike.com legacy"],
+        "salesChannel": [
+          "Nike.com legacy"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 105,
         "localPrice": "$105",
@@ -2321,9 +2707,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Olive",
-        "salesChannel": ["Nike.com legacy"],
+        "salesChannel": [
+          "Nike.com legacy"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 105,
         "localPrice": "$105",
@@ -2336,9 +2725,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Gold",
-        "salesChannel": ["Nike.com legacy"],
+        "salesChannel": [
+          "Nike.com legacy"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 105,
         "localPrice": "$105",
@@ -2351,13 +2743,16 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Grey",
-        "salesChannel": ["Nike.com legacy"],
+        "salesChannel": [
+          "Nike.com legacy"
+        ],
         "abTest": null
-    }],
+      }
+    ],
     "showColorways": true,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "null",
+    "ratingCount": null,
     "rating": null,
     "teamName": null,
     "maxAge": null,
@@ -2366,9 +2761,12 @@
     "segmentNumber": "",
     "customizationtype": "Full Customization",
     "customizable": true,
-    "salesChannel": ["Nike.com legacy"],
+    "salesChannel": [
+      "Nike.com legacy"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 115,
     "localPrice": "$115",
@@ -2393,7 +2791,8 @@
     "numberOfColors": 5,
     "showNumberOfColors": true,
     "itemIndex": 25,
-    "colorways": [{
+    "colorways": [
+      {
         "inWallContentCard": false,
         "rawPrice": 115,
         "localPrice": "$115",
@@ -2406,9 +2805,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Khaki",
-        "salesChannel": ["Nike.com legacy"],
+        "salesChannel": [
+          "Nike.com legacy"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 115,
         "localPrice": "$115",
@@ -2421,9 +2823,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Cream",
-        "salesChannel": ["Nike.com legacy"],
+        "salesChannel": [
+          "Nike.com legacy"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 115,
         "localPrice": "$115",
@@ -2436,9 +2841,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Green",
-        "salesChannel": ["Nike.com legacy"],
+        "salesChannel": [
+          "Nike.com legacy"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 115,
         "localPrice": "$115",
@@ -2451,9 +2859,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Blue",
-        "salesChannel": ["Nike.com legacy"],
+        "salesChannel": [
+          "Nike.com legacy"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 115,
         "localPrice": "$115",
@@ -2466,13 +2877,16 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Brown",
-        "salesChannel": ["Nike.com legacy"],
+        "salesChannel": [
+          "Nike.com legacy"
+        ],
         "abTest": null
-    }],
+      }
+    ],
     "showColorways": true,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "null",
+    "ratingCount": null,
     "rating": null,
     "teamName": null,
     "maxAge": null,
@@ -2481,9 +2895,12 @@
     "segmentNumber": "",
     "customizationtype": "Full Customization",
     "customizable": true,
-    "salesChannel": ["Nike.com legacy"],
+    "salesChannel": [
+      "Nike.com legacy"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 170,
     "localPrice": "$170",
@@ -2508,7 +2925,8 @@
     "numberOfColors": 2,
     "showNumberOfColors": true,
     "itemIndex": 26,
-    "colorways": [{
+    "colorways": [
+      {
         "inWallContentCard": false,
         "rawPrice": 170,
         "localPrice": "$170",
@@ -2521,9 +2939,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 170,
         "localPrice": "$170",
@@ -2536,13 +2957,16 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Blue",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }],
+      }
+    ],
     "showColorways": true,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "null",
+    "ratingCount": null,
     "rating": null,
     "teamName": null,
     "maxAge": null,
@@ -2551,9 +2975,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 230,
     "localPrice": "$230",
@@ -2582,7 +3009,7 @@
     "showColorways": false,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "1",
+    "ratingCount": 1,
     "rating": 4,
     "teamName": null,
     "maxAge": null,
@@ -2591,9 +3018,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 110,
     "localPrice": "$110",
@@ -2622,7 +3052,7 @@
     "showColorways": false,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "null",
+    "ratingCount": null,
     "rating": null,
     "teamName": null,
     "maxAge": null,
@@ -2631,9 +3061,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 160,
     "localPrice": "$160",
@@ -2658,7 +3091,8 @@
     "numberOfColors": 7,
     "showNumberOfColors": true,
     "itemIndex": 29,
-    "colorways": [{
+    "colorways": [
+      {
         "inWallContentCard": false,
         "rawPrice": 160,
         "localPrice": "$160",
@@ -2671,9 +3105,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 160,
         "localPrice": "$160",
@@ -2686,9 +3123,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 160,
         "localPrice": "$160",
@@ -2701,9 +3141,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "White",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 160,
         "localPrice": "$160",
@@ -2716,9 +3159,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "White",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 103.97,
         "localPrice": "$103.97",
@@ -2731,9 +3177,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 111.97,
         "localPrice": "$111.97",
@@ -2746,9 +3195,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 111.97,
         "localPrice": "$111.97",
@@ -2761,13 +3213,16 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Grey",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }],
+      }
+    ],
     "showColorways": true,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "6",
+    "ratingCount": 6,
     "rating": 4.5,
     "teamName": null,
     "maxAge": null,
@@ -2776,9 +3231,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 160,
     "localPrice": "$160",
@@ -2803,7 +3261,8 @@
     "numberOfColors": 8,
     "showNumberOfColors": true,
     "itemIndex": 30,
-    "colorways": [{
+    "colorways": [
+      {
         "inWallContentCard": false,
         "rawPrice": 160,
         "localPrice": "$160",
@@ -2816,9 +3275,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Brown",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 160,
         "localPrice": "$160",
@@ -2831,9 +3293,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Red",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 160,
         "localPrice": "$160",
@@ -2846,9 +3311,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Grey",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 103.97,
         "localPrice": "$103.97",
@@ -2861,9 +3329,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 111.97,
         "localPrice": "$111.97",
@@ -2876,9 +3347,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Grey",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 111.97,
         "localPrice": "$111.97",
@@ -2891,9 +3365,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Red",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 95.97,
         "localPrice": "$95.97",
@@ -2906,9 +3383,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 79.97,
         "localPrice": "$79.97",
@@ -2921,13 +3401,16 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }],
+      }
+    ],
     "showColorways": true,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "13",
+    "ratingCount": 13,
     "rating": 3.7,
     "teamName": null,
     "maxAge": null,
@@ -2936,9 +3419,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 130,
     "localPrice": "$130",
@@ -2963,7 +3449,8 @@
     "numberOfColors": 6,
     "showNumberOfColors": true,
     "itemIndex": 31,
-    "colorways": [{
+    "colorways": [
+      {
         "inWallContentCard": false,
         "rawPrice": 130,
         "localPrice": "$130",
@@ -2976,9 +3463,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Brown",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 130,
         "localPrice": "$130",
@@ -2991,9 +3481,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 120,
         "localPrice": "$120",
@@ -3006,9 +3499,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Grey",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 120,
         "localPrice": "$120",
@@ -3021,9 +3517,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Blue",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 95.97,
         "localPrice": "$95.97",
@@ -3036,9 +3535,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Khaki",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 101.97,
         "localPrice": "$101.97",
@@ -3051,13 +3553,16 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Red",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }],
+      }
+    ],
     "showColorways": true,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "25",
+    "ratingCount": 25,
     "rating": 4.8,
     "teamName": null,
     "maxAge": null,
@@ -3066,9 +3571,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 135,
     "localPrice": "$135",
@@ -3097,7 +3605,7 @@
     "showColorways": false,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "null",
+    "ratingCount": null,
     "rating": null,
     "teamName": null,
     "maxAge": null,
@@ -3106,9 +3614,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 85,
     "localPrice": "$85",
@@ -3137,7 +3648,7 @@
     "showColorways": false,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "null",
+    "ratingCount": null,
     "rating": null,
     "teamName": null,
     "maxAge": null,
@@ -3146,9 +3657,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 130,
     "localPrice": "$130",
@@ -3173,7 +3687,8 @@
     "numberOfColors": 2,
     "showNumberOfColors": true,
     "itemIndex": 34,
-    "colorways": [{
+    "colorways": [
+      {
         "inWallContentCard": false,
         "rawPrice": 130,
         "localPrice": "$130",
@@ -3186,9 +3701,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "White",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 130,
         "localPrice": "$130",
@@ -3201,13 +3719,16 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Orange",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }],
+      }
+    ],
     "showColorways": true,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "null",
+    "ratingCount": null,
     "rating": null,
     "teamName": null,
     "maxAge": null,
@@ -3216,9 +3737,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 130,
     "localPrice": "$130",
@@ -3243,7 +3767,8 @@
     "numberOfColors": 2,
     "showNumberOfColors": true,
     "itemIndex": 35,
-    "colorways": [{
+    "colorways": [
+      {
         "inWallContentCard": false,
         "rawPrice": 130,
         "localPrice": "$130",
@@ -3256,9 +3781,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "White",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 130,
         "localPrice": "$130",
@@ -3271,13 +3799,16 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Orange",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }],
+      }
+    ],
     "showColorways": true,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "null",
+    "ratingCount": null,
     "rating": null,
     "teamName": null,
     "maxAge": null,
@@ -3286,9 +3817,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 170,
     "localPrice": "$170",
@@ -3313,7 +3847,8 @@
     "numberOfColors": 2,
     "showNumberOfColors": true,
     "itemIndex": 36,
-    "colorways": [{
+    "colorways": [
+      {
         "inWallContentCard": false,
         "rawPrice": 170,
         "localPrice": "$170",
@@ -3326,9 +3861,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 170,
         "localPrice": "$170",
@@ -3341,13 +3879,16 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Cream",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }],
+      }
+    ],
     "showColorways": true,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "0",
+    "ratingCount": 0,
     "rating": 0,
     "teamName": null,
     "maxAge": null,
@@ -3356,9 +3897,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 175,
     "localPrice": "$175",
@@ -3383,7 +3927,8 @@
     "numberOfColors": 4,
     "showNumberOfColors": true,
     "itemIndex": 37,
-    "colorways": [{
+    "colorways": [
+      {
         "inWallContentCard": false,
         "rawPrice": 175,
         "localPrice": "$175",
@@ -3396,9 +3941,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 175,
         "localPrice": "$175",
@@ -3411,9 +3959,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Olive",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 112.97,
         "localPrice": "$112.97",
@@ -3426,9 +3977,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "White",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 175,
         "localPrice": "$175",
@@ -3441,13 +3995,16 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }],
+      }
+    ],
     "showColorways": true,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "1",
+    "ratingCount": 1,
     "rating": 5,
     "teamName": null,
     "maxAge": null,
@@ -3456,9 +4013,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 225,
     "localPrice": "$225",
@@ -3483,7 +4043,8 @@
     "numberOfColors": 11,
     "showNumberOfColors": true,
     "itemIndex": 38,
-    "colorways": [{
+    "colorways": [
+      {
         "inWallContentCard": false,
         "rawPrice": 225,
         "localPrice": "$225",
@@ -3496,9 +4057,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 225,
         "localPrice": "$225",
@@ -3511,9 +4075,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Cream",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 225,
         "localPrice": "$225",
@@ -3526,9 +4093,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 225,
         "localPrice": "$225",
@@ -3541,9 +4111,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Red",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 225,
         "localPrice": "$225",
@@ -3556,9 +4129,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Blue",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 225,
         "localPrice": "$225",
@@ -3571,9 +4147,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 225,
         "localPrice": "$225",
@@ -3586,9 +4165,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Brown",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 225,
         "localPrice": "$225",
@@ -3601,9 +4183,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Blue",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 225,
         "localPrice": "$225",
@@ -3616,9 +4201,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 225,
         "localPrice": "$225",
@@ -3631,9 +4219,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Grey",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 225,
         "localPrice": "$225",
@@ -3646,13 +4237,16 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Green",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }],
+      }
+    ],
     "showColorways": true,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "15",
+    "ratingCount": 15,
     "rating": 4.1,
     "teamName": null,
     "maxAge": null,
@@ -3661,9 +4255,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 225,
     "localPrice": "$225",
@@ -3688,7 +4285,8 @@
     "numberOfColors": 2,
     "showNumberOfColors": true,
     "itemIndex": 39,
-    "colorways": [{
+    "colorways": [
+      {
         "inWallContentCard": false,
         "rawPrice": 225,
         "localPrice": "$225",
@@ -3701,9 +4299,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 225,
         "localPrice": "$225",
@@ -3716,13 +4317,16 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Grey",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }],
+      }
+    ],
     "showColorways": true,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "2",
+    "ratingCount": 2,
     "rating": 4.5,
     "teamName": null,
     "maxAge": null,
@@ -3731,9 +4335,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 180,
     "localPrice": "$180",
@@ -3758,7 +4365,8 @@
     "numberOfColors": 2,
     "showNumberOfColors": true,
     "itemIndex": 40,
-    "colorways": [{
+    "colorways": [
+      {
         "inWallContentCard": false,
         "rawPrice": 180,
         "localPrice": "$180",
@@ -3771,9 +4379,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "White",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 180,
         "localPrice": "$180",
@@ -3786,13 +4397,16 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }],
+      }
+    ],
     "showColorways": true,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "null",
+    "ratingCount": null,
     "rating": null,
     "teamName": null,
     "maxAge": null,
@@ -3801,9 +4415,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 110,
     "localPrice": "$110",
@@ -3828,7 +4445,8 @@
     "numberOfColors": 2,
     "showNumberOfColors": true,
     "itemIndex": 41,
-    "colorways": [{
+    "colorways": [
+      {
         "inWallContentCard": false,
         "rawPrice": 110,
         "localPrice": "$110",
@@ -3841,9 +4459,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Green",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 110,
         "localPrice": "$110",
@@ -3856,13 +4477,16 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }],
+      }
+    ],
     "showColorways": true,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "3",
+    "ratingCount": 3,
     "rating": 5,
     "teamName": null,
     "maxAge": null,
@@ -3871,9 +4495,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 180,
     "localPrice": "$180",
@@ -3898,7 +4525,8 @@
     "numberOfColors": 2,
     "showNumberOfColors": true,
     "itemIndex": 42,
-    "colorways": [{
+    "colorways": [
+      {
         "inWallContentCard": false,
         "rawPrice": 180,
         "localPrice": "$180",
@@ -3911,9 +4539,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 180,
         "localPrice": "$180",
@@ -3926,13 +4557,16 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Blue",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }],
+      }
+    ],
     "showColorways": true,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "null",
+    "ratingCount": null,
     "rating": null,
     "teamName": null,
     "maxAge": null,
@@ -3941,9 +4575,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 120,
     "localPrice": "$120",
@@ -3968,7 +4605,8 @@
     "numberOfColors": 9,
     "showNumberOfColors": true,
     "itemIndex": 43,
-    "colorways": [{
+    "colorways": [
+      {
         "inWallContentCard": false,
         "rawPrice": 120,
         "localPrice": "$120",
@@ -3981,9 +4619,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Blue",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 101.97,
         "localPrice": "$101.97",
@@ -3996,9 +4637,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Orange",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 83.97,
         "localPrice": "$83.97",
@@ -4011,9 +4655,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 83.97,
         "localPrice": "$83.97",
@@ -4026,9 +4673,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 77.97,
         "localPrice": "$77.97",
@@ -4041,9 +4691,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Cream",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 83.97,
         "localPrice": "$83.97",
@@ -4056,9 +4709,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 71.97,
         "localPrice": "$71.97",
@@ -4071,9 +4727,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Blue",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 83.97,
         "localPrice": "$83.97",
@@ -4086,9 +4745,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "White",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 89.97,
         "localPrice": "$89.97",
@@ -4101,13 +4763,16 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Blue",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }],
+      }
+    ],
     "showColorways": true,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "7",
+    "ratingCount": 7,
     "rating": 3.6,
     "teamName": null,
     "maxAge": null,
@@ -4116,9 +4781,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 110,
     "localPrice": "$110",
@@ -4143,7 +4811,8 @@
     "numberOfColors": 6,
     "showNumberOfColors": true,
     "itemIndex": 44,
-    "colorways": [{
+    "colorways": [
+      {
         "inWallContentCard": false,
         "rawPrice": 110,
         "localPrice": "$110",
@@ -4156,9 +4825,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 110,
         "localPrice": "$110",
@@ -4171,9 +4843,14 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Red",
-        "salesChannel": ["Nike.com"],
-        "abTest": ["Lifestyle"]
-    }, {
+        "salesChannel": [
+          "Nike.com"
+        ],
+        "abTest": [
+          "Lifestyle"
+        ]
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 110,
         "localPrice": "$110",
@@ -4186,9 +4863,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Cream",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 110,
         "localPrice": "$110",
@@ -4201,9 +4881,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 110,
         "localPrice": "$110",
@@ -4216,9 +4899,14 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "White",
-        "salesChannel": ["Nike.com"],
-        "abTest": ["Lifestyle"]
-    }, {
+        "salesChannel": [
+          "Nike.com"
+        ],
+        "abTest": [
+          "Lifestyle"
+        ]
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 110,
         "localPrice": "$110",
@@ -4231,13 +4919,18 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
-        "abTest": ["Lifestyle"]
-    }],
+        "salesChannel": [
+          "Nike.com"
+        ],
+        "abTest": [
+          "Lifestyle"
+        ]
+      }
+    ],
     "showColorways": true,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "105",
+    "ratingCount": 105,
     "rating": 4.6,
     "teamName": null,
     "maxAge": null,
@@ -4246,9 +4939,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 160,
     "localPrice": "$160",
@@ -4273,7 +4969,8 @@
     "numberOfColors": 2,
     "showNumberOfColors": true,
     "itemIndex": 45,
-    "colorways": [{
+    "colorways": [
+      {
         "inWallContentCard": false,
         "rawPrice": 160,
         "localPrice": "$160",
@@ -4286,9 +4983,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 160,
         "localPrice": "$160",
@@ -4301,13 +5001,16 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Silver",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }],
+      }
+    ],
     "showColorways": true,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "null",
+    "ratingCount": null,
     "rating": null,
     "teamName": null,
     "maxAge": null,
@@ -4316,9 +5019,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 110,
     "localPrice": "$110",
@@ -4343,7 +5049,8 @@
     "numberOfColors": 4,
     "showNumberOfColors": true,
     "itemIndex": 46,
-    "colorways": [{
+    "colorways": [
+      {
         "inWallContentCard": false,
         "rawPrice": 110,
         "localPrice": "$110",
@@ -4356,9 +5063,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Brown",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 110,
         "localPrice": "$110",
@@ -4371,9 +5081,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 110,
         "localPrice": "$110",
@@ -4386,9 +5099,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Olive",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 110,
         "localPrice": "$110",
@@ -4401,13 +5117,16 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }],
+      }
+    ],
     "showColorways": true,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "null",
+    "ratingCount": null,
     "rating": null,
     "teamName": null,
     "maxAge": null,
@@ -4416,9 +5135,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 130,
     "localPrice": "$130",
@@ -4443,7 +5165,8 @@
     "numberOfColors": 9,
     "showNumberOfColors": true,
     "itemIndex": 47,
-    "colorways": [{
+    "colorways": [
+      {
         "inWallContentCard": false,
         "rawPrice": 130,
         "localPrice": "$130",
@@ -4456,9 +5179,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Cream",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 130,
         "localPrice": "$130",
@@ -4471,9 +5197,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Blue",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 130,
         "localPrice": "$130",
@@ -4486,9 +5215,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 101.97,
         "localPrice": "$101.97",
@@ -4501,9 +5233,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 101.97,
         "localPrice": "$101.97",
@@ -4516,9 +5251,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 103.97,
         "localPrice": "$103.97",
@@ -4531,9 +5269,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Silver",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 96.97,
         "localPrice": "$96.97",
@@ -4546,9 +5287,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Cream",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 130,
         "localPrice": "$130",
@@ -4561,9 +5305,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Grey",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 103.97,
         "localPrice": "$103.97",
@@ -4576,13 +5323,16 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Gold",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }],
+      }
+    ],
     "showColorways": true,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "10",
+    "ratingCount": 10,
     "rating": 4.7,
     "teamName": null,
     "maxAge": null,
@@ -4591,9 +5341,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 140,
     "localPrice": "$140",
@@ -4622,7 +5375,7 @@
     "showColorways": false,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "5",
+    "ratingCount": 5,
     "rating": 3.4,
     "teamName": null,
     "maxAge": null,
@@ -4631,9 +5384,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 140,
     "localPrice": "$140",
@@ -4658,7 +5414,8 @@
     "numberOfColors": 2,
     "showNumberOfColors": true,
     "itemIndex": 49,
-    "colorways": [{
+    "colorways": [
+      {
         "inWallContentCard": false,
         "rawPrice": 140,
         "localPrice": "$140",
@@ -4671,9 +5428,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 140,
         "localPrice": "$140",
@@ -4686,13 +5446,16 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }],
+      }
+    ],
     "showColorways": true,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "null",
+    "ratingCount": null,
     "rating": null,
     "teamName": null,
     "maxAge": null,
@@ -4701,9 +5464,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 110,
     "localPrice": "$110",
@@ -4728,7 +5494,8 @@
     "numberOfColors": 6,
     "showNumberOfColors": true,
     "itemIndex": 50,
-    "colorways": [{
+    "colorways": [
+      {
         "inWallContentCard": false,
         "rawPrice": 110,
         "localPrice": "$110",
@@ -4741,9 +5508,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Red",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 110,
         "localPrice": "$110",
@@ -4756,9 +5526,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 110,
         "localPrice": "$110",
@@ -4771,9 +5544,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "White",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 110,
         "localPrice": "$110",
@@ -4786,9 +5562,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 110,
         "localPrice": "$110",
@@ -4801,9 +5580,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "White",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 110,
         "localPrice": "$110",
@@ -4816,13 +5598,16 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }],
+      }
+    ],
     "showColorways": true,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "24",
+    "ratingCount": 24,
     "rating": 4.5,
     "teamName": null,
     "maxAge": null,
@@ -4831,9 +5616,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 150,
     "localPrice": "$150",
@@ -4862,7 +5650,7 @@
     "showColorways": false,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "null",
+    "ratingCount": null,
     "rating": null,
     "teamName": null,
     "maxAge": null,
@@ -4871,9 +5659,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 160,
     "localPrice": "$160",
@@ -4902,7 +5693,7 @@
     "showColorways": false,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "null",
+    "ratingCount": null,
     "rating": null,
     "teamName": null,
     "maxAge": null,
@@ -4911,9 +5702,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 110,
     "localPrice": "$110",
@@ -4942,7 +5736,7 @@
     "showColorways": false,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "null",
+    "ratingCount": null,
     "rating": null,
     "teamName": null,
     "maxAge": null,
@@ -4951,9 +5745,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 160,
     "localPrice": "$160",
@@ -4978,7 +5775,8 @@
     "numberOfColors": 4,
     "showNumberOfColors": true,
     "itemIndex": 54,
-    "colorways": [{
+    "colorways": [
+      {
         "inWallContentCard": false,
         "rawPrice": 160,
         "localPrice": "$160",
@@ -4991,9 +5789,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Silver",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 119.97,
         "localPrice": "$119.97",
@@ -5006,9 +5807,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Orange",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 119.97,
         "localPrice": "$119.97",
@@ -5021,9 +5825,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 119.97,
         "localPrice": "$119.97",
@@ -5036,13 +5843,16 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Grey",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }],
+      }
+    ],
     "showColorways": true,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "8",
+    "ratingCount": 8,
     "rating": 5,
     "teamName": null,
     "maxAge": null,
@@ -5051,9 +5861,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 160,
     "localPrice": "$160",
@@ -5082,7 +5895,7 @@
     "showColorways": false,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "null",
+    "ratingCount": null,
     "rating": null,
     "teamName": null,
     "maxAge": null,
@@ -5091,9 +5904,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 170,
     "localPrice": "$170",
@@ -5122,7 +5938,7 @@
     "showColorways": false,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "2",
+    "ratingCount": 2,
     "rating": 4.5,
     "teamName": null,
     "maxAge": null,
@@ -5131,9 +5947,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 190,
     "localPrice": "$190",
@@ -5158,7 +5977,8 @@
     "numberOfColors": 2,
     "showNumberOfColors": true,
     "itemIndex": 57,
-    "colorways": [{
+    "colorways": [
+      {
         "inWallContentCard": false,
         "rawPrice": 190,
         "localPrice": "$190",
@@ -5171,9 +5991,13 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "White",
-        "salesChannel": ["Bootroom", "Nike.com"],
+        "salesChannel": [
+          "Bootroom",
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 190,
         "localPrice": "$190",
@@ -5186,13 +6010,16 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }],
+      }
+    ],
     "showColorways": true,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "7",
+    "ratingCount": 7,
     "rating": 4.1,
     "teamName": null,
     "maxAge": null,
@@ -5201,9 +6028,13 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Bootroom", "Nike.com"],
+    "salesChannel": [
+      "Bootroom",
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 180,
     "localPrice": "$180",
@@ -5228,7 +6059,8 @@
     "numberOfColors": 2,
     "showNumberOfColors": true,
     "itemIndex": 58,
-    "colorways": [{
+    "colorways": [
+      {
         "inWallContentCard": false,
         "rawPrice": 180,
         "localPrice": "$180",
@@ -5241,9 +6073,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 180,
         "localPrice": "$180",
@@ -5256,13 +6091,16 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Pink",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }],
+      }
+    ],
     "showColorways": true,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "null",
+    "ratingCount": null,
     "rating": null,
     "teamName": null,
     "maxAge": null,
@@ -5271,9 +6109,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 170,
     "localPrice": "$170",
@@ -5298,7 +6139,8 @@
     "numberOfColors": 5,
     "showNumberOfColors": true,
     "itemIndex": 59,
-    "colorways": [{
+    "colorways": [
+      {
         "inWallContentCard": false,
         "rawPrice": 170,
         "localPrice": "$170",
@@ -5311,9 +6153,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "White",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 101.97,
         "localPrice": "$101.97",
@@ -5326,9 +6171,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 101.97,
         "localPrice": "$101.97",
@@ -5341,9 +6189,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Black",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 126.97,
         "localPrice": "$126.97",
@@ -5356,9 +6207,12 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Brown",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }, {
+      },
+      {
         "inWallContentCard": false,
         "rawPrice": 101.97,
         "localPrice": "$101.97",
@@ -5371,13 +6225,16 @@
         "comingSoon": false,
         "preorder": false,
         "colorDescription": "Blue",
-        "salesChannel": ["Nike.com"],
+        "salesChannel": [
+          "Nike.com"
+        ],
         "abTest": null
-    }],
+      }
+    ],
     "showColorways": true,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "5",
+    "ratingCount": 5,
     "rating": 4.8,
     "teamName": null,
     "maxAge": null,
@@ -5386,9 +6243,12 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}, {
+  },
+  {
     "inWallContentCard": false,
     "rawPrice": 170,
     "localPrice": "$170",
@@ -5417,7 +6277,7 @@
     "showColorways": false,
     "showReviews": true,
     "showPrice": true,
-    "ratingCount": "null",
+    "ratingCount": null,
     "rating": null,
     "teamName": null,
     "maxAge": null,
@@ -5426,6 +6286,9 @@
     "segmentNumber": "",
     "customizationtype": "",
     "customizable": false,
-    "salesChannel": ["Nike.com"],
+    "salesChannel": [
+      "Nike.com"
+    ],
     "abTest": null
-}]
+  }
+]

@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { getProduct } from '../../Redux/reducer';
 import MensShoes from '../../Data/nikeMensShoesPg1.json';
 
 
@@ -7,8 +10,18 @@ class MensShoe extends Component {
     constructor() {
         super();
         this.state = {
+            product: []
         }
     }
+    
+
+    // componentDidMount() {
+    //     axios.get('/api/mensshoes').then(response => {
+    //         console.log('response: ', response.data);
+    //         return this.props.getProduct(response.data)
+    //     })
+    // }
+
     
     render() { 
         let mappedShoes = MensShoes.map((shoe, index) => {
@@ -29,5 +42,17 @@ class MensShoe extends Component {
          );
     }
 }
+
+const mapStateToProps = state => {
+    return {
+        products: state.products,
+
+
+    }
+}
+
+const mapDispatchToProps = {
+    getProduct
+}
  
-export default MensShoe;
+export default connect(mapStateToProps,mapDispatchToProps)(MensShoe);

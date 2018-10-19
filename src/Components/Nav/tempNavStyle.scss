@@ -1,5 +1,19 @@
 .navTest {
     height: 100px;
     width: 100%;
-    background: tomato;
+    background: white;
+}
+
+#nikeSwoosh {
+    max-width: 70px;
+    max-height: 50px;
+    min-width: 35px;
+    min-height: 25px;
+}
+
+.homeImages {
+    max-width: 100vw;
+    max-height: 100vh;
+    margin-top: 3px;
+    margin-bottom: 3px;
 }

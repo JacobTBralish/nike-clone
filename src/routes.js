@@ -7,6 +7,7 @@ import DetailedShoe from './Components/MensShoe/DetailedShoe';
 import Checkout from './Components/Checkout/CheckoutForm';
 import ShippingOptions from './Components/Checkout/ShippingOptions';
 import ShippingForm from './Components/Checkout/ShippingForm';
+import NikePlus from './Components/NikePlus/NikePlus';
 
 export default (
     <Switch>
@@ -16,6 +17,7 @@ export default (
         <Route path="/product/:id" component={DetailedShoe} />
         <Route path="/cart" component={Cart} />
         <Route path="/checkout" component={Checkout} />
+        <Route path="/nike/nike-plus" component={NikePlus} />
         <Route exact path='/' component={Home} />
     </Switch>
 )
