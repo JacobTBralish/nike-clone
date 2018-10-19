@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
-import { updateUser } from './../../Redux/reducer';
+import { updateUser, logOut } from './../../Redux/reducer';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './tempNavStyle.scss'
@@ -23,13 +23,12 @@ class Nav extends Component {
         const redirectUri = encodeURIComponent(`${window.location.origin}/auth/callback`);
         window.location = `https://${process.env.REACT_APP_AUTH0_DOMAIN}/authorize?client_id=${process.env.REACT_APP_AUTH0_CLIENT_ID}&scope=openid%20profile%20email&redirect_uri=${redirectUri}&response_type=code`
     }
-    logout() {
-        axios.post('/api/auth/logout').then(response => {
-          window.alert('Successfully logged out')
-           this.setState({
-             user: ''
-             })
-        }).catch(error => console.log('error',error))
+
+    logout = () => {
+        axios.post('/api/logout').then(res => {
+            console.log(res.data)
+            this.props.logOut(this.props.user);
+        })
     }
 
 
@@ -62,7 +61,8 @@ const mapStateToProps = state => {
   }
   
   const mapDispatchToProps = {
-    updateUser
+    updateUser,
+    logOut
   }
   
   

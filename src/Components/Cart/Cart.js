@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 // import MensShoes from '../../Data/nikeMensShoesPg1.json'
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { setTotal } from '../../Redux/reducer';
 // import Axios from 'axios';
 
 
@@ -20,7 +21,7 @@ class Cart extends Component {
     }
 
     getTotal = () => {
-        let { cart, total } = this.props;
+        let { cart, total, setTotal } = this.props;
         
         if(cart.length > 0) {
             console.log('cart: ', cart);
@@ -31,7 +32,7 @@ class Cart extends Component {
             })
         }
         console.log('total: ', total);
-        return total
+        setTotal(total)
     }
     
 
@@ -108,4 +109,9 @@ const mapStateToProps = state => {
         total: state.total
         }
 }
-export default connect(mapStateToProps)(Cart)
+
+const mapDispatchToProps =  {
+    setTotal
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Cart)

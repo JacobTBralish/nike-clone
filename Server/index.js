@@ -7,6 +7,7 @@ const massive = require('massive');
 const session = require('express-session');
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY)
 const pC = require('./controllers/paymentcontroller');
+const sC = require('./controllers/shippingcontroller');
 const fs = require('fs')
 
 // const request = require('request');
@@ -111,6 +112,10 @@ app.post('/api/payment', pC.processPayment);
 // app.post('/api/order', pC.createOrder);
 app.post('/api/email', pC.sendConfirmation);
 
+// =========================================== Shipping & Billing Endpoints ================================== \\
+
+app.post('/api/shippingInfo', sC.postShippingInformation);
+
 // ================================================ Auth0 Login ====================================== \\
 
 app.get('/api/user-data', (req, res) => {
@@ -120,10 +125,10 @@ app.get('/api/user-data', (req, res) => {
 
 // ================================================= Auth0 Logout ===================================== \\
 
-app.post('/api/auth/logout', (req, res) => {
-    req.session.destroy()
-    res.send()
-});
+app.post('/api/logout', (req, res) => {
+    req.session.destroy();
+    res.json();
+})
 
 // ================================================= Stripe config ===================================== \\
 // Set your secret key: remember to change this to your live secret key in production
