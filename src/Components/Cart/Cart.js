@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 // import MensShoes from '../../Data/nikeMensShoesPg1.json'
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { setTotal } from '../../Redux/reducer';
 // import Axios from 'axios';
 
 
@@ -20,9 +21,8 @@ class Cart extends Component {
     }
 
     getTotal = () => {
-        let { cart/* , total */ } = this.props;
-        let { total } = this.state;
-
+        let { cart, total, setTotal } = this.props;
+        
         if(cart.length > 0) {
             console.log('cart: ', cart);
             cart.forEach(item => {
@@ -31,32 +31,36 @@ class Cart extends Component {
                 total += fixedPrice 
             })
         }
-        this.setState({total}) 
+        console.log('total: ', total);
+        setTotal(total)
     }
     
 
-componentDidMount() {
-    this.getTotal();
-}
+    componentDidMount() {
+        this.getTotal();
+    }
 
-    // this.setState({
-    //     total : total
-    // });
-
+    deleteFromCart = title => {
+        
+    }
 
 
     render() {
         let checkoutLinkStlyle = {
             textDecoration: "none",
             color: "white",
-            background: "orange",
+            background: "tomato",
             fontWeight: "bold",
 
         }
 
-        const cart = [this.props.location.state]
-        let { orderComplete, total } = this.state;
-        // let { total } = this.props;
+        let disclaimerText = {
+            fontSize: "10px"
+        }
+
+        let { cart, total } = this.props
+        console.log('total: ', total);
+        let { orderComplete } = this.state;
         // const { totalPrice } = this;
         console.log('cart: ', cart);
 
@@ -87,9 +91,10 @@ componentDidMount() {
                 <div>
                     <h1>Cart Rendered </h1>
                     {mappedCart}
-                    <h3>Total: ${(total *= 1.06).toFixed(2)}</h3>
+                    <h2>*Total: ${(total).toFixed(2)}</h2>
+                    <p style={disclaimerText}>*Tax will be included after shipping details are input</p>
                     {console.log('total: ', total)}
-                    <Link style={checkoutLinkStlyle} to={{pathname:'/checkout', state:{total:total}}}>CHECKOUT</Link>
+                    <Link style={checkoutLinkStlyle} to='/checkout'>CHECKOUT</Link>
                 </div>
             }
 
@@ -104,4 +109,9 @@ const mapStateToProps = state => {
         total: state.total
         }
 }
-export default connect(mapStateToProps)(Cart)
+
+const mapDispatchToProps =  {
+    setTotal
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Cart)

@@ -7,6 +7,7 @@ const massive = require('massive');
 const session = require('express-session');
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY)
 const pC = require('./controllers/paymentcontroller');
+const sC = require('./controllers/shippingcontroller');
 const fs = require('fs')
 
 
@@ -31,11 +32,11 @@ app.use(session({
 
 
 
-// axios.get('https://store.nike.com/html-services/gridwallData?gridwallPath=mens-training-shoes%2F7puZ9hkZoi3&country=US&lang_locale=en_US&pn=1').then(response => {
-//     return fs.writeFile('./nikeMensTrainingShoesPg1.json', JSON.stringify(response.data.sections[0].items), /* { flag: 'a+' }, */ (err) => {
+// axios.get('https://www.nike.com/us/en_us/retail/en/api/v2/stores.json').then(response => {
+//     return fs.writeFile('./src/data/nikeStoreLocations.json', JSON.stringify(response.data.stores), /* { flag: 'a+' }, */ (err) => {
 //         if (err){
 //             console.log(err)
-//             return response.data.sections[0].items
+//             return response.data.stores
 //         }
 //     })
 // })
@@ -137,6 +138,10 @@ app.post('/api/payment', pC.processPayment);
 // app.post('/api/order', pC.createOrder);
 app.post('/api/email', pC.sendConfirmation);
 
+// =========================================== Shipping & Billing Endpoints ================================== \\
+
+app.post('/api/shippingInfo', sC.postShippingInformation);
+
 // ================================================ Auth0 Login ====================================== \\
 
 app.get('/api/user-data', (req, res) => {
@@ -146,10 +151,10 @@ app.get('/api/user-data', (req, res) => {
 
 // ================================================= Auth0 Logout ===================================== \\
 
-app.post('/api/auth/logout', (req, res) => {
-    req.session.destroy()
-    res.send()
-});
+app.post('/api/logout', (req, res) => {
+    req.session.destroy();
+    res.json();
+})
 
 // ================================================= Stripe config ===================================== \\
 // Set your secret key: remember to change this to your live secret key in production
