@@ -6,8 +6,9 @@ const axios = require('axios');
 const massive = require('massive');
 const session = require('express-session');
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY)
-const pC = require('./controllers/paymentcontroller');
+const paymentC = require('./controllers/paymentcontroller');
 const sC = require('./controllers/shippingcontroller');
+const productC = require('./controllers/productconroller');
 const fs = require('fs')
 
 
@@ -32,8 +33,8 @@ app.use(session({
 
 
 
-// axios.get('https://www.nike.com/us/en_us/retail/en/api/v2/stores.json').then(response => {
-//     return fs.writeFile('./src/data/nikeStoreLocations.json', JSON.stringify(response.data.stores), /* { flag: 'a+' }, */ (err) => {
+// axios.get('https://store.nike.com/html-services/gridwallData?gridwallPath=mens-lifestyle-shoes%2F7puZoneZoi3&country=US&lang_locale=en_US').then(response => {
+//     return fs.writeFile('./src/data/nikeMensLifeStyleShoes.js', JSON.stringify(response.data.stores), /* { flag: 'a+' }, */ (err) => {
 //         if (err){
 //             console.log(err)
 //             return response.data.stores
@@ -133,14 +134,19 @@ app.get('/auth/callback', (req,res) => {
 
 // app.post('/api/cart-data/:id', cart_controller.addToCart)
 
+// =========================================== Product Endpoints ================================== \\
+app.get('/api/mensshoes', productC.getProduct);
+// app.get('/api/products/:id', pc.getProduct)
+
+
 // =========================================== Payment Endpoints ================================== \\
-app.post('/api/payment', pC.processPayment);
+app.post('/api/payment', paymentC.processPayment);
 // app.post('/api/order', pC.createOrder);
-app.post('/api/email', pC.sendConfirmation);
+app.post('/api/email', paymentC.sendConfirmation);
 
 // =========================================== Shipping & Billing Endpoints ================================== \\
 
-app.post('/api/shippingInfo', sC.postShippingInformation);
+// app.post('/api/shippingInfo', sC.postShippingInformation);
 
 // ================================================ Auth0 Login ====================================== \\
 

@@ -3,7 +3,7 @@
     display: inline-block;
     width: 8px;
     height: 8px;
-    background: red;
+    /* background: red; */
     border-radius: 8px;
     margin: 0 8px;
   }
@@ -12,9 +12,10 @@
     padding-right: 12px;
     margin: -12px;
     color: transparent;
-    line-height: 24px;
+    background-image: url('http://s3.amazonaws.com/assets.brickworksoftware.com/Nike/nikepin.png');    
+    line-height: 124px;
     font-size: 13px;
-    white-space: nowrap;
+    
   }
   .station span {
     display: none;

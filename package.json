@@ -25,6 +25,7 @@
     "react-scripts": "2.0.4",
     "react-stripe-checkout": "^2.6.3",
     "react-stripe-elements": "^2.0.1",
+    "react-svg": "^6.0.18",
     "redux": "^4.0.1",
     "redux-promise-middleware": "^5.1.1",
     "request": "^2.88.0",

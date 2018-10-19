@@ -5,6 +5,7 @@ module.exports = function(app) {
     '/api',
     // '/send', 
     '/save-stripe-token', 
-    '/auth/callback'
+    '/auth/callback',
+
     ],{ target: 'http://localhost:5000/' }));
 };

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import StripeCheckout from 'react-stripe-checkout'
 import { connect } from 'react-redux';
 import { withRouter, Link } from 'react-router-dom';
-import { setTotal } from '../../Redux/reducer';
+// import { setTotal } from '../../Redux/reducer';
 import axios from 'axios';
 
 const fromDollarToCent = amount => amount * 100;
@@ -63,21 +63,20 @@ class ShippingOptions extends Component {
    
 
     paymentSuccess = data => {
-        const d = new Date()
-        const today = `${d.getMonth()+1}/${d.getDate()}/${d.getFullYear()}`
-        console.log('------------ today', today)
-        console.log('------------ paymentSuccess data', data)
-        alert('Payment successful!')
-        console.log('data: ', data.data);
-        let id = data.data.stripeSuccess.id.split('')
-        console.log('id: ', id);
-        id.splice(0, 3)
-        console.log('id: ', id);
-        this.setState({orderId: id.join('')})
         const date = new Date();
         const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
-        const time = `${months[date.getMonth()]} ${date.getDate()}th, ${date.getFullYear()}`;
-        axios.post('/api/email', { trackingNumber: this.makeId() ,email: this.props.user.email, name: this.props.user.name, date: time, total: this.props.total, number: this.state.orderId, address: "this.props.address"})
+        const today = `${months[date.getMonth()]} ${date.getDate()}th, ${date.getFullYear()}`;
+        // console.log('------------ today', today)
+        // console.log('------------ paymentSuccess data', data)
+        alert('Payment successful!')
+        // console.log('data: ', data.data);
+        let id = data.data.stripeSuccess.id.split('')
+        // console.log('id: ', id);
+        id.splice(0, 3)
+        // console.log('id: ', id);
+        this.setState({orderId: id.join('')})
+        // console.log(this.props.shippingInfo, 'this is this.props.shit');
+        // axios.post('/api/email', { trackingNumber: this.makeId() ,email: this.props.user.email, name: this.props.user.name, date: today, total: this.props.total, number: this.state.orderId, address: this.props.shippingInfo })
         // axios.post('/api/order', {orderId: id.join(''), userId: this.props.user.id, addressId: this.props.address.id, cart: this.props.cart, date: today})
         .then(res => {
             console.log('------------ POST Order res', res)
@@ -111,7 +110,8 @@ class ShippingOptions extends Component {
 
 
     render() {
-        let {  total, user } = this.props;
+        let {  total, user, shippingInfo } = this.props;
+        console.log('shippingInfo: ', shippingInfo);
         console.log('total: ', total);
         let { SameShippingAsBilling, chosenState/* , home */ } = this.state;
         let { taxRate } = this.props.location.state;
@@ -183,13 +183,13 @@ class ShippingOptions extends Component {
                 <StripeCheckout 
                     name='Nike'
                     description='Just do it'
-                    amount={fromDollarToCent(total * (1+parseFloat(taxRate)))}
+                    amount={fromDollarToCent(total * (1+parseFloat(taxRate)) + parseInt(this.state.selectedOption))}
                     image={'http://content.nike.com/content/dam/one-nike/globalAssets/social_media_images/nike_swoosh_logo_black.png'}
                     panelLabel='Pay'
                     currency='USD'
                     stripeKey={process.env.REACT_APP_STRIPE_PUBLISHABLE}
                     email={user.email ? user.email : null}
-                    token={this.onToken(total * (1+parseFloat(taxRate)))}
+                    token={this.onToken(total * (1+parseFloat(taxRate)) + parseInt(this.state.selectedOption))}
                 />
                 </div>
             <div>
@@ -206,14 +206,15 @@ const mapStateToProps = state => {
     return {
         user: state.user,
         cart: state.cart,
-        total: state.total
+        total: state.total,
+        shippingInfo: state.shippingInfo
         
     }
 }
  
 
 const mapDispatchToProps =  {
-    setTotal
+    // setTotal
 }
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ShippingOptions));

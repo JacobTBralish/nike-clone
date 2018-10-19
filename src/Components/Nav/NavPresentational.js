@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './tempNavStyle.scss'
 
+import NikeSwoosh from '../../NikeSwoosh.svg'
+
 class Nav extends Component {
     constructor() {
         super();
@@ -42,11 +44,19 @@ class Nav extends Component {
 
         return (
             <div className='navTest'>
-                <h1>Rendered</h1>
-                <Link to='/'>Home</Link>
-                <Link to='/mensshoes'>Mens Shoes</Link>
-                {/* <button onClick={}>Log in / Register</button> */}
-                {user ? <li onClick={()=>this.logout()}><Link to='/'>Logout</Link></li> : <li onClick={() => {this.login()}}>Login / Register</li>}
+                <div>
+                    <Link to='/nike/nike-plus'><button>Nike Plus</button></Link>
+                    <Link to=''><button></button></Link>
+                    <Link to=''><button></button></Link>
+                    <Link to=''><button></button></Link>
+                </div>
+                <div>
+                    <div><Link to='/'><img src={NikeSwoosh} id='nikeSwoosh'></img></Link></div>
+                    <Link to='/'>Home</Link>
+                    <Link to='/mensshoes'>Mens Shoes</Link>
+                    {/* <button onClick={}>Log in / Register</button> */}
+                    {user ? <li onClick={()=>this.logout()}><Link to='/'>Logout</Link></li> : <li onClick={() => {this.login()}}>Login / Register</li>}
+                </div>
             </div>
         )
     }
