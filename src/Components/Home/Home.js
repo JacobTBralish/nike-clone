@@ -34,7 +34,6 @@ class Home extends Component {
                <div>
                     <View3 info={{image: Nike6thImage, h2Text: "ALL FOR ONE", h2Text2: "LEBRON XVI", pText: "The kids’ Air Force 1 NBA are for those who’ve grown up loving their team.", pText2: "Explosive performance with an ultra-strong Battleknit 2.0 Upper gives you the strength to chase your dreams", linkText: "SHOP KIDS", linkText2: "SHOP LEBRON"}}/>
                 </div>
-                {/* <img src={Nike2ndImage}></img> */}
             </div>
          );
     }
