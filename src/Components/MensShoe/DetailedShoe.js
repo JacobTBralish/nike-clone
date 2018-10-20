@@ -16,7 +16,7 @@ class DetailedShoe extends Component {
         let {price, title, category, productImg } = this.props.location.state;
         
 
-        let { addToCart } = this.props;
+        let { addToCart, total, setTotal } = this.props;
         
 
         return ( 
@@ -27,7 +27,7 @@ class DetailedShoe extends Component {
                 <p>{price}</p>
                 <p>{category}</p>
 
-                <button onClick={() => addToCart({title: title, category: category, price: price, productImg: productImg})}>Add To Cart</button>
+                <button onClick={() => addToCart({title, category, price, productImg}, total)}>Add To Cart</button>
                 <Link to={{pathname:`/cart`, state:{title: title, category: category, price: price, productImg: productImg}}}>To Cart</Link>
                 </div>
          );
@@ -39,7 +39,8 @@ const mapStateToProps = state => {
     return {
         cart: state.cart,
         item: state.cart,
-        user: state.user
+        user: state.user,
+        total: state.total
         }
 }
 

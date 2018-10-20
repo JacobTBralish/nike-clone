@@ -2,7 +2,8 @@ import axios from 'axios';
 
 const initialState = {
     user: [],
-    cart: [], 
+    products: [],
+    cart: [],
     item: '',
     total: 0,
     shippingInfo: [],
@@ -10,6 +11,7 @@ const initialState = {
 
 const UPDATE_USER_INFO = 'UPDATE_USER_INFO';
 const LOGGED_OUT = 'LOGGED_OUT';
+const GET_PRODUCT = 'GET_PRODUCT';
 const ADD_TO_CART = 'ADD_TO_CART';
 const SET_CART = 'SET_CART';
 const SET_TOTAL = 'SET_TOTAL';
@@ -23,9 +25,11 @@ export default function reducer (state = initialState, action){
             return {...state, user:action.payload}
         case LOGGED_OUT:
             return {...state, user: null}
+        case GET_PRODUCT:
+            return {...state, product: action.payload}
         case ADD_TO_CART:
-            let oldCart = [...state.cart, action.payload]
-            return {...state, cart:oldCart}
+            let oldCart = [...state.cart, action.payload.product]
+            return {...state, cart:oldCart, total: action.payload.total}
         case SET_CART:
             return {...state, cart:action.payload}
         case SET_TOTAL:
@@ -60,11 +64,22 @@ export function logOut(){
     }
 }
 
-export function addToCart(product){
-    // let { product } = 
+export function getProduct(products){
+    
+    return {
+        type: GET_PRODUCT,
+        payload: products
+    }
+}
+
+export function addToCart(product, total){
+    let fixedPrice = parseInt(product.price.split('').splice(1, product.price.length - 1).join(''), 10);
+    total += fixedPrice
+    console.log('total: ', total);
+    console.log('product: ', product.title);
     return {
         type: ADD_TO_CART,
-        payload: product
+        payload: {product, total}
     }
 }
 
@@ -76,20 +91,22 @@ export function setCart(cart){
     }
 }
 
-export function setTotal(total){
-    return {
-        type: SET_TOTAL,
-        payload: total
-    }
-}
+// export function setTotal(total){
+//     return {
+//         type: SET_TOTAL,
+//         payload: total
+//     }
+// }
 
-export function postShippingInformation( shippingInfo, firstName, lastName, streetAddress, city, chosenState, zipCode, email, phone){
+export function postShippingInformation( firstName, lastName, streetAddress, city, chosenState, zipCode, email, phone){
     console.log('firstName, lastName, streetAddress, city, chosenState, zipCode, email, phone: ', firstName, lastName, streetAddress, city, chosenState, zipCode, email, phone);
+    let shippingInfo = axios.post('/api/shippingInfo', {firstName, lastName, streetAddress, city, chosenState, zipCode, email, phone}).then(response => {
+        console.log('response: ', response);
+        return response.data
+    })
     return {
         type: POST_SHIPPING,
-        payload: axios.post('/api/shippingInfo', {firstName, lastName, streetAddress, city, chosenState, zipCode, email, phone}).then(response => {
-            return shippingInfo
-        })
+        payload: shippingInfo
     }
 }
 

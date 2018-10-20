@@ -38,7 +38,8 @@ class ShippingForm extends Component {
 
     render() {
         let { taxRate, firstName, lastName, streetAddress, city, chosenState, zipCode, email, phone } = this.state;
-        let { postShippingInformation/* , user */, profile } = this.props;
+        let { postShippingInformation/* , user */, shippingInfo, profile } = this.props;
+        console.log('shippingInfo: ', shippingInfo);
         return (
         <div>
             <form>
@@ -132,6 +133,7 @@ class ShippingForm extends Component {
 }
 const mapStateToProps = state => { 
     return {
+        shippingInfo: state.shippingInfo,
 
     }
  };

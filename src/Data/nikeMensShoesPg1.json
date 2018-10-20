@@ -2606,11 +2606,6 @@
     "showColorways": true,
     "showReviews": true,
     "ratingCount": "24",
-    "rating": 4.5,
-    "teamName": null,
-    "customizationtype": "",
-    "customizable": false
-}, {
     "rawPrice": 150,
     "localPrice": "$150",
     "overriddenLocalPrice": null,

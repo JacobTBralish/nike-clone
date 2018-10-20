@@ -49,6 +49,7 @@ module.exports = {
     // },
     sendConfirmation: (req, res) => {
         const { trackingNumber, email, name, date, total, number, address} = req.body;
+        let { streetAddress, city, chosenState, zipCode } = this.props.shippingInfo[0]
         console.log(address, 'address')
         const transporter = nodemailer.createTransport({
             service: "gmail",
@@ -59,9 +60,9 @@ module.exports = {
         })
         const mailOptions = {
             from: `'Nike Health' <${process.env.EMAIL}`,
-            to: "adcallaghan159@gmail.com",
-            subject: `Nike Health Order Confirmation`,
-            html: address.address_line_two ? `<h1>${name}, thank you for your recent order from Nike.com!</h1><p>Tracking number: ${trackingNumber}, payment confirmation number: ${number}</p><p>Your order was placed on ${date} and came to a total of $${total}</p><p>Please allow up to 5 to 7 business day for delivery to:<br>${address.address_line_one}<br>${address.address_line_two}<br>${address.city}, ${address.state} ${address.zipcode}</p><p>We hope to do business with you again soon!</p>` :  `<h1>${name}, thank you for your recent order from Nike.com!</h1><p>Tracking number: ${trackingNumber}, payment confirmation number: ${number}</p><p>Your order was placed on ${date} and came to a total of $${total}</p><p>Please allow up to 5 to 7 business day for delivery to:<br>${address.address_line_one}<br>${address.city}, ${address.state} ${address.zipcode}</p><p>We hope to do business with you again soon!</p>` 
+            to: email,
+            subject: `Nike Order Confirmation`,
+            html: /* address.address_line_two ? `<h1>${name}, thank you for your recent order from Nike.com!</h1><p>Tracking number: ${trackingNumber}, payment confirmation number: ${number}</p><p>Your order was placed on ${date} and came to a total of $${total}</p><p>Please allow up to 5 to 7 business day for delivery to:<br>${streetAddress}, ${city}, ${chosenState} ${zipCode}<br>${address.address_line_two}<br>${address.city}, ${address.state} ${address.zipcode}</p><p>We hope to do business with you again soon!</p>` :   */`<h1>${name}, thank you for your recent order from Nike.com!</h1><p>Tracking number: ${trackingNumber}, payment confirmation number: ${number}</p><p>Your order was placed on ${date} and came to a total of $${total}</p><p>Please allow up to 5 to 7 business day for delivery to:<br>${streetAddress},<br>${city}, ${chosenstate} ${zipCode}</p><p>We hope to do business with you again soon!</p>` 
         }
 
         transporter.sendMail(mailOptions, (error, info) => {
