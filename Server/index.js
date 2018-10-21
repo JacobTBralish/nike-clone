@@ -120,7 +120,8 @@ app.post('/api/email', paymentC.sendConfirmation);
 
 // =========================================== Shipping & Billing Endpoints ================================== \\
 
-// app.post('/api/shippingInfo', sC.postShippingInformation);
+app.post('/api/shippingInfo', sC.postShippingInformation);
+app.post('/api/billingInfo', sC.postBillingInformation);
 
 // ================================================ Auth0 Login ====================================== \\
 

@@ -5,6 +5,8 @@ import { withRouter, Link } from 'react-router-dom';
 // import { setTotal } from '../../Redux/reducer';
 import axios from 'axios';
 
+import BillingForm from './BillingForm';
+
 const fromDollarToCent = amount => amount * 100;
 
 
@@ -180,6 +182,8 @@ class ShippingOptions extends Component {
                     <p>Orders placed after 5PM EST (2PM PST) begin processing the next business day.</p>
                     <p>Please note that Nike.com does not deliver on Sundays or holidays.</p>
                 </div>
+
+                <div><BillingForm /></div>
                 <StripeCheckout 
                     name='Nike'
                     description='Just do it'
