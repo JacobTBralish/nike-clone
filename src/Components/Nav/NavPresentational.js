@@ -117,7 +117,7 @@ class Nav extends Component {
                             </div>
                         </div>
                         <div class="dropdown">
-                            <button class="dropbtn">Women</button>
+                            <button class="dropbtn">WOMEN</button>
                             <div class="dropdown-content">
                                 <Link to='/'></Link>
                                 <Link to='/'></Link>
@@ -125,7 +125,7 @@ class Nav extends Component {
                             </div>
                         </div>
                         <div class="dropdown">
-                            <button class="dropbtn">Kids</button>
+                            <button class="dropbtn">KIDS</button>
                             <div class="dropdown-content">
                                 <Link to='/'></Link>
                                 <Link to='/'></Link>
@@ -133,7 +133,7 @@ class Nav extends Component {
                             </div>
                         </div>
                         <div class="dropdown">
-                            <button class="dropbtn">Favorites</button>
+                            <button class="dropbtn">FAVORITES</button>
                             <div class="dropdown-content">
                                 <Link to='/'></Link>
                                 <Link to='/'></Link>

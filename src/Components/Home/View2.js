@@ -5,12 +5,12 @@ import './View.scss';
 
 const View2 = (props) => {
     return ( 
-        <div>
+        <div className='imageContent'>
             <img className='homeImage' src={`${props.info.image}`} alt=''></img>
             <h2>{props.info.h2text}</h2>
-            <p>{props.info.pText}</p>
-            <Link to=''>{props.info.linkText}</Link>
-            <Link to=''>{props.info.linkText2}</Link>
+            <p id='pText'>{props.info.pText}</p>
+            <Link id='homeImageLink' to=''>{props.info.linkText}</Link>
+            <Link id='homeImageLink' to=''>{props.info.linkText2}</Link>
             
         </div>
      );
