@@ -52,13 +52,12 @@ class Cart extends Component {
         
         let mappedCart = cart.map((item, index) => {
             if (item !== undefined)
-           { var { productImg, title, price, category } = item;
-            // console.log('item: ', item);
+           { var { spriteSheet, title, localPrice, subtitle } = item[0];
             return <div key={index}>
-                <img src={productImg} alt={title}></img>
+                <img src={spriteSheet} alt={title}></img>
                 <p>{title}</p>
-                <p>{price}</p>
-                <p>{category}</p>
+                <p>{localPrice}</p>
+                <p>{subtitle}</p>
                 <select onChange={this.handleQuantity}>
                     <option value={1}>1</option>
                     <option value={2}>2</option>

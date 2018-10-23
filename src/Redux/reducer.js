@@ -3,6 +3,7 @@ import axios from 'axios';
 const initialState = {
     user: [],
     products: [],
+    product: [],
     cart: [],
     item: '',
     total: 0,
@@ -13,6 +14,7 @@ const initialState = {
 
 const UPDATE_USER_INFO = 'UPDATE_USER_INFO';
 const LOGGED_OUT = 'LOGGED_OUT';
+const GET_PRODUCTS = 'GET_PRODUCTS';
 const GET_PRODUCT = 'GET_PRODUCT';
 const ADD_TO_CART = 'ADD_TO_CART';
 const DELETE_FROM_CART = 'DELETE_FROM_CART';
@@ -29,6 +31,8 @@ export default function reducer (state = initialState, action){
             return {...state, user:action.payload}
         case LOGGED_OUT:
             return {...state, user: null}
+        case GET_PRODUCTS:
+            return {...state, products: action.payload}
         case GET_PRODUCT:
             return {...state, product: action.payload}
         case ADD_TO_CART:
@@ -39,8 +43,8 @@ export default function reducer (state = initialState, action){
             let index = newCart.findIndex(e => e.title == action.payload.title)
             newCart.splice(index, 1)
             let newTotal = newCart.reduce((acum, current) => {
-                let { price } = current
-                let nullo = parseInt(price.split('').splice(1, price.length - 1).join(''), 10);
+                let { localPrice } = current[0]
+                let nullo = parseInt(localPrice.split('').splice(1, localPrice.length - 1).join(''), 10);
                 return acum += parseFloat(JSON.stringify(nullo))
             }, 0)
             return {...state, cart:newCart, total: newTotal}
@@ -76,22 +80,29 @@ export function updateUser(){
         }
     }
     
-    export function logOut(){
-        return {
-            type: LOGGED_OUT
-        }
-    }
-
-export function getProduct(products){
-    
+export function logOut(){
     return {
-        type: GET_PRODUCT,
+        type: LOGGED_OUT
+    }
+}
+
+export function getProducts(products){
+    return {
+        type: GET_PRODUCTS,
         payload: products
     }
 }
 
+export function selectedProduct(product){
+    return {
+        type: GET_PRODUCT,
+        payload: product
+    }
+}
+
 export function addToCart(product, total){
-    let fixedPrice = parseInt(product.price.split('').splice(1, product.price.length - 1).join(''), 10);
+    console.log('product: ', product);
+    let fixedPrice =product[0].rawPrice
     total += fixedPrice
     
     
