@@ -1,12 +1,20 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+// import axios from 'axios';
+import { connect } from 'react-redux';
 
-export default class Orders extends Component {
-    // componentDidMount() {
-    //      get orders from db
-    // }
+
+class Orders extends Component {
+    constructor() {
+        super();
+        this.state = {
+            
+        }
+    }
+
 
     render() {
+        const {orders} = this.props
         return (
             <div > {/* Component Parent Wrapper */}
                 <div> {/* Inner Wrapper */}                 
@@ -30,3 +38,12 @@ export default class Orders extends Component {
         )
     }
 }
+
+
+const mapStateToProps = state => {
+    return {
+        orders: state.orders,
+    }
+}
+
+export default connect(mapStateToProps)(Orders)

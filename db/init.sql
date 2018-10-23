@@ -1,26 +1,29 @@
 drop table if exists users cascade;
 drop table if exists reviews cascade;
 
-
-
-create table users (
-    id serial primary key,
-    auth0_id text unique not null, 
-    name varchar(30) not null, 
-    email varchar(100) unique not null,
-);
-
-insert into users (auth0_id, name, email) values ('1234473896858782', 'Mat Weeler', 'mweeler@gmail.com');
-
 create table reviews (
-    id serial primary key,
-    poster_id integer references users(id),	
-    profile_id integer references instructor_profile(id),	
-    title varchar(100) not null,
-    body text not null,
-    stars integer not null,
-    dateval text
+ 	id serial primary key,
+ 	poster_id integer references users(id), 
+ 	shoeName text,  
+ 	title varchar(100) not null,
+ 	body text not null,
+ 	stars integer not null,
+ 	dateval text
 );
+select * from reviews where shoeName = $1
+delete from reviews where id = $1
+update reviews where id = $1
+insert into reviews (poster_id, shoeName, title, body, stars, dateval) values ($1, $2, $3, $4, $5, $6);
+insert into reviews (poster_id, shoeName, title, body, stars, dateval) values (1, 'Nike Air 1', 'Great Shoe'. 'Body Body Body', 4, 'werd date');
+
+
+update reviews
+set title = $1,
+    body = $2,
+    stars = $3
+where id = $4;
+SELECT * FROM reviews WHERE profile_id = $5;
+
 
 
 create table shipping_addresses (
