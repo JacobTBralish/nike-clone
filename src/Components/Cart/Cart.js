@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 // import MensShoes from '../../Data/nikeMensShoesPg1.json'
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-// import { setTotal } from '../../Redux/reducer';
+import { deleteFromCart } from '../../Redux/reducer';
 // import Axios from 'axios';
 
 
@@ -21,30 +21,6 @@ class Cart extends Component {
         }
     }
 
-    // getTotal = () => {
-    //     let { cart, total, setTotal } = this.props;
-        
-    //     if(cart.length > 0) {
-    //         console.log('cart: ', cart);
-    //         cart.forEach(item => {
-    //             let fixedPrice = parseInt(item.price.split('').splice(1, item.price.length - 1).join(''), 10);
-    //             console.log('fixedPrice: ', parseInt(fixedPrice, 10));
-    //             total += fixedPrice 
-    //         })
-    //     }
-    //     console.log('total: ', total);
-    //     setTotal(total)
-    // }
-    
-
-    // componentDidMount() {
-        
-        // this.getTotal();
-    // }
-
-    deleteFromCart = title => {
-        
-    }
 
     handleQuantity = (event) => {
         console.log('event.target.value: ', event.target.value);
@@ -67,20 +43,22 @@ class Cart extends Component {
             fontSize: "10px"
         }
 
-        let { cart, total } = this.props
+        let { cart, total, deleteFromCart } = this.props
         console.log('total: ', total);
         let { orderComplete } = this.state;
         // const { totalPrice } = this;
         console.log('cart: ', cart);
 
-
+        
         let mappedCart = cart.map((item, index) => {
-            var { productImg, title, price } = item;
+            if (item !== undefined)
+           { var { productImg, title, price, category } = item;
             // console.log('item: ', item);
             return <div key={index}>
                 <img src={productImg} alt={title}></img>
                 <p>{title}</p>
                 <p>{price}</p>
+                <p>{category}</p>
                 <select onChange={this.handleQuantity}>
                     <option value={1}>1</option>
                     <option value={2}>2</option>
@@ -93,8 +71,9 @@ class Cart extends Component {
                     <option value={9}>9</option>
                     <option value={10}>10</option>
                 </select>
-                <button>Remove from Cart</button>
+                <button onClick={() => deleteFromCart(cart, title, total)}>Remove from Cart</button>
             </div>
+            }
         })
         return (
             <div>
@@ -112,7 +91,7 @@ class Cart extends Component {
                 <div>
                     <h1>Cart Rendered </h1>
                     {mappedCart}
-                    <h2>*Total: ${(total).toFixed(2) }</h2>
+                    <h2>*Total: ${total ? (total).toFixed(2) : (0).toFixed(2)}</h2>
                     <p style={disclaimerText}>*Tax will be included after shipping details are input</p>
                     {console.log('total: ', total)}
                     <Link style={checkoutLinkStlyle} to='/checkout'>CHECKOUT</Link>
@@ -132,7 +111,7 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps =  {
-    // setTotal
+    deleteFromCart
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Cart)

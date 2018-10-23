@@ -68,17 +68,17 @@ class ShippingOptions extends Component {
         const date = new Date();
         const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
         const today = `${months[date.getMonth()]} ${date.getDate()}th, ${date.getFullYear()}`;
-        // console.log('------------ today', today)
-        // console.log('------------ paymentSuccess data', data)
+        console.log('------------ today', today)
+        console.log('------------ paymentSuccess data', data)
         alert('Payment successful!')
-        // console.log('data: ', data.data);
+        console.log('data: ', data.data);
         let id = data.data.stripeSuccess.id.split('')
-        // console.log('id: ', id);
+        console.log('id: ', id);
         id.splice(0, 3)
-        // console.log('id: ', id);
+        console.log('id: ', id);
         this.setState({orderId: id.join('')})
-        // console.log(this.props.shippingInfo, 'this is this.props.shit');
-        // axios.post('/api/email', { trackingNumber: this.makeId() ,email: this.props.user.email, name: this.props.user.name, date: today, total: this.props.total, number: this.state.orderId, address: this.props.shippingInfo })
+        console.log(this.props.shippingInfo, 'this is this.props.shit');
+        axios.post('/api/email', { trackingNumber: this.makeId() ,email: this.props.user.email, name: this.props.user.name, date: today, total: this.props.total, number: this.state.orderId, address: this.props.shippingInfo })
         // axios.post('/api/order', {orderId: id.join(''), userId: this.props.user.id, addressId: this.props.address.id, cart: this.props.cart, date: today})
         .then(res => {
             console.log('------------ POST Order res', res)

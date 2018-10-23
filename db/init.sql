@@ -23,26 +23,54 @@ create table reviews (
 );
 
 
+create table shipping_addresses (
+    id serial primary key,
+    ref_id text,
+    first_name varchar(30) not null,
+    last_name varchar(30) not null,
+    user_id integer references users(id),
+    address1 text not null,
+    address2 text,
+    city varchar(30) not null,
+    state varchar(15) not null,
+    zip_code char(5) constraint check_zip_code check (zip_code ~ '[A-Z0-9-]+') not null,
+    email text not null,
+    phone char(10) constraint check_phone_number check (phone not like '%[^0-9]%') not null
+);
+
+create table billing_addresses (
+    id serial primary key,
+    ref_id text references shipping_addresses(ref_id),
+    first_name varchar(30) not null,
+    last_name varchar(30) not null,
+    user_id integer references users(id),
+    address1 text not null,
+    address2 text,
+    city varchar(30) not null,
+    state varchar(15) not null,
+    zip_code char(5) constraint check_zip_code check (zip_code ~ '[A-Z0-9-]+') not null
+);
+
 -- insert into reviews (poster_id, profile_id, title, body, stars, dateVal) 
 -- values (12, 9, 'Knowledgeable and Patient Tutor', 'There are subjects where I do not understand things the first time and reading music happens to be one of them.', 5, 'September 2017');
 
 
-create table instructor_profile (
-    id serial primary key, 
-    instructor_id integer references users(id),	age integer not null, 
-    gender varchar(10) not null, 
-    locationType varchar(10),
-    zipcode integer, 
-    address text, 
-    city varchar(30) not null,
-    state varchar(2) not null, 
-    country varchar(30) not null,
-    price integer not null,
-    instruments text, 
-    styles text,
-    skillLevel text,
-    teachingSince varchar(30) not null,
-    about text not null, 
-    education text,
-    img_url text
-);	
+-- create table instructor_profile (
+--     id serial primary key, 
+--     instructor_id integer references users(id),	age integer not null, 
+--     gender varchar(10) not null, 
+--     locationType varchar(10),
+--     zipcode integer, 
+--     address text, 
+--     city varchar(30) not null,
+--     state varchar(2) not null, 
+--     country varchar(30) not null,
+--     price integer not null,
+--     instruments text, 
+--     styles text,
+--     skillLevel text,
+--     teachingSince varchar(30) not null,
+--     about text not null, 
+--     education text,
+--     img_url text
+-- );	

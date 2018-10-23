@@ -1,3 +1,5 @@
+$NikeFont:'Oswald', sans-serif;
+
 .imageContainer1 {
     position: absolute;
 }
@@ -26,7 +28,7 @@
     font-size: 3.125em;
     font-style: normal;
     font-weight: 400;
-    font-family: 'Oswald', sans-serif;
+    font-family: $NikeFont;
 }
 
 #pText1 {
@@ -36,7 +38,7 @@
 
 #homeImageLink1 {
     display: block;
-    font-family: 'Oswald', sans-serif;
+    font-family: $NikeFont;
     background: white;
     color: black;
     text-decoration: none;
