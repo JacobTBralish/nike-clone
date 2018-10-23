@@ -36,7 +36,7 @@ class BillingForm extends Component {
     handleToggle = (event) => {
         event.preventDefault();
         this.setState({
-            toggleValue: true
+            toggleValue: true 
         })
     }
 
@@ -48,15 +48,6 @@ class BillingForm extends Component {
         console.log('refId: ', refId);
         console.log('shippingInfo: ', shippingInfo);
 
-        let mappedShippingSameAsBilling = shippingInfo.length ? shippingInfo.map((info, index) => {
-            return <div key={index}>
-            <p>{info.firstName} {info.lastName}</p>
-            <p>{info.address1} {info.address2 || null} {info.zipCode}</p>
-            <p>{info.city} {info.chosenState}</p>
-            </div>
-        }) : 'loading...'
-        
-        console.log('mappedShippingSameAsBilling: ', mappedShippingSameAsBilling);
 
 
 
@@ -73,7 +64,21 @@ class BillingForm extends Component {
 
             {toggleValue 
             ?
-            {mappedShippingSameAsBilling}
+            <div>
+            <div>
+                <p>{shippingInfo[0].first_name}
+                {shippingInfo[0].last_name}</p>
+            </div>
+            <div>
+                <p>
+                {shippingInfo[0].address1} {shippingInfo[0].address2 || null} {shippingInfo[0].zip_code}
+                </p>
+            </div>
+            <div>
+                <p>{shippingInfo[0].city} {shippingInfo[0].state}</p>
+            </div>
+
+            </div>
             :
             <form>
                 <div>

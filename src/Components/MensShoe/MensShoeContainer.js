@@ -15,22 +15,20 @@ class MensShoe extends Component {
     }
     
 
-    // componentDidMount() {
-    //     axios.get('/api/mensshoes').then(response => {
-    //         console.log('response: ', response.data);
-    //         return this.props.getProduct(response.data)
-    //     })
-    // }
+    componentDidMount() {
+        this.props.getProduct(MensShoes)
+    }
 
     
     render() { 
-        let mappedShoes = MensShoes.map((shoe, index) => {
+        console.log('product: ', this.props.products);
+        let mappedShoes = this.props.products.map((item, index) => {
             // console.log('shoe: ', shoe);
             return <div key={index}>
-                <Link to={{pathname:`/product/${shoe.title}`, state:{title: shoe.title, category: shoe.subtitle, price: shoe.localPrice, productImg: shoe.spriteSheet}}} ><img src={shoe.spriteSheet} alt={shoe.title}></img>
-                <p>{shoe.title}</p>
-                <p>{shoe.subtitle}</p>
-                <p>{shoe.localPrice}</p>
+                <Link to={{pathname:`/product/${item.title}`, state:{title: item.title, category: item.subtitle, price: item.localPrice, productImg: item.spriteSheet}}} ><img src={item.spriteSheet} alt={item.title}></img>
+                <p>{item.title}</p>
+                <p>{item.subtitle}</p>
+                <p>{item.localPrice}</p>
                 </Link>
             </div>
         })
