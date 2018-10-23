@@ -8,6 +8,7 @@ const initialState = {
     total: 0,
     shippingInfo: [],
     billingInfo: [],
+    reviews: [],
 }
 
 const UPDATE_USER_INFO = 'UPDATE_USER_INFO';
@@ -19,12 +20,30 @@ const SET_TOTAL = 'SET_TOTAL';
 const POST_SHIPPING = 'POST_SHIPPING';
 const POST_BILLING = 'POST_BILLING';
 
+const DELETE_REVIEWS = 'DELETE_REVIEWS';
+const EDIT_REVIEWS = 'EDIT_REVIEWS';
+const GET_REVIEWS = 'GET_REVIEWS';
+const CREATE_REVIEW = 'CREATE_REVIEW';
+
+
 export default function reducer (state = initialState, action){
-    console.log('action.type: ', action.payload);
+
+    console.log('action.type: ', action.type);
+    console.log('action.payload: ', action.payload);
     
     switch(action.type){
         case `${UPDATE_USER_INFO}_FULFILLED`:
             return {...state, user:action.payload}
+        case DELETE_REVIEWS:
+            return {...state, reviews:action.payload}
+        case EDIT_REVIEWS:
+            return {...state, reviews:action.payload}
+        case CREATE_REVIEW:
+            return {...state, reviews:action.payload}
+        case `${GET_REVIEWS}_PENDING`:
+            return {...state }
+        case `${GET_REVIEWS}_FULFILLED`:
+            return {...state, reviews:action.payload}
         case LOGGED_OUT:
             return {...state, user: null}
         case GET_PRODUCT:
@@ -40,21 +59,17 @@ export default function reducer (state = initialState, action){
             return {...state, shippingInfo:action.payload}
         case POST_BILLING:
             return {...state, billingInfo:action.payload}
-
         //  case GET_CART:
             //  return {...state, cart:action.payload}
-
         default:
             return state
     }
 }
 
 export function updateUser(){
-    
     return {
         type: UPDATE_USER_INFO,
         payload: axios.get('/api/user-data').then(response => {
-            
             return response.data
             }).catch(error => {
           
@@ -69,7 +84,6 @@ export function logOut(){
 }
 
 export function getProduct(products){
-    
     return {
         type: GET_PRODUCT,
         payload: products
@@ -88,7 +102,6 @@ export function addToCart(product, total){
 }
 
 export function setCart(cart){
-    
     return {
         type: SET_CART,
         payload: cart
@@ -146,3 +159,39 @@ export function postBillingInformation( firstName, lastName, streetAddress, city
 //          })
 //      }
 //  }
+
+export function getReviews(itemName) {
+    // console.log('getReviews id -------> ', itemName)
+    decodeURI(itemName)
+    return {
+        type: GET_REVIEWS,
+        payload: axios.get(`/api/reviews/${itemName}`)
+        .then(response => {
+            // console.log('get reviews response ---->', response)
+            // console.log('get reviews response.data ---->', response.data)
+            return response.data
+        })
+        .catch(err => console.log('getReviews error --=========-->', err))
+    }
+}
+export function deleteReviews(reviews) {
+    console.log('deleteReviews reducer, reviews === ', reviews)
+    return {
+        type: DELETE_REVIEWS,
+        payload: reviews
+    }
+}
+export function editReviews(reviews) {
+    console.log('editReviews reducer, reviews === ', reviews)
+    return {
+        type: EDIT_REVIEWS,
+        payload: {reviews}
+    }
+}
+export function createReview(reviews) {
+    console.log('createReviews reducer, reviews === ', reviews)
+    return {
+        type: EDIT_REVIEWS,
+        payload: reviews
+    }
+}

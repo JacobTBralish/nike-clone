@@ -43,7 +43,7 @@ class Nav extends Component {
     // }
     render() {
         const { user } = this.props
-        console.log('user: ', user);
+        // console.log('user: ', user);
 
         return (
             <span className='navTest'>

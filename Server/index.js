@@ -16,6 +16,7 @@ const cors = require('cors');
 
 
 const cart_controller = require('./controllers/cart_controller')
+const review_controller = require('./controllers/review_controller')
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -104,6 +105,13 @@ app.get('/auth/callback', (req,res) => {
 })
 
 
+// =========================================== Review Endpoints ================================== \\
+
+app.delete('/api/reviews/:itemName', review_controller.remove)
+app.post('/api/reviews',  review_controller.create)
+app.put('/api/reviews', review_controller.edit)
+app.get('/api/reviews/:itemName' , review_controller.reviews_by_name)
+
 // =========================================== Controller Endpoints ================================== \\
 
 // app.post('/api/cart-data/:id', cart_controller.addToCart)
@@ -166,6 +174,5 @@ app.post('save-stripe-token', async (req,res)=> {
     }
 })
 
-const cd = lol;
 const PORT = 5000;
 app.listen(PORT, ()=> console.log(`Server listening on port ${PORT} 🏄`));
