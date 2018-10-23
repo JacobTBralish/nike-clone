@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import axios from 'axios';
 
 export default class Review extends Component {
     constructor () {
@@ -21,7 +22,7 @@ export default class Review extends Component {
             }
          })
      }
- 
+
     onChange = e => {
         // console.log(e.target.name, e.target.value)
         this.setState({[e.target.name]: e.target.value});
@@ -77,7 +78,7 @@ export default class Review extends Component {
                     </select>
                     </div>
                     <div>
-                    <button onClick={() => {handleDelete(reviewId)
+                    <button onClick={() => {this.props.handleDelete(reviewId)
                         this.toggleEdit()
                         }}>Delete</button>
                 <button onClick={() => {

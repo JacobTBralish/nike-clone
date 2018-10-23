@@ -9,8 +9,8 @@ const initialState = {
     total: 0,
     shippingInfo: [],
     billingInfo: [],
-    refId: '',
     reviews: [],
+    refId: '',
 }
 
 const UPDATE_USER_INFO = 'UPDATE_USER_INFO';
@@ -201,13 +201,14 @@ export function getReviews(itemName) {
         type: GET_REVIEWS,
         payload: axios.get(`/api/reviews/${itemName}`)
         .then(response => {
-            // console.log('get reviews response ---->', response)
-            // console.log('get reviews response.data ---->', response.data)
+            console.log('get reviews response ---->', response)
+            console.log('get reviews response.data ---->', response.data)
             return response.data
         })
         .catch(err => console.log('getReviews error --=========-->', err))
     }
 }
+
 export function deleteReviews(reviews) {
     console.log('deleteReviews reducer, reviews === ', reviews)
     return {

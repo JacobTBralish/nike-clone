@@ -33,12 +33,14 @@ class BillingForm extends Component {
         })
     }
 
-    handleToggle = (event) => {
-        event.preventDefault();
-        this.setState({
-            toggleValue: true 
-        })
-    }
+    handleToggle = () => {
+        this.setState((prevState) =>{
+            console.log('prevState: ', prevState);
+            return {
+                toggleValue: !prevState.toggleValue,
+            }
+         })
+     }
 
 
     render() {

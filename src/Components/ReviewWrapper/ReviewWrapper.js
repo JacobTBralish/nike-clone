@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
-import { getReviews } from '../../Redux/reducer'
+import { getReviews, deleteReviews, editReviews, createReview, } from '../../Redux/reducer'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 import Review from './../Review/Review';
@@ -13,11 +13,11 @@ class ReviewWrapper extends Component {
             Body: '',
             Stars: 0,
          }
-         this.onChange = this.onChange.bind(this)
     }
 
     componentDidMount() {
-        this.props.getReviews(this.props.product.title)
+        this.props.getReviews(this.props.match.params.id)
+        // console.log('this.props.match.params.id: ', this.props.match.params.id);
     }
     toggleEdit = () => {
         this.setState((prevState) =>{
@@ -27,6 +27,21 @@ class ReviewWrapper extends Component {
             }
          })
      }
+
+     handleDelete = (reviewId) => {
+        // console.log('CLICKED', deletedId)
+        // console.log('handleDelete === this.props.title', this.props.location.state.title)
+        // console.log('handleDelete === reviewId', reviewId)
+        axios.delete(`/api/reviews/${this.props.match.params.id}?reviewId=${reviewId}`)
+        .then(response => {
+            // console.log('handleDelete response', response)
+            // console.log('handleDelete response.data', response.data)
+            this.props.deleteReviews(response.data)
+            })  
+        .catch(error => console.log('handleDelete', error))
+        this.props.history.push(`/product/${encodeURI(this.props.product[0].title)}`)
+    }
+ 
   fireReview = (itemName, title, body, stars, poster_id) => {
     // e.preventDefault();
     let date = new Date();
@@ -35,40 +50,43 @@ class ReviewWrapper extends Component {
     
     console.log('dateval', dateval, 'shoeName', itemName, 'title:',title, 'body:',body, 'stars:',stars, 'poster_id:',poster_id)
     
-    axios.post(`/api/reviews`, {itemName, title, body, stars, poster_id, dateval})
-    .then(response => {
-        console.log('fireReview response =====>', response)
-        this.props.createReview(response.data)
-    })
-    .catch(error => console.log('handleDelete', error))
-}
+        axios.post(`/api/reviews`, {itemName, title, body, stars, poster_id, dateval})
+            .then(response => {
+            console.log('fireReview response =====>', response)
+            this.props.createReview(response.data)
+            })
+        .catch(error => console.log('handleDelete', error))
+    }
 
 
-handleEdit = (itemName, title, body, stars, id) => {
-    console.log('CLICKED', id, title, body, stars)
-    axios.put(`/api/reviews/${this.props.match.params.id}`, {itemName, title, body, stars, id})
-    .then(response => {
-        console.log('handleEdit response ======>', response)
-        this.props.editReviews(response.data)
-    })
-    .catch(error => console.log('handleDelete', error))
-}
+    handleEdit = (itemName, title, body, stars, id) => {
+        console.log('CLICKED', id, title, body, stars)
+        axios.put(`/api/reviews/${this.props.match.params.id}`, {itemName, title, body, stars, id})
+        .then(response => {
+            console.log('handleEdit response ======>', response)
+            this.props.editReviews(response.data)
+        })
+        .catch(error => console.log('handleDelete', error))
+    }
 
 
-onChange = (e) => {
-    // console.log(e.target.name, e.target.value)
-    this.setState({[e.target.name]: e.target.value});
-  }
+    onChange = (e) => {
+        // console.log(e.target.name, e.target.value)
+        this.setState({[e.target.name]: e.target.value});
+    }
     render() {
         console.log('Reviews in RevoewWrapper',this.props.reviews)
         // const data = this.props.reviews.length > 0 ? this.props.reviews[0]: {}
         let { Title, Body, Stars } = this.state
-        let { user, itemName, reviews } = this.props;
+        let { user, itemName, reviews, product } = this.props;
+        console.log('prooduct', product);
+
         let reviewList = reviews.map((review, index) => {
             let { name, body, title, dateval, itemName, stars, id, poster_id} = review
-            return <Review key={index} handleDelete={this.props.handleDelete} handleEdit={this.handleEdit} posterName={name} body={body} title={title} dateval={dateval} itemName={itemName} stars={stars} reviewId={id} user={this.props.user} poster={poster_id} />
+            return <Review key={index} handleDelete={this.handleDelete} handleEdit={this.handleEdit} posterName={name} body={body} title={title} dateval={dateval} itemName={itemName} stars={stars} reviewId={id} user={this.props.user} poster={poster_id} />
         })
-
+        
+        console.log('reviewList: ', reviewList);
         return (
             <div>
                     <label >Title</label>
@@ -87,7 +105,7 @@ onChange = (e) => {
                             <option value='5'>5</option>
                         </select>
 
-                        <button type="submit" onClick={() => this.fireReview(itemName, Title, Body, Stars, user.id)}>Submit</button>                
+                        <button type="submit" onClick={() => this.fireReview(product[0].title, Title, Body, Stars, user.id)}>Submit</button>                
                     </div>  
                     {reviewList}
                 </div>  
@@ -99,12 +117,16 @@ onChange = (e) => {
 const mapStateToProps = state => {
     return {
         product: state.product,
-        reviews: state.reviews
+        reviews: state.reviews,
+        user: state.user
     }
 }
   
 const mapDispatchToProps = {
-    getReviews
+    getReviews,
+    deleteReviews,
+    editReviews,
+    createReview,
   };
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ReviewWrapper));
