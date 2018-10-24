@@ -17,8 +17,13 @@ class DetailedShoe extends Component {
         this.props.selectedProduct(this.props.product)
     } 
 
+    // shoeSize = () => {
+    //     shoeSizes = [];
+    //     for (i = 0)
+    // }
+
     render() {
-        let { addToCart, total, product, reviews } = this.props;
+        let { addToCart, total, product, reviews, qty, cart } = this.props;
         console.log('reviews: ', reviews);
         console.log('product: ', product);
 

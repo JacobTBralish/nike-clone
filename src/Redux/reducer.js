@@ -7,6 +7,7 @@ const initialState = {
     cart: [],
     item: '',
     total: 0,
+    taxRate: 0,
     shippingInfo: [],
     billingInfo: [],
     reviews: [],
@@ -20,6 +21,7 @@ const GET_PRODUCT = 'GET_PRODUCT';
 const ADD_TO_CART = 'ADD_TO_CART';
 const DELETE_FROM_CART = 'DELETE_FROM_CART';
 const SET_CART = 'SET_CART';
+const SET_TAX_RATE = 'SET_TAX_RATE';
 const SET_TOTAL = 'SET_TOTAL';
 const POST_SHIPPING = 'POST_SHIPPING';
 const POST_BILLING = 'POST_BILLING';
@@ -67,9 +69,12 @@ export default function reducer (state = initialState, action){
             return {...state, cart:newCart, total: newTotal}
         case SET_CART:
             return {...state, cart:action.payload}
+        case SET_TAX_RATE:
+            return {...state, taxRate:action.payload}
         case SET_TOTAL:
             return {...state, total:action.payload}
         case POST_SHIPPING:
+        console.log(action.payload, '============================');
             return {...state, shippingInfo: action.payload}
         case POST_BILLING:
             return {...state, billingInfo: action.payload}
@@ -140,6 +145,13 @@ export function setCart(cart){
     }
 }
 
+export function setTaxRate(taxRate){
+    return {
+        type: SET_TAX_RATE,
+        payload: taxRate
+    }
+}
+
 export function postShippingInformation(shippingInfo){
     console.log('shippingInfo: ', shippingInfo);
     return {
@@ -153,7 +165,7 @@ export function postBillingInformation( refId, firstName, lastName, userId, addr
 
     console.log('firstName, lastName, userId, address1, address2, city, chosenState, zipCode: ', refId, firstName, lastName, userId, address1, address2, city, chosenState, zipCode);
     return {
-        type: POST_SHIPPING,
+        type: POST_BILLING,
         payload: axios.post('/api/billingInfo', {refId, firstName, lastName, userId, address1, address2, city, chosenState, zipCode }).then(response => {
             return response.data
         }).catch(error => {

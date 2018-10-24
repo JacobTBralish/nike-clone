@@ -26,7 +26,7 @@ module.exports = {
         const db = req.app.get('db')
         const { orderId, userId, addressId, cart, date } = req.body;
         console.log('cart: ', cart);
-        db.new_order({userId, usetracking_numberrId, date, cart_total
+        db.new_order({userId, tracking_number, purchase_date, cart_total
         }).then(order => {
             console.log('order=======1: ', order);
             cart.map(item => {

@@ -5,6 +5,7 @@ import { withRouter, Link } from 'react-router-dom';
 // import { setTotal } from '../../Redux/reducer';
 import axios from 'axios';
 
+import CartCheckoutView from '../Cart/CartCheckoutView'
 import BillingForm from './BillingForm';
 
 const fromDollarToCent = amount => amount * 100;
@@ -16,7 +17,6 @@ class ShippingOptions extends Component {
         this.state = {
             shippingCost: 0,
             orderId: '',
-            taxRate: 0,
             chosenState: '',
             SameShippingAsBilling: false,
             home: false,
@@ -119,35 +119,41 @@ class ShippingOptions extends Component {
         let { SameShippingAsBilling, chosenState/* , home */ } = this.state;
         let { taxRate } = this.props.location.state;
         console.log('this.props.location.state: ', this.props.location.state);
-        console.log('taxRate: ', taxRate);
+        // console.log('taxRate: ', taxRate);
 
         // let { firstName, lastName, streetAddress, city, chosenState, zipCode, email, phoneNumber } = props;
 
         return (
             <div>
+                {shippingInfo.length >= 1 &&
                 <div>
-                    <div>
-                        <Link to='/shippingform'>Edit</Link>
+                {/* {null ? <CartCheckoutView taxRate={taxRate}/> : null} */}
+                <div>
                     </div>
-                    {/* <div>
-                        <p>{firstName}</p>
-                        <p>{lastName}</p>
-                    </div>
-                    <div>
-                        <p>{streetAddress}</p>
-                    </div>
-                    <div>
-                        <p>{city}</p>
-                        <p>{chosenState}</p>
-                        <p>{zipCode}</p>
+                     <div>
+                            <div>
+                                <Link to='/shippingform'>Edit</Link>
+                            </div>
+                        <p>{shippingInfo[0].first_name}</p>
+                        <p>{shippingInfo[0].last_name}</p>
                     </div>
                     <div>
-                        <p>{email}</p>
+                        <p>{shippingInfo[0].address1}, {shippingInfo[0].address2 ? shippingInfo[0].address2 : null}</p>
                     </div>
                     <div>
-                        <p>{phoneNumber}</p>
-                    </div> */}
+                        <p>{shippingInfo[0].city}</p>
+                        <p>{shippingInfo[0].state}</p>
+                        <p>{shippingInfo[0].zip_code}</p>
+                    </div>
+                    <div>
+                        <p>{shippingInfo[0].email}</p>
+                    </div>
+                    <div>
+                        <p>{shippingInfo[0].phone}</p>
+                    </div>
                 </div>
+                    }
+                <CartCheckoutView />
 
 
                 <div>
@@ -208,6 +214,7 @@ class ShippingOptions extends Component {
 }
 
 const mapStateToProps = state => {
+    console.log('state: ', state);
     return {
         user: state.user,
         cart: state.cart,
