@@ -4,7 +4,7 @@ drop table if exists reviews cascade;
 create table reviews (
  	id serial primary key,
  	poster_id integer references users(id), 
- 	shoeName text,  
+ 	itemName text,  
  	title varchar(100) not null,
  	body text not null,
  	stars integer not null,
