@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import ReactMapGL, {Marker, Popup} from 'react-map-gl';
 import StorePin from './Storepin';
-import Stores from '../../Data/nikeStoreLocations.json'
+import Stores from '../../Data/nikeStoreLocations.json';
+import CustomMarker from './CustomMarker';
+import StoreInfo from './StoreInfo';
 import './Marker.css'
 
 
@@ -18,11 +20,7 @@ class FindStore extends Component {
       longitude: -112.584766,
       zoom: 6
     },
-    popupInfo: {
-      name: '',
-      address_lines: '',
-      phone_number: null
-    },
+    popupInfo: null,
   };
 
   
@@ -65,8 +63,12 @@ renderPopup = () => {
         <Popup tipsize={15}
         closeButton={true}
         closeOnClick={false}
+        longitude={popupInfo.longitude}
+        latitude={popupInfo.latitude}
         anchor="top"
-        onClose={() => {this.setState({popupInfo: null })}}/>
+        onClose={() => {this.setState({popupInfo: null })}}>
+          <StoreInfo info={popupInfo} />
+        </Popup>
     )
 }
 
@@ -128,10 +130,8 @@ getLocation = () => {
 
   const storesLongitude = Stores.map(e => {
 
-   return <Marker setPopup={this.renderPopup} className="station" longitude={e.longitude} latitude={e.latitude} >
-          <div>{e.name}</div>
-          <div>{e.city}</div>
-          <div>{e.phone_number}</div>
+   return <Marker className="station" longitude={e.longitude} latitude={e.latitude} >
+          <StorePin size={20} onClick={() => this.setState({popupInfo: e})} />
         </Marker>
   })
  const storesLatitude = Stores.map(e => {
@@ -144,6 +144,7 @@ getLocation = () => {
       mapboxApiAccessToken={process.env.REACT_APP_TOKEN}
       {...this.state.viewport}
       onViewportChange={(viewport) => this.setState({viewport})}>
+      {this.renderPopup()}
       {storesLongitude}
        <div>Longitude: {this.getLocation}</div>
        <div>Latitude: {this.getLocation}</div>

@@ -20,7 +20,8 @@
   display: none;
 }
 
-.leaflet-container {
-  height: 400px;
-  width: 100%;
+
+.popup-box {
+display: flex;
+text-align: center
 }
