@@ -1,91 +1,154 @@
 import React, {Component} from 'react';
-import ReactMapGL, {Marker} from 'react-map-gl';
+import ReactMapGL, {Marker, Popup} from 'react-map-gl';
 import StorePin from './Storepin';
-import STORES from '../../Data/nikeStoreLocations.json'
+import Stores from '../../Data/nikeStoreLocations.json'
 import './Marker.css'
-
 
 
 
 class FindStore extends Component {
 
   state = {
+    longitude:null,
+    latitude:null,
     viewport: {
-      width: 400,
-      height: 400,
-      latitude: 37.7577,
-      longitude: -122.4376,
-      zoom: 8
+      width: 800,
+      height: 800,
+      latitude: 33.074240,
+      longitude: -112.584766,
+      zoom: 6
     },
-    popupInfo: null
+    popupInfo: {
+      name: '',
+      address_lines: '',
+      phone_number: null
+    },
   };
 
-  renderMarker = (store, index) => {
-    return (
-        <Marker key={`marker-${index}`}> 
-        <StorePin size={20} onClick={() => this.setState({popupInfo: store})} />
-        </ Marker>
-    )
-  }
-
-
-
-//   renderMarker = (station, i) => {
-//     const {name, coordinates} = station;
-//     console.log('-----------------name', name)
+  
+// storeAddress = STORES.map(e =>  {
 //     return (
-//       <Marker >
-//         <div className="station"><span></span></div>
-//       </Marker>
-//     );
-//   }
+//         <div>
+//             <Marker>
+//             <img className="companyImage" src={console.log(e.company_image, 'image')}/>
+//             <div>{e.name}</div>
+//             <div>{e.address_lines}</div>
+//             <div>{e.phone_number}</div>
+//             </Marker>
+//         </div>
+//     )
+// }) 
+
+// locateUser() {
+//   navigator.geolocation.getCurrentPosition(position => {
+//     this.updateViewport({
+//       longitude: position.coords.longitude,
+//       latitude: position.coords.latitude
+//     });
+//   });
+// }
+
+
+
+renderPopup = () => {
+  console.log('hit')
+  console.log('Info from poup ------------->', this.state.popupInfo)
+    const {popupInfo} = this.state
+    // this.setState({
+    //   popupInfo: {
+    //     name: Stores.name,
+    //     address_lines: Stores.address_lines,
+    //     phone_number: Stores.phone_number
+    //   }
+    // })
+    return popupInfo && (
+        <Popup tipsize={15}
+        closeButton={true}
+        closeOnClick={false}
+        anchor="top"
+        onClose={() => {this.setState({popupInfo: null })}}/>
+    )
+}
+
+
+
+showPosition = (position) => {
+  console.log(position.coords.longitude)
+  console.log(position.coords.latitude)
+  this.setState({
+    lat: position.coords.latitude,
+    long: position.coords.longitude
+  })
+}
+
+//  getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
+//   var R = 6371; // Radius of the earth in km
+//   var dLat = deg2rad(lat2-lat1);  // deg2rad below
+//   var dLon = deg2rad(lon2-lon1); 
+//   var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+//     Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) * 
+//     Math.sin(dLon/2) * Math.sin(dLon/2);
+//   var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
+//   var d = R * c; // Distance in km
+//   return d;
+// }
+
+
+
+getLocation = () => {
+  console.log('hit before', navigator)
+  if (navigator.geolocation) {
+    console.log('hit inside')
+    navigator.geolocation.getCurrentPosition(this.showPosition);
+  }
+}
+
+
+// renderMarker = (store, index) => {
+//   console.log(store, 'store')
+//     return (
+//       <Marker className="station" key={index}
+//         longitude={store.longitude}
+//         latitude={store.latitude} />
+//     )
+// }
 
   render() {
+    // const popup = Stores.map(e => {
+    //   console.log('hit')
+    //   return <Popup tipsize={15}
+    //   offsetTop={10}
+    //   offsetLeft={10}
+    //   closeButton={true}
+    //   closeOnClick={false}
+    //   anchor={"top"}
+    //   longitude={Stores.longitude}
+    //   latitude={Stores.latitude}/>
+    // })
+
+  const storesLongitude = Stores.map(e => {
+
+   return <Marker setPopup={this.renderPopup} className="station" longitude={e.longitude} latitude={e.latitude} >
+          <div>{e.name}</div>
+          <div>{e.city}</div>
+          <div>{e.phone_number}</div>
+        </Marker>
+  })
+ const storesLatitude = Stores.map(e => {
+   return e.latitude
+ })
     return (
     <div>
-      <ReactMapGL      
+      <ReactMapGL
+      mapStyle="mapbox://styles/danielgomez/cjnm073b50s8u2rn6ik6gn88f"
       mapboxApiAccessToken={process.env.REACT_APP_TOKEN}
       {...this.state.viewport}
-      onViewportChange={(viewport) => this.setState({viewport})}
-    >
-        <Marker onClick={this.renderMarker} latitude={STORES[0].latitude} longitude={STORES[0].longitude}  >
-            <h1 className='station'>{STORES[0].address_lines}</h1>
-        </Marker>
-        <Marker onClick={this.renderMarker} latitude={STORES[1].latitude} longitude={STORES[1].longitude} > 
-            <h1 className='station'>{STORES[1].address_lines}</h1>
-        </Marker>
-        <Marker onClick={this.renderMarker} latitude={STORES[2].latitude} longitude={STORES[2].longitude}  > 
-            <h1 className='station'>{STORES[2].address_lines}</h1>
-        </Marker>
-        <Marker onClick={this.renderMarker} latitude={STORES[3].latitude} longitude={STORES[3].longitude}  > 
-            <h1 className='station'>{STORES[3].address_lines}</h1>
-        </Marker>
-        <Marker onClick={this.renderMarker} latitude={STORES[4].latitude} longitude={STORES[4].longitude}  > 
-            <h1 className='station'>{STORES[4].address_lines}</h1>
-        </Marker>
-        <Marker onClick={this.renderMarker} latitude={STORES[5].latitude} longitude={STORES[5].longitude}  > 
-            <h1 className='station'>{STORES[5].address_lines}</h1>
-        </Marker>
-        <Marker onClick={this.renderMarker} latitude={STORES[6].latitude} longitude={STORES[6].longitude}  > 
-            <h1 className='station'>{STORES[6].address_lines}</h1>
-        </Marker>
-        <Marker onClick={this.renderMarker} latitude={STORES[7].latitude} longitude={STORES[7].longitude}  > 
-            <h1 className='station'>{STORES[7].address_lines}</h1>
-        </Marker>
-        <Marker onClick={this.renderMarker} latitude={STORES[8].latitude} longitude={STORES[8].longitude}  > 
-            <h1 className='station'>{STORES[8].address_lines}</h1>
-        </Marker>
-        <Marker onClick={this.renderMarker} latitude={STORES[9].latitude} longitude={STORES[9].longitude}  > 
-            <h1 className='station'>{STORES[9].address_lines}</h1>
-        </Marker>
-        <Marker onClick={this.renderMarker} latitude={STORES[10].latitude} longitude={STORES[10].longitude} > 
-            <h1 className='station'>{STORES[10].address_lines}</h1>
-        </Marker>
-        <Marker onClick={this.renderMarker} latitude={STORES[11].latitude} longitude={STORES[11].longitude} > 
-            <h1 className='station'>{STORES[11].address_lines}</h1>
-        </Marker>
-    </ReactMapGL>
-    
+      onViewportChange={(viewport) => this.setState({viewport})}>
+      {storesLongitude}
+       <div>Longitude: {this.getLocation}</div>
+       <div>Latitude: {this.getLocation}</div>
+        <button onClick={this.getLocation}>get location</button>
+        </ReactMapGL>
       </div>
     );
   }
