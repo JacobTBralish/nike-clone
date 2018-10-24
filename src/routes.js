@@ -5,6 +5,7 @@ import Cart from './Components/Cart/Cart';
 import MensShoes from './Components/MensShoe/MensShoeContainer';
 import DetailedShoe from './Components/MensShoe/DetailedShoe';
 import CheckoutPresentational from './Components/Checkout/CheckoutPresentational';
+import FindStore from './Components/FindStore/FindStore';
 import ShippingOptions from './Components/Checkout/ShippingOptions';
 import ShippingForm from './Components/Checkout/ShippingForm';
 import NikePlus from './Components/NikePlus/NikePlus';
@@ -14,6 +15,7 @@ import Wishlist from './Components/Wishlist/Wishlist';
 
 export default (
     <Switch>
+        <Route path='/storelocator' component={FindStore} />
         <Route path='/mensshoes' component={MensShoes} />
         <Route path='/shippingoptions' component={ShippingOptions}/>
         <Route path='/shippingform' component={ShippingForm}/>

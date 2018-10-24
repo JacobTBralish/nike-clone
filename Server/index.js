@@ -11,6 +11,7 @@ const sC = require('./controllers/shippingcontroller');
 const productC = require('./controllers/productconroller');
 const fs = require('fs')
 
+
 // const request = require('request');
 const cors = require('cors');
 
@@ -111,6 +112,31 @@ app.get('/auth/callback', (req,res) => {
   })
 })
 
+// =========================================== Mapbox ==================================================== \\
+
+// stylesService.getStyle({..})
+//   .send()
+//   .then(resp => {
+//     const style = resp.body;
+//     // Do something with the style.
+//   })
+
+// // Get the next page of results.
+// tilesetsService.listTilesets()
+//   .send()
+//   .then(resp => {
+//     if (resp.hasNextPage()) {
+//       const nextPageReq = resp.nextPage();
+//       nextPageReq.send().then();
+//     }
+//   })
+
+// // Check the headers.
+// tilesetsService.listTilesets()
+//   .send()
+//   .then(resp => {
+//     console.log(resp.headers);
+//   });
 
 // =========================================== Review Endpoints ================================== \\
 
@@ -130,6 +156,14 @@ app.get('/api/mensshoes', productC.getProduct);
 
 // =========================================== Payment Endpoints ================================== \\
 app.post('/api/payment', paymentC.processPayment);
+<<<<<<< HEAD
+// app.post('/api/order', pC.createOrder);
+app.post('/api/email', paymentC.sendConfirmation);
+
+// =========================================== Shipping & Billing Endpoints ================================== \\
+
+// app.post('/api/shippingInfo', sC.postShippingInformation);
+=======
 app.post('/api/email', paymentC.sendConfirmation);
 app.post('/api/order', paymentC.createOrder);
 
@@ -137,6 +171,7 @@ app.post('/api/order', paymentC.createOrder);
 
 app.post('/api/shippingInfo', sC.postShippingInformation);
 app.post('/api/billingInfo', sC.postBillingInformation);
+>>>>>>> 28c52ef09a4f036ab876850377a6cc5700796c1f
 
 // ================================================ Auth0 Login ====================================== \\
 

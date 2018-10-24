@@ -49,9 +49,15 @@ module.exports = {
 
 
     sendConfirmation: (req, res) => {
+<<<<<<< HEAD
+        const { trackingNumber, email, name, date, total, number, address} = req.body;
+        let { streetAddress, city, chosenState, zipCode } = this.props.shippingInfo[0]
+        console.log(address, 'address')
+=======
         const { firstname, lastname, phone, email} = req.body;
         console.log('req.body: ', req.body);
         // console.log('email: ', email);
+>>>>>>> 28c52ef09a4f036ab876850377a6cc5700796c1f
         const transporter = nodemailer.createTransport({
             service: "gmail",
             auth: {

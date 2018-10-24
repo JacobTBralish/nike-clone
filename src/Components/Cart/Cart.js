@@ -22,6 +22,13 @@ class Cart extends Component {
 
 
 
+    handleQuantity = (event) => {
+        console.log('event.target.value: ', event.target.value);
+        this.setState({
+            qty: event.target.value
+        })
+    }
+
 
     render() {
         let checkoutLinkStlyle = {

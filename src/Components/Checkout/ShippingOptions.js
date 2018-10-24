@@ -71,9 +71,9 @@ class ShippingOptions extends Component {
         console.log('------------ today', today)
         console.log('------------ paymentSuccess data', data)
         alert('Payment successful!')
-        console.log('data: ', data.data);
+        // console.log('data: ', data.data);
         let id = data.data.stripeSuccess.id.split('')
-        console.log('id: ', id);
+        // console.log('id: ', id);
         id.splice(0, 3)
         let trackingNumber = this.makeId()
         console.log('id: ', id);
