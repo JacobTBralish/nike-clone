@@ -220,7 +220,7 @@ export function editReviews(reviews) {
     console.log('editReviews reducer, reviews === ', reviews)
     return {
         type: EDIT_REVIEWS,
-        payload: {reviews}
+        payload: reviews
     }
 }
 export function createReview(reviews) {

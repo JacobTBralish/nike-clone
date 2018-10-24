@@ -21,32 +21,33 @@ module.exports = {
         })
     },
 
-    // createOrder: (req, res) => {
-    //     const db = req.app.get('db')
-    //     const { orderId, userId, addressId, cart, date } = req.body;
-    //     console.log('cart: ', cart);
-    //     db.new_order({
-    //         orderId,
-    //         userId,
-    //         addressId,
-    //         date
-    //     }).then(order => {
-    //         cart.map(item => {
-    //             const { id, qty } = item;
-    //             console.log(order);
-    //             const orderId = order[0].id
-    //             db.new_line_item({id, qty, orderId})
-    //         }).then(lineItem => {
-    //             res.status(200);
-    //             console.log(lineItem);
-    //         }).catch(error => {
-    //             console.log('232435456 YAY error: ', error);
-    //         })
-    //         res.status(200).send(order)
-    //     }).catch(error => {
-    //         console.log('error: ', error);
-    //     });
-    // },
+
+    createOrder: (req, res) => {
+        const db = req.app.get('db')
+        const { orderId, userId, addressId, cart, date } = req.body;
+        console.log('cart: ', cart);
+        db.new_order({userId, usetracking_numberrId, date, cart_total
+        }).then(order => {
+            console.log('order=======1: ', order);
+            cart.map(item => {
+                console.log('item: ', item);
+                const { id, qty } = item;
+                console.log('order=======2: ', order);
+                const orderId = order[0].id
+                db.create_order_items({orders_ref, title, style ,price, size, color, quantity})
+            }).then(lineItem => {
+                res.status(200);
+                console.log('lineItem: ', lineItem);
+            }).catch(error => {
+                console.log('232435456 YAY error: ', error);
+            })
+            res.status(200).send(order)
+        }).catch(error => {
+            console.log('error: ', error);
+        });
+    },
+
+
     sendConfirmation: (req, res) => {
         const { firstname, lastname, phone, email} = req.body;
         console.log('req.body: ', req.body);

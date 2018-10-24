@@ -14,7 +14,7 @@ class DetailedShoe extends Component {
     }
 
     componentDidMount() {
-    this.props.selectedProduct(this.props.product)
+        this.props.selectedProduct(this.props.product)
     } 
 
     render() {

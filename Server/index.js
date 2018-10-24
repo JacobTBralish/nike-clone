@@ -72,13 +72,20 @@ app.get('/auth/callback', (req,res) => {
       return db.find_user_by_auth0_id(auth0Id).then(users => {
           console.log('find user has fired')
           if (users.length){console.log(users)
-              const user = users[0];
-              req.session.user = user;
-              res.redirect('/');
-          } else {
-              const userArray = [
+            const user = users[0];
+            req.session.user = user;
+            console.log('response.data.name: ', response.data);
+            res.redirect('/');
+
+        } else {
+            console.log('response.data.name: ', response.data);
+            const userArray = [
                   auth0Id,
+                  response.data.given_name,
+                  response.data.family_name,
                   response.data.name,
+                  response.data.picture,
+                  response.data.gender,
                   response.data.email,
               ];
               return db.create_user(userArray).then(newUser => {console.log(newUser,'create user has fired')
@@ -123,8 +130,8 @@ app.get('/api/mensshoes', productC.getProduct);
 
 // =========================================== Payment Endpoints ================================== \\
 app.post('/api/payment', paymentC.processPayment);
-// app.post('/api/order', pC.createOrder);
 app.post('/api/email', paymentC.sendConfirmation);
+app.post('/api/order', paymentC.createOrder);
 
 // =========================================== Shipping & Billing Endpoints ================================== \\
 
