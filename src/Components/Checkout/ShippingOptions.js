@@ -5,6 +5,8 @@ import { withRouter, Link } from 'react-router-dom';
 // import { setTotal } from '../../Redux/reducer';
 import axios from 'axios';
 
+import BillingForm from './BillingForm';
+
 const fromDollarToCent = amount => amount * 100;
 
 
@@ -66,18 +68,19 @@ class ShippingOptions extends Component {
         const date = new Date();
         const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
         const today = `${months[date.getMonth()]} ${date.getDate()}th, ${date.getFullYear()}`;
-        // console.log('------------ today', today)
-        // console.log('------------ paymentSuccess data', data)
+        console.log('------------ today', today)
+        console.log('------------ paymentSuccess data', data)
         alert('Payment successful!')
         // console.log('data: ', data.data);
         let id = data.data.stripeSuccess.id.split('')
         // console.log('id: ', id);
         id.splice(0, 3)
-        // console.log('id: ', id);
+        let trackingNumber = this.makeId()
+        console.log('id: ', id);
         this.setState({orderId: id.join('')})
-        // console.log(this.props.shippingInfo, 'this is this.props.shit');
-        // axios.post('/api/email', { trackingNumber: this.makeId() ,email: this.props.user.email, name: this.props.user.name, date: today, total: this.props.total, number: this.state.orderId, address: this.props.shippingInfo })
-        // axios.post('/api/order', {orderId: id.join(''), userId: this.props.user.id, addressId: this.props.address.id, cart: this.props.cart, date: today})
+        console.log(this.props.shippingInfo, 'this is this.props.shit');
+        axios.post('/api/email', { trackingNumber: trackingNumber ,email: this.props.user.email, name: this.props.user.name, date: today, total: this.props.total, number: this.state.orderId, address: this.props.shippingInfo })
+        axios.post('/api/order', {userId: this.props.user.id, tracking_number: trackingNumber, date: today, cart_total: this.props.total})
         .then(res => {
             console.log('------------ POST Order res', res)
             res.status(200).send('Hey, it worked')
@@ -180,6 +183,8 @@ class ShippingOptions extends Component {
                     <p>Orders placed after 5PM EST (2PM PST) begin processing the next business day.</p>
                     <p>Please note that Nike.com does not deliver on Sundays or holidays.</p>
                 </div>
+
+                <div><BillingForm /></div>
                 <StripeCheckout 
                     name='Nike'
                     description='Just do it'

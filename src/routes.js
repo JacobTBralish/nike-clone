@@ -9,6 +9,9 @@ import FindStore from './Components/FindStore/FindStore';
 import ShippingOptions from './Components/Checkout/ShippingOptions';
 import ShippingForm from './Components/Checkout/ShippingForm';
 import NikePlus from './Components/NikePlus/NikePlus';
+import Orders from './Components/Orders/Orders';
+import NikeSettings from './Components/NikeSettings/Settings';
+import Wishlist from './Components/Wishlist/Wishlist';
 
 export default (
     <Switch>
@@ -20,6 +23,9 @@ export default (
         <Route path="/cart" component={Cart} />
         <Route path="/checkout" component={Checkout} />
         <Route path="/nike/nike-plus" component={NikePlus} />
+        <Route path="/orders" component={Orders} />
+        <Route path="/settings" component={NikeSettings} />
+        <Route path="/wishlist" component={Wishlist} />
         <Route exact path='/' component={Home} />
     </Switch>
 )

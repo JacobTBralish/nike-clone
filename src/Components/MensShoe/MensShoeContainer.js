@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { getProduct } from '../../Redux/reducer';
+import { getProducts, selectedProduct } from '../../Redux/reducer';
 import MensShoes from '../../Data/nikeMensShoesPg1.json';
 
 
@@ -15,22 +15,20 @@ class MensShoe extends Component {
     }
     
 
-    // componentDidMount() {
-    //     axios.get('/api/mensshoes').then(response => {
-    //         console.log('response: ', response.data);
-    //         return this.props.getProduct(response.data)
-    //     })
-    // }
+    componentDidMount() {
+        this.props.getProducts(MensShoes)
+    }
 
     
     render() { 
-        let mappedShoes = MensShoes.map((shoe, index) => {
-            // console.log('shoe: ', shoe);
+        let { products, selectedProduct } = this.props;
+        let mappedShoes = products.map((item, index) => {
+            // 
             return <div key={index}>
-                <Link to={{pathname:`/product/${shoe.title}`, state:{title: shoe.title, category: shoe.subtitle, price: shoe.localPrice, productImg: shoe.spriteSheet}}} ><img src={shoe.spriteSheet} alt={shoe.title}></img>
-                <p>{shoe.title}</p>
-                <p>{shoe.subtitle}</p>
-                <p>{shoe.localPrice}</p>
+                <Link onClick={() => { selectedProduct([item])}} to={`/product/${item.title}`} ><img src={item.spriteSheet} alt={item.title}></img>
+                <p>{item.title}</p>
+                <p>{item.subtitle}</p>
+                <p>{item.localPrice}</p>
                 </Link>
             </div>
         })
@@ -46,13 +44,12 @@ class MensShoe extends Component {
 const mapStateToProps = state => {
     return {
         products: state.products,
-
-
     }
 }
 
 const mapDispatchToProps = {
-    getProduct
+    getProducts,
+    selectedProduct
 }
  
 export default connect(mapStateToProps,mapDispatchToProps)(MensShoe);

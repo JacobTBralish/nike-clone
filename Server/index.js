@@ -17,6 +17,7 @@ const cors = require('cors');
 
 
 const cart_controller = require('./controllers/cart_controller')
+const review_controller = require('./controllers/review_controller')
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -72,13 +73,20 @@ app.get('/auth/callback', (req,res) => {
       return db.find_user_by_auth0_id(auth0Id).then(users => {
           console.log('find user has fired')
           if (users.length){console.log(users)
-              const user = users[0];
-              req.session.user = user;
-              res.redirect('/');
-          } else {
-              const userArray = [
+            const user = users[0];
+            req.session.user = user;
+            console.log('response.data.name: ', response.data);
+            res.redirect('/');
+
+        } else {
+            console.log('response.data.name: ', response.data);
+            const userArray = [
                   auth0Id,
+                  response.data.given_name,
+                  response.data.family_name,
                   response.data.name,
+                  response.data.picture,
+                  response.data.gender,
                   response.data.email,
               ];
               return db.create_user(userArray).then(newUser => {console.log(newUser,'create user has fired')
@@ -130,6 +138,13 @@ app.get('/auth/callback', (req,res) => {
 //     console.log(resp.headers);
 //   });
 
+// =========================================== Review Endpoints ================================== \\
+
+app.delete('/api/reviews/:itemName', review_controller.remove)
+app.post('/api/reviews',  review_controller.create)
+app.put('/api/reviews', review_controller.edit)
+app.get('/api/reviews/:itemName' , review_controller.reviews_by_name)
+
 // =========================================== Controller Endpoints ================================== \\
 
 // app.post('/api/cart-data/:id', cart_controller.addToCart)
@@ -141,12 +156,22 @@ app.get('/api/mensshoes', productC.getProduct);
 
 // =========================================== Payment Endpoints ================================== \\
 app.post('/api/payment', paymentC.processPayment);
+<<<<<<< HEAD
 // app.post('/api/order', pC.createOrder);
 app.post('/api/email', paymentC.sendConfirmation);
 
 // =========================================== Shipping & Billing Endpoints ================================== \\
 
 // app.post('/api/shippingInfo', sC.postShippingInformation);
+=======
+app.post('/api/email', paymentC.sendConfirmation);
+app.post('/api/order', paymentC.createOrder);
+
+// =========================================== Shipping & Billing Endpoints ================================== \\
+
+app.post('/api/shippingInfo', sC.postShippingInformation);
+app.post('/api/billingInfo', sC.postBillingInformation);
+>>>>>>> 28c52ef09a4f036ab876850377a6cc5700796c1f
 
 // ================================================ Auth0 Login ====================================== \\
 
@@ -190,7 +215,6 @@ app.post('save-stripe-token', async (req,res)=> {
         res.status(500).end
     }
 })
-
 
 const PORT = 5000;
 app.listen(PORT, ()=> console.log(`Server listening on port ${PORT} 🏄`));

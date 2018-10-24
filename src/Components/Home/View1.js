@@ -1,15 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './View.scss';
 
 
 const View1 = (props) => {
     return ( 
-        <div>
-            <img src={`${props.image}`} alt=''></img>
-            <h2>{props.h2text}</h2>
-            <p>{props.pText}</p>
-            <Link to=''>{props.linkText}</Link>
-            
+        <div className='imageContainer1'>
+            <img className='homeImage' src={`${props.info.image}`} alt='' />
+            <div className='imageContent1'>
+                <h2 id='h2Text1'>{props.info.h2Text}</h2>
+                <p id='pText1'>{props.info.pText}</p>
+                <Link id='homeImageLink1' to=''>{props.info.linkText}</Link>
+            </div>
         </div>
      );
 }

@@ -1,23 +1,51 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { postShippingInformation } from '../../Redux/reducer';
+import { postShippingInformation, createRefId } from '../../Redux/reducer';
+import axios from 'axios';
 
 class ShippingForm extends Component {
     constructor(){
         super();
         this.state = {
             taxRate: 0,
+            refId: '',
             firstName: 'Jacob',
             lastName: 'Bralish',
-            streetAddress: '12345 street',
+            address1: '12345 street',
+            address2: null,
             city: 'nope',
             chosenState: 'Alabama',
             zipCode: '12345',
-            email: 'nope@nope.com',
-            phone: '1234567890'
+            email: 'hopperjtb@aol.com',
+            phone: '1234567890',
+            toggleValue: false
         }
     }
+
+    // makeId = () => {
+    //     var refId = "";
+    //     var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    //     for (var i = 0; i < 30; i++)
+    //     refId += possible.charAt(Math.floor(Math.random() * possible.length));
+    // return refId
+    // }
+    
+    sendShippingInformation=(firstName, lastName, userId, address1, address2, city, chosenState, zipCode ,email ,phone)=>{
+        var refId = "";
+        var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        for (var i = 0; i < 30; i++)
+        refId += possible.charAt(Math.floor(Math.random() * possible.length));
+        this.setState({refId: refId})
+    axios.post('/api/shippingInfo', {refId, firstName, lastName, userId, address1, address2, city, chosenState, zipCode ,email ,phone}).then(response => {
+        console.log('response.data: ', response.data);
+        console.log('response: ', response.data[0].ref_id);
+        this.props.createRefId(response.data[0].ref_id)
+        this.props.postShippingInformation(response.data)
+  }).catch(error => {
+      console.log(error, 'Error in the reducer with post shipping info');
+  })
+}
 
     handleShipping = (event) => {
         const value = JSON.parse(event.target.value)
@@ -35,10 +63,15 @@ class ShippingForm extends Component {
         })
     }
 
-
+    handleToggle = () => {
+        this.setState({
+            toggleValue: true
+        })
+    }
     render() {
-        let { taxRate, firstName, lastName, streetAddress, city, chosenState, zipCode, email, phone } = this.state;
-        let { postShippingInformation/* , user */, shippingInfo, profile } = this.props;
+        let { taxRate, firstName, lastName, address1, address2, city, chosenState, zipCode, email, phone, toggleValue } = this.state;
+        let { postShippingInformation, user, shippingInfo, refId } = this.props;
+        console.log('refId: ', this.state.refId);
         console.log('shippingInfo: ', shippingInfo);
         return (
         <div>
@@ -51,10 +84,17 @@ class ShippingForm extends Component {
                 </div>
 
                 <div>
-                    <input required onChange={this.handleChange} name='streetAddress' value={streetAddress}></input>
-                    <label htmlFor='firstName'>Street Address</label>
+                    <input required onChange={this.handleChange} name='address1' value={address1}></input>
+                    <label htmlFor='address1'>Street Address</label>
                 </div>
-
+                { !toggleValue ?
+                    <button style={{background: "none", border: "none", color: 'darkGrey'}} onClick={this.handleToggle}><i class="fas fa-plus">Add Company, C/O, Apt, Suite, Unit</i></button>
+                :
+                <div>
+                    <input required onChange={this.handleChange} name='address2' value={address2}></input>
+                    <label htmlFor='address2' />
+                </div>
+                }
                 <div>
                     <input required onChange={this.handleChange} name='city' value={city}></input>
                     <label htmlFor='city'>City</label>
@@ -123,7 +163,8 @@ class ShippingForm extends Component {
                     <label htmlFor='phone'>Phone Number</label>
                 </div>
                 <div><p style={{fontSize: "8"}}><i className="fas fa-lock"></i> Your privacy is important to us. We will only contact you if there is an issue with your order.</p></div>
-                <div><Link to={{pathname:'/shippingoptions', state:{taxRate}}}><button type='submit' onClick={() => postShippingInformation( firstName, lastName ,streetAddress ,city ,chosenState ,zipCode ,email ,phone )}>SAVE & CONTINUE</button></Link></div>
+                <div><Link to={{pathname:'/shippingoptions', state:{taxRate}}}><button type='submit' onClick={() => this.sendShippingInformation(  firstName, lastName, (user ? user.id : null), address1, address2, city, chosenState, zipCode , email, phone )}>SAVE & CONTINUE</button></Link></div>
+
             </form>
             
                 
@@ -134,12 +175,15 @@ class ShippingForm extends Component {
 const mapStateToProps = state => { 
     return {
         shippingInfo: state.shippingInfo,
+        user: state.user,
+        refId: state.refId
 
     }
  };
 
  const mapDispatchToProps = { 
-     postShippingInformation
+    postShippingInformation,
+    createRefId
   };
 
 export default connect(mapStateToProps,mapDispatchToProps)(ShippingForm)
