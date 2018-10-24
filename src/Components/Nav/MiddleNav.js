@@ -11,7 +11,6 @@ const MiddleNav = () => {
             <div className='swooshDiv'>
                 <Link to='/'><img src={NikeSwoosh} id='nikeSwoosh'></img></Link>
             </div>
-            <div>
                 <div className="dropdown">
                     <Link to='/mensshoes' class="dropbtn">MEN</Link>
                     <div class="dropdown-content">
@@ -92,7 +91,6 @@ const MiddleNav = () => {
                         <Link to='/'></Link>
                     </div>
                 </div>
-            </div>
             <div className='searchInput'>
                 <input placeholder='Search' id='navSearchBar'></input>
             </div>

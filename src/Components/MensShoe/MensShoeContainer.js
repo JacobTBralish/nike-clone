@@ -22,9 +22,8 @@ class MensShoe extends Component {
     
     render() { 
         let { products, selectedProduct } = this.props;
-        console.log('products: ', products);
         let mappedShoes = products.map((item, index) => {
-            // console.log('shoe: ', shoe);
+            // 
             return <div key={index}>
                 <Link onClick={() => { selectedProduct([item])}} to={`/product/${item.title}`} ><img src={item.spriteSheet} alt={item.title}></img>
                 <p>{item.title}</p>

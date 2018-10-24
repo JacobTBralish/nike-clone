@@ -75,11 +75,12 @@ class ShippingOptions extends Component {
         let id = data.data.stripeSuccess.id.split('')
         console.log('id: ', id);
         id.splice(0, 3)
+        let trackingNumber = this.makeId()
         console.log('id: ', id);
         this.setState({orderId: id.join('')})
         console.log(this.props.shippingInfo, 'this is this.props.shit');
-        axios.post('/api/email', { trackingNumber: this.makeId() ,email: this.props.user.email, name: this.props.user.name, date: today, total: this.props.total, number: this.state.orderId, address: this.props.shippingInfo })
-        // axios.post('/api/order', {orderId: id.join(''), userId: this.props.user.id, addressId: this.props.address.id, cart: this.props.cart, date: today})
+        axios.post('/api/email', { trackingNumber: trackingNumber ,email: this.props.user.email, name: this.props.user.name, date: today, total: this.props.total, number: this.state.orderId, address: this.props.shippingInfo })
+        axios.post('/api/order', {userId: this.props.user.id, tracking_number: trackingNumber, date: today, cart_total: this.props.total})
         .then(res => {
             console.log('------------ POST Order res', res)
             res.status(200).send('Hey, it worked')
