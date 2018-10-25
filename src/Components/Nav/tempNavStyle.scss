@@ -1,4 +1,6 @@
 $NikeFont: 'Oswald', sans-serif;
+$border-light: #e5e5e5;
+
 
 .navTest {
     height: 100px;
@@ -21,11 +23,11 @@ $NikeFont: 'Oswald', sans-serif;
     height: 39px;
     border: lightgray .5px solid;
     margin: 0;
-}
 
-.topNav > button {
-    height: 39px;
-    background: white;
+    button {
+        height: 39px;
+        background: white;
+    }
 }
 
 #nikePlus > button {
@@ -48,7 +50,6 @@ $NikeFont: 'Oswald', sans-serif;
     background: none;
 }
 
-
 #jumpmanImg {
     max-height: 21px;
     max-width: 21px;
@@ -59,7 +60,6 @@ $NikeFont: 'Oswald', sans-serif;
     max-height: 48px;
     max-width: 48px;
 }
-
 
 #converseImg {
     max-height: 72px;
@@ -76,19 +76,15 @@ $NikeFont: 'Oswald', sans-serif;
     height: 68px;
     justify-content: space-between;
     align-items: center;
-    border: lightgray .5px solid;
+    border: $border-light .5px solid;
     padding: 1px;
-}
-
-.middleNav > .swooshDiv {
-    height: 100%;
-    align-items: center;
-    align-content: center;
-    display: flex;
-}
-
-.swooshDiv {
-    justify-content: flex-start;
+    .swooshDiv {
+        height: 100%;
+        align-items: center;
+        align-content: center;
+        display: flex;
+        justify-content: flex-start;
+    }
 }
 
 #nikeSwoosh {
