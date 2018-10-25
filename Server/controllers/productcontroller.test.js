@@ -1,0 +1,1 @@
+const productController = require('./productconroller')

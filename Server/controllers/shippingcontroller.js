@@ -1,20 +1,6 @@
 
 module.exports = {
 
-<<<<<<< HEAD
-    // postShippingInformation: (req, res ) => {
-    //     const db = req.app.get('db');
-    //     let { firstName, lastName ,streetAddress ,city ,chosenState ,zipCode ,email ,phone } = req.body;
-    //     console.log('req.body: ', req.body);
-
-    //     db.post_shipping({ firstName, lastName ,streetAddress ,city ,chosenState ,zipCode ,email ,phone }).then(shippingInfo => {
-    //         res.status(200).json(shippingInfo)
-    //     }).catch(error => {
-    //         res.status(500).json(error);
-    //         console.log('Error posting shipping info in shipping controller ', error);
-    //     })
-    // },
-=======
     postShippingInformation: (req, res ) => {
         const db = req.app.get('db');
         let {refId, firstName, lastName, userId, address1, address2, city, chosenState, zipCode ,email ,phone} = req.body;
@@ -26,7 +12,6 @@ module.exports = {
             console.log('Error posting shipping info in shipping controller ', error);
         })
     },
->>>>>>> 28c52ef09a4f036ab876850377a6cc5700796c1f
 
     postBillingInformation: (req, res ) => {
         const db = req.app.get('db');
