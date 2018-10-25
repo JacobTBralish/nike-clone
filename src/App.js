@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Nav from './Components/Nav/NavPresentational';
 import Footer from './Components/Footer/Footer';
 
-// import './reset.css'
+import './reset.css'
 
 import routes from './routes';
 

@@ -78,9 +78,12 @@ class ShippingOptions extends Component {
         let trackingNumber = this.makeId()
         console.log('id: ', id);
         this.setState({orderId: id.join('')})
-        console.log(this.props.shippingInfo, 'this is this.props.shit');
+        console.log(this.props.total, 'this is this.props.shit');
+        let userId = (this.props.user ? this.props.user.id : null)
+        let bodyCart = this.props.cart[0]
+        console.log('this.props.cart: ', this.props.cart[0]);
         axios.post('/api/email', { trackingNumber: trackingNumber ,email: this.props.user.email, name: this.props.user.name, date: today, total: this.props.total, number: this.state.orderId, address: this.props.shippingInfo })
-        axios.post('/api/order', {userId: this.props.user.id, tracking_number: trackingNumber, date: today, cart_total: this.props.total})
+        axios.post('/api/order', { userId: userId , tracking_number: trackingNumber, date: today, cart_total: this.props.total, cart: bodyCart })
         .then(res => {
             console.log('------------ POST Order res', res)
             res.status(200).send('Hey, it worked')
@@ -113,7 +116,7 @@ class ShippingOptions extends Component {
 
 
     render() {
-        let {  total, user, shippingInfo } = this.props;
+        let {  total, user, shippingInfo, billingInfo } = this.props;
         console.log('shippingInfo: ', shippingInfo);
         console.log('total: ', total);
         let { SameShippingAsBilling, chosenState/* , home */ } = this.state;
@@ -194,7 +197,7 @@ class ShippingOptions extends Component {
                 <StripeCheckout 
                     name='Nike'
                     description='Just do it'
-                    amount={fromDollarToCent(total * (1+parseFloat(taxRate)) + parseInt(this.state.selectedOption))}
+                    amount={(fromDollarToCent(total * (1+parseFloat(taxRate)) + parseInt(this.state.selectedOption))).toFixed(2)}
                     image={'http://content.nike.com/content/dam/one-nike/globalAssets/social_media_images/nike_swoosh_logo_black.png'}
                     panelLabel='Pay'
                     currency='USD'
@@ -219,7 +222,8 @@ const mapStateToProps = state => {
         user: state.user,
         cart: state.cart,
         total: state.total,
-        shippingInfo: state.shippingInfo
+        shippingInfo: state.shippingInfo,
+        billingInfo: state.billingInfo
         
     }
 }

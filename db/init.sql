@@ -65,7 +65,7 @@ create table orders (
     user_id integer references users(id),
     tracking_number text not null,
     purchase_date text not null,
-    cart_total integer not null
+    cart_total text not null
 );    
 
 create table orderItems (

@@ -1,4 +1,6 @@
 $NikeFont: 'Oswald', sans-serif;
+$top-border-light: #E5E5E5;
+$link-color-grey: #8D8D8D;
 
 .navTest {
     height: 100px;
@@ -19,33 +21,61 @@ $NikeFont: 'Oswald', sans-serif;
     flex-direction: row;
     width: 100vw;
     height: 39px;
-    border: lightgray .5px solid;
+    justify-content: space-between;
+    align-items: center;
+    border: $top-border-light .5px solid;
     margin: 0;
-}
+    color:$link-color-grey;
+    button {
+        height: 39px;
+        background: white;
+        border: none;
+        border-right: .5px solid lightgray;
+        cursor: pointer;
+    }
+    #nikePlus > button {
+        width: 111px;
+        background: none;
+        color:$link-color-grey;
+    }
 
-.topNav > button {
-    height: 39px;
-    background: white;
-}
+    #jordan > button {
+        width: 79px;
+        background: none;
+        color:$link-color-grey;
+        align-items: center;
 
-#nikePlus > button {
-    width: 111px;
-    background: none;
-}
+    }
 
-#jordan > button {
-    width: 79px;
-    background: none;
-}
+    #converse > button {
+        width: 130px;
+        background: none;
+        color:$link-color-grey;
+        align-items: center;
 
-#converse > button {
-    width: 130px;
-    background: none;
-}
+    }
 
-#hurley > button {
-    width: 106px;
-    background: none;
+    #hurley > button {
+        width: 106px;
+        background: none;
+        color:$link-color-grey;
+        align-items: center;
+
+    }
+    .rightList {
+        display: flex;
+        list-style: none;
+        flex-direction: row;
+        border: none;
+        color:$link-color-grey;
+        li {
+            margin-left: 10px;
+            margin-right: 10px;
+            color: rgb(70, 70, 70);
+        }
+    }
+
+
 }
 
 
@@ -78,29 +108,28 @@ $NikeFont: 'Oswald', sans-serif;
     align-items: center;
     border: lightgray .5px solid;
     padding: 1px;
+    .swooshDiv {
+        height: 100%;
+        align-items: center;
+        align-content: center;
+        display: flex;
+        justify-content: flex-start;
+        #nikeSwoosh {
+            max-width: 70px;
+            max-height: 50px;
+            height: 58px;
+            width: 70px;
+            min-width: 35px;
+            min-height: 25px;
+            margin: 5px;
+            margin-left: 25px;
+        }
+    }
 }
 
-.middleNav > .swooshDiv {
-    height: 100%;
-    align-items: center;
-    align-content: center;
-    display: flex;
-}
 
-.swooshDiv {
-    justify-content: flex-start;
-}
 
-#nikeSwoosh {
-    max-width: 70px;
-    max-height: 50px;
-    height: 58px;
-    width: 70px;
-    min-width: 35px;
-    min-height: 25px;
-    margin: 5px;
-    margin-left: 25px;
-}
+
 
 .homeImages {
     max-width: 100vw;
