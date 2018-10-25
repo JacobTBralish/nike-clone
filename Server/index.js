@@ -156,6 +156,12 @@ app.get('/api/mensshoes', productC.getProduct);
 
 // =========================================== Payment Endpoints ================================== \\
 app.post('/api/payment', paymentC.processPayment);
+// app.post('/api/order', pC.createOrder);
+app.post('/api/email', paymentC.sendConfirmation);
+
+// =========================================== Shipping & Billing Endpoints ================================== \\
+
+// app.post('/api/shippingInfo', sC.postShippingInformation);
 app.post('/api/email', paymentC.sendConfirmation);
 app.post('/api/order', paymentC.createOrder);
 

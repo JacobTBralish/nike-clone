@@ -15,19 +15,12 @@ class Cart extends Component {
             order: [],
             qty: 0,
             total: 0,
-            orderid: '',
-            qty: 0
-            
+            orderid: ''
         }
     }
 
 
-    handleQuantity = (event) => {
-        console.log('event.target.value: ', event.target.value);
-        this.setState({
-            qty: event.target.value
-        })
-    }
+
 
     handleQuantity = (event) => {
         console.log('event.target.value: ', event.target.value);
@@ -65,7 +58,7 @@ class Cart extends Component {
                 <p>{title}</p>
                 <p>{localPrice}</p>
                 <p>{subtitle}</p>
-                <select onChange={this.handleQuantity}>
+                {/* <select onChange={this.handleQuantity}>
                     <option value={1}>1</option>
                     <option value={2}>2</option>
                     <option value={3}>3</option>
@@ -76,7 +69,7 @@ class Cart extends Component {
                     <option value={8}>8</option>
                     <option value={9}>9</option>
                     <option value={10}>10</option>
-                </select>
+                </select> */}
                 <button onClick={() => deleteFromCart(cart, title, total)}>Remove from Cart</button>
             </div>
             }
@@ -112,12 +105,12 @@ class Cart extends Component {
 const mapStateToProps = state => {
     return {
         cart: state.cart,
-        total: state.total
+        total: state.total,
         }
 }
 
 const mapDispatchToProps =  {
-    deleteFromCart
+    deleteFromCart,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Cart)

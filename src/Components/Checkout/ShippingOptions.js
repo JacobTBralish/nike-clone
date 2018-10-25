@@ -5,6 +5,7 @@ import { withRouter, Link } from 'react-router-dom';
 // import { setTotal } from '../../Redux/reducer';
 import axios from 'axios';
 
+import CartCheckoutView from '../Cart/CartCheckoutView'
 import BillingForm from './BillingForm';
 
 const fromDollarToCent = amount => amount * 100;
@@ -16,7 +17,6 @@ class ShippingOptions extends Component {
         this.state = {
             shippingCost: 0,
             orderId: '',
-            taxRate: 0,
             chosenState: '',
             SameShippingAsBilling: false,
             home: false,
@@ -78,9 +78,12 @@ class ShippingOptions extends Component {
         let trackingNumber = this.makeId()
         console.log('id: ', id);
         this.setState({orderId: id.join('')})
-        console.log(this.props.shippingInfo, 'this is this.props.shit');
+        console.log(this.props.total, 'this is this.props.shit');
+        let userId = (this.props.user ? this.props.user.id : null)
+        let bodyCart = this.props.cart[0]
+        console.log('this.props.cart: ', this.props.cart[0]);
         axios.post('/api/email', { trackingNumber: trackingNumber ,email: this.props.user.email, name: this.props.user.name, date: today, total: this.props.total, number: this.state.orderId, address: this.props.shippingInfo })
-        axios.post('/api/order', {userId: this.props.user.id, tracking_number: trackingNumber, date: today, cart_total: this.props.total})
+        axios.post('/api/order', { userId: userId , tracking_number: trackingNumber, date: today, cart_total: this.props.total, cart: bodyCart })
         .then(res => {
             console.log('------------ POST Order res', res)
             res.status(200).send('Hey, it worked')
@@ -113,41 +116,47 @@ class ShippingOptions extends Component {
 
 
     render() {
-        let {  total, user, shippingInfo } = this.props;
+        let {  total, user, shippingInfo, billingInfo } = this.props;
         console.log('shippingInfo: ', shippingInfo);
         console.log('total: ', total);
         let { SameShippingAsBilling, chosenState/* , home */ } = this.state;
         let { taxRate } = this.props.location.state;
         console.log('this.props.location.state: ', this.props.location.state);
-        console.log('taxRate: ', taxRate);
+        // console.log('taxRate: ', taxRate);
 
         // let { firstName, lastName, streetAddress, city, chosenState, zipCode, email, phoneNumber } = props;
 
         return (
             <div>
+                {shippingInfo.length >= 1 &&
                 <div>
-                    <div>
-                        <Link to='/shippingform'>Edit</Link>
+                {/* {null ? <CartCheckoutView taxRate={taxRate}/> : null} */}
+                <div>
                     </div>
-                    {/* <div>
-                        <p>{firstName}</p>
-                        <p>{lastName}</p>
-                    </div>
-                    <div>
-                        <p>{streetAddress}</p>
-                    </div>
-                    <div>
-                        <p>{city}</p>
-                        <p>{chosenState}</p>
-                        <p>{zipCode}</p>
+                     <div>
+                            <div>
+                                <Link to='/shippingform'>Edit</Link>
+                            </div>
+                        <p>{shippingInfo[0].first_name}</p>
+                        <p>{shippingInfo[0].last_name}</p>
                     </div>
                     <div>
-                        <p>{email}</p>
+                        <p>{shippingInfo[0].address1}, {shippingInfo[0].address2 ? shippingInfo[0].address2 : null}</p>
                     </div>
                     <div>
-                        <p>{phoneNumber}</p>
-                    </div> */}
+                        <p>{shippingInfo[0].city}</p>
+                        <p>{shippingInfo[0].state}</p>
+                        <p>{shippingInfo[0].zip_code}</p>
+                    </div>
+                    <div>
+                        <p>{shippingInfo[0].email}</p>
+                    </div>
+                    <div>
+                        <p>{shippingInfo[0].phone}</p>
+                    </div>
                 </div>
+                    }
+                <CartCheckoutView />
 
 
                 <div>
@@ -188,7 +197,7 @@ class ShippingOptions extends Component {
                 <StripeCheckout 
                     name='Nike'
                     description='Just do it'
-                    amount={fromDollarToCent(total * (1+parseFloat(taxRate)) + parseInt(this.state.selectedOption))}
+                    amount={(fromDollarToCent(total * (1+parseFloat(taxRate)) + parseInt(this.state.selectedOption))).toFixed(2)}
                     image={'http://content.nike.com/content/dam/one-nike/globalAssets/social_media_images/nike_swoosh_logo_black.png'}
                     panelLabel='Pay'
                     currency='USD'
@@ -208,11 +217,13 @@ class ShippingOptions extends Component {
 }
 
 const mapStateToProps = state => {
+    console.log('state: ', state);
     return {
         user: state.user,
         cart: state.cart,
         total: state.total,
-        shippingInfo: state.shippingInfo
+        shippingInfo: state.shippingInfo,
+        billingInfo: state.billingInfo
         
     }
 }

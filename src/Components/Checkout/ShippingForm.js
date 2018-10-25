@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { postShippingInformation, createRefId } from '../../Redux/reducer';
+import { postShippingInformation, createRefId, setTaxRate } from '../../Redux/reducer';
 import axios from 'axios';
 
 class ShippingForm extends Component {
@@ -71,7 +71,6 @@ class ShippingForm extends Component {
     render() {
         let { taxRate, firstName, lastName, address1, address2, city, chosenState, zipCode, email, phone, toggleValue } = this.state;
         let { postShippingInformation, user, shippingInfo, refId } = this.props;
-        console.log('refId: ', this.state.refId);
         console.log('shippingInfo: ', shippingInfo);
         return (
         <div>
@@ -183,7 +182,8 @@ const mapStateToProps = state => {
 
  const mapDispatchToProps = { 
     postShippingInformation,
-    createRefId
+    createRefId,
+    setTaxRate
   };
 
 export default connect(mapStateToProps,mapDispatchToProps)(ShippingForm)
