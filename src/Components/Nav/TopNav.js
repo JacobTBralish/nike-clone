@@ -39,7 +39,7 @@ logout = () => {
             </div>
             <div className='rightList'>                
                 {user ? <li onClick={()=>this.logout()}><Link to='/'>Logout</Link></li> : <li onClick={() => {this.login()}}>Join/Login In To Nike Plus Accout</li>}
-                <li><a href='#'>Help</a></li>
+                <li><Link to='/'>Help</Link></li>
                 <li><Link to='/cart'><i class="fas fa-shopping-cart"></i></Link></li>
                 <li></li>
             </div>

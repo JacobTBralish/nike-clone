@@ -3,100 +3,361 @@ import { Link } from 'react-router-dom';
 
 import NikeSwoosh from '../../logos/NikeSwoosh.svg'
 
-
 const MiddleNav = () => {
-    return ( 
-        <span className='navTest'>
-        <div className='middleNav'>
-            <div className='swooshDiv'>
-                <Link to='/'><img src={NikeSwoosh} id='nikeSwoosh'></img></Link>
+
+    return ( <span className='navTest'>
+    <div className='middleNav'>
+        <div className='swooshDiv'>
+            <Link to='/'><img src={NikeSwoosh} id='nikeSwoosh'></img></Link>
+        </div>
+        <div className='buttonCluster'>
+            {/* wraps mens */}
+            <div className="dropdown">
+            {/* wraps men link */}
+            {/* <div></div> */}
+            <div className='nav-button' /* onMouseEnter={() => isHovered()} onMouseLeave={() => isHovered()} */>
+                <Link to='/mensshoes' className="nav-link">MEN</Link>
+            {/* menu container */}
+            <div className={/* ${toggle ? 'showContainer' : 'hideContainer'} */`dropdown-content-container`}>
+            <div className='drop-down-content-sub-container'>
+            
+                <div className="dropdown-content-column">
+                <ul className='column-list'>
+                    <li className='column-list-item'><Link to='/'>NEW RELEASES</Link></li>
+                    <li className='column-list-item'><Link to='/'>FLEECE FAVORITES</Link></li>
+                    <li className='column-list-item'><Link to='/'>NIKE X NBA</Link></li>
+                    <li className='column-list-item'><Link to='/'>BASKETBALL GEAR UP</Link></li>
+                    <li className='column-list-item'><Link to='/'>THE BLACK AND WHITE TREND</Link></li>
+                    <li className='column-list-item'><Link to='/'>BEST SELLERS</Link></li>
+                    <li className='column-list-item'><Link to='/'>SALE</Link></li>
+                </ul>
+                </div>
+
+                <div className="dropdown-content-column-left-line">
+                    <Link className='column-list-item' to='/mensshoes'>SHOES</Link>
+                    <ul>
+                        <li className='column-list-link'><Link to='/'>SNKRS Launch Calender</Link></li>
+                        <li className='column-list-link'><Link to='/'>Lifestyle</Link></li>
+                        <li className='column-list-link'><Link to='/'>Running</Link></li>
+                        <li className='column-list-link'><Link to='/'>Training & Gym</Link></li>
+                        <li className='column-list-link'><Link to='/'>BasketBall</Link></li>
+                        <li className='column-list-link'><Link to='/'>Jordan</Link></li>
+                        <li className='column-list-link'><Link to='/'>Football</Link></li>
+                        <li className='column-list-link'><Link to='/'>Soccer</Link></li>
+                        <li className='column-list-link'><Link to='/'>Baseball</Link></li>
+                        <li className='column-list-link'><Link to='/'>Golf</Link></li>
+                        <li className='column-list-link'><Link to='/'>Skateboarding</Link></li>
+                        <li className='column-list-link'><Link to='/'>Tennis</Link></li>
+                        <li className='column-list-link'><Link to='/'>Boots</Link></li>
+                        <li className='column-list-link'><Link to='/mensshoes'>All Shoes</Link></li>
+                    </ul>
+                </div>
+                <div class="dropdown-content-column-no-line">
+                    <Link className='column-list-item' className='column-list-item' to='/'>CLOTHING</Link>
+                    <ul>
+                        <li className='column-list-link'><Link to='/'>Tops & T-Shirts</Link></li>
+                        <li className='column-list-link'><Link to='/'>Shorts</Link></li>
+                        <li className='column-list-link'><Link to='/'>Polos</Link></li>
+                        <li className='column-list-link'><Link to='/'>Hoodies & Sweatshirts</Link></li>
+                        <li className='column-list-link'><Link to='/'>Jackets & Vests</Link></li>
+                        <li className='column-list-link'><Link to='/'>Pants & Tights</Link></li>
+                        <li className='column-list-link'><Link to='/'>Surf & Swimwear</Link></li>
+                        <li className='column-list-link'><Link to='/'>Nike Pro & Compression</Link></li>
+                        <li className='column-list-link'><Link to='/'>Socks & Underwear</Link></li>
+                        <li className='column-list-link'><Link to='/'>Big & Tall</Link></li>
+                        <li className='column-list-link'><Link to='/'>All Clothing</Link></li>
+                        <li className='column-list-link'><Link to='/'>ACCESSORIES & EQUIPMENT</Link></li>
+                        <li className='column-list-link'><Link to='/'>Bags & Backpacks</Link></li>
+                        <li className='column-list-link'><Link to='/'>Hats</Link></li>
+                    </ul>
+
+                </div>
+                <div class="dropdown-content-column-left-line-end">
+                    <Link className='column-list-item' to='/'>SHOP COLLECTION</Link>
+                    <ul>
+                        <li className='column-list-link'><Link to='/'>SNKRS Launch Calender</Link></li>
+                        <li className='column-list-link'><Link to='/'>Lifestyle</Link></li>
+                        <li className='column-list-link'><Link to='/'>Running</Link></li>
+                        <li className='column-list-link'><Link to='/'>Training & Gym</Link></li>
+                        <li className='column-list-link'><Link to='/'>BasketBall</Link></li>
+                        <li className='column-list-link'><Link to='/'>Jordan</Link></li>
+                        <li className='column-list-link'><Link to='/'>Football</Link></li>
+                        <li className='column-list-link'><Link to='/'>Soccer</Link></li>
+                        <li className='column-list-link'><Link to='/'>Baseball</Link></li>
+                        <li className='column-list-link'><Link to='/'>Golf</Link></li>
+                        <li className='column-list-link'><Link to='/'>Skateboarding</Link></li>
+                        <li className='column-list-link'><Link to='/'>Tennis</Link></li>
+                        <li className='column-list-link'><Link to='/'>Boots</Link></li>
+                        <li className='column-list-link'><Link to='/'>All Shoes</Link></li>
+                    </ul>
+
+                </div>
+                </div>
             </div>
-                <div className="dropdown">
-                    <Link to='/mensshoes' class="dropbtn">MEN</Link>
-                    <div class="dropdown-content">
-                        <Link to='/mensshoes'>SHOES</Link>
-                        <Link to='/'>SNKRS Launch Calender</Link>
-                            <Link to='/'>Lifestyle</Link>
-                            <Link to='/'>Running</Link>
-                            <Link to='/'>Training & Gym</Link>
-                            <Link to='/'>BasketBall</Link>
-                            <Link to='/'>Jordan</Link>
-                            <Link to='/'>Football</Link>
-                            <Link to='/'>Soccer</Link>
-                            <Link to='/'>Baseball</Link>
-                            <Link to='/'>Golf</Link>
-                            <Link to='/'>Skateboarding</Link>
-                            <Link to='/'>Tennis</Link>
-                            <Link to='/'>Boots</Link>
-                            <Link to='/mensshoes'>All Shoes</Link>
-                    </div>
-                    <div class="dropdown-content">
-                        <Link to='/'>CLOTHING</Link>
-                            <Link to='/'>SNKRS Launch Calender</Link>
-                            <Link to='/'>Lifestyle</Link>
-                            <Link to='/'>Running</Link>
-                            <Link to='/'>Training & Gym</Link>
-                            <Link to='/'>BasketBall</Link>
-                            <Link to='/'>Jordan</Link>
-                            <Link to='/'>Football</Link>
-                            <Link to='/'>Soccer</Link>
-                            <Link to='/'>Baseball</Link>
-                            <Link to='/'>Golf</Link>
-                            <Link to='/'>Skateboarding</Link>
-                            <Link to='/'>Tennis</Link>
-                            <Link to='/'>Boots</Link>
-                            <Link to='/'>All Shoes</Link>
-                        <Link to='/'>ACCESSORIES & EQUIPMENT</Link>
-                            <Link to='/'>Bags & Backpacks</Link>
-                            <Link to='/'>Hats</Link>
+            </div>
+            
+            </div>
+            <div className="dropdown">
+            {/* wraps men link */}
+            {/* <div></div> */}
+            <div className='nav-button' /* onMouseEnter={() => isHovered()} onMouseLeave={() => isHovered()} */>
+                <Link to='/mensshoes' className="nav-link">WOMEN</Link>
+            {/* menu container */}
+            <div className={/* ${toggle ? 'showContainer' : 'hideContainer'} */`dropdown-content-container`}>
+            <div className='drop-down-content-sub-container'>
+            
+                <div className="dropdown-content-column">
+                <ul className='column-list'>
+                    <li className='column-list-item'><Link to='/'>NEW RELEASES</Link></li>
+                    <li className='column-list-item'><Link to='/'>FLEECE FAVORITES</Link></li>
+                    <li className='column-list-item'><Link to='/'>NIKE X NBA</Link></li>
+                    <li className='column-list-item'><Link to='/'>BASKETBALL GEAR UP</Link></li>
+                    <li className='column-list-item'><Link to='/'>THE BLACK AND WHITE TREND</Link></li>
+                    <li className='column-list-item'><Link to='/'>BEST SELLERS</Link></li>
+                    <li className='column-list-item'><Link to='/'>SALE</Link></li>
+                </ul>
+                </div>
 
-                    </div>
-                    <div class="dropdown-content">
-                        <Link to='/'>SHOP COLLECTION</Link>
-                            <Link to='/'>Tops & T-Shirts</Link>
-                            <Link to='/'>Shorts</Link>
-                            <Link to='/'>Polos</Link>
-                            <Link to='/'>Hoodies & Sweatshirts</Link>
-                            <Link to='/'>Jackets & Vests</Link>
-                            <Link to='/'>Pants & Tights</Link>
-                            <Link to='/'>Surf & Swimwear</Link>
-                            <Link to='/'>Nike Pro & Compression</Link>
-                            <Link to='/'>Socks & Underwear</Link>
-                            <Link to='/'>Big & Tall</Link>
-                            <Link to='/'>All Clothing</Link>
+                <div className="dropdown-content-column-left-line">
+                    <Link className='column-list-item' to='/mensshoes'>SHOES</Link>
+                    <ul>
+                        <li className='column-list-link'><Link to='/'>SNKRS Launch Calender</Link></li>
+                        <li className='column-list-link'><Link to='/'>Lifestyle</Link></li>
+                        <li className='column-list-link'><Link to='/'>Running</Link></li>
+                        <li className='column-list-link'><Link to='/'>Training & Gym</Link></li>
+                        <li className='column-list-link'><Link to='/'>BasketBall</Link></li>
+                        <li className='column-list-link'><Link to='/'>Jordan</Link></li>
+                        <li className='column-list-link'><Link to='/'>Football</Link></li>
+                        <li className='column-list-link'><Link to='/'>Soccer</Link></li>
+                        <li className='column-list-link'><Link to='/'>Baseball</Link></li>
+                        <li className='column-list-link'><Link to='/'>Golf</Link></li>
+                        <li className='column-list-link'><Link to='/'>Skateboarding</Link></li>
+                        <li className='column-list-link'><Link to='/'>Tennis</Link></li>
+                        <li className='column-list-link'><Link to='/'>Boots</Link></li>
+                        <li className='column-list-link'><Link to='/mensshoes'>All Shoes</Link></li>
+                    </ul>
+                </div>
+                <div class="dropdown-content-column-no-line">
+                    <Link className='column-list-item' className='column-list-item' to='/'>CLOTHING</Link>
+                    <ul>
+                        <li className='column-list-link'><Link to='/'>Tops & T-Shirts</Link></li>
+                        <li className='column-list-link'><Link to='/'>Shorts</Link></li>
+                        <li className='column-list-link'><Link to='/'>Polos</Link></li>
+                        <li className='column-list-link'><Link to='/'>Hoodies & Sweatshirts</Link></li>
+                        <li className='column-list-link'><Link to='/'>Jackets & Vests</Link></li>
+                        <li className='column-list-link'><Link to='/'>Pants & Tights</Link></li>
+                        <li className='column-list-link'><Link to='/'>Surf & Swimwear</Link></li>
+                        <li className='column-list-link'><Link to='/'>Nike Pro & Compression</Link></li>
+                        <li className='column-list-link'><Link to='/'>Socks & Underwear</Link></li>
+                        <li className='column-list-link'><Link to='/'>Big & Tall</Link></li>
+                        <li className='column-list-link'><Link to='/'>All Clothing</Link></li>
+                        <li className='column-list-link'><Link to='/'>ACCESSORIES & EQUIPMENT</Link></li>
+                        <li className='column-list-link'><Link to='/'>Bags & Backpacks</Link></li>
+                        <li className='column-list-link'><Link to='/'>Hats</Link></li>
+                    </ul>
 
-                    </div>
                 </div>
-                <div class="dropdown">
-                    <button class="dropbtn">WOMEN</button>
-                    <div class="dropdown-content">
-                        <Link to='/'></Link>
-                        <Link to='/'></Link>
-                        <Link to='/'></Link>
-                    </div>
+                <div class="dropdown-content-column-left-line-end">
+                    <Link className='column-list-item' to='/'>SHOP COLLECTION</Link>
+                    <ul>
+                        <li className='column-list-link'><Link to='/'>SNKRS Launch Calender</Link></li>
+                        <li className='column-list-link'><Link to='/'>Lifestyle</Link></li>
+                        <li className='column-list-link'><Link to='/'>Running</Link></li>
+                        <li className='column-list-link'><Link to='/'>Training & Gym</Link></li>
+                        <li className='column-list-link'><Link to='/'>BasketBall</Link></li>
+                        <li className='column-list-link'><Link to='/'>Jordan</Link></li>
+                        <li className='column-list-link'><Link to='/'>Football</Link></li>
+                        <li className='column-list-link'><Link to='/'>Soccer</Link></li>
+                        <li className='column-list-link'><Link to='/'>Baseball</Link></li>
+                        <li className='column-list-link'><Link to='/'>Golf</Link></li>
+                        <li className='column-list-link'><Link to='/'>Skateboarding</Link></li>
+                        <li className='column-list-link'><Link to='/'>Tennis</Link></li>
+                        <li className='column-list-link'><Link to='/'>Boots</Link></li>
+                        <li className='column-list-link'><Link to='/'>All Shoes</Link></li>
+                    </ul>
+
                 </div>
-                <div class="dropdown">
-                    <button class="dropbtn">KIDS</button>
-                    <div class="dropdown-content">
-                        <Link to='/'></Link>
-                        <Link to='/'></Link>
-                        <Link to='/'></Link>
-                    </div>
                 </div>
-                <div class="dropdown">
-                    <button class="dropbtn">FAVORITES</button>
-                    <div class="dropdown-content">
-                        <Link to='/'></Link>
-                        <Link to='/'></Link>
-                        <Link to='/'></Link>
-                    </div>
+            </div>
+            </div>
+            
+            </div>
+            <div className="dropdown">
+            {/* wraps men link */}
+            {/* <div></div> */}
+            <div className='nav-button' /* onMouseEnter={() => isHovered()} onMouseLeave={() => isHovered()} */>
+                <Link to='/mensshoes' className="nav-link">KIDS</Link>
+            {/* menu container */}
+            <div className={/* ${toggle ? 'showContainer' : 'hideContainer'} */`dropdown-content-container`}>
+            <div className='drop-down-content-sub-container'>
+            
+                <div className="dropdown-content-column">
+                <ul className='column-list'>
+                    <li className='column-list-item'><Link to='/'>NEW RELEASES</Link></li>
+                    <li className='column-list-item'><Link to='/'>FLEECE FAVORITES</Link></li>
+                    <li className='column-list-item'><Link to='/'>NIKE X NBA</Link></li>
+                    <li className='column-list-item'><Link to='/'>BASKETBALL GEAR UP</Link></li>
+                    <li className='column-list-item'><Link to='/'>THE BLACK AND WHITE TREND</Link></li>
+                    <li className='column-list-item'><Link to='/'>BEST SELLERS</Link></li>
+                    <li className='column-list-item'><Link to='/'>SALE</Link></li>
+                </ul>
                 </div>
-            <div className='searchInput'>
-                <input placeholder='Search' id='navSearchBar'></input>
+
+                <div className="dropdown-content-column-left-line">
+                    <Link className='column-list-item' to='/mensshoes'>SHOES</Link>
+                    <ul>
+                        <li className='column-list-link'><Link to='/'>SNKRS Launch Calender</Link></li>
+                        <li className='column-list-link'><Link to='/'>Lifestyle</Link></li>
+                        <li className='column-list-link'><Link to='/'>Running</Link></li>
+                        <li className='column-list-link'><Link to='/'>Training & Gym</Link></li>
+                        <li className='column-list-link'><Link to='/'>BasketBall</Link></li>
+                        <li className='column-list-link'><Link to='/'>Jordan</Link></li>
+                        <li className='column-list-link'><Link to='/'>Football</Link></li>
+                        <li className='column-list-link'><Link to='/'>Soccer</Link></li>
+                        <li className='column-list-link'><Link to='/'>Baseball</Link></li>
+                        <li className='column-list-link'><Link to='/'>Golf</Link></li>
+                        <li className='column-list-link'><Link to='/'>Skateboarding</Link></li>
+                        <li className='column-list-link'><Link to='/'>Tennis</Link></li>
+                        <li className='column-list-link'><Link to='/'>Boots</Link></li>
+                        <li className='column-list-link'><Link to='/mensshoes'>All Shoes</Link></li>
+                    </ul>
+                </div>
+                <div class="dropdown-content-column-no-line">
+                    <Link className='column-list-item' className='column-list-item' to='/'>CLOTHING</Link>
+                    <ul>
+                        <li className='column-list-link'><Link to='/'>Tops & T-Shirts</Link></li>
+                        <li className='column-list-link'><Link to='/'>Shorts</Link></li>
+                        <li className='column-list-link'><Link to='/'>Polos</Link></li>
+                        <li className='column-list-link'><Link to='/'>Hoodies & Sweatshirts</Link></li>
+                        <li className='column-list-link'><Link to='/'>Jackets & Vests</Link></li>
+                        <li className='column-list-link'><Link to='/'>Pants & Tights</Link></li>
+                        <li className='column-list-link'><Link to='/'>Surf & Swimwear</Link></li>
+                        <li className='column-list-link'><Link to='/'>Nike Pro & Compression</Link></li>
+                        <li className='column-list-link'><Link to='/'>Socks & Underwear</Link></li>
+                        <li className='column-list-link'><Link to='/'>Big & Tall</Link></li>
+                        <li className='column-list-link'><Link to='/'>All Clothing</Link></li>
+                        <li className='column-list-link'><Link to='/'>ACCESSORIES & EQUIPMENT</Link></li>
+                        <li className='column-list-link'><Link to='/'>Bags & Backpacks</Link></li>
+                        <li className='column-list-link'><Link to='/'>Hats</Link></li>
+                    </ul>
+
+                </div>
+                <div class="dropdown-content-column-left-line-end">
+                    <Link className='column-list-item' to='/'>SHOP COLLECTION</Link>
+                    <ul>
+                        <li className='column-list-link'><Link to='/'>SNKRS Launch Calender</Link></li>
+                        <li className='column-list-link'><Link to='/'>Lifestyle</Link></li>
+                        <li className='column-list-link'><Link to='/'>Running</Link></li>
+                        <li className='column-list-link'><Link to='/'>Training & Gym</Link></li>
+                        <li className='column-list-link'><Link to='/'>BasketBall</Link></li>
+                        <li className='column-list-link'><Link to='/'>Jordan</Link></li>
+                        <li className='column-list-link'><Link to='/'>Football</Link></li>
+                        <li className='column-list-link'><Link to='/'>Soccer</Link></li>
+                        <li className='column-list-link'><Link to='/'>Baseball</Link></li>
+                        <li className='column-list-link'><Link to='/'>Golf</Link></li>
+                        <li className='column-list-link'><Link to='/'>Skateboarding</Link></li>
+                        <li className='column-list-link'><Link to='/'>Tennis</Link></li>
+                        <li className='column-list-link'><Link to='/'>Boots</Link></li>
+                        <li className='column-list-link'><Link to='/'>All Shoes</Link></li>
+                    </ul>
+
+                </div>
+                </div>
+            </div>
+            </div>
+            
+            </div>
+            <div className="dropdown">
+            {/* wraps men link */}
+            {/* <div></div> */}
+            <div className='nav-button' /* onMouseEnter={() => isHovered()} onMouseLeave={() => isHovered()} */>
+                <Link to='/mensshoes' className="nav-link">FAVORITES</Link>
+            {/* menu container */}
+            <div className={/* ${toggle ? 'showContainer' : 'hideContainer'} */`dropdown-content-container`}>
+            <div className='drop-down-content-sub-container'>
+            
+                <div className="dropdown-content-column">
+                <ul className='column-list'>
+                    <li className='column-list-item'><Link to='/'>NEW RELEASES</Link></li>
+                    <li className='column-list-item'><Link to='/'>FLEECE FAVORITES</Link></li>
+                    <li className='column-list-item'><Link to='/'>NIKE X NBA</Link></li>
+                    <li className='column-list-item'><Link to='/'>BASKETBALL GEAR UP</Link></li>
+                    <li className='column-list-item'><Link to='/'>THE BLACK AND WHITE TREND</Link></li>
+                    <li className='column-list-item'><Link to='/'>BEST SELLERS</Link></li>
+                    <li className='column-list-item'><Link to='/'>SALE</Link></li>
+                </ul>
+                </div>
+
+                <div className="dropdown-content-column-left-line">
+                    <Link className='column-list-item' to='/mensshoes'>SHOES</Link>
+                    <ul>
+                        <li className='column-list-link'><Link to='/'>SNKRS Launch Calender</Link></li>
+                        <li className='column-list-link'><Link to='/'>Lifestyle</Link></li>
+                        <li className='column-list-link'><Link to='/'>Running</Link></li>
+                        <li className='column-list-link'><Link to='/'>Training & Gym</Link></li>
+                        <li className='column-list-link'><Link to='/'>BasketBall</Link></li>
+                        <li className='column-list-link'><Link to='/'>Jordan</Link></li>
+                        <li className='column-list-link'><Link to='/'>Football</Link></li>
+                        <li className='column-list-link'><Link to='/'>Soccer</Link></li>
+                        <li className='column-list-link'><Link to='/'>Baseball</Link></li>
+                        <li className='column-list-link'><Link to='/'>Golf</Link></li>
+                        <li className='column-list-link'><Link to='/'>Skateboarding</Link></li>
+                        <li className='column-list-link'><Link to='/'>Tennis</Link></li>
+                        <li className='column-list-link'><Link to='/'>Boots</Link></li>
+                        <li className='column-list-link'><Link to='/mensshoes'>All Shoes</Link></li>
+                    </ul>
+                </div>
+                <div class="dropdown-content-column-no-line">
+                    <Link className='column-list-item' className='column-list-item' to='/'>CLOTHING</Link>
+                    <ul>
+                        <li className='column-list-link'><Link to='/'>Tops & T-Shirts</Link></li>
+                        <li className='column-list-link'><Link to='/'>Shorts</Link></li>
+                        <li className='column-list-link'><Link to='/'>Polos</Link></li>
+                        <li className='column-list-link'><Link to='/'>Hoodies & Sweatshirts</Link></li>
+                        <li className='column-list-link'><Link to='/'>Jackets & Vests</Link></li>
+                        <li className='column-list-link'><Link to='/'>Pants & Tights</Link></li>
+                        <li className='column-list-link'><Link to='/'>Surf & Swimwear</Link></li>
+                        <li className='column-list-link'><Link to='/'>Nike Pro & Compression</Link></li>
+                        <li className='column-list-link'><Link to='/'>Socks & Underwear</Link></li>
+                        <li className='column-list-link'><Link to='/'>Big & Tall</Link></li>
+                        <li className='column-list-link'><Link to='/'>All Clothing</Link></li>
+                        <li className='column-list-link'><Link to='/'>ACCESSORIES & EQUIPMENT</Link></li>
+                        <li className='column-list-link'><Link to='/'>Bags & Backpacks</Link></li>
+                        <li className='column-list-link'><Link to='/'>Hats</Link></li>
+                    </ul>
+
+                </div>
+                <div class="dropdown-content-column-left-line-end">
+                    <Link className='column-list-item' to='/'>SHOP COLLECTION</Link>
+                    <ul>
+                        <li className='column-list-link'><Link to='/'>SNKRS Launch Calender</Link></li>
+                        <li className='column-list-link'><Link to='/'>Lifestyle</Link></li>
+                        <li className='column-list-link'><Link to='/'>Running</Link></li>
+                        <li className='column-list-link'><Link to='/'>Training & Gym</Link></li>
+                        <li className='column-list-link'><Link to='/'>BasketBall</Link></li>
+                        <li className='column-list-link'><Link to='/'>Jordan</Link></li>
+                        <li className='column-list-link'><Link to='/'>Football</Link></li>
+                        <li className='column-list-link'><Link to='/'>Soccer</Link></li>
+                        <li className='column-list-link'><Link to='/'>Baseball</Link></li>
+                        <li className='column-list-link'><Link to='/'>Golf</Link></li>
+                        <li className='column-list-link'><Link to='/'>Skateboarding</Link></li>
+                        <li className='column-list-link'><Link to='/'>Tennis</Link></li>
+                        <li className='column-list-link'><Link to='/'>Boots</Link></li>
+                        <li className='column-list-link'><Link to='/'>All Shoes</Link></li>
+                    </ul>
+
+                </div>
+                </div>
+            </div>
+            </div>
+            
             </div>
         </div>
-    </span>
-     );
+        <div className='searchInput'>
+            <input placeholder='Search' id='navSearchBar'></input>
+        </div>
+    </div>
+</span> );
+
 }
- 
-export default MiddleNav;
+ export default MiddleNav;

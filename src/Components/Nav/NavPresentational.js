@@ -5,10 +5,10 @@ import './tempNavStyle.scss'
 
 const Nav = () => {
     return ( 
-        <div>
+        <>
             <TopNav />
             <MiddleNav />
-        </div>
+        </>
 
      );
 }
