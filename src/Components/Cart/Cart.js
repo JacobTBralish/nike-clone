@@ -180,9 +180,17 @@ class Cart extends Component {
 {/* <div id="ch4_summaryApplyGC" className="ch4_summaryRow ch4_uppercase" >
 </div> */}
 {/* <!-- Summary Total --> */}
-<div id="ch4_summaryTotal" className="ch4_summaryRow ch4_uppercase">TOTAL<span id="totalAmt" className="ch4_right">$185.00</span>
+<div id="ch4_summaryTotal" className="ch4_summaryRow ch4_uppercase">TOTAL<span id="totalAmt" className="ch4_right">${total ? (total).toFixed(2) : (0).toFixed(2)}</span>         
+</div>
+<div id="ch4_summaryTotal" className="ch4_summaryRow ch4_uppercase">
+    {/* <input id="ch4_cartCheckoutBtn" type="button" value="CHECKOUT" className="ch4_btn ch4_btnOrange ch4_btnDropShadowSummary ch4_btnSummaryCol"></input> */}
+    <Link id="ch4_cartCheckoutBtn"  className="ch4_btn ch4_btnOrange ch4_btnDropShadowSummary ch4_btnSummaryCol" to='/checkout'>CHECKOUT</Link> 
 </div>
 
+{/* /* <h2>*Total: ${total ? (total).toFixed(2) : (0).toFixed(2)}</h2>
+                <p style={disclaimerText}>*Tax will be included after shipping details are input</p>
+                {console.log('total: ', total)}
+                <Link style={checkoutLinkStlyle} to='/checkout'>CHECKOUT</Link>  */}
         </div>
     <div id="ch4_summaryButtons" className="ch4_summaryRowEnd "></div>
    {/* <!-- Free Ship Message --> */}

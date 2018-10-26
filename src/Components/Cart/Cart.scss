@@ -446,6 +446,24 @@ a:-webkit-any-link {
     color: #fff;
     text-align: center;
     height: 41px;
+    a:-webkit-any-link {
+        cursor: pointer;
+        // text-decoration: underline;
+    }
+}
+.ch4_btnOrange {
+    a:-webkit-any-link {
+        cursor: pointer;
+        text-decoration: none;
+    }
+}
+a#ch4_cartCheckoutBtn {
+        text-decoration: none!important;
+        display: block;
+        width: 269px;
+        height:41px;
+        padding: 13px;
+
 }
 #ch4_summaryButtons {
     padding: 20px;
