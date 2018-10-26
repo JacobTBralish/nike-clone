@@ -77,7 +77,6 @@ label {
     cursor: pointer
 }
 body {
-    text: #666;
     background: #fff
 }
 
@@ -218,16 +217,12 @@ a.is-visited,a:visited,a[class*=nsg-button].is-active,a[class*=nsg-button].is-ho
     display: inline-block;
     margin-right: 15px;
 }
-.basic-info-form .attributes .dob-container-profile .select-container {
-    display: inline-block;
-    margin-right: 15px;
-}
 .edf-font-size--large, .edf-font-size--xlarge, .edf-font-size--xxlarge, .edf-font-size--xxxlarge, .edf-font-size--xxxxlarge, .edf-title-font-size--large, .edf-title-font-size--xlarge, .edf-title-font-size--xxxxlarge, .edf-title-font-size--xxlarge, .edf-title-font-size--xxxlarge {
     -webkit-font-smoothing: antialiased;
     // letter-spacing: -0.045em;
     margin: 0 0 0.12em 0;
-    letter-spacing: 0.1em;
-    font-size: 2.1em;
+    letter-spacing: 0.06em;
+    font-size: 2em;
     font-weight: 600;
 }
 .nsg-form--drop-down select {
@@ -252,13 +247,9 @@ a.is-visited,a:visited,a[class*=nsg-button].is-active,a[class*=nsg-button].is-ho
     height: 35px;
 
 }
-.dob-comp-inner {
-    // border: solid 1px blue;
-}
 .dob-comp-outer {
     // border: solid 1px red;
     margin-bottom: 5px;
-
     display: flex;
 }
 
