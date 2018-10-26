@@ -108,10 +108,14 @@ export default class Account extends Component {
                     :
                     selectedOption ==='6' 
                     ?
-                    <div>
-                        <h1>CONNECTED APPS</h1>
-                        <p>Disconnect from Nike+ connected apps that are currently authorized to access your Nike+ account.</p>
-                        <div>You don’t have any connected apps.</div>
+                    <div className="connected-apps-content">
+                        <h2 className="edf-font-size--xlarge nsg-font-family--platform">CONNECTED APPS</h2>
+                        <div className="preferences-no-shadow">
+                            <div className="preference-text2 nsg-text--dark-grey nsg-font-family--base edf-font-size--regular ">Disconnect from Nike+ connected apps that are currently authorized to access your Nike+ account.</div>
+                        </div>
+                        <div className="preferences apps-empty">
+                            <div>You don’t have any connected apps.</div>
+                            </div>
                     </div> 
                     :
                     <>
