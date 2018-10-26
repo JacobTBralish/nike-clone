@@ -206,10 +206,7 @@ class ShippingOptions extends Component {
                     token={this.onToken(total * (1+parseFloat(taxRate)) + parseInt(this.state.selectedOption))}
                 />
                 </div>
-            <div>
-                <input type='checkbox' value={SameShippingAsBilling} onChange={this.handleChange}></input> Billing address same as shipping
 
-            </div>
 
             </div>
         );

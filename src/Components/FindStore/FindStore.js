@@ -6,10 +6,7 @@ import CustomMarker from './CustomMarker';
 import StoreInfo from './StoreInfo';
 import './Marker.scss'
 
-
-
 class FindStore extends Component {
-
   state = {
     longitude:null,
     latitude:null,
@@ -45,7 +42,6 @@ class FindStore extends Component {
 //         </div>
 //     )
 // }) 
-
 // locateUser() {
 //   navigator.geolocation.getCurrentPosition(position => {
 //     this.updateViewport({
@@ -54,9 +50,6 @@ class FindStore extends Component {
 //     });
 //   });
 // }
-
-
-
 renderPopup = () => {
   console.log('hit')
   console.log('Info from poup ------------->', this.state.popupInfo)
@@ -72,10 +65,7 @@ renderPopup = () => {
           <StoreInfo info={popupInfo} />
         </Popup>
     )
-}
-
-
-
+  }
 showPosition = (position) => {
   console.log(position.coords.longitude)
   console.log(position.coords.latitude)
@@ -96,9 +86,6 @@ showPosition = (position) => {
 //   var d = R * c; // Distance in km
 //   return d;
 // }
-
-
-
 getLocation = () => {
   console.log('hit before', navigator)
   if (navigator.geolocation) {
@@ -106,8 +93,6 @@ getLocation = () => {
     navigator.geolocation.getCurrentPosition(this.showPosition);
   }
 }
-
-
 // renderMarker = (store, index) => {
 //   console.log(store, 'store')
 //     return (
@@ -288,5 +273,4 @@ getLocation = () => {
     );
   }
 }
-
 export default FindStore

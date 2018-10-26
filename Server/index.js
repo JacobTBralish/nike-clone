@@ -34,14 +34,34 @@ app.use(session({
 
 
 
-// axios.get('https://store.nike.com/html-services/gridwallData?gridwallPath=mens-lifestyle-shoes%2F7puZoneZoi3&country=US&lang_locale=en_US').then(response => {
-//     return fs.writeFile('./src/data/nikeMensLifeStyleShoes.js', JSON.stringify(response.data.stores), /* { flag: 'a+' }, */ (err) => {
+// axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=womens-shoes/7ptZoi3&pn=6').then(response => {
+//     return fs.writeFile('./src/data/AllWomensShoesPg6.json', JSON.stringify(response.data.sections[0].items), /* { flag: 'a+' }, */ (err) => {
 //         if (err){
 //             console.log(err)
-//             return response.data.stores
+//             return response.data.sections[0].items
 //         }
 //     })
 // })
+
+// axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=womens-shoes/7ptZoi3&pn=1').then(response => {
+//     return axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=womens-shoes/7ptZoi3&pn=2').then(response => {
+//         return axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=womens-shoes/7ptZoi3&pn=3').then(response => {
+//             return axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=womens-shoes/7ptZoi3&pn=4').then(response => {
+//                 return axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=womens-shoes/7ptZoi3&pn=5').then(response => {
+//                     return axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=womens-shoes/7ptZoi3&pn=6').then(response => {
+//                         return fs.writeFile('./src/data/AllWomensShoesPg1.json', JSON.stringify(response.data.sections[0].items), /* { flag: 'a+' }, */ (err) => {
+//                             if (err){
+//                                 console.log(err)
+//                                 return response.data.sections[0].items
+//                             }
+//                         })
+//                     })
+//                 })
+//             })
+//         })
+//     })
+// })
+
 
 massive(process.env.CONNECTION_STRING).then(database => {
     console.log('Hooked up to your database bruh.🤙')

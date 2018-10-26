@@ -1,62 +1,370 @@
 $NikeFont:'Oswald', sans-serif;
+$TextFont:'Roboto', sans-serif;
 
-.imageContainer1 {
-    position: absolute;
+.imageContainer {
+    position: relative;
+    margin: 15px 0;
+
+    .homeImage {
+        width: 100%;
+        height: 100%;
+    }
+
+    #homeVideo {
+        width: 100%;
+        height: 100%; 
+    }
+
+        .videoContent1 {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            z-index: 5;
+            background: none;
+            width: 50%;
+            height: 50%;
+            top: 0px;
+            left: 0;
+            // margin-top: 30px;
+            padding: 50px 160px 60px 60px;
+            
+            
+
+
+
+            #homeVideoLink1 {
+                display: block;
+                font-family: $NikeFont;
+                background: black;
+                color: white;
+                text-decoration: none;
+                padding: 0 20px;
+                cursor: pointer;
+                width: 150px;
+                height: 40px;
+                border-radius: 3px;
+                align-items: center;
+                padding-left: 5px;
+                padding-right: 5px;
+                // margin: 0 auto;
+                text-align: center;
+                font-size: .9375em;
+                line-height: 38px;
+                font-size: .9375em;
+                font-weight: bold;
+                font-style: normal;
+                bottom: 0;
+                left: 0;
+                margin-top: 10px
+            }
+
+            #h2Text1 {
+                color: black;
+                text-shadow: 1px 1px 1px black;
+                margin-bottom: .250em;
+                font-size: 3.125em;
+                font-style: normal;
+                font-weight: 400;
+                font-family: $NikeFont;
+            }
+    
+            #pText1 {
+                color: black;
+                font-family: $TextFont;
+                font-size: 15px;
+            }
+    
+        }
+    
+    .imageContent1 {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+         z-index: 5;
+        background: none;
+        width: 50%;
+        height: 50%;
+        top: 0px;
+        left: 0;
+        padding: 50px;
+        
+
+        #h2Text1 {
+            color: white;
+            text-shadow: 1px 1px 1px black;
+            margin-bottom: .250em;
+            font-size: 3.125em;
+            font-style: normal;
+            font-weight: 400;
+            font-family: $NikeFont;
+        }
+
+        #pText1 {
+            color: white;
+            font-family: $TextFont;
+            font-size: 15px;
+        }
+
+        #homeImageLink1 {
+            display: block;
+            font-family: $NikeFont;
+            background: white;
+            color: black;
+            text-decoration: none;
+            padding: 0 20px;
+            cursor: pointer;
+            width: 150px;
+            height: 40px;
+            border-radius: 3px;
+            align-items: center;
+            padding-left: 5px;
+            padding-right: 5px;
+            // margin: 0 auto;
+            text-align: center;
+            font-size: .9375em;
+            line-height: 38px;
+            font-size: .9375em;
+            font-weight: bold;
+            font-style: normal;
+            bottom: 0;
+            left: 0;
+            margin-top: 10px
+        }
+    }
+
+
+    
+    .imageContent2 {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        z-index: 5;
+        background: none;
+        width: 50%;
+        height: 50%;
+        top: 0;
+        left: 0;
+        padding: 50px;
+        
+
+        #h2Text2 {
+            color: white;
+            text-shadow: 1px 1px 1px black;
+            margin-bottom: .250em;
+            font-size: 3.125em;
+            font-style: normal;
+            font-weight: 400;
+            font-family: $NikeFont;
+        }
+
+        #pText2 {
+            color: white;
+            font-family: $TextFont;
+            font-size: 15px;
+        }
+
+        .linkRow{
+            display: flex;
+            #homeImageLink2-1 {
+                display: block;
+                font-family: $NikeFont;
+                background: white;
+                color: black;
+                text-decoration: none;
+                padding: 0 20px;
+                cursor: pointer;
+                width: 140px;
+                height: 40px;
+                border-radius: 3px;
+                align-items: center;
+                padding-left: 5px;
+                padding-right: 5px;
+                // margin: 0 auto;
+                text-align: center;
+                font-size: .9375em;
+                line-height: 38px;
+                font-size: .9375em;
+                font-weight: bold;
+                font-style: normal;
+                bottom: 0;
+                left: 0;
+                margin-top: 10px;
+                margin-right: 10px;
+            }
+    
+            #homeImageLink2-2 {
+                display: block;
+                font-family: $NikeFont;
+                background: white;
+                color: black;
+                text-decoration: none;
+                padding: 0 20px;
+                cursor: pointer;
+                width: 120px;
+                height: 40px;
+                border-radius: 3px;
+                align-items: center;
+                padding-left: 5px;
+                padding-right: 5px;
+                // margin: 0 auto;
+                text-align: center;
+                font-size: .9375em;
+                line-height: 38px;
+                font-size: .9375em;
+                font-weight: bold;
+                font-style: normal;
+                bottom: 0;
+                left: 0;
+                margin-top: 10px
+            }
+        }
+    }
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .content-row {
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        z-index: 5;
+        top: -250px;
+        // flex-direction: row;
+
+        .imageContent3-1 {
+            display: flex;
+            flex-direction: column;
+            // justify-content: flex-end;
+            position: relative;
+            z-index: 5;
+            background: none;
+            width: 35%;
+            height: 50%;
+            // left: auto;
+            // right: 0;
+            padding: 0px 50px 50px 50px;
+
+
+            #h2Text3-1 {
+                color: white;
+                text-shadow: 1px 1px 1px black;
+                margin-bottom: .250em;
+                font-size: 3.125em;
+                font-style: normal;
+                font-weight: 400;
+                font-family: $NikeFont;
+            }
+
+            #pText3-1 {
+                color: white;
+                font-family: $TextFont;
+                font-size: 15px;
+            }
+
+            #homeImageLink3-1 {
+                display: block;
+                font-family: $NikeFont;
+                background: white;
+                color: black;
+                text-decoration: none;
+                padding: 0 20px;
+                cursor: pointer;
+                width: 120px;
+                height: 40px;
+                border-radius: 3px;
+                align-items: center;
+                padding-left: 5px;
+                padding-right: 5px;
+                // margin: 0 auto;
+                text-align: center;
+                font-size: .9375em;
+                line-height: 38px;
+                font-size: .9375em;
+                font-weight: bold;
+                font-style: normal;
+                bottom: 0;
+                left: 0;
+                margin-top: 10px
+            }
+
+        }
+    
+        .imageContent3-2 {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            z-index: 5;
+            background: none;
+            width: 35%;
+            height: 50%;
+            // bottom: 0;
+            left: auto;
+            // right: auto;
+            padding:  0px 50px 50px 50px;
+            justify-content: flex-end;
+
+            #h2Text3-2 {
+                color: white;
+                text-shadow: 1px 1px 1px black;
+                margin-bottom: .250em;
+                font-size: 3.125em;
+                font-style: normal;
+                font-weight: 400;
+                font-family: $NikeFont;
+            }
+
+            #pText3-2 {
+                color: white;
+                font-family: $TextFont;
+                font-size: 15px;
+            }
+
+            #homeImageLink3-2 {
+                display: block;
+                font-family: $NikeFont;
+                background: white;
+                color: black;
+                text-decoration: none;
+                padding: 0 20px;
+                cursor: pointer;
+                width: 130px;
+                height: 40px;
+                border-radius: 3px;
+                align-items: center;
+                padding-left: 5px;
+                padding-right: 5px;
+                // margin: 0 auto;
+                text-align: center;
+                font-size: .9375em;
+                line-height: 38px;
+                font-size: .9375em;
+                font-weight: bold;
+                font-style: normal;
+                bottom: 0;
+                right: 0;
+                margin-top: 10px
+            }
+
+        }
+    }
+
 }
 
-.homeImage {
-    width: 100%;
-    height: 100%;
-}
 
-.imageContent1 {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    z-index: 5;
-    background: none;
-    width: 50%;
-    height: 50%;
-    top: 0;
-    left: 0;
-    padding: 50px
-}
-
-#h2Text1 {
-    color: white;
-    margin-bottom: .250em;
-    font-size: 3.125em;
-    font-style: normal;
-    font-weight: 400;
-    font-family: $NikeFont;
-}
-
-#pText1 {
-    color: white;
-
-}
-
-#homeImageLink1 {
-    display: block;
-    font-family: $NikeFont;
-    background: white;
-    color: black;
-    text-decoration: none;
-    padding: 0 20px;
-    cursor: pointer;
-    width: 77px;
-    height: 40px;
-    border-radius: 3px;
-    align-items: center;
-    padding-left: 5px;
-    padding-right: 5px;
-    // margin: 0 auto;
-    text-align: center;
-    font-size: .9375em;
-    line-height: 38px;
-    font-size: .9375em;
-    font-weight: bold;
-    font-style: normal;
-    bottom: 0;
-    left: 0;
-}
