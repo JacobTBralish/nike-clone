@@ -10,6 +10,7 @@ $TextFont:'Roboto', sans-serif;
     height: 100%;
     margin: 0;
     padding: 0;
+    
     .bannerContainer {
         display: flex;
         width: 984px;
@@ -53,7 +54,10 @@ $TextFont:'Roboto', sans-serif;
         flex-direction: row;
         flex-wrap: wrap;
         width: 100%;
-
+        align-items: center;
+        justify-content: center;
+        //THIS PADDING IS MOVING THE GRIDWALL AWAY FROM THE LEFT SIDE
+        padding: 50px;
         min-width: 482px;
         margin-bottom: 50px;
         // margin-left: 299px;
@@ -114,12 +118,18 @@ $TextFont:'Roboto', sans-serif;
             #colorwayNumber {
             margin: 5px 0;
             font-family: $TextFont;
+            // letter-spacing: .125em;
+
             }
         }
         #productTitle {
             line-height: 13px;
             font-weight: bold;
             margin: 2px 0;
+            
+            #productCount {
+                color: #666;
+            }
         }
         
         #productType {
