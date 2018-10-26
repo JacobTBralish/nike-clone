@@ -4,10 +4,7 @@ import StorePin from './Storepin';
 import Stores from '../../Data/nikeStoreLocations.json'
 import './Marker.css'
 
-
-
 class FindStore extends Component {
-
   state = {
     longitude:null,
     latitude:null,
@@ -24,7 +21,6 @@ class FindStore extends Component {
       phone_number: null
     },
   };
-
   
 // storeAddress = STORES.map(e =>  {
 //     return (
@@ -38,7 +34,6 @@ class FindStore extends Component {
 //         </div>
 //     )
 // }) 
-
 // locateUser() {
 //   navigator.geolocation.getCurrentPosition(position => {
 //     this.updateViewport({
@@ -47,9 +42,6 @@ class FindStore extends Component {
 //     });
 //   });
 // }
-
-
-
 renderPopup = () => {
   console.log('hit')
   console.log('Info from poup ------------->', this.state.popupInfo)
@@ -68,10 +60,7 @@ renderPopup = () => {
         anchor="top"
         onClose={() => {this.setState({popupInfo: null })}}/>
     )
-}
-
-
-
+  }
 showPosition = (position) => {
   console.log(position.coords.longitude)
   console.log(position.coords.latitude)
@@ -80,7 +69,6 @@ showPosition = (position) => {
     long: position.coords.longitude
   })
 }
-
 //  getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
 //   var R = 6371; // Radius of the earth in km
 //   var dLat = deg2rad(lat2-lat1);  // deg2rad below
@@ -92,9 +80,6 @@ showPosition = (position) => {
 //   var d = R * c; // Distance in km
 //   return d;
 // }
-
-
-
 getLocation = () => {
   console.log('hit before', navigator)
   if (navigator.geolocation) {
@@ -102,8 +87,6 @@ getLocation = () => {
     navigator.geolocation.getCurrentPosition(this.showPosition);
   }
 }
-
-
 // renderMarker = (store, index) => {
 //   console.log(store, 'store')
 //     return (
@@ -112,7 +95,6 @@ getLocation = () => {
 //         latitude={store.latitude} />
 //     )
 // }
-
   render() {
     // const popup = Stores.map(e => {
     //   console.log('hit')
@@ -125,9 +107,7 @@ getLocation = () => {
     //   longitude={Stores.longitude}
     //   latitude={Stores.latitude}/>
     // })
-
   const storesLongitude = Stores.map(e => {
-
    return <Marker setPopup={this.renderPopup} className="station" longitude={e.longitude} latitude={e.latitude} >
           <div>{e.name}</div>
           <div>{e.city}</div>
@@ -153,5 +133,4 @@ getLocation = () => {
     );
   }
 }
-
 export default FindStore

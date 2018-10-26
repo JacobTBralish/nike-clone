@@ -6,18 +6,18 @@ import './View.scss';
 
 const View3 = (props) => {
     return ( 
-        <div>
+        <div className='imageContainer'>
             <img className='homeImage' src={`${props.info.image}`} alt=''></img>
-            <span>
-                <div className='imageContent'>
-                    <h2 id='h2Text'>{props.info.h2text}</h2>
-                    <p id='pText'>{props.info.pText}</p>
-                    <Link id='homeImageLink' to=''>{props.info.linkText}</Link>
+            <span className='content-row'>
+                <div className='imageContent3-1'>
+                    <h2 id='h2Text3-1'>{props.info.h2Text}</h2>
+                    <p id='pText3-1'>{props.info.pText}</p>
+                    <Link id='homeImageLink3-1' to='/'>{props.info.linkText}</Link>
                 </div>
-                <div>
-                    <h2 id='h2Text'>{props.info.h2text2}</h2>
-                    <p id='pText'>{props.info.pText2}</p>
-                    <Link id='homeImageLink' to=''>{props.info.linkText2}</Link>
+                <div className='imageContent3-2'>
+                    <h2 id='h2Text3-2'>{props.info.h2Text2}</h2>
+                    <p id='pText3-2'>{props.info.pText2}</p>
+                    <Link id='homeImageLink3-2' to='/'>{props.info.linkText2}</Link>
                 </div>
             </span>
             

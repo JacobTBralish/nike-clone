@@ -192,6 +192,9 @@ $link-color-grey: #8D8D8D;
                 &:hover {
                     border-bottom: black 2px solid;
                 }
+                &:focus {
+                    border-bottom: black 2px solid;
+                }
             }
         
         .dropdown-content-container {
