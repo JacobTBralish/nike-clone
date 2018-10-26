@@ -34,11 +34,11 @@ app.use(session({
 
 
 
-// axios.get('https://store.nike.com/html-services/gridwallData?gridwallPath=mens-lifestyle-shoes%2F7puZoneZoi3&country=US&lang_locale=en_US').then(response => {
-//     return fs.writeFile('./src/data/nikeMensLifeStyleShoes.js', JSON.stringify(response.data.stores), /* { flag: 'a+' }, */ (err) => {
+// axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=mens-shoes/7puZoi3&pn=6').then(response => {
+//     return fs.writeFile('./src/data/AllMensShoesPg6.json', JSON.stringify(response.data.sections[0].items), /* { flag: 'a+' }, */ (err) => {
 //         if (err){
 //             console.log(err)
-//             return response.data.stores
+//             return response.data.sections[0].items
 //         }
 //     })
 // })

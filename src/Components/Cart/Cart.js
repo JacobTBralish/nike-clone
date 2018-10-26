@@ -76,7 +76,7 @@ class Cart extends Component {
         })
         return (
             <div>
-                { orderComplete ?
+                {/* { orderComplete ? */}
                 <div>
                     <h2>Order Completed</h2>
                     <h3>Order Summary</h3>
@@ -86,7 +86,7 @@ class Cart extends Component {
                         <li>{price}</li> */}
                     </ul>
                 </div>
-            :
+            // :
                 <div>
                     <h1>Cart Rendered </h1>
                     {mappedCart}
@@ -95,7 +95,7 @@ class Cart extends Component {
                     {console.log('total: ', total)}
                     <Link style={checkoutLinkStlyle} to='/checkout'>CHECKOUT</Link>
                 </div>
-            }
+            // }
 
             </div>
         )
