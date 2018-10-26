@@ -4,7 +4,7 @@ import StorePin from './Storepin';
 import Stores from '../../Data/nikeStoreLocations.json';
 import CustomMarker from './CustomMarker';
 import StoreInfo from './StoreInfo';
-import './Marker.css'
+import './Marker.scss'
 
 
 
@@ -17,7 +17,7 @@ class FindStore extends Component {
     showStores: 2,
 
     viewport: {
-      width: 1020,
+    width: 1840,
       height: 550,
       latitude: 33.074240,
       longitude: -112.584766,
@@ -124,15 +124,14 @@ getLocation = () => {
   const storesLongitude = Stores.slice(0, this.state.showStores).map(e => {
 
    return <Marker perspective={true} longitude={e.longitude} latitude={e.latitude} >
-          <StorePin size={20} onClick={() => this.setState({popupInfo: e})} />
-        </Marker>
+            <StorePin size={20} onClick={() => this.setState({popupInfo: e})} />
+          </Marker>
   })
  const storesLatitude = Stores.map(e => {
    return e.latitude
  })
-    return (<div>
+    return (<div className="find-store-main">
       <div>
-          <div></div>
           <div className="map-box"></div>
       </div>
       <ReactMapGL
@@ -142,45 +141,150 @@ getLocation = () => {
       onViewportChange={(viewport) => this.setState({viewport})}>
       {this.renderPopup()}
       {storesLongitude}
-      <button onClick={this.handleShowMore}>Show More states</button>
+      <button onClick={this.handleShowMore}>Show More stores</button>
        <div>Longitude: {this.getLocation}</div>
        <div>Latitude: {this.getLocation}</div>
         <button onClick={this.getLocation}>get location</button>
         </ReactMapGL>
-       <div >
-         <div className="locator-box">STORE LOCATOR
-              <div className="black-img">
-                  
-                    <div>BROWSE ALL STORES</div>
+       <div className="locator-box" >
+         <h3 >STORE LOCATOR</h3>
+              <div className="store-locator">
 
+                <div className="find-store-map">
+                
+                <div className="find-store">BROWSE ALL STORES
+                
+                    <div className="text-box-all-stores">
+                    
+                        <h4 className="nike-background-text-color">BROSWE ALL STORES</h4>
+                        <p className="nike-text-color">Browse our directory of everything Nike has to offer.</p>
+                        <a className="link-color">Browse All Stores</a>
+
+                    </div>
+
+                </div>
+                
+                </div>
+
+                <div className="find-store-map"><img className="all-stores" /></div>
+              
               </div>
 
-            <div className="store-locator"> div
+            <div className="store-locator">
 
-                  <div>NIKE STORES</div>
+                  <div className="find-store-map">
+                  
+                      <img className="nike-img"/>
+                      
+                  </div>
+                  
+                  <div className="find-store-map">
+                  
+                      <div className="find-store">NIKE STORES
+                        <div className="text-box">
+                          
+                          <h4 className="nike-background-text-color">NIKE STORES</h4>
+                          <p className="nike-text-color">Extraordanary access to a world of products and services,</p>
+                          <p className="nike-text-color">all dedicated to helping you get better.</p>
+                          <a className="link-color">Show Locations</a>
+
+                        </div>
+
+                      </div>
+
+                  </div>
 
             </div>
 
-            <div className="store-locator"> div
+            <div className="store-locator">
 
-                  <div>NIKE FACTORY STORES</div>
+                <div className="find-store-map" >
+                <div className="find-store">NIKE FACTORY STORES
+
+                    <div className="text-box-nike-factory">
+                    <h4 className="nike-background-text-color">NIKE FACTORY STORES</h4>
+                    <p className="nike-text-color">Nike products, in stock and where you shop</p>
+                    <a className="link-color">Show Locations</a>
+                    </div>
+
+                </div>
+                  
+                </div>
+                  <div className="find-store-map" ><img className="nike-factory-img" /></div>
+                  
+            </div>
+
+            <div className="store-locator">
+
+                  <div className="find-store-map">
+                  
+                      <img className="converse-img"/>
+                  
+                  </div>
+
+                <div  className="find-store-map" >
+
+                  <div className="find-store">CONVERSE
+
+                      <div className="text-box">
+
+                        <h4 className="nike-background-text-color">CONVERSE</h4>
+                        <p className="nike-text-color">Browse all Converse stores</p>
+                        <a className="link-color">Show Locations</a>
+                     
+                     </div>
+
+                  </div>
+                  
+              </div>
+                  
+            </div>
+
+            <div className="store-locator">
+
+                  <div className="find-store-map">
+
+                    <div className="find-store">HURLEY
+                  
+                <div className="text-box-hurley">
+                  
+                  <h4 className="nike-background-text-color">HURLEY</h4>
+                  <p className="nike-text-color">Browse all Hurley stores</p> 
+                  <a className="link-color" >Show Locations</a>
+
+                </div>
+
+              </div>
+                  
+            </div>
+
+                  <div className="find-store-map"><img className="hurley-img"/></div>
+
+            </div> 
+
+            <div className="store-locator">
+
+              <div className="find-store-map">
+                
+                <img className="partner-store" />
+                
+              </div>
+                <div className="find-store-map">
+                <div className="find-store">PARTNER STORES
+
+                  <div className="text-box-Nike-partner-stores">
+                      <h4 className="nike-background-text-color">NIKE PARTNER STORE</h4>
+                      <a className="link-color">Show Locations</a>
+                  </div>
+
+                </div>
+              
+              </div>
 
             </div>
 
-            <div className="store-locator">div
-
-                  <div>CONVERSE</div>
-
-            </div>
-
-            <div className="store-locator">div
-
-                  <div>HURLEY</div>
-
-            </div>
          </div>
        </div>
-      </div>
     );
   }
 }
