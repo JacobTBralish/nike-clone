@@ -31,11 +31,18 @@ logout = () => {
     return ( 
         <div>
             <div className='topNav'>
+            <div className='leftNav'>
                 <Link id='nikePlus' to='/nike/nike-plus'><button id='topNavButton'>Nike Plus</button></Link>
                 <Link id='jordan' to='/nike/nike-plus'to=''><button id='topNavButton'><img id='jumpmanImg' src={jumpman}></img></button></Link>
                 <Link id='hurley' to='/nike/nike-plus'to=''><button id='topNavButton'><img id='converseImg' src={Converse}></img></button></Link>
                 <Link id='converse' to='/nike/nike-plus'to=''><button id='topNavButton'><img id='hurleyImg' src={Hurley}></img></button></Link>
+            </div>
+            <div className='rightList'>                
                 {user ? <li onClick={()=>this.logout()}><Link to='/'>Logout</Link></li> : <li onClick={() => {this.login()}}>Join/Login In To Nike Plus Accout</li>}
+                <li><Link to='/'>Help</Link></li>
+                <li><Link to='/cart'><i class="fas fa-shopping-cart"></i></Link></li>
+                <li></li>
+            </div>
             </div>
         </div>
      );

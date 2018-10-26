@@ -1,0 +1,50 @@
+.station:before {
+  content: ' ';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: red;
+  border-radius: 8px;
+  margin: 0 8px;
+}
+.station {
+  border-radius: 20px;
+  padding-right: 12px;
+  margin: -12px;
+  color: transparent;
+  line-height: 24px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+.station span {
+  display: none;
+}
+
+
+.popup-box {
+display: flex;
+text-align: center
+}
+
+.store-locator {
+  border: 1px solid blue;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between
+}
+
+.black-img {
+  background-image: url('https://cdn.filepicker.io/api/file/CNbpWaVQfS3IrUM2swrG');
+  width: 45%;
+  height: 50%;
+}
+
+.locator-box {
+  height: 60%
+}
+
+.map-box {
+ position: inherit;
+ left: 100%;
+}

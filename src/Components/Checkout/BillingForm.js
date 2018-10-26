@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { postBillingInformation } from '../../Redux/reducer';
 
+import CartCheckoutView from '../Cart/CartCheckoutView';
+
 class BillingForm extends Component {
     constructor(){
         super();
@@ -58,13 +60,16 @@ class BillingForm extends Component {
         <div>
             <div>
                 <h3>Shipping Address</h3>
+                <div>
+                    <CartCheckoutView />
+                </div>
             </div>
-
+            
             <div>
                 <button onClick={this.handleToggle} type='checkBox'></button>Billing address same as shipping
             </div>
 
-            {toggleValue 
+            {toggleValue
             ?
             <div>
             <div>
@@ -79,7 +84,7 @@ class BillingForm extends Component {
             <div>
                 <p>{shippingInfo[0].city} {shippingInfo[0].state}</p>
             </div>
-
+            <div><Link to={{pathname:'/shippingoptions', state:{taxRate}}}><button type='submit' onClick={() => postBillingInformation(refId, shippingInfo[0].first_name, shippingInfo[0].last_name, (user ? user.id : null), shippingInfo[0].address1, (shippingInfo[0].address2 || null), shippingInfo[0].city, shippingInfo[0].state, shippingInfo[0].zip_code )}>SAVE & CONTINUE</button></Link></div>
             </div>
             :
             <form>

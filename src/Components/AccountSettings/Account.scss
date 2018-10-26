@@ -113,14 +113,23 @@ body {
         margin-bottom: 40px;
     }
 }
+.basic-info-form .deactivate-container button {
+    line-height: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+}
+
 .edf-font-size--xlarge {
     font-size: 25px;
 }
 .edf-font-size--large, .edf-font-size--xlarge, .edf-font-size--xxlarge, .edf-font-size--xxxlarge, .edf-font-size--xxxxlarge, .edf-title-font-size--large, .edf-title-font-size--xlarge, .edf-title-font-size--xxxxlarge, .edf-title-font-size--xxlarge, .edf-title-font-size--xxxlarge {
     -webkit-font-smoothing: antialiased;
-    letter-spacing: -0.045em;
+    // letter-spacing: -0.045em;
     margin: 0 0 0.12em 0;
-    word-spacing: -0.05em;
+    letter-spacing: 0.3em;
+    font-size: 2.1em;
+    font-weight: 600;
 }
 .nsg-text--dark-grey, .nsg-text--dark-grey:link, a.nsg-text--dark-grey:active, a.nsg-text--dark-grey:hover, a.nsg-text--dark-grey:visited {
     color: #222;
@@ -173,9 +182,15 @@ li {
     display: block;
     font-weight: 700;
 }
+.nsg-bg--dark-grey, .nsg-bg--dark-grey.is-active, .nsg-bg--dark-grey.is-visited, .nsg-bg--dark-grey:active, .nsg-bg--dark-grey:link, .nsg-bg--dark-grey:not([disabled]):not([class*=is-disabled]).is-hover, .nsg-bg--dark-grey:not([disabled]):not([class*=is-disabled]):hover, .nsg-bg--dark-grey:visited, .nsg-button.nsg-bg--dark-grey, .nsg-button.nsg-bg--dark-grey.is-active, .nsg-button.nsg-bg--dark-grey.is-visited, .nsg-button.nsg-bg--dark-grey:active, .nsg-button.nsg-bg--dark-grey:link, .nsg-button.nsg-bg--dark-grey:not([disabled]):not([class*=is-disabled]).is-hover, .nsg-button.nsg-bg--dark-grey:not([disabled]):not([class*=is-disabled]):hover, .nsg-button.nsg-bg--dark-grey:visited, .nsg-button.nsg-grad--dark-grey, .nsg-button.nsg-grad--dark-grey.is-active, .nsg-button.nsg-grad--dark-grey.is-visited, .nsg-button.nsg-grad--dark-grey:active, .nsg-button.nsg-grad--dark-grey:link, .nsg-button.nsg-grad--dark-grey:not([disabled]):not([class*=is-disabled]).is-hover, .nsg-button.nsg-grad--dark-grey:not([disabled]):not([class*=is-disabled]):hover, .nsg-button.nsg-grad--dark-grey:visited, .nsg-grad--dark-grey, .nsg-grad--dark-grey.is-active, .nsg-grad--dark-grey.is-visited, .nsg-grad--dark-grey:active, .nsg-grad--dark-grey:link, .nsg-grad--dark-grey:not([disabled]):not([class*=is-disabled]).is-hover, .nsg-grad--dark-grey:not([disabled]):not([class*=is-disabled]):hover, .nsg-grad--dark-grey:visited {
+    background-color: #222;
+    border-color: #222;
+    color: #fff;
+    letter-spacing: 0.1em;
+}
 
 .content {
-    border: 1px black solid;
+    // border: 1px black solid;
     width: 500px;
     padding: 6px 0px 0px 100px;
     // padding: 6px 0px 0px 100px;
@@ -184,7 +199,36 @@ li {
 
 }
 
+.nsg-bg--nike-fuel, .nsg-bg--nike-fuel.is-active, .nsg-bg--nike-fuel.is-visited, .nsg-bg--nike-fuel:active, .nsg-bg--nike-fuel:link, .nsg-bg--nike-fuel:not([disabled]):not([class*=is-disabled]).is-hover, .nsg-bg--nike-fuel:not([disabled]):not([class*=is-disabled]):hover, .nsg-bg--nike-fuel:visited, .nsg-button.nsg-bg--nike-fuel, .nsg-button.nsg-bg--nike-fuel.is-active, .nsg-button.nsg-bg--nike-fuel.is-visited, .nsg-button.nsg-bg--nike-fuel:active, .nsg-button.nsg-bg--nike-fuel:link, .nsg-button.nsg-bg--nike-fuel:not([disabled]):not([class*=is-disabled]).is-hover, .nsg-button.nsg-bg--nike-fuel:not([disabled]):not([class*=is-disabled]):hover, .nsg-button.nsg-bg--nike-fuel:visited, .nsg-button.nsg-grad--nike-fuel, .nsg-button.nsg-grad--nike-fuel.is-active, .nsg-button.nsg-grad--nike-fuel.is-visited, .nsg-button.nsg-grad--nike-fuel:active, .nsg-button.nsg-grad--nike-fuel:link, .nsg-button.nsg-grad--nike-fuel:not([disabled]):not([class*=is-disabled]).is-hover, .nsg-button.nsg-grad--nike-fuel:not([disabled]):not([class*=is-disabled]):hover, .nsg-button.nsg-grad--nike-fuel:visited, .nsg-grad--nike-fuel, .nsg-grad--nike-fuel.is-active, .nsg-grad--nike-fuel.is-visited, .nsg-grad--nike-fuel:active, .nsg-grad--nike-fuel:link, .nsg-grad--nike-fuel:not([disabled]):not([class*=is-disabled]).is-hover, .nsg-grad--nike-fuel:not([disabled]):not([class*=is-disabled]):hover, .nsg-grad--nike-fuel:visited {
+    background-color: #87e300;
+    border-color: #87e300;
+    color: #000;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+}
 
+.basic-info-form .save-container {
+    width: 620px;
+    margin: -15px 0 -10px 0;
+    text-align: right;
+}
+.nsg-button, .nsg-button--flyout nav>a, .nsg-button--nikeid {
+    letter-spacing: -1px;
+    font-size: 15px;
+    height: 40px;
+    line-height: 38px;
+    text-align: center;
+}
+.nsg-button, .nsg-button--flyout nav>a, .nsg-button--nikeid, .nsg-button-small {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.basic-info-form .save-container button {
+    margin-left: 10px;
+    min-width: 100px;
+    text-transform: uppercase;
+}
 .basic-info-form .profile-image-bio-wrapper {
     width: 100%;
     .photo-button-wrapper {
