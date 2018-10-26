@@ -1,3 +1,5 @@
+const createReviewData = require('../lib/createReview/createReviewData');
+
 module.exports = {
     reviews_by_name: (req, res) => {
         // console.log('reviews_by_name fired in controller')
@@ -14,11 +16,16 @@ module.exports = {
         const db = req.app.get('db');
         // const shoeName = req.params.id;
         const { itemName ,poster_id, reviewTitle, body, stars, dateval} = req.body
-        console.log('itemName', itemName, 'title =====>', reviewTitle, 'body ====>', body, 'stars ====>', stars, 'poster_id ====>', poster_id) 
-        
+        console.log('itemName', itemName, 'title =====>', reviewTitle, 'body ====>', body, 'stars ====>', stars, 'poster_id ====>', poster_id)
+
+        createReviewData.createReview(db, req.body).then(reviews => {
+            res.status(200).send(reviews)
+        })
+        .catch(error => console.log('error in create review ===> ', error))
         // comp_titles.map(titles => {
         //     db.query('SELECT $1 FROM users', ['id']).then(users)
         // })
+
         db.create_review({poster_id, itemName, title:reviewTitle, body, stars, dateval})
         .then(reviews => {
             res.status(200).send(reviews)

@@ -35,9 +35,11 @@ $link-color-grey: #8D8D8D;
         cursor: pointer;
     }
     #nikePlus > button {
+        
         width: 111px;
         background: none;
         color:$link-color-grey;
+        align-items: center;
     }
 
     #jordan > button {
@@ -46,12 +48,12 @@ $link-color-grey: #8D8D8D;
         color:$link-color-grey;
         align-items: center;
     }
+
     #converse > button {
         width: 130px;
         background: none;
         color:$link-color-grey;
         align-items: center;
-
     }
 
     #hurley > button {
@@ -61,6 +63,7 @@ $link-color-grey: #8D8D8D;
         align-items: center;
 
     }
+
     .rightList {
         display: flex;
         list-style: none;
@@ -109,6 +112,7 @@ $link-color-grey: #8D8D8D;
 
 #topNavButton {
     height: 39px;
+ 
 }
 
 .swooshDiv {
@@ -186,6 +190,9 @@ $link-color-grey: #8D8D8D;
                 text-decoration: none;
                 color: inherit;
                 &:hover {
+                    border-bottom: black 2px solid;
+                }
+                &:focus {
                     border-bottom: black 2px solid;
                 }
             }

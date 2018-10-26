@@ -31,12 +31,13 @@
     "redux": "^4.0.1",
     "redux-promise-middleware": "^5.1.1",
     "request": "^2.88.0",
+    "sinon": "^7.1.0",
     "stripe": "^6.12.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest --watch server/",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

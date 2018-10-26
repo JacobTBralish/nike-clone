@@ -125,7 +125,7 @@ class Cart extends Component {
     <!-- /* Content Items */}
                         <div className="chrome">
                             <h2 class="heading toUppercase">Your Cart ({`${cart.length}`})</h2>
-                            <div className="content no-padding clearfix">
+                            <div id="content" className="content no-padding clearfix">
                                 <div className="ch4_contentItems">
                                     <ul className="bordered">
                                         <form id="lineitemform" action="https://secure-store.nike.com/us/checkout/html/cart.jsp?_DARGS=/us/checkout/common/includes/lineItem.jsp.lineitemform" method="post" novalidate="">
@@ -162,7 +162,7 @@ class Cart extends Component {
 
             <div id="ch4_summaryShipping" className="ch4_summaryRow">
                 <div id="ch4_itemLabel" className="ch4_itemLabel">ESTIMATED SHIPPING &amp; HANDLING</div>
-                <div className="ch4_itemLabelValue"><span id="shippingAmount">$0.00</span></div>
+                <div className="ch4_itemLabelValue ch4_right"><span id="shippingAmount">$0.00</span></div>
                 <div className="float-left">Standard:&nbsp;FREE&nbsp;Arrives 2-4 Days</div>
             </div>
 

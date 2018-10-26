@@ -14,6 +14,7 @@ import View3 from './View3';
 class Home extends Component {
 
     render() { 
+
         return ( 
             <div className='homeContainer'>
                 <div>
