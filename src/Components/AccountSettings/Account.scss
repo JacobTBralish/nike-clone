@@ -1,0 +1,386 @@
+$NikeFont: 'Oswald', sans-serif;
+
+body {
+    font-family: $NikeFont;
+
+}
+
+.nsg-bg--light-grey, .nsg-bg--light-grey.is-active, .nsg-bg--light-grey.is-visited, .nsg-bg--light-grey:active, .nsg-bg--light-grey:link, .nsg-bg--light-grey:not([disabled]):not([class*=is-disabled]).is-hover, .nsg-bg--light-grey:not([disabled]):not([class*=is-disabled]):hover, .nsg-bg--light-grey:visited, .nsg-button.nsg-bg--light-grey, .nsg-button.nsg-bg--light-grey.is-active, .nsg-button.nsg-bg--light-grey.is-visited, .nsg-button.nsg-bg--light-grey:active, .nsg-button.nsg-bg--light-grey:link, .nsg-button.nsg-bg--light-grey:not([disabled]):not([class*=is-disabled]).is-hover, .nsg-button.nsg-bg--light-grey:not([disabled]):not([class*=is-disabled]):hover, .nsg-button.nsg-bg--light-grey:visited, .nsg-button.nsg-grad--light-grey, .nsg-button.nsg-grad--light-grey.is-active, .nsg-button.nsg-grad--light-grey.is-visited, .nsg-button.nsg-grad--light-grey:active, .nsg-button.nsg-grad--light-grey:link, .nsg-button.nsg-grad--light-grey:not([disabled]):not([class*=is-disabled]).is-hover, .nsg-button.nsg-grad--light-grey:not([disabled]):not([class*=is-disabled]):hover, .nsg-button.nsg-grad--light-grey:visited, .nsg-grad--light-grey, .nsg-grad--light-grey.is-active, .nsg-grad--light-grey.is-visited, .nsg-grad--light-grey:active, .nsg-grad--light-grey:link, .nsg-grad--light-grey:not([disabled]):not([class*=is-disabled]).is-hover, .nsg-grad--light-grey:not([disabled]):not([class*=is-disabled]):hover, .nsg-grad--light-grey:visited {
+    background-color: #ddd;
+    border-color: #ddd;
+    color: #000;
+}
+.nsg-button, .nsg-button--flyout nav>a, .nsg-button--flyout nav>ul li, .nsg-button--nikeid, .nsg-button--pill-down, .nsg-button--pill-right, .nsg-button--small--pill, .nsg-button--toggle, .nsg-button--toggle .toggleBg, .nsg-button--toggle>ul>li, .nsg-button-small {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    border-radius: 2px;
+    -webkit-background-clip: padding;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    border: none;
+    cursor: pointer;
+    margin: 0;
+    outline: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+}
+
+.nsg-button {
+    white-space: nowrap;
+}
+
+.nsg-button, .nsg-button--flyout nav>a, .nsg-button--nikeid {
+    letter-spacing: -1px;
+    font-size: 15px;
+    height: 40px;
+    line-height: 38px;
+    text-align: center;
+}
+.nsg-button, .nsg-button--flyout nav>a, .nsg-button--nikeid, .nsg-button-small {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.nsg-button, .nsg-button-small {
+    color: #111;
+    background-color: #ccc;
+    border: 1px solid #ccc;
+}
+
+
+.profile .profile-nav h2, .content .profile-content h2 {
+    margin-bottom: 36px;
+    padding-left: 20px;
+}
+.profile .profile-nav ul li {
+    height: 44px;
+    line-height: 44px;
+    // padding-left: 38px;
+    color: #999999;
+    position: relative;
+    cursor: pointer;
+    list-style: none;
+}
+.profile .profile-nav ul li.active {
+    color: #333333;
+    padding-bottom: 0;
+}
+.profile-nav {
+    min-height: 1120px;
+    vertical-align: top;
+    // width: 290px;
+    padding-top: 6px;
+    // margin-left: 150px;
+
+}
+.profile .profile-nav ul li .profile-divider {
+    border-top: 1px solid #D8D8D8;
+    height: 0;
+    left: -25px;
+    margin-left: 40px;
+    position: relative;
+}
+
+[class*=nsg-glyph--] {
+    display: inline-block;
+    overflow: hidden;
+    text-align: left;
+    text-indent: 100%;
+    white-space: nowrap;
+    position: relative;
+    vertical-align: middle;
+    width: 1em;
+    height: 1em;
+}
+.profile {
+    color: #333;
+    font-size: 12px;
+    >div {
+        display: inline-block;
+        text-align: left;
+    }
+    h2 {
+        margin-bottom: 40px;
+    }
+}
+.basic-info-form .deactivate-container button {
+    line-height: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+}
+
+.edf-font-size--xlarge {
+    font-size: 25px;
+}
+.edf-font-size--large, .edf-font-size--xlarge, .edf-font-size--xxlarge, .edf-font-size--xxxlarge, .edf-font-size--xxxxlarge, .edf-title-font-size--large, .edf-title-font-size--xlarge, .edf-title-font-size--xxxxlarge, .edf-title-font-size--xxlarge, .edf-title-font-size--xxxlarge {
+    -webkit-font-smoothing: antialiased;
+    // letter-spacing: -0.045em;
+    margin: 0 0 0.12em 0;
+    letter-spacing: 0.3em;
+    font-size: 2.1em;
+    font-weight: 600;
+}
+.nsg-text--dark-grey, .nsg-text--dark-grey:link, a.nsg-text--dark-grey:active, a.nsg-text--dark-grey:hover, a.nsg-text--dark-grey:visited {
+    color: #222;
+}
+h2, h3 {
+    text-transform: uppercase;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: 400;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    // padding-inline-start: 40px;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.profile-content {
+    width: 380px;
+    border: 0px solid #CCC;
+    label {
+        padding: 0 0 4px 0;
+    }
+    .two-field-container .left-container {
+        display: inline-block;
+        margin-right: 15px;
+        width: 180px;
+    }
+}
+
+.nsg-form--required {
+    color: #fe0000;
+    font-weight: 700;
+}
+.nsg-form--label .nsg-form--required, .nsg-form--label--normal .nsg-form--required {
+    margin-left: 3px;
+}
+
+.nsg-form--label, .nsg-form--label--control, .nsg-form--label--normal {
+    cursor: pointer;
+    display: block;
+    font-weight: 700;
+}
+.nsg-bg--dark-grey, .nsg-bg--dark-grey.is-active, .nsg-bg--dark-grey.is-visited, .nsg-bg--dark-grey:active, .nsg-bg--dark-grey:link, .nsg-bg--dark-grey:not([disabled]):not([class*=is-disabled]).is-hover, .nsg-bg--dark-grey:not([disabled]):not([class*=is-disabled]):hover, .nsg-bg--dark-grey:visited, .nsg-button.nsg-bg--dark-grey, .nsg-button.nsg-bg--dark-grey.is-active, .nsg-button.nsg-bg--dark-grey.is-visited, .nsg-button.nsg-bg--dark-grey:active, .nsg-button.nsg-bg--dark-grey:link, .nsg-button.nsg-bg--dark-grey:not([disabled]):not([class*=is-disabled]).is-hover, .nsg-button.nsg-bg--dark-grey:not([disabled]):not([class*=is-disabled]):hover, .nsg-button.nsg-bg--dark-grey:visited, .nsg-button.nsg-grad--dark-grey, .nsg-button.nsg-grad--dark-grey.is-active, .nsg-button.nsg-grad--dark-grey.is-visited, .nsg-button.nsg-grad--dark-grey:active, .nsg-button.nsg-grad--dark-grey:link, .nsg-button.nsg-grad--dark-grey:not([disabled]):not([class*=is-disabled]).is-hover, .nsg-button.nsg-grad--dark-grey:not([disabled]):not([class*=is-disabled]):hover, .nsg-button.nsg-grad--dark-grey:visited, .nsg-grad--dark-grey, .nsg-grad--dark-grey.is-active, .nsg-grad--dark-grey.is-visited, .nsg-grad--dark-grey:active, .nsg-grad--dark-grey:link, .nsg-grad--dark-grey:not([disabled]):not([class*=is-disabled]).is-hover, .nsg-grad--dark-grey:not([disabled]):not([class*=is-disabled]):hover, .nsg-grad--dark-grey:visited {
+    background-color: #222;
+    border-color: #222;
+    color: #fff;
+    letter-spacing: 0.1em;
+}
+
+.content {
+    // border: 1px black solid;
+    width: 500px;
+    padding: 6px 0px 0px 100px;
+    // padding: 6px 0px 0px 100px;
+    margin-bottom: 36px;
+    // padding-left: 20px;
+
+}
+
+.nsg-bg--nike-fuel, .nsg-bg--nike-fuel.is-active, .nsg-bg--nike-fuel.is-visited, .nsg-bg--nike-fuel:active, .nsg-bg--nike-fuel:link, .nsg-bg--nike-fuel:not([disabled]):not([class*=is-disabled]).is-hover, .nsg-bg--nike-fuel:not([disabled]):not([class*=is-disabled]):hover, .nsg-bg--nike-fuel:visited, .nsg-button.nsg-bg--nike-fuel, .nsg-button.nsg-bg--nike-fuel.is-active, .nsg-button.nsg-bg--nike-fuel.is-visited, .nsg-button.nsg-bg--nike-fuel:active, .nsg-button.nsg-bg--nike-fuel:link, .nsg-button.nsg-bg--nike-fuel:not([disabled]):not([class*=is-disabled]).is-hover, .nsg-button.nsg-bg--nike-fuel:not([disabled]):not([class*=is-disabled]):hover, .nsg-button.nsg-bg--nike-fuel:visited, .nsg-button.nsg-grad--nike-fuel, .nsg-button.nsg-grad--nike-fuel.is-active, .nsg-button.nsg-grad--nike-fuel.is-visited, .nsg-button.nsg-grad--nike-fuel:active, .nsg-button.nsg-grad--nike-fuel:link, .nsg-button.nsg-grad--nike-fuel:not([disabled]):not([class*=is-disabled]).is-hover, .nsg-button.nsg-grad--nike-fuel:not([disabled]):not([class*=is-disabled]):hover, .nsg-button.nsg-grad--nike-fuel:visited, .nsg-grad--nike-fuel, .nsg-grad--nike-fuel.is-active, .nsg-grad--nike-fuel.is-visited, .nsg-grad--nike-fuel:active, .nsg-grad--nike-fuel:link, .nsg-grad--nike-fuel:not([disabled]):not([class*=is-disabled]).is-hover, .nsg-grad--nike-fuel:not([disabled]):not([class*=is-disabled]):hover, .nsg-grad--nike-fuel:visited {
+    background-color: #87e300;
+    border-color: #87e300;
+    color: #000;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+}
+
+.basic-info-form .save-container {
+    width: 620px;
+    margin: -15px 0 -10px 0;
+    text-align: right;
+}
+.nsg-button, .nsg-button--flyout nav>a, .nsg-button--nikeid {
+    letter-spacing: -1px;
+    font-size: 15px;
+    height: 40px;
+    line-height: 38px;
+    text-align: center;
+}
+.nsg-button, .nsg-button--flyout nav>a, .nsg-button--nikeid, .nsg-button-small {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.basic-info-form .save-container button {
+    margin-left: 10px;
+    min-width: 100px;
+    text-transform: uppercase;
+}
+.basic-info-form .profile-image-bio-wrapper {
+    width: 100%;
+    .photo-button-wrapper {
+        width: 125px;
+        text-align: center;
+        margin-left: 0px;
+        button {
+            line-height: 29px;
+            margin: auto;
+            min-width: 95px;
+            width: auto;
+            display: block;
+        }
+    }
+}
+.basic-info-form .name-container {
+    margin-top: 1em;
+}
+
+.profile-pic-wrapper {
+    height: 125px;
+    display: inline-block;
+    margin-right: 20px;
+    .profile-pic.defaultPic {
+        background-image: url(https://secure-store.nike.com/nikestore/html/img/default-profile-img.png?buildRev=58e0a3d…);
+    }
+    .profile-pic {
+        border: .5px solid #CCC;
+        border-radius: 63px;
+        -moz-border-radius: 5px;
+        height: 125px;
+        width: 125px;
+        background-color: #fff;
+        background-repeat: no-repeat;
+        background-size: 125px auto;
+        background-position: center center;
+    }
+}
+
+.bio-section-wrapper {
+    height: 125px;
+    display: inline-block;
+    vertical-align: top;
+    width: 228px;
+    .nike-textarea {
+        resize: none;
+        height: 100px;
+        width: 100%;
+    }
+    .length-count {
+        position: relative;
+        top: 7px;
+        right: -190px;
+        font-style: italic;
+        color: #666;
+        overflow: auto;
+        font-size: 12px;
+    }
+}
+
+.address-form-holder .input-wrapper, .basic-info-form .input-wrapper {
+    margin-bottom: 5%;
+}
+
+.nsg-form--amount input, .nsg-form--input {
+    border-radius: 2px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #fff;
+    -webkit-font-smoothing: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #666;
+    -webkit-background-clip: padding;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    border: 1px solid #ddd;
+    outline: 0;
+    margin: 0;
+    padding: .6667em 1em;
+    position: relative;
+    font-family: inherit;
+    font-size: inherit;
+    width: 100%;
+}
+
+input, textarea, select, button {
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+}
+
+.photo-edit-button-container {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+    -webkit-appearance: textarea;
+    background-color: white;
+    -webkit-rtl-ordering: logical;
+    flex-direction: column;
+    resize: auto;
+    cursor: text;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    border-width: 1px;
+    border-style: solid;
+    border-color: initial;
+    border-image: initial;
+    padding: 2px;
+}
+
+
+.nike-input[type='text'], .nike-input[type='email'], .nike-input[type='password'], .nike-textarea {
+    -webkit-box-shadow: inset 0px 1px 2px rgba(0,0,0,0.32), inset 0px 0px 3px rgba(0,0,0,0.32);
+    -moz-box-shadow: inset 0px 1px 2px rgba(0,0,0,0.32),inset 0px 0px 3px rgba(0,0,0,0.32);
+    box-shadow: inset 0px 1px 2px rgba(0,0,0,0.32), inset 0px 0px 3px rgba(0,0,0,0.32);
+    font-size: 12px;
+    color: gray;
+    border-radius: 3px;
+    padding: 2px 6px;
+}
+
+.nsg-form--label, .nsg-form--label--control, .nsg-form--label--normal {
+    cursor: pointer;
+    display: block;
+    font-weight: 700;
+}
+
+
+
+@media screen and (max-width: 1260px) {
+    .profile .profile-nav {
+    margin-left: 25px;
+    width: 230px;
+    }
+}
+@media screen and (min-width: 1260px) {
+    .profile .profile-nav {
+    margin-left: 150px;
+    width: 290px;
+    }
+}

@@ -2,8 +2,6 @@ $NikeFont: 'Oswald', sans-serif;
 $top-border-light: #E5E5E5;
 $link-color-grey: #8D8D8D;
 
-
-
 // .navTest {
 //     height: 100px;
 //     width: 100%;
@@ -93,7 +91,6 @@ $link-color-grey: #8D8D8D;
 
 }
 
-
 #jumpmanImg {
     max-height: 21px;
     max-width: 21px;
@@ -104,7 +101,6 @@ $link-color-grey: #8D8D8D;
     max-height: 48px;
     max-width: 48px;
 }
-
 
 #converseImg {
     max-height: 72px;
@@ -141,7 +137,7 @@ $link-color-grey: #8D8D8D;
     height: 68px;
     justify-content: space-between;
     align-items: center;
-    border: lightgray .5px solid;
+    // border: $border-light;
     padding: 1px;
     font-family: $NikeFont;
     .swooshDiv {
@@ -405,4 +401,3 @@ $link-color-grey: #8D8D8D;
         transition: .4s;
     }
 }
-

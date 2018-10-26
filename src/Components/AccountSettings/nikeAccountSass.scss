@@ -1,0 +1,403 @@
+[class*=nsg-glyph--]:before,body {
+    -webkit-font-smoothing: auto;
+    -moz-osx-font-smoothing: grayscale
+}
+
+img,legend {
+    border: 0
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary {
+    display: block
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    margin: 0
+}
+
+a:active,a:focus,a:hover {
+    outline: 0
+}
+b,strong {
+    font-weight: 700
+}
+
+dfn {
+    font-style: italic
+}
+
+mark {
+    background: #ff0;
+    color: #000
+}
+
+code,kbd,pre,samp {
+    font-family: monospace,serif;
+    font-size: 1em
+}
+
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word
+}
+
+small {
+    font-size: 80%
+}
+
+fieldset {
+    border: 1px solid silver;
+    margin: 0 2px;
+    padding: .35em .625em .75em
+}
+button,input,select,textarea {
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0;
+    outline: 0;
+    vertical-align: baseline
+}
+button,input {
+    line-height: normal
+}
+
+button,select {
+    text-transform: none
+}
+button[disabled],input[disabled] {
+    cursor: default
+}
+textarea {
+    overflow: auto;
+    vertical-align: top
+}
+label {
+    cursor: pointer
+}
+body {
+    text: #666;
+    background: #fff
+}
+
+a {
+    color: inherit
+}
+
+a.is-active,a.is-hover,a:active,a:focus,a:hover {
+    color: #fa5400
+}
+
+a.is-visited,a:visited,a[class*=nsg-button].is-active,a[class*=nsg-button].is-hover,a[class*=nsg-button]:active,a[class*=nsg-button]:focus,a[class*=nsg-button]:hover {
+    color: inherit
+}
+
+.nsg-button-small {
+    font-size: 13px;
+    line-height: 30px;
+    text-align: center
+}
+
+.nsg-form--label,.nsg-form--label--control,.nsg-form--label--normal {
+    cursor: pointer;
+    display: block;
+    font-weight: 700
+}
+
+.nsg-form--label--small {
+    display: inline-block;
+    font-size: 10px;
+    line-height: 18px;
+    text-decoration: underline;
+    vertical-align: middle
+}
+.nsg-form--label--normal {
+    cursor: pointer;
+    display: block;
+    font-weight: 400;
+    padding: .6667em 0
+}
+
+.nsg-form--label--control {
+    border: 1px solid rgba(0,0,0,.12);
+    margin: 1px;
+    padding: .8em;
+    border-radius: 2px
+}
+
+.nsg-form--input>input {
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #666
+}
+
+.nsg-form--required {
+    color: #fe0000;
+    font-weight: 700
+}
+
+.nsg-form--required-text {
+    font-size: 12px;
+    margin-top: 12px
+}
+
+.divider.bottom {
+    margin-top: 30px;
+    border-top: 1px solid #D8D8D8;
+}
+.divider {
+    height: 0;
+    width: 620px;
+}
+.divider.top {
+    margin-bottom: 35px;
+    border-top: 1px solid #FFF;
+}
+.edf-font-size--large {
+    font-size: 20px;
+}
+.basic-info-form .attributes h3 {
+    display: inline-block;
+}
+.basic-info-form .attributes .tooltip-container {
+    display: inline-block;
+    position: relative;
+    overflow: visible;
+}
+.basic-info-form .attributes .tooltip-container .nsg-glyph--help {
+    margin: -7px 0 0 13px;
+}
+.edf-title-font-size--xxxlarge {
+    font-size: 30px;
+}
+.nsg-text--nike-orange, .nsg-text--nike-orange:link, a.nsg-text--nike-orange:active, a.nsg-text--nike-orange:hover, a.nsg-text--nike-orange:visited {
+    color: #fa5400;
+}
+.edf-font-size--large, .edf-font-size--xlarge, .edf-font-size--xxlarge, .edf-font-size--xxxlarge, .edf-font-size--xxxxlarge, .edf-title-font-size--large, .edf-title-font-size--xlarge, .edf-title-font-size--xxxxlarge, .edf-title-font-size--xxlarge, .edf-title-font-size--xxxlarge {
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: -0.045em;
+    margin: 0 0 0.12em 0;
+    word-spacing: -0.05em;
+}
+.basic-info-form .attributes .dob-container-profile {
+    margin-top: 10px;
+    width: 420px;
+}
+.basic-info-form .attributes .dob-container-profile .select-container {
+    display: inline-block;
+    margin-right: 15px;
+}
+.nsg-form--drop-down {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-background-clip: padding;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    cursor: pointer;
+    margin: 0;
+    outline: 0;
+    position: relative;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 38px;
+    padding: 0;
+    text-align: left;
+}
+.basic-info-form .attributes .dob-container-profile .select-container {
+    display: inline-block;
+    margin-right: 15px;
+}
+.basic-info-form .attributes .dob-container-profile .select-container {
+    display: inline-block;
+    margin-right: 15px;
+}
+.edf-font-size--large, .edf-font-size--xlarge, .edf-font-size--xxlarge, .edf-font-size--xxxlarge, .edf-font-size--xxxxlarge, .edf-title-font-size--large, .edf-title-font-size--xlarge, .edf-title-font-size--xxxxlarge, .edf-title-font-size--xxlarge, .edf-title-font-size--xxxlarge {
+    -webkit-font-smoothing: antialiased;
+    // letter-spacing: -0.045em;
+    margin: 0 0 0.12em 0;
+    letter-spacing: 0.1em;
+    font-size: 2.1em;
+    font-weight: 600;
+}
+.nsg-form--drop-down select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    height: 100%;
+    left: 0;
+    margin: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.dob-comp {
+    // border: solid 1px black;
+    // margin-bottom: 2px 0px;
+    margin-right: 15px;
+    width: 80px;
+    height: 35px;
+
+}
+.dob-comp-inner {
+    // border: solid 1px blue;
+}
+.dob-comp-outer {
+    // border: solid 1px red;
+    margin-bottom: 5px;
+
+    display: flex;
+}
+
+#dob-select {
+    width: 80px;
+    height: 35px;
+}
+.margadd {
+    margin-bottom: 20px;
+}
+
+#comp-select {
+    // background:blue;
+    width: 80px;
+    height: 35px;
+    text-align: center;
+    color:grey;
+    letter-spacing:0.3em;
+    background-color: #f7f7f7;
+    border: none;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    option {
+        &:hover {
+            color: white;
+            background: black;
+        }
+    }
+}
+.profile .profile-content .radio-group-container .radio-container {
+    float: left;
+    margin: 0 18px 0 0;
+}
+.basic-info-form .attributes .gender-container {
+    margin-top: 10px;
+}
+.profile .profile-content .radio-group-container {
+    padding-top: 13px;
+    clear: left;
+}
+.profile .profile-content .radio-group-container .radio-container input {
+    margin-right: 5px;
+}
+.profile .profile-content .radio-group-container .radio-container label {
+    padding: 0px 0 7px 0px;
+}
+.nsg-form--radio {
+    opacity: 0;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    position: absolute;
+}
+.radio-container {
+    display: flex;
+}
+.default-container {
+    display: flex;
+    // flex-direction: row-reverse;
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+.profile .profile-content label {
+    padding: 0 0 4px 0;
+    letter-spacing: 0.2em;
+}
+.weight-information {
+    font-size: 0.9em;
+    line-height: 1.3em;
+    letter-spacing: 0.06em;
+}
+div>#addpad {
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 1020px) {
+.divider {
+    width: 450px;
+    }
+}
+.nsg-form--label, .nsg-form--label--control, .nsg-form--label--normal {
+    letter-spacing: 0.1em;
+    font-size: 1.05em;
+    // margin-bottom: 2px;
+    font-weight: 600;
+}
+.nsg-form--label--normal {
+    // letter-spacing: 0.1em;
+    font-size: 0.95em;
+    font-weight: 400;   
+}
+.nsg-form--checkbox {
+    opacity: 0;
+    float: left;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+.nsg-form--checkbox:not(#void) + * {
+    margin: 0;
+    cursor: default;
+    padding: 0 0 4px 22px;
+    background-image: url(/styleguide/assets/images/checkboxes.svg);
+    background-position: 0 0;
+}
+#label-fix {
+    margin-right: 10px;
+
+    // padding:px;
+}
+
+#block-container {
+    display:flex
+}
+#block-sub-container {
+    margin-top:5px;
+    margin-right:35px;
+}
+#lock-sub-container {
+    margin-top:13px;
+    margin-right:35px;
+}
+#override-input {
+    width: 138px;
+    height: 100%;
+}
+
+#override-input {
+    .override-input {
+        width: 138px;
+        height: 100%;
+    }
+}
+
+
+.mobile-number--container {
+    position: relative;
+}
+
+.clearfix {
+    zoom: 1;
+}
