@@ -12,10 +12,12 @@ import NikePlus from './Components/NikePlus/NikePlus';
 import Orders from './Components/Orders/Orders';
 // import NikeSettings from './Components/AccountSettings/Settings';
 import Wishlist from './Components/Wishlist/Wishlist';
+import FemaleSideBarSort from './Components/ProductSort/FemaleSideBarSort';
 import Account from './Components/AccountSettings/Account'
 
 export default (
     <Switch>
+        <Route path='/test' component={FemaleSideBarSort} />
         <Route path='/storelocator' component={FindStore} />
         <Route path='/mensshoes' component={MensShoes} />
         <Route path='/shippingoptions' component={ShippingOptions}/>
