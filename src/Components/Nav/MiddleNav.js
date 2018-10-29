@@ -16,7 +16,7 @@ const MiddleNav = () => {
             {/* wraps men link */}
             {/* <div></div> */}
             <div className='nav-button' /* onMouseEnter={() => isHovered()} onMouseLeave={() => isHovered()} */>
-                <Link to='/mensshoes' className="nav-link">MEN</Link>
+                <Link to='/allmensshoes' className="nav-link">MEN</Link>
             {/* menu container */}
             <div className={/* ${toggle ? 'showContainer' : 'hideContainer'} */`dropdown-content-container`}>
             <div className='drop-down-content-sub-container'>
@@ -34,7 +34,7 @@ const MiddleNav = () => {
                 </div>
 
                 <div className="dropdown-content-column-left-line">
-                    <Link className='column-list-item' to='/mensshoes'>SHOES</Link>
+                    <Link className='column-list-item' to='/allmensshoes'>SHOES</Link>
                     <ul>
                         <li className='column-list-link'><Link to='/'>SNKRS Launch Calender</Link></li>
                         <li className='column-list-link'><Link to='/'>Lifestyle</Link></li>
@@ -101,7 +101,7 @@ const MiddleNav = () => {
             {/* wraps men link */}
             {/* <div></div> */}
             <div className='nav-button' /* onMouseEnter={() => isHovered()} onMouseLeave={() => isHovered()} */>
-                <Link to='/mensshoes' className="nav-link">WOMEN</Link>
+                <Link to='/allwomensshoes' className="nav-link">WOMEN</Link>
             {/* menu container */}
             <div className={/* ${toggle ? 'showContainer' : 'hideContainer'} */`dropdown-content-container`}>
             <div className='drop-down-content-sub-container'>
@@ -119,7 +119,7 @@ const MiddleNav = () => {
                 </div>
 
                 <div className="dropdown-content-column-left-line">
-                    <Link className='column-list-item' to='/mensshoes'>SHOES</Link>
+                    <Link className='column-list-item' to='/allwomensshoes'>SHOES</Link>
                     <ul>
                         <li className='column-list-link'><Link to='/'>SNKRS Launch Calender</Link></li>
                         <li className='column-list-link'><Link to='/'>Lifestyle</Link></li>

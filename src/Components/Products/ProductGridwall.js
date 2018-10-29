@@ -12,23 +12,25 @@ class MensShoe extends Component {
     constructor() {
         super();
         this.state = {
-            product: []
+            product: [],
+            isLoading: null
         }
-        this.toTopRef = React.createRef();
+        // this.toTopRef = React.createRef();
     }
     
     
     // window.self.scrollX();
     componentDidMount() {
         this.props.getProducts(MensShoes);
-        console.log('toTopRef', this.toTopRef);
+        
+        // console.log('toTopRef', this.toTopRef);
     }
 
-    resetWindow = () => {
-        // toTopRef
-        console.log('toTopRef: ', this.toTopRef);
+    // resetWindow = () => {
+    //     // toTopRef
+    //     console.log('toTopRef: ', this.toTopRef);
         
-    }
+    // }
 
     
     render() { 
