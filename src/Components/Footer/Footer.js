@@ -16,7 +16,7 @@ export default class Footer extends Component {
                         <li><Link className='linkTitle' to="/">GIFT CARDS</Link></li> {/* opt */}
                         <li><Link className='linkTitle' to="/">STUDENT DISCOUNT</Link></li>
                         <li><Link className='linkTitle' to="/">MILITIARY DISCOUNT</Link></li>
-                        <li><Link className='linkTitle' to="/">FIND A STORE</Link></li>
+                        <li><Link className='linkTitle' to="/storelocator">FIND A STORE</Link></li>
                         <li><Link className='linkTitle' to="/">SIGN UP FOR EMAIL</Link></li> {/* opt */}
                     </ul>
                     <ul> {/* GET HELP LIST */}

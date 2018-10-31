@@ -10,6 +10,8 @@ $TextFont:'Roboto', sans-serif;
     height: 100%;
     margin: 0;
     padding: 0;
+    // display: flex;
+    // flex-direction: row;
     
     .bannerContainer {
         display: flex;
@@ -57,9 +59,10 @@ $TextFont:'Roboto', sans-serif;
         align-items: center;
         justify-content: center;
         //THIS PADDING IS MOVING THE GRIDWALL AWAY FROM THE LEFT SIDE
-        padding: 50px;
+        // padding: 50px;
         min-width: 482px;
         margin-bottom: 50px;
+        //TO BRING BACK SHOES CONTAINER 299PX
         // margin-left: 299px;
         margin-top: 46px;
         
@@ -69,7 +72,7 @@ $TextFont:'Roboto', sans-serif;
         @media (max-width: 1023px){
         }
         .subGridwall {
-
+            max-width: 80vw;
         }
     }
 }

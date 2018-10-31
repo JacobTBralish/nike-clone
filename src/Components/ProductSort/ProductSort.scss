@@ -1,0 +1,135 @@
+$NikeFont:'Oswald', sans-serif;
+$TextFont:'Roboto', sans-serif;
+
+.left-sort-nav {
+    bottom: auto;
+    position: absolute;
+    top: 130px;
+    background: #fff;
+    left: 9px;
+    padding: 24px;
+    position: absolute;
+    width: 216px;
+    z-index: 9;
+    font-size: 13px;
+    -webkit-tap-highlight-color: transparent;
+
+
+
+
+    .left-sort-nav-header {
+        margin-bottom: 21px;
+        
+            .left-sort-nav-title {
+                font-size: 24px;
+                line-height: 1;
+                min-height: 23px;
+                text-transform: uppercase;
+                margin-bottom: 21px;
+    
+            }
+    
+            .left-sort-nav-header-line {
+                background-color: #ddd;
+                height: 1px;
+                width: 100%;
+                display: block;
+                border-color: #e5e5e5;
+                color: #000;
+    
+            }
+        }
+        
+        .categoryParentContainer {
+        
+    
+
+        
+                .categorySubContainer {
+                    
+                    font-size: 13px;
+                    -webkit-tap-highlight-color: transparent;
+                    color: #111;
+                    margin: 0;
+                    padding: 0;
+                    font-style: normal;
+                    font-weight: 400;
+                    -webkit-font-smoothing: antialiased;
+
+                    // &:active:focus {
+                    //     display: block;
+                    // }
+                    .categorieTitle {
+                        
+                        margin-bottom: 9px;
+                        // display: block;
+                        font-style: normal;
+                        font-weight: 700;
+                        margin: 0;
+                        padding: 0;
+                        font-family: $TextFont;
+                        line-height: 24px;
+                        cursor: pointer;
+                        // &:active:focus:hover {
+                        //     display: block;
+                        // }
+                        .radioButtons {
+                            visibility: hidden;
+                        }
+                        .radioButtons:checked + label {
+                            font-weight: bold;
+                            
+                            
+                        }
+
+ 
+                    }
+                    
+                    .listContainer {
+                        font-family: $TextFont;
+                        margin: -4px 0 7px;
+                        padding-left: 14px;
+                        padding: 0;
+                            // display: none;
+                                
+                            // &:target {
+                            //     display: flex;
+                                
+                            // }
+                            
+                            
+                            
+                            .hiddenList {
+                                font-family: $TextFont;
+                                padding-left: 14px;
+
+                                
+
+                                // display: block;
+                                // list-style-type: disc;
+                                // -webkit-margin-before: 1em;
+                                // margin-block-start: 1em;
+                                // -webkit-margin-after: 1em;
+                                // margin-block-end: 1em;
+                                // -webkit-margin-start: 0px;
+                                // margin-inline-start: 0px;
+                                // -webkit-margin-end: 0px;
+                                // margin-inline-end: 0px;
+                            
+                                
+
+                                li {
+                                    font-family: $TextFont;
+                                    margin: 0;
+                                    padding: 0;
+                                    line-height: 20px;
+                                    
+                                }
+            
+                            }
+                        }
+                    
+        
+                }
+        }
+}

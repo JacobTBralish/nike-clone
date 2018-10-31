@@ -27,7 +27,7 @@ export default class Account extends Component {
                     <h2 className="edf-font-size--xlarge nsg-text--dark-grey">SETTINGS</h2>
                     <ul className="edf-title-font-size--xsmall">
                         <li className="tab basic-info active" data-content=".basic-info-content" data-tab-name="account settings">
-                            <input checked={selectedOption === '0'} onChange={this.handleOptionChange} value='0' name="account" type="radio" required></input>{'ACCOUNT'}
+                            <input checked={selectedOption === '0'} value='0' name="account" type="radio" required></input>{'ACCOUNT'}
                         </li>
                         <li className="tab privacy" data-content=".privacy-content" data-tab-name="privacy settings">
                           <div className="profile-divider"></div>

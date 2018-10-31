@@ -43,12 +43,12 @@ app.use(session({
 //     })
 // })
 
-// axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=womens-shoes/7ptZoi3&pn=1').then(response => {
-//     return axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=womens-shoes/7ptZoi3&pn=2').then(response => {
-//         return axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=womens-shoes/7ptZoi3&pn=3').then(response => {
-//             return axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=womens-shoes/7ptZoi3&pn=4').then(response => {
-//                 return axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=womens-shoes/7ptZoi3&pn=5').then(response => {
-//                     return axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=womens-shoes/7ptZoi3&pn=6').then(response => {
+// axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=womens-shoes/7ptZoi3&pn=1').then(response1 => {
+//     return axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=womens-shoes/7ptZoi3&pn=2').then(response2 => {
+//         return axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=womens-shoes/7ptZoi3&pn=3').then(response3 => {
+//             return axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=womens-shoes/7ptZoi3&pn=4').then(response4 => {
+//                 return axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=womens-shoes/7ptZoi3&pn=5').then(response5 => {
+//                     return axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=womens-shoes/7ptZoi3&pn=6').then(response6 => {
 //                         return fs.writeFile('./src/data/AllWomensShoesPg1.json', JSON.stringify(response.data.sections[0].items), /* { flag: 'a+' }, */ (err) => {
 //                             if (err){
 //                                 console.log(err)
@@ -62,6 +62,27 @@ app.use(session({
 //     })
 // })
 
+// axios.get(url1).then(response => {
+//     // write data out here
+//     return axios.get(url2)
+// }).then(response => {
+//     // write data out here
+//     return axios.get(url3)
+// }).then()
+
+// axios.all([
+//     axios.get(url1),
+//     axios.get(url2),
+// ]).then()
+
+// Promise.all([
+//     axios.get(url1),
+//     axios.get(url2)
+// ]).then((response1, response2, ... ) => {
+//     fs.writeFile('./src/lasjdf', alldata, { flag: 'a+' }, err => {
+
+//     })
+// })
 
 massive(process.env.CONNECTION_STRING).then(database => {
     console.log('Hooked up to your database bruh.🤙')
