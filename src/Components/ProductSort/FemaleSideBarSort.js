@@ -648,7 +648,7 @@ export default class FemaleSideBarSort extends Component {
                                           </ul>
                                         </div>
                                       </div> */}
-                                      <span class="exp-left-nav-filter-keyline nsg-misc-keyline--horizontal nsg-bg--ultra-light-grey"></span>
+                                      {/* <span class="exp-left-nav-filter-keyline nsg-misc-keyline--horizontal nsg-bg--ultra-light-grey"></span> */}
                                   </div>
         )
     }

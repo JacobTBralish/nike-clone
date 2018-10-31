@@ -73,7 +73,7 @@ class Settings extends Component {
                     <div className="title-container">
                         <h3 className="nsg-font-family--platform edf-font-size--large">Attributes</h3>
                         <div className="tooltip-container">
-                            <span className="nsg-glyph--help edf-title-font-size--xxxlarge nsg-text--nike-orange">?</span>
+                            <span className="nsg-glyph--help edf-title-font-size--xxxlarge nsg-text--nike-orange"></span>
                             <div className="nsg-form--tool-tip nsg-font-family--platform hidden">Your selections will be used to calculate fitness metrics and help filter products</div>
                         </div>
                     </div>

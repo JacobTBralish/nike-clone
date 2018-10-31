@@ -1,0 +1,211 @@
+
+.infoContainer {
+    display: flex;
+    margin: 44px;
+    font-family: sans-serif;
+    .buttonBox {
+        height: 45px;
+        width: 100%;
+        margin-top: 30px;
+        margin-bottom: 19px;
+        .blackBtn {
+            &:hover {
+                background: rgba(17,17,17,.75);
+            }
+            border: none;
+            background: #111;
+            color: white;
+            height: 100%;
+            text-align: center;
+        }
+        .addToCart {
+            width: 78%;
+            border-right: 1px solid white;
+            font-size: 0.9em;
+        }
+        .wishList {
+            font-size: 0.9em;
+
+            width: 22%;
+        }
+    }
+    .imageContainer {
+        border: solid 1px red;
+        margin: 30px;
+
+        // position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+        width: 87%;
+        margin: 0px;
+        .imgResizer {
+            border: solid 1px yellow;
+            height: 100%;
+            width: 45%;
+            // margin: 5px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+    }
+    .sidebar-container {
+        height: 100%;
+        width: 50%;
+        border: solid 1px blue;
+    
+        .borderBottom {
+            height: 0px;
+            width: 100%;
+            border-bottom: 1px solid #eee;
+            margin: 30px 0px;
+        }
+
+        .shippingBox {
+            // padding: 20px 0px;
+            .reviewContainer {
+                color: black;
+            }
+            h1 {
+                font-size: 1.1em;
+                letter-spacing: 0.03em;
+                margin-bottom: 30px;           
+            }
+            p {
+                font-size: 0.8em;
+                line-height: 20px;
+            }
+            a {
+                text-decoration: underline;
+            }
+            ul {
+                padding: 0px 0px 0px 15px;
+                font-size: 0.8em;
+                letter-spacing: 0.03em;
+                li {
+                    margin-bottom: 8px;
+                }
+            }
+            .shippingBullet:before {
+                    /* For a round bullet */
+                    content:'\2022';
+                    /* For a square bullet */
+                    /*content:'\25A0';*/
+                    display: block;
+                    position: relative;
+                    max-width: 0px;
+                    max-height: 0px;
+                    right: 13px;
+                    top: -2px;
+                    color: rgba(0, 0, 0, 0.801);
+                    font-size: 18px;
+            }
+        }
+        .infoBox {
+            // height: 120px;
+            width: 100%;
+            padding-top: 20px;
+            .infoTitle {
+                font-size: 0.8em;
+                font-weight: 600;
+            }
+            .infoBody {
+                color: #000;
+                font-size: 0.8em;
+                /* letter-spacing: 0.0em; */
+                line-height: 17px;
+                padding-top: 8px;
+            }
+        }
+        .headingFlex {
+            color: #333;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 12px;
+            font-size: 0.93em;
+            font-family: sans-serif;
+            padding-bottom: 12px;
+            .localPrice {
+                margin-right: 4px;
+            }
+            .sizeGuide {
+                color: rgb(95, 95, 95);
+                margin-right: 4px;
+            }
+        }
+        .stockBox {
+            height: 52px;
+            width: 100%;
+            background: #eee;
+            text-align: center;
+            line-height: 52px;
+            font-size: 0.8em;
+            
+            color: #777;
+            li {
+                list-style: none;
+              }
+          
+              li:before {
+                /* For a round bullet */
+                content:'\2022';
+                /* For a square bullet */
+                /*content:'\25A0';*/
+                display: block;
+                position: relative;
+                max-width: 0px;
+                max-height: 0px;
+                right: -65px;
+                top: -0px;
+                color: rgba(255, 208, 0, 0.801);
+                font-size: 30px;
+              }
+            .stockAvailability {
+                color: yellow;
+                span {
+                    color: #777;
+                }
+            }
+        }
+        .titleHeader {
+            h1 {
+                color: #333;
+                font-size: 1.6em;
+                padding-bottom: 34px;
+            }
+        }
+        .colorWaysDiv {
+            border: 1px solid olive;
+        }
+    }
+    .sizeContainer {
+        color: #000;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 3px;
+        .size {
+                color: #333;
+                height: 40px;
+                width: 48.4%;
+                border: 1px solid #EEE;
+                border-radius: 4px;
+                text-align: center;
+                line-height: 40px;
+                font-size: 0.9em;
+                /* margin: 3px; */
+                margin-bottom: 5px;
+                margin-right: 4px;
+                position: relative;
+                right: -3px;
+            &:hover {
+                border: solid 1px black;
+            }
+            &:active {
+                background: #000;
+                color: white;
+            }
+        }
+    }
+
+}

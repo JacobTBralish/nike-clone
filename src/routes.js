@@ -28,6 +28,7 @@ export default (
         <Route path="/nike/nike-plus" component={NikePlus} />
         <Route path="/orders" component={Orders} />
         <Route path="/settings" component={Account} />
+        {/* <Route path="/settin" component={Accountss} /> */}
         <Route path="/wishlist" component={Wishlist} />
         <Route exact path='/' component={Home} />
     </Switch>
