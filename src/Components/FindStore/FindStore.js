@@ -6,7 +6,10 @@ import CustomMarker from './CustomMarker';
 import StoreInfo from './StoreInfo';
 import './Marker.scss'
 
+
+
 class FindStore extends Component {
+
   state = {
     longitude:null,
     latitude:null,
@@ -42,6 +45,7 @@ class FindStore extends Component {
 //         </div>
 //     )
 // }) 
+
 // locateUser() {
 //   navigator.geolocation.getCurrentPosition(position => {
 //     this.updateViewport({
@@ -50,6 +54,9 @@ class FindStore extends Component {
 //     });
 //   });
 // }
+
+
+
 renderPopup = () => {
   console.log('hit')
   console.log('Info from poup ------------->', this.state.popupInfo)
@@ -65,7 +72,10 @@ renderPopup = () => {
           <StoreInfo info={popupInfo} />
         </Popup>
     )
-  }
+}
+
+
+
 showPosition = (position) => {
   console.log(position.coords.longitude)
   console.log(position.coords.latitude)
@@ -86,6 +96,9 @@ showPosition = (position) => {
 //   var d = R * c; // Distance in km
 //   return d;
 // }
+
+
+
 getLocation = () => {
   console.log('hit before', navigator)
   if (navigator.geolocation) {
@@ -93,6 +106,12 @@ getLocation = () => {
     navigator.geolocation.getCurrentPosition(this.showPosition);
   }
 }
+
+mapSearch = () => {
+
+}
+
+
 // renderMarker = (store, index) => {
 //   console.log(store, 'store')
 //     return (
@@ -155,7 +174,7 @@ getLocation = () => {
               
               </div>
 
-            <div className="store-locator">
+              <div className="store-locator">
 
                   <div className="find-store-map">
                   
@@ -166,6 +185,7 @@ getLocation = () => {
                   <div className="find-store-map">
                   
                       <div className="find-store">NIKE STORES
+
                         <div className="text-box">
                           
                           <h4 className="nike-background-text-color">NIKE STORES</h4>
@@ -184,6 +204,7 @@ getLocation = () => {
             <div className="store-locator">
 
                 <div className="find-store-map" >
+
                 <div className="find-store">NIKE FACTORY STORES
 
                     <div className="text-box-nike-factory">
@@ -254,7 +275,9 @@ getLocation = () => {
                 <img className="partner-store" />
                 
               </div>
+
                 <div className="find-store-map">
+
                 <div className="find-store">PARTNER STORES
 
                   <div className="text-box-Nike-partner-stores">
@@ -262,15 +285,17 @@ getLocation = () => {
                       <a className="link-color">Show Locations</a>
                   </div>
 
-                </div>
+                 </div>
               
-              </div>
+               </div>
 
-            </div>
+             </div>
 
-         </div>
+          </div>
+
        </div>
     );
   }
 }
+
 export default FindStore
