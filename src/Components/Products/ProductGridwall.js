@@ -21,9 +21,32 @@ class MensShoe extends Component {
     
     // window.self.scrollX();
     componentDidMount() {
-        this.props.getProducts(MensShoes);
+        let { name, fetch } = this.props;
+        console.log('this.props: ', this.props);
+
+        this.props.getProducts(fetch)
+    /* Props coming from routes */
+        // if(!this.props[name].length) {
+        //     try {
+        //         this.setState({ loading: true })
+        //         const newState = await fetch();
         
+        //         this.setState({
+        //         [name] : newState,
+        //         loading: false
+        //         }, localStorage.setItem([name], JSON.stringify(newState)))
+        //     } catch(error) {
+        //         throw(new Error(`Error retrieving Nike products`))
+        //     }
+        //     }
         // console.log('toTopRef', this.toTopRef);
+    }
+
+    componentWillReceiveProps(nextProps) {
+        console.log('nextProps: ', nextProps);
+        const { name, fetch } = nextProps;
+
+        this.props.getProducts(fetch)
     }
 
     // resetWindow = () => {
@@ -37,7 +60,7 @@ class MensShoe extends Component {
         let { products, selectedProduct } = this.props;
         let mappedShoes = products.map((item, index) => {
             return <div className='productContainer'>
-                <Link key={index} onClick={() => { selectedProduct([item])}} to={`/product/${item.title}`} >
+                <Link key={index} onClick={() => { selectedProduct([item])}} to={`/product/${encodeURIComponent(item.title)}`} >
                 <div className='productImageContainer'>
                     <img id='productImage' src={item.spriteSheet} alt={item.title}></img>
                 </div>
@@ -60,8 +83,8 @@ class MensShoe extends Component {
                     <div id='gridwall'>
                     <div className='bannerContainer'>
                         <div className='bannerTitleContainer'>
-                            <h1 className='pageTitle'>MEN'S SHOES & SNEAKERS {/* <h1 id='productCount'> */}({`${products.length}`}){/* </h1> */}</h1>
-                            <p className='bannerDescription'>Explore the latest shoes for men for every sport, workout and everyday look. Built for ultimate performance and sneaker style, Nike shoes for men deliver cutting-edge technologies specific to your sport in iconic designs.</p>
+                            <h1 className='pageTitle'>{this.props.fetch[0].pageHeaderTitle} {/* <h1 id='productCount'> */}({`${products.length}`}){/* </h1> */}</h1>
+                            <p className='bannerDescription'>{this.props.fetch[0].pageHeader}</p>
                         </div>
                         <div>
                             <select className='sortSelector'>

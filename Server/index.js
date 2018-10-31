@@ -43,24 +43,15 @@ app.use(session({
 //     })
 // })
 
-// axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=womens-shoes/7ptZoi3&pn=1').then(response1 => {
-//     return axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=womens-shoes/7ptZoi3&pn=2').then(response2 => {
-//         return axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=womens-shoes/7ptZoi3&pn=3').then(response3 => {
-//             return axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=womens-shoes/7ptZoi3&pn=4').then(response4 => {
-//                 return axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=womens-shoes/7ptZoi3&pn=5').then(response5 => {
-//                     return axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=womens-shoes/7ptZoi3&pn=6').then(response6 => {
-//                         return fs.writeFile('./src/data/AllWomensShoesPg1.json', JSON.stringify(response.data.sections[0].items), /* { flag: 'a+' }, */ (err) => {
-//                             if (err){
-//                                 console.log(err)
-//                                 return response.data.sections[0].items
-//                             }
-//                         })
-//                     })
-//                 })
-//             })
-//         })
+// axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=mens-clothing/1mdZ7pu&pn=15').then(response => {
+//     return fs.writeFile('./src/data/AllMensClothesPg15.json', JSON.stringify(response.data.sections[0].items), /* { flag: 'a+' }, */ (err) => {
+//         if (err){
+//             console.log(err)
+//             return response.data.sections[0].items
+//         }
 //     })
 // })
+
 
 // axios.get(url1).then(response => {
 //     // write data out here
@@ -71,16 +62,38 @@ app.use(session({
 // }).then()
 
 // axios.all([
-//     axios.get(url1),
-//     axios.get(url2),
-// ]).then()
+//     axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=mens-clothing/1mdZ7pu&pn=1'),
+//      axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=mens-clothing/1mdZ7pu&pn=2'),
+//      axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=mens-clothing/1mdZ7pu&pn=3'),
+//      axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=mens-clothing/1mdZ7pu&pn=4'),
+//      axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=mens-clothing/1mdZ7pu&pn=5'),
+//      axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=mens-clothing/1mdZ7pu&pn=6'),
+//      axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=mens-clothing/1mdZ7pu&pn=7'),
+//      axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=mens-clothing/1mdZ7pu&pn=8'),
+//      axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=mens-clothing/1mdZ7pu&pn=9'),
+//      axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=mens-clothing/1mdZ7pu&pn=10'),
+//      axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=mens-clothing/1mdZ7pu&pn=11'),
+//      axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=mens-clothing/1mdZ7pu&pn=12'),
+//      axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=mens-clothing/1mdZ7pu&pn=13'),
+//      axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=mens-clothing/1mdZ7pu&pn=14'),
+//      axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=mens-clothing/1mdZ7pu&pn=15')
+// ]).then(axios.spread( (res1, res2, res3, res4, res5, res6, res7, res8, res9, res10, res11, res12, res13, res14, res15) => {
+//                         return fs.writeFile('./src/data/AllMensClothesPg1-12.json', JSON.stringify(res1.data.sections[0].items, res2.data.sections[0].items, res3.data.sections[0].items, res4.data.sections[0].items, res5.data.sections[0].items, res6.data.sections[0].items, res7.data.sections[0].items, res8.data.sections[0].items, res9.data.sections[0].items, res10.data.sections[0].items, res11.data.sections[0].items, res12.data.sections[0].items, res13.data.sections[0].items, res14.data.sections[0].items, res15.data.sections[0].items), /* { flag: 'a+' }, */ (err) => {
+//                             if (err){
+//                                 console.log(err)
+//                                 return response.data.sections[0].items
+//                             }
+//                         })
+//                     }))
 
 // Promise.all([
 //     axios.get(url1),
 //     axios.get(url2)
 // ]).then((response1, response2, ... ) => {
-//     fs.writeFile('./src/lasjdf', alldata, { flag: 'a+' }, err => {
-
+//      return fs.writeFile('./src/data/AllMensClothesPg1-15.json', JSON.stringify(response.data.sections[0].items), /* { flag: 'a+' }, */ (err) => {
+//                             if (err){
+//                                 console.log(err)
+//                                 return response15.data.sections[0].items
 //     })
 // })
 

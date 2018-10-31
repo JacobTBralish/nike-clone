@@ -86,7 +86,7 @@ class ProductSort extends Component {
                         </>
                     :
                     <div className='categorySubContainer'>
-                        <li className='categorieTitle'>
+                        <li className='categorieTitleClosed'>
                             <input type="radio" className='radioButtons'  onChange={this.handleOptionChange}  checked={selectedOption === '0'} id='radioShoes' value='0' />
                             <label for='radioShoes'>Shoes</label>
                         </li>
@@ -111,7 +111,7 @@ class ProductSort extends Component {
                     </>
                     :
                     <div className='categorySubContainer'>
-                        <li className='categorieTitle'>
+                        <li className='categorieTitleClosed'>
                             <input type="radio" className='radioButtons'  onChange={this.handleOptionChange}  checked={selectedOption === '1'} id='radioCompression & Nike Pro' value='1' />
                             <label for='radioCompression & Nike Pro'>Compression & Nike Pro</label>
                          </li>   
@@ -142,7 +142,7 @@ class ProductSort extends Component {
                     </>
                     :
                     <div className='categorySubContainer'>
-                        <li className='categorieTitle'>
+                        <li className='categorieTitleClosed'>
                             <input type="radio" className='radioButtons'  onChange={this.handleOptionChange}  checked={selectedOption === '2'} id='radioTops & T-Shirts' value='2' />
                             <label for='radioTops & T-Shirts'>Compression & Nike Pro</label>
                         </li>
@@ -167,7 +167,7 @@ class ProductSort extends Component {
                     </>
                     :
                     <div className='categorySubContainer'>
-                        <li className='categorieTitle'>
+                        <li className='categorieTitleClosed'>
                             <input type="radio" className='radioButtons'  onChange={this.handleOptionChange}  checked={selectedOption === '3'} id='radioHoodies & Pullovers' value='3' />
                             <label for='radioHoodies & Pullovers'>Hoodies & Pullovers</label>
                         </li>
@@ -196,7 +196,7 @@ class ProductSort extends Component {
                     </>
                     :
                     <div className='categorySubContainer'>
-                        <li className='categorieTitle'>
+                        <li className='categorieTitleClosed'>
                             <input type="radio" className='radioButtons'  onChange={this.handleOptionChange}  checked={selectedOption === '4'} id='radioJackets & Vests' value='4' />
                             <label for='radioJackets & Vests'>Jackets & Vests</label>
                         </li>
@@ -224,7 +224,7 @@ class ProductSort extends Component {
                     </>
                     :
                     <div className='categorySubContainer'>
-                        <li className='categorieTitle'>
+                        <li className='categorieTitleClosed'>
                             <input type="radio" className='radioButtons'  onChange={this.handleOptionChange}  checked={selectedOption === '5'} id='radioPants & Tights' value='5' />
                             <label for='radioPants & Tights'>Pants & Tights</label>
                         </li>
@@ -250,7 +250,7 @@ class ProductSort extends Component {
                     </>
                     :
                     <div className='categorySubContainer'>
-                        <li className='categorieTitle'>
+                        <li className='categorieTitleClosed'>
                             <input type="radio" className='radioButtons'  onChange={this.handleOptionChange}  checked={selectedOption === '6'} id='radioTracksuits' value='6' />
                             <label for='radioTracksuits'>Tracksuits</label>
                         </li>
@@ -285,7 +285,7 @@ class ProductSort extends Component {
                     </>
                     :
                     <div className='categorySubContainer'>
-                        <li className='categorieTitle'>
+                        <li className='categorieTitleClosed'>
                             <div> 
                                 <input type="radio" className='radioButtons'  onChange={this.handleOptionChange}  checked={selectedOption === '7'} id='radioSurf & Swimwear' value='7' />
                                 <label for='radioSurf & Swimwear'>Surf & Swimwear</label>
@@ -334,7 +334,7 @@ class ProductSort extends Component {
                     </>
                     :
                     <div className='categorySubContainer'>
-                        <li className='categorieTitle'>
+                        <li className='categorieTitleClosed'>
                             <div>
                                 <input type="radio" className='radioButtons'  onChange={this.handleOptionChange}  checked={selectedOption === '8'} id='radioAccessories & Equipment' value='8' />
                                 <label for='radioAccessories & Equipment'>Accessories & Equipment</label>

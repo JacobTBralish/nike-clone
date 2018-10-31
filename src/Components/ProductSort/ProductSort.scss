@@ -10,7 +10,7 @@ $TextFont:'Roboto', sans-serif;
     padding: 24px;
     position: absolute;
     width: 216px;
-    z-index: 9;
+    // z-index: 9;
     font-size: 13px;
     -webkit-tap-highlight-color: transparent;
 
@@ -59,8 +59,31 @@ $TextFont:'Roboto', sans-serif;
                     // &:active:focus {
                     //     display: block;
                     // }
+                    // .categorieTitleClosed{
+                    //     position: relative;
+                    //     left: -20px;
+                    //     margin-bottom: 9px;
+                    //     // display: block;
+                    //     font-style: normal;
+                    //     font-weight: 700;
+                    //     margin: 0;
+                    //     padding: 0;
+                    //     font-family: $TextFont;
+                    //     line-height: 24px;
+                    //     cursor: pointer;
+                    //     // &:active:focus:hover {
+                    //     //     display: block;
+                    //     // }
+                    //     .radioButtons {
+                    //         visibility: hidden;
+                    //     }
+                    //     .radioButtons:checked + label {
+                    //         font-weight: bold;
+                            
+                            
+                    //     }
+                    // }
                     .categorieTitle {
-                        
                         margin-bottom: 9px;
                         // display: block;
                         font-style: normal;

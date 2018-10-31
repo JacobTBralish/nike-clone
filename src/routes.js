@@ -15,7 +15,9 @@ import Wishlist from './Components/Wishlist/Wishlist';
 import Account from './Components/AccountSettings/Account'
 // Product Imports
 import ProductGridwall from './Components/Products/ProductGridwall';
-import AllMensShoes from './Data/AllMensShoesPg1-6.json'
+import AllMensShoes from './Data/AllMensShoesPg1-6.json';
+import AllMensClothes from './Data/AllMensClothesPg1-15.json';
+import AllWomensShoes from './Data/AllWomensShoesPg1-6.json';
 
 export default (
     <Switch>
@@ -24,6 +26,12 @@ export default (
                 {/* Product Routes */}
         <Route path='/allmensshoes' render={() => (
         <ProductGridwall name='AllMensShoes' fetch={ AllMensShoes } />
+        )} />
+        <Route path='/allmensclothes' render={() => (
+        <ProductGridwall name='AllMensClothes' fetch={ AllMensClothes } />
+        )} />
+        <Route path='/allwomensshoes' render={() => (
+        <ProductGridwall name='AllWomensShoes' fetch={ AllWomensShoes } />
         )} />
         <Route path='/shippingoptions' component={ShippingOptions}/>
         <Route path='/shippingform' component={ShippingForm}/>
