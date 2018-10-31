@@ -5,6 +5,8 @@ import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 import Review from './../Review/Review';
 
+import './ReviewWrapper.scss'
+
 class ReviewWrapper extends Component {
     constructor(props) {
         super(props);
@@ -81,8 +83,10 @@ class ReviewWrapper extends Component {
         
         console.log('reviewList: ', reviewList);
         return (
-            <div>
-                    <label >Title</label>
+            <div className="ReviewParentContainer">
+                <h1></h1>
+
+                    {/* <label >Title</label>
                     <input type="text" name="reviewTitle" value={reviewTitle} onChange={this.onChange}></input>
                     <div>
                         <label>Body</label>
@@ -100,8 +104,10 @@ class ReviewWrapper extends Component {
                         </select>
 
                         <button type="submit" onClick={() => this.fireReview(user.id, product[0].title, reviewTitle, body, stars)}>Submit</button>                
-                    </div>  
-                    {reviewList}
+                    </div>   */}
+                    <div className="Review">
+                        {reviewList}
+                    </div>
                 </div>  
              
         )

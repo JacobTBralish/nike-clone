@@ -12,6 +12,7 @@ import NikePlus from './Components/NikePlus/NikePlus';
 import Orders from './Components/Orders/Orders';
 // import NikeSettings from './Components/AccountSettings/Settings';
 import Wishlist from './Components/Wishlist/Wishlist';
+import FemaleSideBarSort from './Components/ProductSort/FemaleSideBarSort';
 import Account from './Components/AccountSettings/Account'
 // Product Imports
 import ProductGridwall from './Components/Products/ProductGridwall';
@@ -21,6 +22,7 @@ import AllWomensShoes from './Data/AllWomensShoesPg1-6.json';
 
 export default (
     <Switch>
+        <Route path='/test' component={FemaleSideBarSort} />
         <Route path='/storelocator' component={FindStore} />
         {/* <Route path='/mensshoes' component={MensShoes} /> */}
                 {/* Product Routes */}
@@ -41,6 +43,7 @@ export default (
         <Route path="/nike/nike-plus" component={NikePlus} />
         <Route path="/orders" component={Orders} />
         <Route path="/settings" component={Account} />
+        {/* <Route path="/settin" component={Accountss} /> */}
         <Route path="/wishlist" component={Wishlist} />
         <Route exact path='/' component={Home} />
     </Switch>
