@@ -6,6 +6,9 @@ import './Footer.scss'
 export default class Footer extends Component {
     render() {
         return (
+            <div id="footer-size">
+
+
             <div className='footerContainer'> {/* Wrapper */}
                 
                 <div className='linkContainer'> {/* Body */}
@@ -25,13 +28,13 @@ export default class Footer extends Component {
                         <li><Link className='link' to="/">Contact Us</Link></li>
                     </ul>
                     <ul> {/* ABOUT NIKE */}
-                        <Link className='linkTitle' to="/"><li>ABOUT NIKE</li></Link> {/* BUILD IF TIME http://about.nike.com */}
-                        <Link className='link' to="http://news.nike.com"><li>News</li></Link>
-                        <Link className='link' to="https://jobs.nike.com"><li>Careers</li></Link>
-                        <Link className='link' to="https://jobs.converse.com"><li>Converse Culture & Careers</li></Link>
-                        <Link className='link' to="http://investors.nike.com"><li>Investors</li></Link>
-                        <Link className='link' to="/"><li>Sustainable Innovation</li></Link> {/* BUILD IF TIME https://www.nike.com/us/en_us/c/sustinability */}
-                        <Link className='link' to="/"><li>CA Supply Chains Act</li></Link> {/* BUILD IF TIME https://www.nike.com/help/a/supply-chain */}
+                        <li><Link className='linkTitle' to="/">ABOUT NIKE</Link></li> {/* BUILD IF TIME http://about.nike.com */}
+                        <li><Link className='link' to="http://news.nike.com">News</Link></li>
+                        <li><Link className='link' to="https://jobs.nike.com">Careers</Link></li>
+                        <li><Link className='link' to="https://jobs.converse.com">Converse Culture & Careers</Link></li>
+                        <li><Link className='link' to="http://investors.nike.com">Investors</Link></li>
+                        <li><Link className='link' to="/">Sustainable Innovation</Link></li> {/* BUILD IF TIME https://www.nike.com/us/en_us/c/sustinability */}
+                        <li><Link className='link' to="/">CA Supply Chains Act</Link></li> {/* BUILD IF TIME https://www.nike.com/help/a/supply-chain */}
                     </ul>
                     {/* SOCIAL LINKS NEED ICONS*/}
                     <ul>
@@ -43,20 +46,26 @@ export default class Footer extends Component {
                         </li>
                     </ul>
                 </div>
+
                 <div className='bottomLinks'> {/* Bottom */}
-                    <ul>
-                        <li><Link to="https://www.nike.com/language_tunnel"><span><img src="https://content.nike.com/content/dam/nike/global/country_flags/us_sml.png" alt="United States" width="14" height="10" /></span></Link></li>
-                        <li>©&nbsp;2018&nbsp;Nike, Inc. All Rights Reserved</li>
+                    <ul id="ftshi">
+                        <img src="https://content.nike.com/content/dam/nike/global/country_flags/us_sml.png" alt="United States" width="14" height="10" />
+                        <li> <span id="workwork">United States</span> ©&nbsp;2018&nbsp;Nike, Inc. All Rights Reserved</li>
                     </ul>
-                    <div>
-                        <div>Guides</div> {/* opt */}
-                        <div>
-                            <span><Link className='link' to="https://agreementservice.svs.nike.com/rest/agreement?agreementType=termsOfUse&amp;uxId=com.nike.commerce.nikedotcom.web&amp;country=US&amp;language=en&amp;requestType=redirect">Terms of Use</Link></span>
-                            <span><Link className='link' to="https://agreementservice.svs.nike.com/rest/agreement?agreementType=privacyPolicy&amp;uxId=com.nike.commerce.nikedotcom.web&amp;country=US&amp;language=en&amp;requestType=redirect">Nike Privacy Policy</Link></span>
+                        <div id="lame">
+                       
+                            <span><Link  to="https://agreementservice.svs.nike.com/rest/agreement?agreementType=privacyPolicy&amp;uxId=com.nike.commerce.nikedotcom.web&amp;country=US&amp;language=en&amp;requestType=redirect">Nike Privacy Policy</Link></span>
+                            <span><Link  to="https://agreementservice.svs.nike.com/rest/agreement?agreementType=termsOfUse&amp;uxId=com.nike.commerce.nikedotcom.web&amp;country=US&amp;language=en&amp;requestType=redirect">Terms of Use</Link></span>
+                            <span><a>Guides</a></span> {/* opt */}
                         </div>
-                    </div>
+              
+
                 </div>
+
             </div>
+
+
+        </div>
         )
     }
 }

@@ -1,8 +1,3 @@
-[class*=nsg-glyph--]:before,body {
-    -webkit-font-smoothing: auto;
-    -moz-osx-font-smoothing: grayscale
-}
-
 img,legend {
     border: 0
 }
@@ -59,6 +54,7 @@ button,input,select,textarea {
     outline: 0;
     vertical-align: baseline
 }
+
 button,input {
     line-height: normal
 }
@@ -83,39 +79,85 @@ body {
 a {
     color: inherit
 }
-
-a.is-active,a.is-hover,a:active,a:focus,a:hover {
-    color: #fa5400
-}
-
-a.is-visited,a:visited,a[class*=nsg-button].is-active,a[class*=nsg-button].is-hover,a[class*=nsg-button]:active,a[class*=nsg-button]:focus,a[class*=nsg-button]:hover {
-    color: inherit
-}
-
-.nsg-button-small {
-    font-size: 13px;
-    line-height: 30px;
-    text-align: center
-}
-
-.nsg-form--label,.nsg-form--label--control,.nsg-form--label--normal {
-    cursor: pointer;
-    display: block;
-    font-weight: 700
-}
-
-.nsg-form--label--small {
-    display: inline-block;
-    font-size: 10px;
-    line-height: 18px;
-    text-decoration: underline;
-    vertical-align: middle
-}
-.nsg-form--label--normal {
-    cursor: pointer;
-    display: block;
-    font-weight: 400;
-    padding: .6667em 0
+.profile {
+    a.is-visited,a:visited,a[class*=nsg-button].is-active,a[class*=nsg-button].is-hover,a[class*=nsg-button]:active,a[class*=nsg-button]:focus,a[class*=nsg-button]:hover {
+        color: inherit
+    }
+    
+    .nsg-button-small {
+        font-size: 13px;
+        line-height: 30px;
+        text-align: center
+    }
+    
+    .nsg-form--label,.nsg-form--label--control,.nsg-form--label--normal {
+        cursor: pointer;
+        display: block;
+        font-weight: 700
+    }
+    
+    .nsg-form--label--small {
+        display: inline-block;
+        font-size: 10px;
+        line-height: 18px;
+        text-decoration: underline;
+        vertical-align: middle
+    }
+    .nsg-form--label--normal {
+        cursor: pointer;
+        display: block;
+        font-weight: 400;
+        padding: .6667em 0
+    }
+    
+    .nsg-form--input>input {
+        background-color: transparent;
+        border: 0;
+        outline: 0;
+        margin: 0;
+        padding: 0;
+        -webkit-font-smoothing: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        color: #666
+    }
+    
+    .nsg-form--required {
+        color: #fe0000;
+        font-weight: 700
+    }
+    
+    .nsg-form--required-text {
+        font-size: 12px;
+        margin-top: 12px
+    }
+    
+    .basic-info-form .attributes .tooltip-container .nsg-glyph--help {
+        margin: -7px 0 0 13px;
+    }
+    .edf-title-font-size--xxxlarge {
+        font-size: 30px;
+    }
+    .nsg-text--nike-orange, .nsg-text--nike-orange:link, a.nsg-text--nike-orange:active, a.nsg-text--nike-orange:hover, a.nsg-text--nike-orange:visited {
+        color: #fa5400;
+    }
+    a.is-active,a.is-hover,a:active,a:focus,a:hover {
+        color: #fa5400
+    }
+    
+    .divider.bottom {
+        margin-top: 30px;
+        border-top: 1px solid #D8D8D8;
+    }
+    .divider {
+        height: 0;
+        width: 620px;
+    }
+    .divider.top {
+        margin-bottom: 35px;
+        border-top: 1px solid #FFF;
+    }
+    
 }
 
 .nsg-form--label--control {
@@ -123,41 +165,6 @@ a.is-visited,a:visited,a[class*=nsg-button].is-active,a[class*=nsg-button].is-ho
     margin: 1px;
     padding: .8em;
     border-radius: 2px
-}
-
-.nsg-form--input>input {
-    background-color: transparent;
-    border: 0;
-    outline: 0;
-    margin: 0;
-    padding: 0;
-    -webkit-font-smoothing: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    color: #666
-}
-
-.nsg-form--required {
-    color: #fe0000;
-    font-weight: 700
-}
-
-.nsg-form--required-text {
-    font-size: 12px;
-    margin-top: 12px
-}
-
-.divider.bottom {
-    margin-top: 30px;
-    border-top: 1px solid #D8D8D8;
-}
-.divider {
-    height: 0;
-    width: 620px;
-}
-.divider.top {
-    margin-bottom: 35px;
-    border-top: 1px solid #FFF;
 }
 .edf-font-size--large {
     font-size: 20px;
@@ -169,15 +176,6 @@ a.is-visited,a:visited,a[class*=nsg-button].is-active,a[class*=nsg-button].is-ho
     display: inline-block;
     position: relative;
     overflow: visible;
-}
-.basic-info-form .attributes .tooltip-container .nsg-glyph--help {
-    margin: -7px 0 0 13px;
-}
-.edf-title-font-size--xxxlarge {
-    font-size: 30px;
-}
-.nsg-text--nike-orange, .nsg-text--nike-orange:link, a.nsg-text--nike-orange:active, a.nsg-text--nike-orange:hover, a.nsg-text--nike-orange:visited {
-    color: #fa5400;
 }
 .edf-font-size--large, .edf-font-size--xlarge, .edf-font-size--xxlarge, .edf-font-size--xxxlarge, .edf-font-size--xxxxlarge, .edf-title-font-size--large, .edf-title-font-size--xlarge, .edf-title-font-size--xxxxlarge, .edf-title-font-size--xxlarge, .edf-title-font-size--xxxlarge {
     -webkit-font-smoothing: antialiased;
