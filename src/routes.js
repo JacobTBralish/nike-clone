@@ -28,49 +28,49 @@ export default (
         {/* <Route path='/mensshoes' component={MensShoes} /> */}
                 {/* Product Routes */}
         <Route path='/all mens shoes' render={() => (
-        <ProductGridwall nfl={true} nba={false} fetch={ AllMensShoes } />
+        <ProductGridwall nfl={false} nba={false} fetch={ AllMensShoes } />
         )} />
         <Route path='/mens lifestyle shoes' render={() => (
-        <ProductGridwall nfl={true} nba={false} name="Men's Shoe" fetch={ AllMensShoes } />
+        <ProductGridwall nfl={false} nba={false} name="Men's Shoe" fetch={ AllMensShoes } />
         )} />
         <Route path='/mens running shoes' render={() => (
-        <ProductGridwall nfl={true} nba={false} name="Men's Running Shoe" fetch={ AllMensShoes } />
+        <ProductGridwall nfl={false} nba={false} name="Men's Running Shoe" fetch={ AllMensShoes } />
         )} />
         <Route path='/mens training & gym shoes' render={() => (
-        <ProductGridwall nfl={true} nba={false} name="Men's Training Shoe" fetch={ AllMensShoes } />
+        <ProductGridwall nfl={false} nba={false} name="Men's Training Shoe" fetch={ AllMensShoes } />
         )} />
         <Route path='/mens basketball shoes' render={() => (
-        <ProductGridwall nfl={true} nba={true} name="Basketball Shoe" fetch={ AllMensShoes } />
+        <ProductGridwall nfl={false} nba={true} name="Basketball Shoe" fetch={ AllMensShoes } />
         )} />
         <Route path='/mens baseball cleats' render={() => (
-        <ProductGridwall nfl={true} nba={true} name="Men's Baseball Cleat" fetch={ AllMensShoes } />
+        <ProductGridwall nfl={false} nba={true} name="Men's Baseball Cleat" fetch={ AllMensShoes } />
         )} />
         <Route path='/mens lacrosse cleat' render={() => (
-        <ProductGridwall nfl={true} nba={true} name="Lacrosse Cleat" fetch={ AllMensShoes } />
+        <ProductGridwall nfl={false} nba={true} name="Lacrosse Cleat" fetch={ AllMensShoes } />
         )} />
         <Route path='/mens soccer cleat' render={() => (
-        <ProductGridwall nfl={true} nba={true} name="Men's Soccer Cleat" fetch={ AllMensShoes } />
+        <ProductGridwall nfl={false} nba={true} name="Men's Soccer Cleat" fetch={ AllMensShoes } />
         )} />
         <Route path='/mens boots' render={() => (
-        <ProductGridwall nfl={true} nba={false} name="Men's Boot" fetch={ AllMensShoes } />
+        <ProductGridwall nfl={false} nba={false} name="Men's Boot" fetch={ AllMensShoes } />
         )} />
         <Route path='/mens skateboarding shoes' render={() => (
-        <ProductGridwall nfl={true} nba={false} name="Men's Skateboarding Shoe" fetch={ AllMensShoes } />
+        <ProductGridwall nfl={false} nba={false} name="Men's Skateboarding Shoe" fetch={ AllMensShoes } />
         )} />
         <Route path='/mens gameday shoes' render={() => (
         <ProductGridwall nfl={true} nfl={true} nba={false} name="Men's Gym/Gameday Shoe" fetch={ AllMensShoes } />
         )} />
         <Route path='/unisex shoes' render={() => (
-        <ProductGridwall nfl={true} nba={false} name="Unisex Shoe" fetch={ AllMensShoes } />
+        <ProductGridwall nfl={false} nba={false} name="Unisex Shoe" fetch={ AllMensShoes } />
         )} />
         <Route path='/all mens clothes' render={() => (
-        <ProductGridwall nfl={true} nba={false} name='AllMensClothes' fetch={ AllMensClothes } />
+        <ProductGridwall nfl={false} nba={false} name='AllMensClothes' fetch={ AllMensClothes } />
         )} />
+        {/* <Route path='/all womens shoes' render={() => (
+        <ProductGridwall nfl={false} nba={false} name='AllWomensShoes' fetch={ AllWomensShoes } />
+        )} /> */}
         <Route path='/all womens shoes' render={() => (
-        <ProductGridwall nfl={true} nba={false} name='AllWomensShoes' fetch={ AllWomensShoes } />
-        )} />
-        <Route path='/all womens shoes' render={() => (
-        <ProductGridwall nfl={true} nba={false} name='AllWomensShoes' fetch={ AllWomensShoes } />
+        <ProductGridwall nfl={false} nba={false} /* name="Women's Shoes" */ fetch={ AllWomensShoes } />
         )} />
         <Route path='/shippingoptions' component={ShippingOptions}/>
         <Route path='/shippingform' component={ShippingForm}/>
