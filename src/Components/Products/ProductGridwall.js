@@ -3,7 +3,6 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { getProducts, selectedProduct } from '../../Redux/reducer';
-import MensShoes from '../../Data/AllMensShoesPg1-6.json';
 import ProductSort from '../ProductSort/ProductSort';
 
 import './ProductContainer.scss';
@@ -13,52 +12,55 @@ class MensShoe extends Component {
         super();
         this.state = {
             product: [],
-            isLoading: null
+            isLoading: null,
         }
-        // this.toTopRef = React.createRef();
     }
     
     
-    // window.self.scrollX();
     componentDidMount() {
         let { name, fetch } = this.props;
         console.log('this.props: ', this.props);
-
         this.props.getProducts(fetch)
-    /* Props coming from routes */
-        // if(!this.props[name].length) {
-        //     try {
-        //         this.setState({ loading: true })
-        //         const newState = await fetch();
-        
-        //         this.setState({
-        //         [name] : newState,
-        //         loading: false
-        //         }, localStorage.setItem([name], JSON.stringify(newState)))
-        //     } catch(error) {
-        //         throw(new Error(`Error retrieving Nike products`))
-        //     }
-        //     }
-        // console.log('toTopRef', this.toTopRef);
+
+
     }
 
     componentWillReceiveProps(nextProps) {
         console.log('nextProps: ', nextProps);
         const { name, fetch } = nextProps;
-
         this.props.getProducts(fetch)
+        
     }
 
-    // resetWindow = () => {
-    //     // toTopRef
-    //     console.log('toTopRef: ', this.toTopRef);
-        
+    handleFilter = (arr, value) => {
+        if (value){
+        let array = [];
+        arr.filter((e, i) => {
+          if (e.subtitle === value){
+            array.push(arr[i])
+          }
+        })
+        return array
+       } else {
+        return arr
+    }
+}
+
+    // noDataMessage = () => {
+    //     alert('Sorry! We do not have any data for this categorie, try another category!')
     // }
+
 
     
     render() { 
-        let { products, selectedProduct } = this.props;
-        let mappedShoes = products.map((item, index) => {
+        let { products, selectedProduct, name } = this.props;
+        console.log('name: ', name);
+
+        
+        let filteredArray = this.handleFilter(products, (name || null))
+        console.log('filteredArray: ', filteredArray);
+
+        let mappedShoes = filteredArray.map((item, index) => {
             return <div className='productContainer'>
                 <Link key={index} onClick={() => { selectedProduct([item])}} to={`/product/${encodeURIComponent(item.title)}`} >
                 <div className='productImageContainer'>
@@ -83,7 +85,7 @@ class MensShoe extends Component {
                     <div id='gridwall'>
                     <div className='bannerContainer'>
                         <div className='bannerTitleContainer'>
-                            <h1 className='pageTitle'>{this.props.fetch[0].pageHeaderTitle} {/* <h1 id='productCount'> */}({`${products.length}`}){/* </h1> */}</h1>
+                            <h1 className='pageTitle'>{this.props.fetch[0].pageHeaderTitle} {/* <h1 id='productCount'> */}({`${mappedShoes.length}`}){/* </h1> */}</h1>
                             <p className='bannerDescription'>{this.props.fetch[0].pageHeader}</p>
                         </div>
                         <div>

@@ -204,7 +204,7 @@ app.get('/api/reviews/:itemName' , review_controller.reviews_by_name)
 // app.post('/api/cart-data/:id', cart_controller.addToCart)
 
 // =========================================== Product Endpoints ================================== \\
-app.get('/api/mensshoes', productC.getProduct);
+// app.get('/api/mensshoes', productC.getProduct);
 // app.get('/api/products/:id', pc.getProduct)
 
 

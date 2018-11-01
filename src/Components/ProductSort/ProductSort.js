@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 
 import './ProductSort.scss'
 
@@ -13,11 +14,9 @@ class ProductSort extends Component {
          }
     }
 
-    handleSort = (e) => {
-        this.setState({
-            input: e.target.value
-        })
-    }
+    // handleSort = (e) => {
+    //    this.props.history.push()
+    // }
 
     handleToggle = () => {
         this.setState((prevState) =>{
@@ -33,6 +32,9 @@ class ProductSort extends Component {
           selectedOption: changeEvent.target.value
         });
     }
+
+
+       
 
 
     // onClick={() => this.props.myRef.current.scrollIntoView({behavior: "smooth"})}
@@ -63,22 +65,21 @@ class ProductSort extends Component {
                     
                             <div id='hiddenList1' className='listContainer'>
                                 <ul className='hiddenList'>
-                                    <li value='Lifestyle' onClick={(e)=> this.handleSort(e.target.value)}>Lifestyle</li>
-                                    <li value='Running' onClick={(e)=> this.handleSort(e.target.value)}>Running</li>
-                                    <li value='Basketball' onClick={(e)=> this.handleSort(e.target.value)}>Basketball</li>
-                                    <li value='Football' onClick={(e)=> this.handleSort(e.target.value)}>Football</li>
-                                    <li value='Soccer' onClick={(e)=> this.handleSort(e.target.value)}>Soccer</li>
-                                    <li value='Training & Gym' onClick={(e)=> this.handleSort(e.target.value)}>Training & Gym</li>
-                                    <li value='' onClick={(e)=> this.handleSort(e.target.value)}>+ More</li>
-                                    <li value='Skateboarding' onClick={(e)=> this.handleSort(e.target.value)}>Skateboarding</li>
-                                    <li value='Baseball / Softball' onClick={(e)=> this.handleSort(e.target.value)}>Baseball / Softball</li>
-                                    <li value='Golf' onClick={(e)=> this.handleSort(e.target.value)}>Golf</li>
-                                    <li value='Tennis' onClick={(e)=> this.handleSort(e.target.value)}>Tennis</li>
-                                    <li value='Track & Field' onClick={(e)=> this.handleSort(e.target.value)}>Track & Field</li>
-                                    <li value='Lacrosse' onClick={(e)=> this.handleSort(e.target.value)}>Lacrosse</li>
-                                    <li value='Walking' onClick={(e)=> this.handleSort(e.target.value)}>Walking</li>
-                                    <li value='Outdoor' onClick={(e)=> this.handleSort(e.target.value)}>Outdoor</li>
-                                    <li value='Boxing' onClick={(e)=> this.handleSort(e.target.value)}>Boxing</li>
+                                    <li value='Lifestyle' onClick={()=> this.props.history.push('/mens lifestyle shoes')}>Lifestyle</li>
+                                    <li value='Running' onClick={()=> this.props.history.push('/mens running shoes')}>Running</li>
+                                    <li value='Basketball' onClick={()=> this.props.history.push('/mens basketball shoes')}>Basketball</li>
+                                    <li value='Football' onClick={()=> this.props.history.push('/mens football shoes')}>Football</li>
+                                    <li value='Soccer' onClick={()=> this.props.history.push('/mens soccer shoes')}>Soccer</li>
+                                    <li value='Training & Gym' onClick={()=> this.props.history.push('/mens training & gym shoes')}>Training & Gym</li>
+                                    <li value='Skateboarding' onClick={()=> this.props.history.push('/mens skateboarding shoes')}>Skateboarding</li>
+                                    <li value='Baseball / Softball' onClick={()=> this.props.history.push('/mens baseball cleats')}>Baseball / Softball</li>
+                                    <li value='Golf' onClick={()=> this.props.history.push('/mens golf shoes')}>Golf</li>
+                                    <li value='Tennis' onClick={()=> this.props.history.push('/mens tennis shoes')}>Tennis</li>
+                                    <li value='Track & Field' onClick={()=> this.props.history.push('/mens track & field')}>Track & Field</li>
+                                    <li value='Lacrosse' onClick={()=> this.props.history.push('/mens lacrosse cleat')}>Lacrosse</li>
+                                    <li value='Walking' onClick={()=> this.props.history.push('/all mens shoes')}>Walking</li>
+                                    <li value='Outdoor' onClick={()=> this.props.history.push('/mens boots')}>Outdoor</li>
+                                    <li value='Boxing' onClick={()=> this.props.history.push('/all ments shoes')}>Boxing</li>
                                 </ul>
                             </div>
                         </li>
@@ -102,8 +103,8 @@ class ProductSort extends Component {
                                 <div  onClick={this.handleToggle}>Compression & Nike Pro</div>
                                 <div id='hiddenList2' className='listContainer'>
                                     <ul id='hiddenList'>
-                                        <li value='Tops' onClick={(e)=> this.handleSort(e.target.value)}>Tops</li>
-                                        <li value='Bottoms' onClick={(e)=> this.handleSort(e.target.value)}>Bottoms</li>
+                                        <li value='Tops' onClick={()=> this.props.history.push('/mens tops')}>Tops</li>
+                                        <li value='Bottoms' onClick={()=> this.props.history.push('/mens bottoms')}>Bottoms</li>
                                     </ul>
                                 </div>
                             </li>
@@ -127,14 +128,14 @@ class ProductSort extends Component {
                                 <div onClick={this.handleToggle}>Tops & T-Shirts</div>
                                 <div id='hiddenList3' className='listContainer'>
                                     <ul id='hiddenList'>
-                                        <li value='Graphic T-Shirt' onClick={(e)=> this.handleSort(e.target.value)}>Graphic T-Shirt</li>
-                                        <li value='Compression & Nike Pro' onClick={(e)=> this.handleSort(e.target.value)}>Compression & Nike Pro</li>
-                                        <li value='Long Sleeve' onClick={(e)=> this.handleSort(e.target.value)}>Long Sleeve</li>
-                                        <li value='Short Sleeve' onClick={(e)=> this.handleSort(e.target.value)}>Short Sleeve</li>
-                                        <li value='Sleeveless & Tank Tops' onClick={(e)=> this.handleSort(e.target.value)}>Sleeveless & Tank Tops</li>
-                                        <li value='Polos' onClick={(e)=> this.handleSort(e.target.value)}>Polos</li>
-                                        <li value='Jerseys' onClick={(e)=> this.handleSort(e.target.value)}>Jerseys</li>
-                                        <li value='Button-downs & Flannels' onClick={(e)=> this.handleSort(e.target.value)}>Button-downs & Flannels</li>
+                                        <li value='Graphic T-Shirt' onClick={()=> this.props.history.push('/mens graphic t-shirts')}>Graphic T-Shirt</li>
+                                        <li value='Compression & Nike Pro' onClick={()=> this.props.history.push('/mens nike pro & compression')}>Compression & Nike Pro</li>
+                                        <li value='Long Sleeve' onClick={()=> this.props.history.push('/mens long sleeve')}>Long Sleeve</li>
+                                        <li value='Short Sleeve' onClick={()=> this.props.history.push('/mens short sleeve')}>Short Sleeve</li>
+                                        <li value='Sleeveless & Tank Tops' onClick={()=> this.props.history.push('/mens sleeveless & tank tops')}>Sleeveless & Tank Tops</li>
+                                        <li value='Polos' onClick={()=> this.props.history.push('/mens polos')}>Polos</li>
+                                        <li value='Jerseys' onClick={()=> this.props.history.push('/mens jerseys')}>Jerseys</li>
+                                        <li value='Button-downs & Flannels' onClick={()=> this.props.history.push('/mens button-downs & flannels')}>Button-downs & Flannels</li>
                                     </ul>
                                 </div>
                             </li>
@@ -144,7 +145,7 @@ class ProductSort extends Component {
                     <div className='categorySubContainer'>
                         <li className='categorieTitleClosed'>
                             <input type="radio" className='radioButtons'  onChange={this.handleOptionChange}  checked={selectedOption === '2'} id='radioTops & T-Shirts' value='2' />
-                            <label for='radioTops & T-Shirts'>Compression & Nike Pro</label>
+                            <label for='radioTops & T-Shirts'>Tops & T-Shirts</label>
                         </li>
                     </div>
                 }
@@ -158,8 +159,8 @@ class ProductSort extends Component {
                                 <div onClick={this.handleToggle}>Hoodies & Pullovers</div>
                                 <div id='hiddenList4' className='listContainer'>
                                     <ul id='hiddenList'>
-                                        <li value='Hoodies' onClick={(e)=> this.handleSort(e.target.value)}>Graphic T-Shirt</li>
-                                        <li value='Pullovers' onClick={(e)=> this.handleSort(e.target.value)}>Compression & Nike Pro</li>
+                                        <li value='Hoodies' onClick={()=> this.props.history.push('/mens graphic t-shirt')}>Graphic T-Shirt</li>
+                                        <li value='Pullovers' onClick={()=> this.props.history.push('/mens nike pro & compression')}>Compression & Nike Pro</li>
                                     </ul>
                                 </div>
                             </li>
@@ -183,12 +184,12 @@ class ProductSort extends Component {
                                 <div onClick={this.handleToggle}>Jackets & Vests</div>
                                 <div id='hiddenList5' className='listContainer'>
                                     <ul id='hiddenList'>
-                                        <li value='Bombers' onClick={(e)=> this.handleSort(e.target.value)}>Bombers</li>
-                                        <li value='Other' onClick={(e)=> this.handleSort(e.target.value)}>Other</li>
-                                        <li value='Parkas' onClick={(e)=> this.handleSort(e.target.value)}>Parkas</li>
-                                        <li value='Puffers' onClick={(e)=> this.handleSort(e.target.value)}>Puffers</li>
-                                        <li value='Vests' onClick={(e)=> this.handleSort(e.target.value)}>Vests</li>
-                                        <li value='Windbreakers' onClick={(e)=> this.handleSort(e.target.value)}>Windbreakers</li>
+                                        <li value='Bombers' onClick={()=> this.props.history.push('/mens bombers')}>Bombers</li>
+                                        <li value='Other' onClick={()=> this.props.history.push('/mens other')}>Other</li>
+                                        <li value='Parkas' onClick={()=> this.props.history.push('/mens parkas')}>Parkas</li>
+                                        <li value='Puffers' onClick={()=> this.props.history.push('/mens puffers')}>Puffers</li>
+                                        <li value='Vests' onClick={()=> this.props.history.push('/mens vests')}>Vests</li>
+                                        <li value='Windbreakers' onClick={()=> this.props.history.push('/mens windbreakers')}>Windbreakers</li>
                                     </ul>
                                 </div>
                             </li>
@@ -212,11 +213,11 @@ class ProductSort extends Component {
                                 <div onClick={this.handleToggle}>Pants & Tights</div>
                                 <div id='hiddenList6' className='listContainer'>
                                     <ul id='hiddenList'>
-                                        <li value='Joggers & Sweatpants' onClick={(e)=> this.handleSort(e.target.value)}>Joggers & Sweatpants</li>
-                                        <li value='Base Layers & Nike Pro' onClick={(e)=> this.handleSort(e.target.value)}>Base Layers & Nike Pro</li>
-                                        <li value='Pants' onClick={(e)=> this.handleSort(e.target.value)}>Pants</li>
-                                        <li value='Tights & Leggings' onClick={(e)=> this.handleSort(e.target.value)}>Tights & Leggings</li>
-                                        <li value='Vests' onClick={(e)=> this.handleSort(e.target.value)}>Vests</li>
+                                        <li value='Joggers & Sweatpants' onClick={()=> this.props.history.push('/mens joggers & sweatpants')}>Joggers & Sweatpants</li>
+                                        <li value='Base Layers & Nike Pro' onClick={()=> this.props.history.push('/mens base layers & nike pro')}>Base Layers & Nike Pro</li>
+                                        <li value='Pants' onClick={()=> this.props.history.push('/mens ')}>Pants</li>
+                                        <li value='Tights & Leggings' onClick={()=> this.props.history.push('/mens tights & leggings')}>Tights & Leggings</li>
+                                        <li value='Vests' onClick={()=> this.props.history.push('/mens vests')}>Vests</li>
                                     </ul>
                             </div> 
                             </li>
@@ -240,9 +241,9 @@ class ProductSort extends Component {
                                     <div onClick={this.handleToggle}>Tracksuits</div>
                                     <div id='hiddenList7' className='listContainer'>
                                         <ul id='hiddenList'>
-                                            <li value='Tracksuit Tops' onClick={(e)=> this.handleSort(e.target.value)}>Tracksuit Tops</li>
-                                            <li value='Tracksuit Bottoms' onClick={(e)=> this.handleSort(e.target.value)}>Tracksuit Bottoms</li>
-                                            <li value='Tracksuit Sets' onClick={(e)=> this.handleSort(e.target.value)}>Tracksuit Sets</li>
+                                            <li value='Tracksuit Tops' onClick={()=> this.props.history.push('/mens tracksuit tops')}>Tracksuit Tops</li>
+                                            <li value='Tracksuit Bottoms' onClick={()=> this.props.history.push('/mens tracksuit bottoms')}>Tracksuit Bottoms</li>
+                                            <li value='Tracksuit Sets' onClick={()=> this.props.history.push('/mens tracksuit sets')}>Tracksuit Sets</li>
                                         </ul>
                                     </div>
                             </div>     
@@ -259,7 +260,7 @@ class ProductSort extends Component {
 
                     <div className='categorySubContainer'>
                         <li className='categorieTitle'>
-                            <div value='Shorts' onClick={(e)=> this.handleSort(e.target.value)}>Shorts</div>
+                            <div value='Shorts' onClick={()=> this.props.history.push('/mens shorts')}>Shorts</div>
                         </li>
                     </div>
 
@@ -272,12 +273,12 @@ class ProductSort extends Component {
                                 <div onClick={this.handleToggle}>Surf & Swimwear</div>
                                 <div id='hiddenList8' className='listContainer'>
                                     <ul id='hiddenList'>
-                                        <li value='Board Shorts' onClick={(e)=> this.handleSort(e.target.value)}>Board Shorts</li>
-                                        <li value='Booties and Gloves' onClick={(e)=> this.handleSort(e.target.value)}>Booties & Gloves</li>
-                                        <li value='Compression' onClick={(e)=> this.handleSort(e.target.value)}>Compression</li>
-                                        <li value='Rashgaurds & Surf Shirts' onClick={(e)=> this.handleSort(e.target.value)}>Rashgaurds & Surf Shirts</li>
-                                        <li value='Swimwear' onClick={(e)=> this.handleSort(e.target.value)}>Swimwear</li>
-                                        <li value='Wetsuits' onClick={(e)=> this.handleSort(e.target.value)}>Wetsuits</li>
+                                        <li value='Board Shorts' onClick={()=> this.props.history.push('/mens board shorts')}>Board Shorts</li>
+                                        <li value='Booties and Gloves' onClick={()=> this.props.history.push('/mens booties & gloves')}>Booties & Gloves</li>
+                                        <li value='Compression' onClick={()=> this.props.history.push('/mens compression')}>Compression</li>
+                                        <li value='Rashgaurds & Surf Shirts' onClick={()=> this.props.history.push('/mens rashgaurds & surf shorts')}>Rashgaurds & Surf Shirts</li>
+                                        <li value='Swimwear' onClick={()=> this.props.history.push('/mens swimwear')}>Swimwear</li>
+                                        <li value='Wetsuits' onClick={()=> this.props.history.push('/mens wetsuit')}>Wetsuits</li>
                                     </ul>
                                 </div>
                             </li>
@@ -297,7 +298,7 @@ class ProductSort extends Component {
 
                     <div className='categorySubContainer'>
                         <li className='categorieTitle'>
-                            <div value='Socks' onClick={(e)=> this.handleSort(e.target.value)}>Socks</div>
+                            <div value='Socks' onClick={()=> this.props.history.push('/socks')}>Socks</div>
                         </li>
                     </div>
 
@@ -313,20 +314,20 @@ class ProductSort extends Component {
 
                                 <div className='listContainer'>
                                     <ul id='hiddenList'>
-                                        <li value='Bags & Backpacks' onClick={(e)=> this.handleSort(e.target.value)}>Lifestyle</li>
-                                        <li value='Balls' onClick={(e)=> this.handleSort(e.target.value)}>Balls</li>
-                                        <li value='Belts' onClick={(e)=> this.handleSort(e.target.value)}>Belts</li>
-                                        <li value='Gloves & Mitts' onClick={(e)=> this.handleSort(e.target.value)}>Gloves & Mitts</li>
-                                        <li value='Hats, Visors & Headbands' onClick={(e)=> this.handleSort(e.target.value)}>Hats, Visors & Headbands</li>
-                                        <li value='Watches' onClick={(e)=> this.handleSort(e.target.value)}>Watches</li>
-                                        <li value='Other' onClick={(e)=> this.handleSort(e.target.value)}>Other</li>
-                                        <li value='Scarves' onClick={(e)=> this.handleSort(e.target.value)}>Scarves</li>
-                                        <li value='Shin Gaurds' onClick={(e)=> this.handleSort(e.target.value)}>Shin Gaurds</li>
-                                        <li value='Shoeslaves' onClick={(e)=> this.handleSort(e.target.value)}>Tennis</li>
-                                        <li value='Sleeves & Arm Bands' onClick={(e)=> this.handleSort(e.target.value)}>Sleeves & Arm Bands</li>
-                                        <li value='Sunglasses' onClick={(e)=> this.handleSort(e.target.value)}>Sunglasses</li>
-                                        <li value='Swim Goggles & Caps' onClick={(e)=> this.handleSort(e.target.value)}>Swim Goggles & Caps</li>
-                                        <li value='Training and Gym' onClick={(e)=> this.handleSort(e.target.value)}>Training and Gym</li>
+                                        <li value='Bags & Backpacks' onClick={()=> this.props.history.push('/mens lifestyle accessories')}>Lifestyle</li>
+                                        <li value='Balls' onClick={()=> this.props.history.push('/balls')}>Balls</li>
+                                        <li value='Belts' onClick={()=> this.props.history.push('/mens belts')}>Belts</li>
+                                        <li value='Gloves & Mitts' onClick={()=> this.props.history.push('/gloves & mitts')}>Gloves & Mitts</li>
+                                        <li value='Hats, Visors & Headbands' onClick={()=> this.props.history.push('/hats')}>Hats, Visors & Headbands</li>
+                                        <li value='Watches' onClick={()=> this.props.history.push('/watches')}>Watches</li>
+                                        <li value='Other' onClick={()=> this.props.history.push('/other')}>Other</li>
+                                        <li value='Scarves' onClick={()=> this.props.history.push('/scarves')}>Scarves</li>
+                                        <li value='Shin Gaurds' onClick={()=> this.props.history.push('/shin gaurds')}>Shin Gaurds</li>
+                                        <li value='Shoeslaves' onClick={()=> this.props.history.push('/tennis')}>Tennis</li>
+                                        <li value='Sleeves & Arm Bands' onClick={()=> this.props.history.push('/sleeves & arm bands')}>Sleeves & Arm Bands</li>
+                                        <li value='Sunglasses' onClick={()=> this.props.history.push('/sunglasses')}>Sunglasses</li>
+                                        <li value='Swim Goggles & Caps' onClick={()=> this.props.history.push('/swim goggles & caps')}>Swim Goggles & Caps</li>
+                                        <li value='Training and Gym' onClick={()=> this.props.history.push('/training & gym')}>Training and Gym</li>
                                     </ul>
                                 </div>
                             </li>
@@ -356,4 +357,4 @@ class ProductSort extends Component {
     }
 }
  
-export default ProductSort;
+export default withRouter(ProductSort);

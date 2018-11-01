@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-// import {} from './../../Redux/reducer';
-// import MensShoes from '../../Data/nikeMensShoesPg1.json'
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { deleteFromCart } from '../../Redux/reducer';
