@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { deleteFromCart } from '../../Redux/reducer';
 import './Cart.scss'
 
+
 class Cart extends Component {
     constructor() {
         super();
@@ -59,7 +60,7 @@ class Cart extends Component {
         // })
         
         let mappedCart = cart.map((item, index) => {
-
+            // console.log('ITEMITEMITEMITEM', item)
             if (item !== undefined)
 
            { var { spriteSheet, title, localPrice, subtitle } = item[0];

@@ -60,7 +60,7 @@ class MensShoe extends Component {
                     <div id='gridwall'>
                     <div className='bannerContainer'>
                         <div className='bannerTitleContainer'>
-                            <h1 className='pageTitle'>MEN'S SHOES & SNEAKERS {/* <h1 id='productCount'> */}({`${products.length}`}){/* </h1> */}</h1>
+                            <h1 className='pageTitle'>MEN'S SHOES & SNEAKERS {/* <h1 id='productCount'> */}<span>({`${products.length}`})</span>{/* </h1> */}</h1>
                             <p className='bannerDescription'>Explore the latest shoes for men for every sport, workout and everyday look. Built for ultimate performance and sneaker style, Nike shoes for men deliver cutting-edge technologies specific to your sport in iconic designs.</p>
                         </div>
                         <div>

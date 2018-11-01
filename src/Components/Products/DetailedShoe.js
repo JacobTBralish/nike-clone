@@ -104,11 +104,15 @@ class DetailedShoe extends Component {
                             </div>
                             <div className="buttonBox">
                                 <button className="addToCart blackBtn" onClick={() => addToCart(product, total)}>Add To Cart</button>
-                                <button className="wishList blackBtn">W</button>
+                                                        <Link className="addToCart" to={{pathname:`/cart`, state:{product}}}>To Cart</Link>
+                                {/* <button className="wishList blackBtn">W</button> */}
                             </div>
+
                             <ul className="stockBox">
                                 <li className="stockAvailability"><span>Limited stock in select sizes</span></li>
                             </ul>
+
+                            <div className="borderBottom"></div>
                             {
 
                                 shoeInfoTitleOne && shoeInfoBodyOne ?
@@ -151,6 +155,7 @@ class DetailedShoe extends Component {
                                 null
                             }
                             <div className="borderBottom"></div>
+
                                                     
                             <div className="shippingBox">
                                 <h1>Free Shipping & Returns</h1>
@@ -164,8 +169,8 @@ class DetailedShoe extends Component {
 
                                <div className="borderBottom"></div>
 
-                             <Link to={{pathname:`/cart`, state:{product}}}>To Cart</Link>
                             <div className="reviewContainer">
+                                <h1 className="reviewsMainTitle">Reviews</h1>
                                 <ReviewWrapper />
                             </div>
                             <p>TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT</p>
@@ -179,34 +184,6 @@ class DetailedShoe extends Component {
 
         return ( 
             <div>
-                {/* <div>
-                    <div>
-                        <h1>MAPPED PICTURES</h1>
-                        <p>needs ternary to check if file is jpg or .webm</p>
-                        <p>only store six pics</p>
-                    </div>
-                    <div>
-                        <h1>SIDE NAV</h1>
-                        <span>Type / Catagory</span><span>... Shoe Price</span>
-                        <p>Shoe Name</p>
-                        <span>Select Size</span><span>Size Guide</span>
-                        <p>size divs</p>
-                        <span>Add to cart</span><span>Add to wishlist</span>
-                        <p>Title1</p>
-                        <p>Info1</p>
-                        <p>Read More ( ternary: display)</p>
-                        <p>Title2</p>
-                        <p>Info2</p>
-                        <p>Title3</p>
-                        <p>Info3</p>
-                        <p>Free Shipping and returns dropdown</p>
-                        <p>reviews dropdown</p>
-                        <p>moreinfo dropdown</p>
-                    </div>
-                    <h1>YOU MIGHT ALSO LIKE</h1>
-                </div> */}
-
-
                 {mappedProduct}
 
                 {/* <div><Link to='/mensshoes'>Back to Shoes</Link></div>

@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { postShippingInformation, createRefId, setTaxRate } from '../../Redux/reducer';
 import axios from 'axios';
+import './ShippingForm.scss'
 
 class ShippingForm extends Component {
     constructor(){
@@ -62,7 +63,7 @@ class ShippingForm extends Component {
             [event.target.name]: event.target.value
         })
     }
-
+//  Nike Factory Stores, Nikes Stores, Nike Partner Store, Converse, Hurley
     handleToggle = () => {
         this.setState({
             toggleValue: true
@@ -73,31 +74,31 @@ class ShippingForm extends Component {
         let { postShippingInformation, user, shippingInfo, refId } = this.props;
         console.log('shippingInfo: ', shippingInfo);
         return (
-        <div>
-            <form>
-                <div>
-                    <input required onChange={this.handleChange} name='firstName' value={firstName}></input>
-                    <label htmlFor='firstName'>first Name</label>
-                    <input required onChange={this.handleChange} name='lastName' value={lastName}></input>
-                    <label htmlFor='lastName'>Last Name</label>
+        <div className="shippingFormWrapper">
+            <form id="shippingForm" >
+                <div className="namesWrapper">
+                    {/* <label htmlFor='firstName'>First Name</label> */}
+                    <input id="shippingInput" className="ShippingName" required onChange={this.handleChange} name='firstName' placeholder="First Name" value={firstName}></input>
+                    {/* <label htmlFor='lastName'>Last Name</label> */}
+                    <input id="shippingInput" className="ShippingName lastname" required onChange={this.handleChange} name='lastName' placeholder="Last Name" value={lastName}></input>
                 </div>
 
-                <div>
-                    <input required onChange={this.handleChange} name='address1' value={address1}></input>
-                    <label htmlFor='address1'>Street Address</label>
+                <div className="addressOneBox">
+                    {/* <label htmlFor='address1'>Street Address</label> */}
+                    <input id="shippingInput" className="addressOne" required onChange={this.handleChange} name='address1' placeholder="Street Address" value={address1}></input>
                 </div>
                 { !toggleValue ?
-                    <button style={{background: "none", border: "none", color: 'darkGrey'}} onClick={this.handleToggle}><i class="fas fa-plus">Add Company, C/O, Apt, Suite, Unit</i></button>
+                    <button id="addressTwoText" style={{background: "none", border: "none", color: 'darkGrey'}} onClick={this.handleToggle}><i class="fas fa-plus"></i> Add Company, C/O, Apt, Suite, Unit</button>
                 :
                 <div>
-                    <input required onChange={this.handleChange} name='address2' value={address2}></input>
                     <label htmlFor='address2' />
+                    <input id="shippingInput" className="addressOneBox" required onChange={this.handleChange} name='address2'  value={address2}></input>
                 </div>
                 }
-                <div>
-                    <input required onChange={this.handleChange} name='city' value={city}></input>
-                    <label htmlFor='city'>City</label>
-                <select required value={JSON.stringify({stateName: chosenState, rate: taxRate})} onChange={this.handleShipping}>
+                <div className="cityStatePostalWrapper">
+                    {/* <label htmlFor='city'>City</label> */}
+                    <input id="shippingInput" className="cityStatePostalInput" required onChange={this.handleChange} name='city' placeholder="City" value={city}></input>
+                <select className="stateSelector cityStatePostalInput" required value={JSON.stringify({stateName: chosenState, rate: taxRate})} onChange={this.handleShipping}>
                     <option value>State</option>
                     <option value='{"stateName":"Alabama","rate":"0.04"}'>Alabama</option>
                     <option value='{"stateName":"Alaska","rate":"0"}'>Alaska</option>
@@ -151,22 +152,20 @@ class ShippingForm extends Component {
                     <option value='{"stateName":"Wyoming","rate":"0.04"}'>Wyoming</option>
                     <option value='{"stateName":"D.C.","rate":"0.0575"}'>D.C.</option>
                 </select>
-                <input required onChange={this.handleChange} pattern="[0-9]{5}" type='text' max={5} name='zipCode' value={zipCode}></input>
-                <label htmlFor='zipCode'>Postal Code</label>
+                <input id="shippingInput" className="cityStatePostalInput" required onChange={this.handleChange} pattern="[0-9]{5}" type='text' max={5} name='zipCode' placeholder="Postal Code" value={zipCode}></input>
+                {/* <label htmlFor='zipCode'>Postal Code</label> */}
                 </div>
 
-                <div>
-                    <input required onChange={this.handleChange} type='email' name='email' value={email}></input>
-                    <label htmlFor='email'>Email</label>
-                    <input required onChange={this.handleChange} type='tel' name='phone' value={phone}></input>
-                    <label htmlFor='phone'>Phone Number</label>
+                <div className="emailPhoneWrapper">
+                    <input id="shippingInput" className="ShippingName" required onChange={this.handleChange} type='email' name='email' placeholder="Email" value={email}></input>
+                    {/* <label htmlFor='email'>Email</label> */}
+                    <input id="shippingInput" className="lastname ShippingName" required onChange={this.handleChange} type='tel' name='phone' placeholder="Phone" value={phone}></input>
+                    {/* <label htmlFor='phone'>Phone Number</label> */}
                 </div>
-                <div><p style={{fontSize: "8"}}><i className="fas fa-lock"></i> Your privacy is important to us. We will only contact you if there is an issue with your order.</p></div>
-                <div><Link to={{pathname:'/shippingoptions', state:{taxRate}}}><button type='submit' onClick={() => this.sendShippingInformation(  firstName, lastName, (user ? user.id : null), address1, address2, city, chosenState, zipCode , email, phone )}>SAVE & CONTINUE</button></Link></div>
+                <div className="bottomText"><p><i className="fas fa-lock"></i> Your privacy is important to us. We will only contact you if there is an issue with your order.</p></div>
+                <div className="footerButtonWrapper"><Link to={{pathname:'/shippingoptions', state:{taxRate}}}><button type='submit' onClick={() => this.sendShippingInformation(  firstName, lastName, (user ? user.id : null), address1, address2, city, chosenState, zipCode , email, phone )}>SAVE & CONTINUE</button></Link></div>
 
-            </form>
-            
-                
+            </form>    
         </div>
         );
     }

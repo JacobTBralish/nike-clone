@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
+import './../ReviewWrapper/ReviewWrapper.scss'
 
 export default class Review extends Component {
     constructor () {
@@ -58,12 +59,14 @@ export default class Review extends Component {
             <div>
                 { !toggleValue 
                 ?
-                <div> {/* ------------ DISPLAY REVIEW ----------- */}
-                    <span>{dateval}</span>
-                    <h1>{title}</h1>
-                    <p>Rating: {`${stars}/5`}</p>
-                    <p>{posterName}</p>
-                    <p>{body}</p>
+                <div className="singleReviewWrapper"> {/* ------------ DISPLAY REVIEW ----------- */}
+                    <div className="singleReviewInner">
+                        {/* <span>{dateval}</span> */}
+                        <h1>{title}</h1>
+                        <p>Rating: {`${stars}/5`}</p>
+                        <p>{posterName}</p>
+                        <p>{body}</p>
+                    </div>
 
                 {  user.id === poster 
                 ?

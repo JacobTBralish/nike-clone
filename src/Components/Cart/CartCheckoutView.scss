@@ -1,0 +1,222 @@
+.checkoutParentWrapper {
+    border: 1px solid black;
+    // padding: 55px;
+
+    >h1 {
+        // border: 1px orange solid;
+        text-align: center;
+        width: 100%;
+        padding-bottom: 17px;
+        line-height: 50px;
+        font-size: 1.65em;
+        font-weight: 600;
+        letter-spacing: 0.09em;
+    }
+    .topLinks {
+        position: relative;
+        // top:-30px;
+        // right:-30px;
+        display:flex;
+        flex-direction: row-reverse;
+
+        // border: 1px solid teal;
+        a, p {
+            font-size: 0.7em;
+            color:rgb(143, 143, 143);
+            padding: 20px;
+        }
+        >a#und {
+            text-decoration: underline!important;
+        }
+    }
+
+
+    .checkoutChildWrapper{
+        padding-right: auto;
+        padding-left: auto;
+        padding-bottom: 100px;
+        display:flex;
+        justify-content: center;
+        flex-direction: row-reverse;
+
+        
+
+        
+        // @media(max-width: 1259px) and (min-width: 1024px){
+        //     padding: 0px 900px;
+         
+        // }
+        @media (max-width: 1023px){
+            flex-direction: column;
+            // width: 100vw;
+            .cartCheckoutParent {
+                width: 100vw!important;
+                .cartSummaryWrapper {
+                    width: 100vw;
+                }
+            }
+        }
+        .cartCheckoutParent {
+            // border: 1px solid blue;
+            // padding: 20px;
+            height: 100%;
+            width: 45%;
+            max-width: 325px;
+
+            .cartSummaryWrapper {
+                // background: yellow;
+                .summaryBox {
+                    border: solid 1px rgb(236, 236, 236);
+                    height:100%;
+                    width:100%;
+                    margin-bottom: 17px;
+                    .summaryInner {
+                        padding: 17px;
+                        font-family: sans-serif;
+                        font-size:0.8em;
+                        color: #222;
+                        letter-spacing: 0.02em;
+                        line-height: 20px;
+                        div {
+                            display: flex;
+                            justify-content: space-between;
+                        }
+                        .displayTotal {
+                            margin-top:11px;
+                            font-weight: 600;
+                            letter-spacing: 0.08em;
+                            font-family: 'Oswald', sans-serif;
+                        }
+                        .totalRed {
+                            margin-top:11px;
+                            color: #fa5400;
+                            font-family: 'Oswald', sans-serif;
+
+                        }
+                    }
+                }
+                .inYourCartWrapper {
+                    margin-bottom: 17px;
+                    border: solid 1px rgb(236, 236, 236);
+
+                    .dateHeader {
+                        font-size: 0.9em;
+                        font-weight: 600;
+                        border-bottom: solid 1px #eee;
+                        letter-spacing: 0.033em;
+                        padding-bottom: 4px; 
+                        margin-bottom:15px;
+                    }
+                    .mappedCartParent {
+                        padding: 17px;
+                        .mappedCartInner {
+                            margin-bottom: 15px;
+                            padding-bottom:15px;
+                            border-bottom: 1px solid #eee; 
+                            display: flex;
+                            flex-direction: row;
+                            font-family: sans-serif;
+                            font-size: 0.85em;
+                            letter-spacing: 0.02em;
+                            color: #555;
+                            line-height: 1.5em;
+                            .mappedCartText {
+                                margin-left: 13px;
+                            }
+                            .mappedCartTitle {
+                                color: black;
+                            }
+                            .mappedCartImg {
+                                text-align: center;
+                                min-height: 60px;
+                                cursor: pointer;
+                                display: inline-block;
+                                position: relative;
+                                overflow: hidden;
+                                width: 60px;
+                                height: 60px;
+                                max-width: 60px;
+                                max-height: 60px;
+                                margin: 0;
+                                img {
+                                    height: 60px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .inYouCartFlex {
+                    background: rgb(234, 234, 234);
+                    display:flex;
+                    justify-content: space-between;
+                    padding-right: 20px;
+                    padding-left: 20px;
+                    color: #222;
+                    line-height:55px;
+                    >h2 {
+                        font-size: 1em;
+                        letter-spacing: 0.01em;
+                        font-weight: 600;
+
+                        
+                    } 
+                    a#editLink {
+                        font-size:0.7em;
+                        text-decoration: underline;
+                        font-family: sans-serif;
+                        color:#111;
+                    }
+                }
+            }
+        }
+        .shippingAndApoWrapper {
+            max-width: 667px;
+            border: 1px solid rgb(212, 212, 212);
+            // padding: 20px;
+            height: 100%;
+            width: 100%;
+            margin-right:15px;
+            .shipRadio {
+                margin-right: 2px;
+                color:#222;
+                position: relative;
+                top: 2px;
+            }
+            span#radioText {
+                font-family: sans-serif;
+                font-weight: 300;
+                font-size: 0.8em; 
+                line-height: 1em;
+
+            }
+            .moveOutTheWay {
+                position: relative;
+                right: -20px;
+            }
+            
+
+            .shippingInnerWrapper {
+                padding:20px 20px 0 20px;
+            }
+            .shippingPadding {
+                padding-top: 20px;
+                // padding-bottom: 20px;
+            }
+            >h1 {
+                line-height: 55px;
+                background: #111;
+                color: white;
+                padding-left: 20px;
+                font-weight: 600;
+                letter-spacing: 0.09em;
+            }
+
+
+        }
+        .radioButtonWrapper {
+            border: 1px solid green;
+            padding: 20px;
+        }
+    }
+
+}

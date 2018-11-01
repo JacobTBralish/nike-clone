@@ -11,6 +11,7 @@ class ReviewWrapper extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            toggleValue: false,
             reviewTitle: '',
             body: '',
             stars: '',
@@ -58,6 +59,7 @@ class ReviewWrapper extends Component {
             this.props.createReview(response.data)
             })
         .catch(error => console.log('handleDelete', error))
+        this.toggleEdit()
     }
 
 
@@ -84,16 +86,19 @@ class ReviewWrapper extends Component {
         console.log('reviewList: ', reviewList);
         return (
             <div className="ReviewParentContainer">
-                <h1></h1>
+                <p className="overall">Overall Rating: {product[0].rating} / 5</p>
+          
 
-                    {/* <label >Title</label>
-                    <input type="text" name="reviewTitle" value={reviewTitle} onChange={this.onChange}></input>
+                    { this.state.toggleValue ?
+                    <div className="createReview"> 
+                        {/* <label >Title</label> */}
+                    <input type="text" name="reviewTitle" placeholder="Title" value={reviewTitle} onChange={this.onChange}></input>
                     <div>
-                        <label>Body</label>
-                        <input type="text" name="body" value={body} onChange={this.onChange}></input>
+                        {/* <label>Body</label> */}
+                        <input type="text" name="body" placeholder="Body" value={body} onChange={this.onChange}></input>
                     </div>
                     <div>
-                        <label>Stars</label>
+                        {/* <label>Stars</label> */}
                         <select name='stars' onChange={this.onChange}>
                             <option>Rating</option>
                             <option value='1'>1</option>
@@ -104,7 +109,11 @@ class ReviewWrapper extends Component {
                         </select>
 
                         <button type="submit" onClick={() => this.fireReview(user.id, product[0].title, reviewTitle, body, stars)}>Submit</button>                
-                    </div>   */}
+                    </div> 
+                    </div>
+                    :
+                    <p className="writeReview" onClick={() => this.toggleEdit()}>Write a review</p>
+                    }
                     <div className="Review">
                         {reviewList}
                     </div>

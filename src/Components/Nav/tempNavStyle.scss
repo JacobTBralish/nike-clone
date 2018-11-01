@@ -34,34 +34,69 @@ $link-color-grey: #8D8D8D;
         border-right: .5px solid lightgray;
         cursor: pointer;
     }
-    #nikePlus > button {
+    #nikePlus {
+        
+        > button {
         
         width: 111px;
         background: none;
-        color:$link-color-grey;
+        // color:$link-color-grey;
         align-items: center;
+        text-align: center;
+        // font-weight: 600;
+        letter-spacing: 0.07em;
+        font-size: 13px;
+        opacity: 0.5;
+            &:hover {
+                opacity: 1;
+            }
+        }
+        
     }
 
-    #jordan > button {
+    #jordan {
+        > button {
+        text-align: center;
         width: 79px;
         background: none;
         color:$link-color-grey;
         align-items: center;
+        line-height: 39px;
+        opacity: 0.5;
+        &:hover {
+            opacity: 1;
+        }
+    }
     }
 
     #converse > button {
         width: 130px;
         background: none;
+        text-align: center;
         color:$link-color-grey;
         align-items: center;
+
+        opacity: 0.5;
+        &:hover {
+            opacity: 1;
+        }
     }
 
     #hurley > button {
         width: 106px;
         background: none;
+        text-align: center;
         color:$link-color-grey;
         align-items: center;
-
+        img {
+            position: relative;
+            top: -2px;
+        }
+    
+        opacity: 0.5;
+        &:hover {
+            opacity: 1;
+        }
     }
 
     .rightList {

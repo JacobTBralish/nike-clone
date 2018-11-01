@@ -29,7 +29,14 @@ $TextFont:'Roboto', sans-serif;
  
             .pageTitle {
                 font-size: 24px;
-            
+                >span {
+                    position: relative;
+                    top: -2px;
+                    color: rgb(149, 149, 149);
+                    font-size: 0.93em;
+                    font-family: sans-serif;
+                    font-weight: 600;
+                }
                
             }
 
