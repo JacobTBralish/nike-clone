@@ -12,10 +12,11 @@ import NikePlus from './Components/NikePlus/NikePlus';
 import Orders from './Components/Orders/Orders';
 // import NikeSettings from './Components/AccountSettings/Settings';
 import Wishlist from './Components/Wishlist/Wishlist';
-import Account from './Components/AccountSettings/Account'
+import Account from './Components/AccountSettings/Account';
 // Product Imports
 import ProductGridwall from './Components/Products/ProductGridwall';
-import AllMensShoes from './Data/AllMensShoesPg1-6.json'
+import AllMensShoes from './Data/AllMensShoesPg1-6.json';
+import AllNikeStores from './Components/FindStore/AllNikeStores';
 
 export default (
     <Switch>
@@ -28,6 +29,7 @@ export default (
         <Route path='/shippingoptions' component={ShippingOptions}/>
         <Route path='/shippingform' component={ShippingForm}/>
         <Route path="/product/:id" component={DetailedShoe} />
+        <Route path="/allstores" component={AllNikeStores} />
         <Route path="/cart" component={Cart} />
         <Route path="/checkout" component={CheckoutPresentational} />
         <Route path="/nike/nike-plus" component={NikePlus} />
