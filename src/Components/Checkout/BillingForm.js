@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import { postBillingInformation } from '../../Redux/reducer';
 
 import CartCheckoutView from '../Cart/CartCheckoutView';
-
+import './fixfix.scss'
+import './../Cart/CartCheckoutView'
 class BillingForm extends Component {
     constructor(){
         super();
@@ -57,8 +58,8 @@ class BillingForm extends Component {
 
         console.log('shippingInfo: ', shippingInfo);
         return (
-        <div>
-            <div>
+        <div className='billingFormWrapper'>
+            <div >
                 <h3>Shipping Address</h3>
                 <div>
                     <CartCheckoutView />

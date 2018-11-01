@@ -16,8 +16,8 @@ class Home extends Component {
 
         return ( 
             <div className='homeContainer'>
-                <div>
-                    <VideoView info={{video: Nike1stVideo, h2Text: "'PLATINUM TINT': COMING 10.27", pText: 'The latest Air Jordan XI arrives in premium fashion.', linkText: 'LAUNCH DETAILS'}}/>
+                <div id="noMargin">
+                    <VideoView  info={{video: Nike1stVideo, h2Text: "'PLATINUM TINT': COMING 10.27", pText: 'The latest Air Jordan XI arrives in premium fashion.', linkText: 'LAUNCH DETAILS'}}/>
                 </div>
                 <div>
                     <View1 info={{image: Nike2ndImage, h2Text: "PUT THE TEAM ON YOUR BACK", pText: "Wear it for your squad. For your city. For a season you’ll never forget.", linkText: "SHOP ZOOMFLY FLYKNIT"}}/>
