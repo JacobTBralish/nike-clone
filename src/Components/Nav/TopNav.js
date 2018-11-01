@@ -41,7 +41,7 @@ logout = () => {
                 {user ? <li onClick={()=>this.logout()}><Link to='/'>Logout</Link></li> : <li onClick={() => {this.login()}}>Join/Login In To Nike Plus Accout</li>}
                 <li><Link to='/'>Help</Link></li>
                 <li><Link to='/cart'><i class="fas fa-shopping-cart"></i></Link></li>
-                <li></li>
+                <li><img src="https://content.nike.com/content/dam/nike/global/country_flags/us_sml.png" alt="United States" width="14" height="10" /></li>
             </div>
             </div>
         </div>
