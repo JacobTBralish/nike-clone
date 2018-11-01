@@ -5,6 +5,7 @@ import Stores from '../../Data/nikeStoreLocations.json';
 import CustomMarker from './CustomMarker';
 import StoreInfo from './StoreInfo';
 import './Marker.scss'
+import { Link } from 'react-router-dom'
 
 
 
@@ -14,10 +15,9 @@ class FindStore extends Component {
     longitude:null,
     latitude:null,
     stores: [],
-    showStores: 2,
-
+    showStores: 20,
     viewport: {
-    width: 1840,
+      width: 1300,
       height: 550,
       latitude: 33.074240,
       longitude: -112.584766,
@@ -32,6 +32,8 @@ class FindStore extends Component {
     this.state.showStores : this.state.showStores + 1
     })
   }
+
+
   
 // storeAddress = STORES.map(e =>  {
 //     return (
@@ -134,7 +136,8 @@ mapSearch = () => {
  const storesLatitude = Stores.map(e => {
    return e.latitude
  })
-    return (<div className="find-store-main">
+    return (
+    <div className="find-store-main">
       <div>
           <div className="map-box"></div>
       </div>
@@ -145,13 +148,13 @@ mapSearch = () => {
       onViewportChange={(viewport) => this.setState({viewport})}>
       {this.renderPopup()}
       {storesLongitude}
-      <button onClick={this.handleShowMore}>Show More stores</button>
-       <div>Longitude: {this.getLocation}</div>
+      {/* <button onClick={this.handleShowMore}>Show More stores</button> */}
+       {/* <div>Longitude: {this.getLocation}</div>
        <div>Latitude: {this.getLocation}</div>
-        <button onClick={this.getLocation}>get location</button>
+        <button onClick={this.getLocation}>get location</button> */}
         </ReactMapGL>
        <div className="locator-box" >
-         <h3 >STORE LOCATOR</h3>
+         <h3 className="" >STORE LOCATOR</h3>
               <div className="store-locator">
 
                 <div className="find-store-map">
@@ -162,7 +165,7 @@ mapSearch = () => {
                     
                         <h4 className="nike-background-text-color">BROSWE ALL STORES</h4>
                         <p className="nike-text-color">Browse our directory of everything Nike has to offer.</p>
-                        <a className="link-color">Browse All Stores</a>
+                        <Link to="/allstores"><a className="link-color">Browse All Stores</a></Link>
 
                     </div>
 

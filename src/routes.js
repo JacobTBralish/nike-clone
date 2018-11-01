@@ -16,7 +16,10 @@ import FemaleSideBarSort from './Components/ProductSort/FemaleSideBarSort';
 import Account from './Components/AccountSettings/Account'
 // Product Imports
 import ProductGridwall from './Components/Products/ProductGridwall';
-import AllMensShoes from './Data/AllMensShoesPg1-6.json'
+import AllMensShoes from './Data/AllMensShoesPg1-6.json';
+import AllNikeStores from './Components/FindStore/AllNikeStores';
+import AllMensClothes from './Data/AllMensClothesPg1-15.json';
+import AllWomensShoes from './Data/AllWomensShoesPg1-6.json';
 
 export default (
     <Switch>
@@ -24,12 +27,55 @@ export default (
         <Route path='/storelocator' component={FindStore} />
         {/* <Route path='/mensshoes' component={MensShoes} /> */}
                 {/* Product Routes */}
-        <Route path='/allmensshoes' render={() => (
-        <ProductGridwall name='AllMensShoes' fetch={ AllMensShoes } />
+        <Route path='/all mens shoes' render={() => (
+        <ProductGridwall nfl={true} nba={false} fetch={ AllMensShoes } />
+        )} />
+        <Route path='/mens lifestyle shoes' render={() => (
+        <ProductGridwall nfl={true} nba={false} name="Men's Shoe" fetch={ AllMensShoes } />
+        )} />
+        <Route path='/mens running shoes' render={() => (
+        <ProductGridwall nfl={true} nba={false} name="Men's Running Shoe" fetch={ AllMensShoes } />
+        )} />
+        <Route path='/mens training & gym shoes' render={() => (
+        <ProductGridwall nfl={true} nba={false} name="Men's Training Shoe" fetch={ AllMensShoes } />
+        )} />
+        <Route path='/mens basketball shoes' render={() => (
+        <ProductGridwall nfl={true} nba={true} name="Basketball Shoe" fetch={ AllMensShoes } />
+        )} />
+        <Route path='/mens baseball cleats' render={() => (
+        <ProductGridwall nfl={true} nba={true} name="Men's Baseball Cleat" fetch={ AllMensShoes } />
+        )} />
+        <Route path='/mens lacrosse cleat' render={() => (
+        <ProductGridwall nfl={true} nba={true} name="Lacrosse Cleat" fetch={ AllMensShoes } />
+        )} />
+        <Route path='/mens soccer cleat' render={() => (
+        <ProductGridwall nfl={true} nba={true} name="Men's Soccer Cleat" fetch={ AllMensShoes } />
+        )} />
+        <Route path='/mens boots' render={() => (
+        <ProductGridwall nfl={true} nba={false} name="Men's Boot" fetch={ AllMensShoes } />
+        )} />
+        <Route path='/mens skateboarding shoes' render={() => (
+        <ProductGridwall nfl={true} nba={false} name="Men's Skateboarding Shoe" fetch={ AllMensShoes } />
+        )} />
+        <Route path='/mens gameday shoes' render={() => (
+        <ProductGridwall nfl={true} nfl={true} nba={false} name="Men's Gym/Gameday Shoe" fetch={ AllMensShoes } />
+        )} />
+        <Route path='/unisex shoes' render={() => (
+        <ProductGridwall nfl={true} nba={false} name="Unisex Shoe" fetch={ AllMensShoes } />
+        )} />
+        <Route path='/all mens clothes' render={() => (
+        <ProductGridwall nfl={true} nba={false} name='AllMensClothes' fetch={ AllMensClothes } />
+        )} />
+        <Route path='/all womens shoes' render={() => (
+        <ProductGridwall nfl={true} nba={false} name='AllWomensShoes' fetch={ AllWomensShoes } />
+        )} />
+        <Route path='/all womens shoes' render={() => (
+        <ProductGridwall nfl={true} nba={false} name='AllWomensShoes' fetch={ AllWomensShoes } />
         )} />
         <Route path='/shippingoptions' component={ShippingOptions}/>
         <Route path='/shippingform' component={ShippingForm}/>
         <Route path="/product/:id" component={DetailedShoe} />
+        <Route path="/allstores" component={AllNikeStores} />
         <Route path="/cart" component={Cart} />
         <Route path="/checkout" component={CheckoutPresentational} />
         <Route path="/nike/nike-plus" component={NikePlus} />

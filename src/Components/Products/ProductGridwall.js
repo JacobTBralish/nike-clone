@@ -3,7 +3,6 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { getProducts, selectedProduct } from '../../Redux/reducer';
-import MensShoes from '../../Data/AllMensShoesPg1-6.json';
 import ProductSort from '../ProductSort/ProductSort';
 
 import './ProductContainer.scss';
@@ -13,31 +12,57 @@ class MensShoe extends Component {
         super();
         this.state = {
             product: [],
-            isLoading: null
+            isLoading: null,
         }
-        // this.toTopRef = React.createRef();
     }
     
     
-    // window.self.scrollX();
     componentDidMount() {
-        this.props.getProducts(MensShoes);
-        
-        // console.log('toTopRef', this.toTopRef);
+        let { name, fetch } = this.props;
+        console.log('this.props: ', this.props);
+        this.props.getProducts(fetch)
+
+
     }
 
-    // resetWindow = () => {
-    //     // toTopRef
-    //     console.log('toTopRef: ', this.toTopRef);
+    componentWillReceiveProps(nextProps) {
+        console.log('nextProps: ', nextProps);
+        const { name, fetch } = nextProps;
+        this.props.getProducts(fetch)
         
+    }
+
+    handleFilter = (arr, value) => {
+        if (value){
+        let array = [];
+        arr.filter((e, i) => {
+          if (e.subtitle === value){
+            array.push(arr[i])
+          }
+        })
+        return array
+       } else {
+        return arr
+    }
+}
+
+    // noDataMessage = () => {
+    //     alert('Sorry! We do not have any data for this categorie, try another category!')
     // }
+
 
     
     render() { 
-        let { products, selectedProduct } = this.props;
-        let mappedShoes = products.map((item, index) => {
+        let { products, selectedProduct, name } = this.props;
+        console.log('name: ', name);
+
+        
+        let filteredArray = this.handleFilter(products, (name || null))
+        console.log('filteredArray: ', filteredArray);
+
+        let mappedShoes = filteredArray.map((item, index) => {
             return <div className='productContainer'>
-                <Link key={index} onClick={() => { selectedProduct([item])}} to={`/product/${item.title}`} >
+                <Link key={index} onClick={() => { selectedProduct([item])}} to={`/product/${encodeURIComponent(item.title)}`} >
                 <div className='productImageContainer'>
                     <img id='productImage' src={item.spriteSheet} alt={item.title}></img>
                 </div>
@@ -60,8 +85,8 @@ class MensShoe extends Component {
                     <div id='gridwall'>
                     <div className='bannerContainer'>
                         <div className='bannerTitleContainer'>
-                            <h1 className='pageTitle'>MEN'S SHOES & SNEAKERS {/* <h1 id='productCount'> */}<span>({`${products.length}`})</span>{/* </h1> */}</h1>
-                            <p className='bannerDescription'>Explore the latest shoes for men for every sport, workout and everyday look. Built for ultimate performance and sneaker style, Nike shoes for men deliver cutting-edge technologies specific to your sport in iconic designs.</p>
+                            <h1 className='pageTitle'>{this.props.fetch[0].pageHeaderTitle} {/* <h1 id='productCount'> */}({`${mappedShoes.length}`}){/* </h1> */}</h1>
+                            <p className='bannerDescription'>{this.props.fetch[0].pageHeader}</p>
                         </div>
                         <div>
                             <select className='sortSelector'>

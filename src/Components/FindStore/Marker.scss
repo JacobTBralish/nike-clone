@@ -59,7 +59,6 @@ text-align: center
 .converse-img {
   background-image: url('https://cdn.filepicker.io/api/file/CNbpWaVQfS3IrUM2swrG');
   margin: auto;
-  width: 50%;
   border: 3px solid green;
   background-size: 100% 100%;
   height: 100%;
@@ -68,7 +67,6 @@ text-align: center
 .nike-factory-img {
   background-image: url('https://cdn.filepicker.io/api/file/JoG06ykQOyfiAKNPwHMp');
   margin: auto;
-  width: 50%;
   border: 3px solid green;
   background-size: 100% 100%;
   height: 100%;
@@ -78,7 +76,6 @@ text-align: center
 .hurley-img {
   background-image: url('https://cdn.filepicker.io/api/file/8XP3Z3N6RXeg0p3Mz12A');
   margin: auto;
-  width: 50%;
   border: 3px solid green;
   background-size: 100% 100%;
   height: 100%;
@@ -88,7 +85,6 @@ text-align: center
 .all-stores {
   background-image: url('https://cdn.filepicker.io/api/file/fvnjv5WPReybS5kbv4tg');
   margin: auto;
-  width: 50%;
   border: 3px solid green;
   background-size: 100% 100%;
   height: 100%;
@@ -98,7 +94,7 @@ text-align: center
 .nike-img {
   background-image: url('https://cdn.filepicker.io/api/file/XZvksX0wTLOrOeNPwmYb');
   margin: auto;
-  width: 50%;
+
   border: 3px solid green;
   background-size: 100% 100%;
   height: 100%;
@@ -108,7 +104,6 @@ text-align: center
 .partner-store {
   background-image: url('https://cdn.filepicker.io/api/file/Wn2Y9vnZRCBb3kOxq3yw');
   margin: auto;
-  width: 50%;
   border: 3px solid green;
   background-size: 100% 100%;
   height: 100%;
@@ -132,6 +127,7 @@ text-align: center
 .nike-text-color {
   color: grey;
   font-size: 10px;
+  letter-spacing: 1px
 }
 
 .link-color {
@@ -188,4 +184,44 @@ text-align: center
   height: 50px;
   width: 60%;
   margin-right: 100px;
+}
+
+.sidebar {
+  width: 33.3333%;
+}
+
+.map {
+  border-left: 1px solid #fff;
+  position: absolute;
+  left: 33.3333%;
+  width: 66.6666%;
+  top: 0;
+  bottom: 0;
+}
+
+.pad2 {
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.mapboxgl-popup{
+  z-index: 1;
+}
+
+.filtered-stores {
+  border: 1px solid black;
+  display: flex;
+  height: 100%;
+  width: 50%;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap
+}
+
+.store-name {
+  border: 1px solid red;
+  height: 100px
 }

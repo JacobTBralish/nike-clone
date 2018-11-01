@@ -1,4 +1,4 @@
-const createReviewData = require('../lib/createReview/createReviewData');
+const createReviewData = require('../lib/Review/createReviewData');
 
 module.exports = {
     reviews_by_name: (req, res) => {
