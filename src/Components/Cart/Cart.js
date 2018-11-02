@@ -102,7 +102,7 @@ class Cart extends Component {
         return (
             <div>
                 <div id="ch4_mainNav">
-                    <div id="ch4_continueShopping" tabindex="10"><Link to="/mensshoes" data-linkname="continue shopping">Continue Shopping</Link></div>
+                    <div id="ch4_continueShopping" tabindex="10"><Link to='/all%20mens%20shoes' data-linkname="continue shopping">Continue Shopping</Link></div>
     {/* <!-- contact number & live chat --> */}
                     <div id="ch4_helpContainerTopNav">
   	                    <div className="ch4_helpChatTop" tabindex="20"><a href="#" class="liveChat" onclick="window.open(&quot;http://help-us.nike.com/app/chat/chat_launch&quot;);" data-linkname="live chat">Live Chat</a></div>

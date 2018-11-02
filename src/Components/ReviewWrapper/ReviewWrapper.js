@@ -92,14 +92,14 @@ class ReviewWrapper extends Component {
                     { this.state.toggleValue ?
                     <div className="createReview"> 
                         {/* <label >Title</label> */}
-                    <input type="text" name="reviewTitle" placeholder="Title" value={reviewTitle} onChange={this.onChange}></input>
+                    <input type="text" name="reviewTitle" className="spreader" placeholder="Title" value={reviewTitle} onChange={this.onChange}></input>
                     <div>
                         {/* <label>Body</label> */}
-                        <input type="text" name="body" placeholder="Body" value={body} onChange={this.onChange}></input>
+                        <input type="text" name="body" className="spreader" placeholder="Body" value={body} onChange={this.onChange}></input>
                     </div>
                     <div>
                         {/* <label>Stars</label> */}
-                        <select name='stars' onChange={this.onChange}>
+                        <select className="spreader" name='stars' onChange={this.onChange}>
                             <option>Rating</option>
                             <option value='1'>1</option>
                             <option value='2'>2</option>

@@ -16,6 +16,25 @@
             color: rgb(178, 178, 178);
             // border:1px solid #ddd;
         }
+        .spreader {
+            margin-right:10px;
+            width: 100px;
+            // margin-left: 10px;
+        }
+        button {
+            &:hover {
+                background: rgba(17,17,17,.75);
+            }
+            border: none;
+            background: #111;
+            color: white;
+            height: 100%;
+            text-align: center;
+            height: 38px;
+            width: 100px;
+            // margin-top: 30px;
+            // margin-bottom: 19px;
+        }
         
     }
     .writeReview {

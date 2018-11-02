@@ -7,6 +7,9 @@ import axios from 'axios';
 
 import CartCheckoutView from '../Cart/CartCheckoutView'
 import BillingForm from './BillingForm';
+import ShippingForm from './ShippingForm';
+import APOForm from './APOForm'
+import './../Cart/CartCheckoutView.scss'
 
 const fromDollarToCent = amount => amount * 100;
 
@@ -15,6 +18,7 @@ class ShippingOptions extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            toggleValue: true,
             shippingCost: 0,
             orderId: '',
             chosenState: '',
@@ -55,10 +59,8 @@ class ShippingOptions extends Component {
     makeId = () => {
         var text = "";
         var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-      
         for (var i = 0; i < 30; i++)
           text += possible.charAt(Math.floor(Math.random() * possible.length));
-      
         return text;
       }
       
@@ -100,63 +102,110 @@ class ShippingOptions extends Component {
         alert('Payment Processing Error! No transaction occurred.')
     }
 
-
     handleChange = (event) => {
         this.setState({
             shippingCost: event.target.value
         })
     }
     
-
     handleOptionChange =  (changeEvent) => {
         this.setState({
           selectedOption: changeEvent.target.value
         });
       }
-
+      toggleEdit = () => {
+        this.setState((prevState) =>{
+        //  console.log('prevstate', prevState)
+            return {
+                toggleValue: !prevState.toggleValue,
+            }
+         })
+     }
 
     render() {
         let {  total, user, shippingInfo, billingInfo } = this.props;
         console.log('shippingInfo: ', shippingInfo);
         console.log('total: ', total);
-        let { SameShippingAsBilling, chosenState/* , home */ } = this.state;
-        let { taxRate } = this.props.location.state;
+        let { SameShippingAsBilling, selectedOption, chosenState/* , home */ } = this.state;
+        let { taxRate } = this.props;
         console.log('this.props.location.state: ', this.props.location.state);
         // console.log('taxRate: ', taxRate);
 
         // let { firstName, lastName, streetAddress, city, chosenState, zipCode, email, phoneNumber } = props;
 
         return (
-            <div>
-                {shippingInfo.length >= 1 &&
-                <div>
-                {/* {null ? <CartCheckoutView taxRate={taxRate}/> : null} */}
-                <div>
-                    </div>
-                     <div>
-                            <div>
-                                <Link to='/shippingform'>Edit</Link>
-                            </div>
-                        <p>{shippingInfo[0].first_name}</p>
-                        <p>{shippingInfo[0].last_name}</p>
-                    </div>
-                    <div>
-                        <p>{shippingInfo[0].address1}, {shippingInfo[0].address2 ? shippingInfo[0].address2 : null}</p>
-                    </div>
-                    <div>
-                        <p>{shippingInfo[0].city}</p>
-                        <p>{shippingInfo[0].state}</p>
-                        <p>{shippingInfo[0].zip_code}</p>
-                    </div>
-                    <div>
-                        <p>{shippingInfo[0].email}</p>
-                    </div>
-                    <div>
-                        <p>{shippingInfo[0].phone}</p>
-                    </div>
+            <div className="checkoutParentWrapper">
+                <div className="topLinks">
+                    <a id="und">Live Chat</a>
+                    <p>1-800-806-6453</p>
                 </div>
-                    }
-                <CartCheckoutView />
+
+                 <h1>CHECKOUT</h1>
+                <div className="checkoutChildWrapper">
+
+                    <div className="cartCheckoutParent">
+                    <CartCheckoutView />
+                    </div>
+                    <div  className="shippingAndApoWrapper">                        
+                        <h1>1. SHIPPING</h1>
+                        <div className="shippingInnerWrapper ">
+                        
+                        <span id="radioText"><input className="shipRadio" checked={selectedOption === '0'} onChange={this.handleOptionChange} value='0' name="Home/Office" type="radio" required></input>Home/Office</span>
+                        <span id="radioText" className="moveOutTheWay buffer"><input className="shipRadio" checked={selectedOption === '1'} onChange={this.handleOptionChange} value='1' name="APO/FPO" type="radio" required></input>APO/FPO</span>
+                        <div className="buffer"></div>
+                        { selectedOption === '0' ?
+                        <>
+                            {shippingInfo.length >= 1 &&
+                                <div className="displayOuterWrapper">    
+                                    { this.state.toggleValue ? 
+                                        <div id="displayInputShipping">
+                                            <div>
+                                                 <div>
+                                                    <span>{shippingInfo[0].first_name} </span>
+                                                    <span>{shippingInfo[0].last_name}</span>
+                                                </div>
+                                                <div>
+                                                    <p>{shippingInfo[0].address1} {shippingInfo[0].address2 ? shippingInfo[0].address2 : null}</p>
+                                                </div>
+                                                <div>
+                                                    <span>{shippingInfo[0].city}, </span><span>{shippingInfo[0].state}</span><span> {shippingInfo[0].zip_code}</span>
+                                                </div>
+                                                <div>
+                                                    <p>{shippingInfo[0].email}</p>
+                                                </div>
+                                                <div>
+                                                    <p>{ "(" + shippingInfo[0].phone.substring(0, 3) + ") " + shippingInfo[0].phone.substring(3, 6) + "-" + shippingInfo[0].phone.substring(6, 10)}</p>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <span className="editUnderLine" onClick={() => this.toggleEdit()}>Edit</span>
+                                            </div>
+                                        </div>
+                                        :
+                                        <>
+                                        <ShippingForm toggleEdit={this.toggleEdit}/>
+                                        <span id="cancelToggle" className="editUnderLine" onClick={() => this.toggleEdit()}>Cancel</span>
+                                        </>
+                                    }
+                                </div>
+                            }
+                            </>
+                            :
+                            <div className="buffer">
+                                <APOForm /> 
+                            </div>       
+                            } 
+                                
+                                
+                        {/* <div className="shippingPadding">
+ 
+                            </div> */}
+                        </div>
+                     </div>
+                </div>
+
+            
+                {/* <CartCheckoutView /> */}
 
 
                 <div>
@@ -220,7 +269,8 @@ const mapStateToProps = state => {
         cart: state.cart,
         total: state.total,
         shippingInfo: state.shippingInfo,
-        billingInfo: state.billingInfo
+        billingInfo: state.billingInfo,
+        taxRate: state.billingInfo
         
     }
 }

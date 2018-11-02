@@ -6,7 +6,7 @@ import './View.scss';
 
 const View3 = (props) => {
     return ( 
-        <div className='imageContainer'>
+        <div id='imageContainerFix'>
             <img className='homeImage' src={`${props.info.image}`} alt=''></img>
             <span className='content-row'>
                 <div className='imageContent3-1'>

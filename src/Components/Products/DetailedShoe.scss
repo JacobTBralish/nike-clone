@@ -17,7 +17,9 @@
             background: #111;
             color: white;
             height: 100%;
-            line-height: 46px;
+            // line-height: 45px;
+            padding-top: 16.5px;
+            padding-bottom: 23.5px;
             text-align: center;
             &:hover {
                 background: rgba(17,17,17,.75);

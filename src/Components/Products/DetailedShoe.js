@@ -173,7 +173,6 @@ class DetailedShoe extends Component {
                                 <h1 className="reviewsMainTitle">Reviews</h1>
                                 <ReviewWrapper />
                             </div>
-                            <p>TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT</p>
                         </div>
 
                 {/* <img src={spriteSheet} alt={detail.title}></img> */}

@@ -62,7 +62,7 @@ class BillingForm extends Component {
             <div >
                 <h3>Shipping Address</h3>
                 <div>
-                    <CartCheckoutView />
+                    {/* <CartCheckoutView /> */}
                 </div>
             </div>
             
