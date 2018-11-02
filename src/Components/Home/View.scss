@@ -4,7 +4,7 @@ $TextFont:'Roboto', sans-serif;
 #imageContainerFix {
     position: relative;
     margin: 15px 0;
-    height: 800px;
+    height: 100%;
 
     .homeImage {
         width: 100%;
@@ -302,7 +302,7 @@ $TextFont:'Roboto', sans-serif;
                 font-style: normal;
                 bottom: 0;
                 left: 0;
-                margin-top: 10px
+                margin-top: 10px;
             }
 
         }

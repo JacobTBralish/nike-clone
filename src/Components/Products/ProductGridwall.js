@@ -6,6 +6,7 @@ import { getProducts, selectedProduct } from '../../Redux/reducer';
 import ProductSort from '../ProductSort/ProductSort';
 
 import './ProductContainer.scss';
+// import YouMightAlsoLike from '../YouMightAlsoLike/YouMightAlsoLike';
 
 class MensShoe extends Component {
     constructor() {
@@ -13,15 +14,17 @@ class MensShoe extends Component {
         this.state = {
             product: [],
             isLoading: null,
+            // randomItems: null
         }
     }
     
     
     componentDidMount() {
+        // this.setState({isLoading: true})
         let { name, fetch } = this.props;
+        let { randomItems } = this.state;
         console.log('this.props: ', this.props);
         this.props.getProducts(fetch)
-
 
     }
 
@@ -104,6 +107,7 @@ class MensShoe extends Component {
                         <ProductSort myRef={this.toTopRef}/>
                     </div>
                 </div>
+                {/* {null ? <YouMightAlsoLike data={this.props.fetch}/> : null} */}
             </>
          );
     }

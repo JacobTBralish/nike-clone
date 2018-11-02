@@ -170,7 +170,7 @@ class BillingForm extends Component {
                     <label htmlFor='Country'>Country</label>
                 </div>
 
-                <div><Link to={{pathname:'/shippingoptions', state:{taxRate}}}><button type='submit' onClick={() => postBillingInformation(refId, firstName, lastName, (user ? user.id : null), address1, address2, city, chosenState, zipCode )}>SAVE & CONTINUE</button></Link></div>
+                <div>{/* <Link to={{pathname:'/shippingoptions', state:{taxRate}}}> */}<button type='submit' onClick={() => postBillingInformation(refId, firstName, lastName, (user ? user.id : null), address1, address2, city, chosenState, zipCode )}>SAVE & CONTINUE</button>{/* </Link> */}</div>
             </form>
             }
             

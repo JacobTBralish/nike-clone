@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { deleteFromCart } from '../../Redux/reducer';
+import YouMightAlsoLike from '../YouMightAlsoLike/YouMightAlsoLike';
 import './Cart.scss'
 
 
@@ -37,6 +38,8 @@ class Cart extends Component {
         }
 
         let { cart, total, deleteFromCart } = this.props
+        // let { fetch } = this.props.location.state
+        console.log('fetch: ', fetch);
         console.log('total: ', total);
         let { orderComplete } = this.state;
         // const { totalPrice } = this;
@@ -58,6 +61,7 @@ class Cart extends Component {
         // })
         
         let mappedCart = cart.map((item, index) => {
+            console.log('cart: ', cart);
             // console.log('ITEMITEMITEMITEM', item)
             if (item !== undefined)
 
@@ -102,7 +106,7 @@ class Cart extends Component {
         return (
             <div>
                 <div id="ch4_mainNav">
-                    <div id="ch4_continueShopping" tabindex="10"><Link to="/mensshoes" data-linkname="continue shopping">Continue Shopping</Link></div>
+                    <div id="ch4_continueShopping" tabindex="10"><Link to="/all mens shoes" data-linkname="continue shopping">Continue Shopping</Link></div>
     {/* <!-- contact number & live chat --> */}
                     <div id="ch4_helpContainerTopNav">
   	                    <div className="ch4_helpChatTop" tabindex="20"><a href="#" class="liveChat" onclick="window.open(&quot;http://help-us.nike.com/app/chat/chat_launch&quot;);" data-linkname="live chat">Live Chat</a></div>
@@ -137,6 +141,8 @@ class Cart extends Component {
                             </div>
                         </div>
                     </div>
+                    <YouMightAlsoLike />
+                    
                 </div>
 
 {/* <!-- SUMMARY COLUMN --> */}
