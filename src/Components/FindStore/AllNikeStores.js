@@ -26,7 +26,7 @@ export default class AllNikeStores extends Component {
                 return e
             }
       })
-      return stores
+     return stores
     }
 
 
@@ -51,10 +51,8 @@ export default class AllNikeStores extends Component {
         return (
         
             <div>
-                <div className="filtered-stores">{allStores}
-                
+                   <div className="filtered-stores">{allStores}
                 </div>
-
             </div>
         )
     }
