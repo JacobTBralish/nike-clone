@@ -59,10 +59,10 @@ class CheckoutPresentational extends Component {
                             } 
                             </div>
                         </div>
-                     </div>
+                            
+                    </div>
                 </div>
                 
-
             {/* <ShippingOptions /> */}
             </div>
          );

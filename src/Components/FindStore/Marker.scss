@@ -32,7 +32,7 @@ text-align: center
 
 
 .store-locator {
-  border: 1px solid blue;
+  // border: 1px solid blue;
   display:flex;
   flex-direction: row;
   align-items: column;
@@ -50,16 +50,16 @@ text-align: center
 }
 
 .find-store-map {
-  border: 1px solid red;
+  // border: 1px solid red;
   height:400px;
   width: 25%;
-  // background-color: black
+  background-color: black
 }
 
 .converse-img {
   background-image: url('https://cdn.filepicker.io/api/file/CNbpWaVQfS3IrUM2swrG');
   margin: auto;
-  border: 3px solid green;
+  // border: 3px solid green;
   background-size: 100% 100%;
   height: 100%;
   width: 100%;
@@ -67,7 +67,7 @@ text-align: center
 .nike-factory-img {
   background-image: url('https://cdn.filepicker.io/api/file/JoG06ykQOyfiAKNPwHMp');
   margin: auto;
-  border: 3px solid green;
+  // border: 3px solid green;
   background-size: 100% 100%;
   height: 100%;
   width: 100%;
@@ -76,7 +76,7 @@ text-align: center
 .hurley-img {
   background-image: url('https://cdn.filepicker.io/api/file/8XP3Z3N6RXeg0p3Mz12A');
   margin: auto;
-  border: 3px solid green;
+  // border: 3px solid green;
   background-size: 100% 100%;
   height: 100%;
   width: 100%;
@@ -85,7 +85,7 @@ text-align: center
 .all-stores {
   background-image: url('https://cdn.filepicker.io/api/file/fvnjv5WPReybS5kbv4tg');
   margin: auto;
-  border: 3px solid green;
+  // border: 3px solid green;
   background-size: 100% 100%;
   height: 100%;
   width: 100%;
@@ -95,7 +95,7 @@ text-align: center
   background-image: url('https://cdn.filepicker.io/api/file/XZvksX0wTLOrOeNPwmYb');
   margin: auto;
 
-  border: 3px solid green;
+  // border: 3px solid green;
   background-size: 100% 100%;
   height: 100%;
   width: 100%;
@@ -104,14 +104,14 @@ text-align: center
 .partner-store {
   background-image: url('https://cdn.filepicker.io/api/file/Wn2Y9vnZRCBb3kOxq3yw');
   margin: auto;
-  border: 3px solid green;
+  // border: 3px solid green;
   background-size: 100% 100%;
   height: 100%;
   width: 100%;
 }
 
 .find-store {
-  background-color: black;
+  // background-color: black;
   width: 100%;
   height: 100%;
   display: flex;
@@ -224,4 +224,9 @@ text-align: center
 .store-name {
   border: 1px solid red;
   height: 100px
+}
+
+.map-box {
+  display: flex;
+  justify-content: center
 }

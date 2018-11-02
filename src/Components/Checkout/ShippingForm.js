@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import { postShippingInformation, createRefId, setTaxRate } from '../../Redux/reducer';
 import axios from 'axios';
 import './ShippingForm.scss'
@@ -11,16 +11,17 @@ class ShippingForm extends Component {
         this.state = {
             taxRate: 0,
             refId: '',
-            firstName: 'Jacob',
-            lastName: 'Bralish',
-            address1: '12345 street',
+            firstName: 'Austin',
+            lastName: 'Callaghan',
+            address1: '7803 N. Abercrombie Ct.',
             address2: null,
-            city: 'nope',
-            chosenState: 'Alabama',
-            zipCode: '12345',
-            email: 'hopperjtb@aol.com',
-            phone: '1234567890',
-            toggleValue: false
+            city: 'Coeur D alene',
+            chosenState: 'ID',
+            zipCode: '83815',
+            email: 'austindwc159@gmail.com',
+            phone: '2088184693',
+            toggleValue: false,
+            parentToggle: false
         }
     }
 
@@ -73,6 +74,7 @@ class ShippingForm extends Component {
         let { taxRate, firstName, lastName, address1, address2, city, chosenState, zipCode, email, phone, toggleValue } = this.state;
         let { postShippingInformation, user, shippingInfo, refId } = this.props;
         console.log('shippingInfo: ', shippingInfo);
+        console.log(this.props.location)
         return (
         <div className="shippingFormWrapper">
             <form id="shippingForm" >
@@ -163,8 +165,21 @@ class ShippingForm extends Component {
                     {/* <label htmlFor='phone'>Phone Number</label> */}
                 </div>
                 <div className="bottomText"><p><i className="fas fa-lock"></i> Your privacy is important to us. We will only contact you if there is an issue with your order.</p></div>
-                <div className="footerButtonWrapper"><Link to={{pathname:'/shippingoptions', state:{taxRate}}}><button type='submit' onClick={() => this.sendShippingInformation(  firstName, lastName, (user ? user.id : null), address1, address2, city, chosenState, zipCode , email, phone )}>SAVE & CONTINUE</button></Link></div>
-
+                <div className="footerButtonWrapper">
+                <Link to={{pathname:'/shippingoptions'}}>
+                <button type='submit' onClick={() => this.sendShippingInformation(  firstName, lastName, (user ? user.id : null), address1, address2, city, chosenState, zipCode , email, phone )}>SAVE & CONTINUE</button></Link>
+                {/* { this.props.location.pathname === '/checkout' ?
+                <>
+                <Link to={{pathname:'/shippingoptions'}}>
+                <button type='submit' onClick={() => this.sendShippingInformation(  firstName, lastName, (user ? user.id : null), address1, address2, city, chosenState, zipCode , email, phone )}>SAVE & CONTINUE</button></Link>
+                </>
+                :
+                <>
+                <a><button type='submit' onClick={() => {this.sendShippingInformation(  firstName, lastName, (user ? user.id : null), address1, address2, city, chosenState, zipCode , email, phone )
+                this.props.toggleEdit(this.state.parentToggle)}}>SAVE & CONTINUE</button></a>
+                </>
+                } */}
+                </div>
             </form>    
         </div>
         );
@@ -185,4 +200,4 @@ const mapStateToProps = state => {
     setTaxRate
   };
 
-export default connect(mapStateToProps,mapDispatchToProps)(ShippingForm)
+export default withRouter(connect(mapStateToProps,mapDispatchToProps)(ShippingForm))

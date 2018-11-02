@@ -26,12 +26,12 @@ class FindStore extends Component {
     popupInfo: null,
   };
 
-  handleShowMore = () => {
-    this.setState({showStores: 
-    this.state.showStores >= Stores.length ?
-    this.state.showStores : this.state.showStores + 1
-    })
-  }
+  // handleShowMore = () => {
+  //   this.setState({showStores: 
+  //   this.state.showStores >= Stores.length ?
+  //   this.state.showStores : this.state.showStores + 1
+  //   })
+  // }
 
 
   
@@ -87,6 +87,8 @@ showPosition = (position) => {
   })
 }
 
+
+
 //  getDistanceFromLatLonInKm = (lat1,lon1,lat2,lon2) => {
 //   var R = 6371; // Radius of the earth in km
 //   var dLat = deg2rad(lat2-lat1);  // deg2rad below
@@ -99,19 +101,23 @@ showPosition = (position) => {
 //   return d;
 // }
 
+// nikeStores = () => {
+//   let filteredNikeStores = Stores.filter(e => {
+//     return e.type.name = "Nike Stores"
+//   })
+//   return filteredNikeStores
+// }
 
 
-getLocation = () => {
-  console.log('hit before', navigator)
-  if (navigator.geolocation) {
-    console.log('hit inside')
-    navigator.geolocation.getCurrentPosition(this.showPosition);
-  }
-}
 
-mapSearch = () => {
+// getLocation = () => {
+//   console.log('hit before', navigator)
+//   if (navigator.geolocation) {
+//     console.log('hit inside')
+//     navigator.geolocation.getCurrentPosition(this.showPosition);
+//   }
+// }
 
-}
 
 
 // renderMarker = (store, index) => {
@@ -125,36 +131,123 @@ mapSearch = () => {
 
 
 
+filterStores = (type) => {
+  let filteredStoreList = Stores.filter(e => {
+      if(e.type !== null) {
+           if(e.type.name === type) {
+            console.log('alalalalalalalala', e.type.name)   
+            return e.type.name
+
+           }
+      }
+  }) 
+  console.log('list of Nike Stores',filteredStoreList)
+  this.setState({stores: filteredStoreList})
+}
+
+
+
+componentDidMount () {
+    let minimizedStores = [];
+    minimizedStores = Stores.filter((e) => {
+      return e.name
+    })
+    console.log('--------------miniStores', minimizedStores)
+    this.setState({stores: minimizedStores})
+}
+
   render() {
+console.log(this.state.stores)
+    // let storesLongitude =[]
 
-  const storesLongitude = Stores.slice(0, this.state.showStores).map(e => {
+    
+    
+  // const storesLongitude = Stores.slice(0, this.state.showStores).map(e => {
 
-   return <Marker perspective={true} longitude={e.longitude} latitude={e.latitude} >
-            <StorePin size={20} onClick={() => this.setState({popupInfo: e})} />
-          </Marker>
-  })
- const storesLatitude = Stores.map(e => {
-   return e.latitude
- })
+  //  return <Marker perspective={true} longitude={e.longitude} latitude={e.latitude} >
+  //           <StorePin size={20} onClick={() => this.setState({popupInfo: e})} />
+  //         </Marker>
+  // })
+//  const storesLatitude = Stores.map(e => {
+//    return e.latitude
+//  })
+// firefirefire = () => {
+//   console.log('Lit!')
+//   const storesLongitude = Stores.slice(0, this.state.showStores).map(e => {
+
+//     return 
+//    })
+//   //  return storesLongitude
+// }
+
+let mappedStoreList = this.state.stores.map((e, index) =>  {
+  if(index < 20) {
+    console.log('Stores that i want', e.type.name)
+    return <Marker key={index} perspective={true} longitude={e.longitude} latitude={e.latitude} >
+    <StorePin size={20} onClick={() => this.setState({popupInfo: e})} />
+  </Marker>
+  }
+})
+
+console.log('-------------allstores', Stores)
+
+
+
     return (
-    <div className="find-store-main">
-      <div>
-          <div className="map-box"></div>
-      </div>
+    <div className="find-store-main"><div>
+        {/* <h1 onClick={() => this.filterStores('Nike Stores')}>FUEGO</h1> */}
+        <div className="map-box">
       <ReactMapGL
       mapStyle="mapbox://styles/danielgomez/cjnm073b50s8u2rn6ik6gn88f"
       mapboxApiAccessToken={process.env.REACT_APP_TOKEN}
       {...this.state.viewport}
       onViewportChange={(viewport) => this.setState({viewport})}>
       {this.renderPopup()}
-      {storesLongitude}
+      {this.state.stores.length > 1 ? mappedStoreList : null}
+        </ReactMapGL>
+      </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       {/* <button onClick={this.handleShowMore}>Show More stores</button> */}
        {/* <div>Longitude: {this.getLocation}</div>
        <div>Latitude: {this.getLocation}</div>
         <button onClick={this.getLocation}>get location</button> */}
-        </ReactMapGL>
+
+
+
+
+
+
+
+
+
+
+
+
+
        <div className="locator-box" >
-         <h3 className="" >STORE LOCATOR</h3>
+         <h3 className="" ></h3>
               <div className="store-locator">
 
                 <div className="find-store-map">
@@ -194,7 +287,7 @@ mapSearch = () => {
                           <h4 className="nike-background-text-color">NIKE STORES</h4>
                           <p className="nike-text-color">Extraordanary access to a world of products and services,</p>
                           <p className="nike-text-color">all dedicated to helping you get better.</p>
-                          <a className="link-color">Show Locations</a>
+                          <a href="#top" className="link-color" onClick={() => this.filterStores('Nike Stores')} >Show Locations</a>
 
                         </div>
 
@@ -213,9 +306,9 @@ mapSearch = () => {
                     <div className="text-box-nike-factory">
                     <h4 className="nike-background-text-color">NIKE FACTORY STORES</h4>
                     <p className="nike-text-color">Nike products, in stock and where you shop</p>
-                    <a className="link-color">Show Locations</a>
+                    <a href="#top" className="link-color" onClick={() => this.filterStores('Nike Factory Stores')} >Show Locations</a>
                     </div>
-
+ 
                 </div>
                   
                 </div>
@@ -239,7 +332,7 @@ mapSearch = () => {
 
                         <h4 className="nike-background-text-color">CONVERSE</h4>
                         <p className="nike-text-color">Browse all Converse stores</p>
-                        <a className="link-color">Show Locations</a>
+                        <a href="#top" className="link-color" onClick={() => this.filterStores('Converse')} >Show Locations</a>
                      
                      </div>
 
@@ -259,7 +352,7 @@ mapSearch = () => {
                   
                   <h4 className="nike-background-text-color">HURLEY</h4>
                   <p className="nike-text-color">Browse all Hurley stores</p> 
-                  <a className="link-color" >Show Locations</a>
+                  <a href="#top" className="link-color" onClick={() => this.filterStores('Hurley')} >Show Locations</a>
 
                 </div>
 
@@ -285,7 +378,7 @@ mapSearch = () => {
 
                   <div className="text-box-Nike-partner-stores">
                       <h4 className="nike-background-text-color">NIKE PARTNER STORE</h4>
-                      <a className="link-color">Show Locations</a>
+                      <a href="#top" className="link-color" onClick={() => this.filterStores('Nike Partner Store')} >Show Locations</a>
                   </div>
 
                  </div>
