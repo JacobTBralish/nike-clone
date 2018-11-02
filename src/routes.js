@@ -20,6 +20,7 @@ import AllMensShoes from './Data/AllMensShoesPg1-6.json';
 import AllNikeStores from './Components/FindStore/AllNikeStores';
 import AllMensClothes from './Data/AllMensClothesPg1-15.json';
 import AllWomensShoes from './Data/AllWomensShoesPg1-6.json';
+import NikeStores from './Components/FindStore/NikeStores';
 
 export default (
     <Switch>
@@ -74,15 +75,16 @@ export default (
         )} />
         <Route path='/shippingoptions' component={ShippingOptions}/>
         <Route path='/shippingform' component={ShippingForm}/>
-        <Route path="/product/:id" component={DetailedShoe} />
-        <Route path="/allstores" component={AllNikeStores} />
-        <Route path="/cart" component={Cart} />
-        <Route path="/checkout" component={CheckoutPresentational} />
-        <Route path="/nike/nike-plus" component={NikePlus} />
-        <Route path="/orders" component={Orders} />
-        <Route path="/settings" component={Account} />
+        <Route path='/product/:id' component={DetailedShoe} />
+        <Route path='/allstores' component={AllNikeStores} />
+        {/* <Route path='/nikestores' component={NikeStores} /> */}
+        <Route path='/cart' component={Cart} />
+        <Route path='/checkout' component={CheckoutPresentational} />
+        <Route path='/nike/nike-plus' component={NikePlus} />
+        <Route path='/orders' component={Orders} />
+        <Route path='/settings' component={Account} />
         {/* <Route path="/settin" component={Accountss} /> */}
-        <Route path="/wishlist" component={Wishlist} />
+        <Route path='/wishlist' component={Wishlist} />
         <Route exact path='/' component={Home} />
     </Switch>
 )
