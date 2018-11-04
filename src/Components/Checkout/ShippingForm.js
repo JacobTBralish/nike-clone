@@ -73,8 +73,9 @@ class ShippingForm extends Component {
     render() {
         let { taxRate, firstName, lastName, address1, address2, city, chosenState, zipCode, email, phone, toggleValue } = this.state;
         let { postShippingInformation, user, shippingInfo, refId } = this.props;
-        console.log('shippingInfo: ', shippingInfo);
-        console.log(this.props.location)
+        // console.log('shippingInfo: ', shippingInfo);
+        // console.log(this.props.location)
+        console.log(taxRate)
         return (
         <div className="shippingFormWrapper">
             <form id="shippingForm" >
@@ -167,7 +168,11 @@ class ShippingForm extends Component {
                 <div className="bottomText"><p><i className="fas fa-lock"></i> Your privacy is important to us. We will only contact you if there is an issue with your order.</p></div>
                 <div className="footerButtonWrapper">
                 <Link to={{pathname:'/shippingoptions'}}>
-                <button type='submit' onClick={() => this.sendShippingInformation(  firstName, lastName, (user ? user.id : null), address1, address2, city, chosenState, zipCode , email, phone )}>SAVE & CONTINUE</button></Link>
+                <button type='submit' onClick={() => { this.props.setTaxRate(taxRate)
+                this.sendShippingInformation(  firstName, lastName, (user ? user.id : null), address1, address2, city, chosenState, zipCode , email, phone )
+                }}>SAVE & CONTINUE</button></Link>
+
+
                 {/* { this.props.location.pathname === '/checkout' ?
                 <>
                 <Link to={{pathname:'/shippingoptions'}}>

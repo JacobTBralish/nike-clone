@@ -23,13 +23,13 @@ class MensShoe extends Component {
         // this.setState({isLoading: true})
         let { name, fetch } = this.props;
         let { randomItems } = this.state;
-        console.log('this.props: ', this.props);
+        // console.log('this.props: ', this.props);
         this.props.getProducts(fetch)
 
     }
 
     componentWillReceiveProps(nextProps) {
-        console.log('nextProps: ', nextProps);
+        // console.log('nextProps: ', nextProps);
         const { name, fetch } = nextProps;
         this.props.getProducts(fetch)
         
@@ -57,11 +57,11 @@ class MensShoe extends Component {
     
     render() { 
         let { products, selectedProduct, name } = this.props;
-        console.log('name: ', name);
+        // console.log('name: ', name);
 
         
         let filteredArray = this.handleFilter(products, (name || null))
-        console.log('filteredArray: ', filteredArray);
+        // console.log('filteredArray: ', filteredArray);
 
         let mappedShoes = filteredArray.map((item, index) => {
             return <div className='productContainer'>

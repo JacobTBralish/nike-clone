@@ -10,6 +10,7 @@ import BillingForm from './BillingForm';
 import ShippingForm from './ShippingForm';
 import APOForm from './APOForm'
 import './../Cart/CartCheckoutView.scss'
+var moment = require('moment-business-days');
 
 const fromDollarToCent = amount => amount * 100;
 
@@ -24,7 +25,8 @@ class ShippingOptions extends Component {
             chosenState: '',
             SameShippingAsBilling: false,
             home: false,
-            selectedOption: '0'
+            selectedOption: '0',
+            shippingOption: '0'
         }
     }
 
@@ -110,7 +112,13 @@ class ShippingOptions extends Component {
     
     handleOptionChange =  (changeEvent) => {
         this.setState({
-          selectedOption: changeEvent.target.value
+            selectedOption: changeEvent.target.value
+        });
+      }
+    handleShippingChange =  (changeEvent) => {
+        this.setState({
+            shippingOption: changeEvent.target.value,
+            shippingCost: changeEvent.target.value
         });
       }
       toggleEdit = () => {
@@ -121,18 +129,40 @@ class ShippingOptions extends Component {
             }
          })
      }
+    //  nth = (d) => {
+    //     if(d>3 && d<21) return 'th'; // thanks kennebec
+    //     switch (d % 10) {
+    //           case 1:  return "st";
+    //           case 2:  return "nd";
+    //           case 3:  return "rd";
+    //           default: return "th";
+    //       }
+    //   } 
 
     render() {
+        
         let {  total, user, shippingInfo, billingInfo } = this.props;
-        console.log('shippingInfo: ', shippingInfo);
-        console.log('total: ', total);
-        let { SameShippingAsBilling, selectedOption, chosenState/* , home */ } = this.state;
+        // console.log('shippingInfo: ', shippingInfo);
+        // console.log('total: ', total);
+        let { SameShippingAsBilling, selectedOption, shippingOption, chosenState/* , home */ } = this.state;
         let { taxRate } = this.props;
-        console.log('this.props.location.state: ', this.props.location.state);
+        // console.log('this.props.location.state: ', this.props.location.state);
         // console.log('taxRate: ', taxRate);
 
         // let { firstName, lastName, streetAddress, city, chosenState, zipCode, email, phoneNumber } = props;
+       
+    const today = new Date();
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+    let next = moment(today).businessAdd(2)._d
+    next = `${months[next.getMonth()]} ${next.getDate()}`;
 
+    let two = moment(today).businessAdd(3)._d
+    two = `${months[two.getMonth()]} ${two.getDate()}`;
+
+    let standard = moment(today).businessAdd(4)._d
+    standard = `${months[standard.getMonth()]} ${standard.getDate()}`;
+
+        // console.log(this.state.shippingCost)
         return (
             <div className="checkoutParentWrapper">
                 <div className="topLinks">
@@ -144,7 +174,7 @@ class ShippingOptions extends Component {
                 <div className="checkoutChildWrapper">
 
                     <div className="cartCheckoutParent">
-                    <CartCheckoutView />
+                    <CartCheckoutView shippingCost={this.state.shippingCost}/>
                     </div>
                     <div  className="shippingAndApoWrapper">                        
                         <h1>1. SHIPPING</h1>
@@ -197,53 +227,58 @@ class ShippingOptions extends Component {
                             } 
                                 
                                 
-                        {/* <div className="shippingPadding">
- 
-                            </div> */}
-                        </div>
+                            <div className="selectShippingSpeedWrapper">
+                                <h3>SELECT YOUR SHIPPING SPEED</h3>
+                                {/* <button id="shippingMethodTooltip">PLACEHOLDERRRRRRRR</button> */}
+                                {/* <p>Shipping estimates takes into account weekends and holidays. <a>See Details</a>
+                                Next day delivery is not available in remote locations.
+                                </p> */}
+                                <div className="shipSpeedBorder">
+                                    <div className="shippingFlex">
+                                        <div><input checked={this.state.shippingOption === '0'} onChange={this.handleShippingChange} type="radio" id="STANDARD" value="0"></input>
+                                            <label htmlFor="STANDARD">
+                                            <span>Standard (Get it by {standard})</span>
+                                            </label>
+                                        </div>
+                                        <span>FREE</span>
+                                    </div>
+                                    <div className="shippingFlex shipBorderMid">
+                                        <div>
+                                            <input checked={this.state.shippingOption === '5'} onChange={this.handleShippingChange} type="radio"  id="TWO_DAY" value="5"></input>
+                                            <label htmlFor="TWO_DAY">
+                                                <span>Two Day (Get it by {two})</span>
+                                            </label>
+                                        </div>
+                                        <span>$5.00</span>
+                                    </div>
+                                    <div className="shippingFlex">
+                                        <div>
+                                            <input checked={this.state.shippingOption === '15'} onChange={this.handleShippingChange} type="radio"  id="NEXT_DAY" value="15"></input>
+                                            <label htmlFor="NEXT_DAY">
+                                                <span>Next Day (Get it by {next})</span>
+                                            </label>
+                                        </div>
+                                        <span>$15.00</span>
+                                    </div>
+                                </div>
+                                <div className="shipSpeedText">
+                                    <p>Orders placed after 5PM EST (2PM PST) begin processing the next business day.</p>
+                                    <p>Please note that Nike.com does not deliver on Sundays or holidays.</p>
+                                </div>
+                                <div className="shipOptionsFooter">                                    
+                                    <button type='submit'>CONTINUE TO PAYMENT</button>
+                                </div>
+                            </div>
+                            
                      </div>
                 </div>
 
             
-                {/* <CartCheckoutView /> */}
 
 
-                <div>
-                    <h3>SELECT YOUR SHIPPING SPEED</h3>
-                    <button id="shippingMethodTooltip">PLACEHOLDERRRRRRRR</button>
-                    <p>Shipping estimates takes into account weekends and holidays. <a>See Details</a>
-                    Next day delivery is not available in remote locations.
-                    </p>
-                    <div>
-                        <div>
-                            <input checked={this.state.selectedOption === '0'} onChange={this.handleOptionChange} type="radio" id="STANDARD" value="0"></input>
-                            <label htmlFor="STANDARD">
-                                <span>Standard (Get it by (FOUR BUSINESS DAYS ISH) DAY, MONTH DAYNUM)</span>
-                                <span>Free</span>
-                            </label>
-                        </div>
-                        <div>
-                            <input checked={this.state.selectedOption === '5'} onChange={this.handleOptionChange} type="radio"  id="TWO_DAY" value="5"></input>
-                            <label htmlFor="TWO_DAY">
-                                <span>Two Day (Get it by DAY, MONTH DAYNUM)</span>
-                                <span>$5.00</span>
-                            </label>
-                        </div>
-                        <div>
-                            <input checked={this.state.selectedOption === '15'} onChange={this.handleOptionChange} type="radio"  id="NEXT_DAY" value="15"></input>
-                            <label htmlFor="NEXT_DAY">
-                                <span>Next Day (Get it by DAY, MONTH DAYNUM)</span>
-                                <span>$15.00</span>
-                            </label>
-                        </div>
-                    </div>
-                <div>
-                    <p>Orders placed after 5PM EST (2PM PST) begin processing the next business day.</p>
-                    <p>Please note that Nike.com does not deliver on Sundays or holidays.</p>
-                </div>
 
-                <div><BillingForm /></div>
-                <StripeCheckout 
+                {/* <div><BillingForm /></div> */}
+                {/* <StripeCheckout 
                     name='Nike'
                     description='Just do it'
                     amount={(fromDollarToCent(total * (1+parseFloat(taxRate)) + parseInt(this.state.selectedOption))).toFixed(2)}
@@ -253,7 +288,7 @@ class ShippingOptions extends Component {
                     stripeKey={process.env.REACT_APP_STRIPE_PUBLISHABLE}
                     email={user.email ? user.email : null}
                     token={this.onToken(total * (1+parseFloat(taxRate)) + parseInt(this.state.selectedOption))}
-                />
+                /> */}
                 </div>
 
 

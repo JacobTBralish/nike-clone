@@ -16,10 +16,10 @@ export default class Review extends Component {
     }
     
     handleEdit = (title, body, stars, id, itemName) => {
-        console.log('CLICKED', itemName, title, body, stars, id)
+        // console.log('CLICKED', itemName, title, body, stars, id)
         axios.put(`/api/reviews/`, { title, body, stars, id, itemName })
         .then(response => {
-            console.log('handleEdit response ======>', response)
+            // console.log('handleEdit response ======>', response)
             this.props.editReviews(response.data)
             this.props.history.push(`/api/reviews/${this.props.match.props.id}`)
         })
