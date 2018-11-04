@@ -13,13 +13,13 @@ class YouMightAlsoLike extends Component {
     componentDidMount() {
         let { randomItems } = this.state;
         let { products } = this.props;
-        console.log('products: ', products);
+        // console.log('products: ', products);
         
             var tmp = products.slice(products);
             for (var i = 0; i < 4; i++) {
               var index = Math.floor(Math.random() * tmp.length);
               var removed = tmp.splice(index, 1);
-              console.log('removed: ', removed);
+            //   console.log('removed: ', removed);
               randomItems.push(removed[0]);
             }
             this.setState({
@@ -28,8 +28,8 @@ class YouMightAlsoLike extends Component {
     }
     render() { 
         let { randomItems } = this.state;
-        console.log('randomItems: ', randomItems);
-        console.log('here it is', this.props.products);
+        // console.log('randomItems: ', randomItems);
+        // console.log('here it is', this.props.products);
 
         
 

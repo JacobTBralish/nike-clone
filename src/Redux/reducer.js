@@ -34,7 +34,7 @@ const CREATE_REVIEW = 'CREATE_REVIEW';
 
 
 export default function reducer (state = initialState, action){
-    console.log(action.payload);
+    // console.log(action.payload);
     switch(action.type){
         case `${UPDATE_USER_INFO}_FULFILLED`:
             return {...state, user:action.payload}
@@ -74,7 +74,7 @@ export default function reducer (state = initialState, action){
         case SET_TOTAL:
             return {...state, total:action.payload}
         case POST_SHIPPING:
-        console.log(action.payload, '============================');
+        // console.log(action.payload, '============================');
             return {...state, shippingInfo: action.payload}
         case POST_BILLING:
             return {...state, billingInfo: action.payload}
@@ -120,11 +120,9 @@ export function selectedProduct(product){
 }
 
 export function addToCart(product, total){
-    console.log('product: ', product);
+    // console.log('product: ', product);
     let fixedPrice =product[0].rawPrice
     total += fixedPrice
-    
-    
     return {
         type: ADD_TO_CART,
         payload: {product, total}
@@ -153,7 +151,7 @@ export function setTaxRate(taxRate){
 }
 
 export function postShippingInformation(shippingInfo){
-    console.log('shippingInfo: ', shippingInfo);
+    // console.log('shippingInfo: ', shippingInfo);
     return {
         type: POST_SHIPPING,
         payload: shippingInfo
@@ -163,7 +161,7 @@ export function postShippingInformation(shippingInfo){
 export function postBillingInformation( refId, firstName, lastName, userId, address1, address2, city, chosenState, zipCode ){
     
 
-    console.log('firstName, lastName, userId, address1, address2, city, chosenState, zipCode: ', refId, firstName, lastName, userId, address1, address2, city, chosenState, zipCode);
+    // console.log('firstName, lastName, userId, address1, address2, city, chosenState, zipCode: ', refId, firstName, lastName, userId, address1, address2, city, chosenState, zipCode);
     return {
         type: POST_BILLING,
         payload: axios.post('/api/billingInfo', {refId, firstName, lastName, userId, address1, address2, city, chosenState, zipCode }).then(response => {
@@ -175,8 +173,8 @@ export function postBillingInformation( refId, firstName, lastName, userId, addr
 }
 
 export function createRefId(refId){
-    console.log('refId: ', refId);
-    console.trace('refId: ', refId);
+    // console.log('refId: ', refId);
+    // console.trace('refId: ', refId);
     
     
     return {
@@ -207,12 +205,12 @@ export function createRefId(refId){
 //  }
 
 export function getReviews(itemName) {
-    console.log('getReviews id -------> ', itemName)
+    // console.log('getReviews id -------> ', itemName)
     decodeURI(itemName)
     let reviews = axios.get(`/api/reviews/${itemName}`)
     .then(response => {
-        console.log('get reviews response ---->', response)
-        console.log('get reviews response.data ---->', response.data)
+        // console.log('get reviews response ---->', response)
+        // console.log('get reviews response.data ---->', response.data)
         return response.data
     })
     .catch(err => console.log('getReviews error --=========-->', err))
@@ -224,21 +222,21 @@ export function getReviews(itemName) {
 }
 
 export function deleteReviews(reviews) {
-    console.log('deleteReviews reducer, reviews === ', reviews)
+    // console.log('deleteReviews reducer, reviews === ', reviews)
     return {
         type: DELETE_REVIEWS,
         payload: reviews
     }
 }
 export function editReviews(reviews) {
-    console.log('editReviews reducer, reviews === ', reviews)
+    // console.log('editReviews reducer, reviews === ', reviews)
     return {
         type: EDIT_REVIEWS,
         payload: reviews
     }
 }
 export function createReview(reviews) {
-    console.log('createReviews reducer, reviews === ', reviews)
+    // console.log('createReviews reducer, reviews === ', reviews)
     return {
         type: EDIT_REVIEWS,
         payload: reviews

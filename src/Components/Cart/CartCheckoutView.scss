@@ -254,7 +254,7 @@
     height: 100%;
     /* width: 100px; */
     border: 1px solid #ddd;
-    line-height: 20px;
+    line-height: 25px;
     font-family: sans-serif;
     font-size: 0.9em;
     display: flex;
@@ -267,4 +267,65 @@
 } 
 .buffer {
     margin-top:10px
+}
+.selectShippingSpeedWrapper {
+    // background: #fa5400;
+    // border-bottom: #ddd solid 1px;
+    // padding-bottom: 20px;
+    >h3 {
+        font-size: 0.85em;
+        letter-spacing: 0.07em;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-weight: 600;
+    }
+    .shipSpeedText {
+        font-family: sans-serif;
+        font-size: 0.75em;
+        line-height: 23px;
+        border-bottom: #ddd solid 1px;
+    padding-bottom: 20px;
+    }
+    .shipSpeedBorder {
+        border: #ddd solid 1px;
+        margin-bottom: 13px;
+        .shippingFlex {
+            display: flex;
+            justify-content: space-between;
+            padding: 13px;
+            font-family: sans-serif;
+            font-size: 0.87em;
+            label {
+                padding-left: 10px;
+            }
+        }
+        .shipBorderMid {
+            border-top: #ddd solid 1px;
+            border-bottom: #ddd solid 1px;
+        }
+    }
+}
+.shipOptionsFooter {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    padding-right: 10px;
+    button {
+        font-family: 'Oswald', sans-serif;
+        height: 40px;
+        width: 137px;
+        background: #fa5400;
+        font-size: 0.8em;
+        line-height: 40px;
+        text-align: center;
+        color: white;
+        border: none;
+        color: white;
+        &:hover {
+            background: rgba(250,84,0,.75);
+        }
+    }
 }

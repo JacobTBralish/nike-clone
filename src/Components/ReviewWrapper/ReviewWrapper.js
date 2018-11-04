@@ -51,7 +51,7 @@ class ReviewWrapper extends Component {
     let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
     let dateval = `${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
     
-    console.log('dateval', dateval, 'shoeName', itemName, 'title:',reviewTitle, 'body:',body, 'stars:',stars, 'poster_id:',poster_id)
+    // console.log('dateval', dateval, 'shoeName', itemName, 'title:',reviewTitle, 'body:',body, 'stars:',stars, 'poster_id:',poster_id)
     
         axios.post(`/api/reviews`, {poster_id, itemName, reviewTitle, body, stars, dateval})
             .then(response => {
@@ -71,19 +71,19 @@ class ReviewWrapper extends Component {
         this.setState({[e.target.name]: e.target.value});
     }
     render() {
-        console.log('Reviews in RevoewWrapper',this.props.reviews)
+        // console.log('Reviews in RevoewWrapper',this.props.reviews)
         // const data = this.props.reviews.length > 0 ? this.props.reviews[0]: {}
         let { reviewTitle, body, stars } = this.state
         let { user, itemName, reviews, product } = this.props;
-        console.log('prooduct', product);
+        // console.log('prooduct', product);
 
         let reviewList = reviews.map((review, index) => {
-            console.log('review: ', review);
+            // console.log('review: ', review);
             let { name, body, title, dateval, stars, id, poster_id} = review
             return <Review key={index} editReviews={this.props.editReviews} handleDelete={this.handleDelete} product={product} posterName={name} body={body} title={title} dateval={dateval} itemName={product[0].title} stars={stars} reviewId={id} user={this.props.user} poster={poster_id} />
         })
         
-        console.log('reviewList: ', reviewList);
+        // console.log('reviewList: ', reviewList);
         return (
             <div className="ReviewParentContainer">
                 <p className="overall">Overall Rating: {product[0].rating} / 5</p>
