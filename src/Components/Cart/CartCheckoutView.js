@@ -32,7 +32,7 @@ class CartCheckoutView extends Component {
         // console.log(this.props.cart, "CARTCARTCART")
         let mappedCart = this.props.cart.length &&
             this.props.cart.map((item, index) => {
-                console.log('item: ', item[0]);
+                // console.log('item: ', item[0]);
                 return <div className="mappedCartInner" key={index}>
                             <div className="mappedCartImg"><img src={item[0].spriteSheet} alt={item[0].title}></img></div>
                             <div className="mappedCartText">
