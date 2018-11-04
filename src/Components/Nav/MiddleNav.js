@@ -53,7 +53,7 @@ const MiddleNav = () => {
                     </ul>
                 </div>
                 <div class="dropdown-content-column-no-line">
-                    <Link className='column-list-item' className='column-list-item' to='/allmensclothes'>CLOTHING</Link>
+                    <Link className='column-list-item' className='column-list-item' to='/all mens clothes'>CLOTHING</Link>
                     <ul>
                         <li className='column-list-link'><Link to='/mens tops & t-shirts'>Tops & T-Shirts</Link></li>
                         <li className='column-list-link'><Link to='/mens shorts'>Shorts</Link></li>

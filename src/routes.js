@@ -65,7 +65,16 @@ export default (
         <ProductGridwall nfl={false} nba={false} name="Unisex Shoe" fetch={ AllMensShoes } />
         )} />
         <Route path='/all mens clothes' render={() => (
-        <ProductGridwall nfl={false} nba={false} name='AllMensClothes' fetch={ AllMensClothes } />
+        <ProductGridwall nfl={false} nba={false} /* name='AllMensClothes' */ fetch={ AllMensClothes } />
+        )} />
+        <Route path='/mens tops & t-shirts' render={() => (
+        <ProductGridwall nfl={false} nba={false} name="Men's T-Shirt" fetch={ AllMensClothes } />
+        )} />
+        <Route path='/mens polos' render={() => (
+        <ProductGridwall nfl={false} nba={false} name="Men's Polo" fetch={ AllMensClothes } />
+        )} />
+        <Route path='/mens shorts' render={() => (
+        <ProductGridwall nfl={false} nba={false} name="Men's Shorts" fetch={ AllMensClothes } />
         )} />
         {/* <Route path='/all womens shoes' render={() => (
         <ProductGridwall nfl={false} nba={false} name='AllWomensShoes' fetch={ AllWomensShoes } />
