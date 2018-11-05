@@ -261,6 +261,12 @@ $link-color-grey: #8D8D8D;
                 margin: 0 auto;
                 text-align: left;
                 // visibility: hidden;
+                #sanSer {
+                        font-family: sans-serif;
+                        font-size: 0.8em;
+                        line-height: 1.6em;
+                    
+                }
 
             
                 .column-list {
@@ -273,6 +279,7 @@ $link-color-grey: #8D8D8D;
                         text-align: -webkit-match-parent;
                         padding-top: 6px;
                         padding-bottom: 6px;
+                        
                         a {
                             text-decoration: none;
                             font-weight: 500;
