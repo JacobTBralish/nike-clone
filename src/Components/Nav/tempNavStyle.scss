@@ -27,6 +27,7 @@ $link-color-grey: #8D8D8D;
     margin: 0;
     color:$link-color-grey;
     font-family: $NikeFont;
+    padding-right: 24px;
     button {
         height: 39px;
         background: white;
@@ -106,10 +107,46 @@ $link-color-grey: #8D8D8D;
         border: none;
         height: 100%;
         align-items: center;
-        font-size: 14px;
+        font-size: 12px;
         margin-left: 10px;
+        font-family: sans-serif;
+
+        .dropdown2 {
+            position: relative;
+            display: inline-block;
+            height: 100%;
+            line-height: 20px;
+            span {
+                line-height: 37px;
+            }
+        }      
+        .dropdown-content2 {
+            display: none;
+            position: absolute;
+            background-color: white;
+            // top:23px;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 24px 16px;
+            z-index: 1;
+            border-top: 2px solid black;
+            border-bottom: 2px solid #eee;
+            border-left: 2px solid #eee;
+            border-right: 2px solid #eee;
+            font-family: sans-serif;
+            line-height: 22px;
+            left: -30px;
+            // font-size: 0.8em;
+        }
+        
+        .dropdown2:hover .dropdown-content2 {
+            display: block;
+        }
         li {
-            margin-right: 10px;
+            // margin-right: 10px;
+            cursor: pointer;
+            padding-left: 10px;
+            padding-right: 14px;
             &:hover{
                 color: rgb(70, 70, 70);
             }
@@ -224,6 +261,8 @@ $link-color-grey: #8D8D8D;
                 align-items: center;
                 text-decoration: none;
                 color: inherit;
+                font-weight: 600;
+
                 &:hover {
                     border-bottom: black 2px solid;
                 }
@@ -439,15 +478,23 @@ $link-color-grey: #8D8D8D;
     justify-content: flex-end;
     margin-right: 30px;
     #navSearchBar {
+        padding-left: 40px;
         height: 40px;
         width: 194px;
         font-size: 15px;
         margin-top: 10px;
         margin-bottom: 10px;
     }
+    >i {
+        position: relative;
+        left: 30px;
+        font-size: 17px;
+        color: grey;
+    }
     #navSearchBar:focus {
         height: 40px;
         width: 224px;
-        transition: .4s;
+        transition: .6s;
+        // border: 1px solid rgb(79, 79, 79);
     }
 }

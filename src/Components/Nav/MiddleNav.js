@@ -344,7 +344,7 @@ const MiddleNav = () => {
             </div>
         </div>
         <div className='searchInput'>
-            <input placeholder='Search' id='navSearchBar'></input>
+        <i class="fas fa-search"></i><input placeholder='Search' id='navSearchBar'></input>
         </div>
     </div>
 </span> );

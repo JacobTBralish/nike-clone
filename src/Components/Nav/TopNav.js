@@ -38,11 +38,37 @@ logout = () => {
                 <Link id='hurley' to='/nike/nike-plus'to=''><button id='topNavButton'><img id='converseImg' src={Converse}></img></button></Link>
             </div>
             <div className='rightList'>                
-                {user ? <li onClick={()=>this.logout()}><Link to='/'>Logout</Link></li> : <li onClick={() => {this.login()}}>Join/Login In To Nike Plus Accout</li>}
-                <li><Link to='/'>Help</Link></li>
+                {user ? 
+                <li class="dropdown2">
+                  <span>My Account</span>
+                  <div class="dropdown-content2">
+                    <p>Profile</p>
+                    <p>Orders</p>
+                    <p>Wish List</p>
+                    <p>Inbox</p>
+                    <p>My Events</p>
+                    <p>Account Settings</p>
+                    <p onClick={()=>this.logout()}>Log Out</p>
+                  </div>
+                </li>
+                : <li onClick={() => {this.login()}}>Join/Login In To Nike Plus Accout</li>}
+                <li class="dropdown2">
+                  <span>Help</span>
+                  <div class="dropdown-content2 moveOva">
+                    <p>Order Status</p>
+                    <p>Shipping and Delivery</p>
+                    <p>Returns</p>
+                    <p>Contact Us</p>
+                    <p>Privacy Policy</p>
+                    <p>Terms & Conditions</p>
+                    <p>Site Feedback</p>
+                    <p>View All</p>
+                  </div>
+                </li>
                 <li><Link to='/cart'><i class="fas fa-shopping-cart"></i></Link></li>
                 <li><img src="https://content.nike.com/content/dam/nike/global/country_flags/us_sml.png" alt="United States" width="14" height="10" /></li>
             </div>
+           
             </div>
         </div>
      );

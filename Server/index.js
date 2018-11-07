@@ -131,14 +131,13 @@ app.get('/auth/callback', (req,res) => {
             req.session.user = user;
             console.log('response.data.name: ', response.data);
             res.redirect('/');
-
         } else {
             console.log('response.data.name: ', response.data);
             const userArray = [
                   auth0Id,
+                  response.data.name,
                   response.data.given_name,
                   response.data.family_name,
-                  response.data.name,
                   response.data.picture,
                   response.data.gender,
                   response.data.email,
