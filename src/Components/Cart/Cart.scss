@@ -46,7 +46,6 @@
 a:-webkit-any-link {
     // color: -webkit-link;
     cursor: pointer;
-    text-decoration: underline;
 }
 .ch4_containerShell {
     width: 100%;
@@ -454,7 +453,7 @@ a:-webkit-any-link {
 .ch4_btnOrange {
     // a:-webkit-any-link {
     //     cursor: pointer;
-    //     text-decoration: none;
+        text-decoration: none;
     // }
 }
 a#ch4_cartCheckoutBtn {
