@@ -11,18 +11,6 @@ class CartCheckoutView extends Component {
 
         }
     }
-    // console.log('props: ', props);
-    // console.log('props.taxRate: ', props.taxRate);
-
-    // nth = (d) => {
-    //     if(d>3 && d<21) return 'th'; // thanks kennebec
-    //     switch (d % 10) {
-    //           case 1:  return "st";
-    //           case 2:  return "nd";
-    //           case 3:  return "rd";
-    //           default: return "th";
-    //       }
-    //   } 
     render() {
         const {total, shippingCost, taxRate} = this.props
         const today = new Date();
@@ -105,7 +93,7 @@ const mapStateToProps = state => {
         cart: state.cart,
         total: state.total,
         taxRate: state.taxRate
-        }
+    }
 }
 
  

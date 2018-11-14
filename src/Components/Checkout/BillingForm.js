@@ -19,7 +19,9 @@ class BillingForm extends Component {
             chosenState: '',
             zipCode: '',
             country: '',
-            toggleValue: false
+            email: 'austindwc159@gmail.com',
+            phone: '2088184693',
+            toggleValue: false 
         }
     }
 
@@ -47,7 +49,7 @@ class BillingForm extends Component {
 
 
     render() {
-        let { taxRate, firstName, lastName, address1, address2, city, chosenState, zipCode, toggleValue, country } = this.state;
+        let { taxRate, firstName, lastName, address1, address2, city, chosenState, zipCode, email, phone, toggleValue, country } = this.state;
         console.log(firstName, lastName, (user ? user.id : null), address1, address2, city, chosenState, zipCode);
         let { postBillingInformation, user, shippingInfo, refId } = this.props;
         console.log('refId: ', refId);
@@ -58,16 +60,10 @@ class BillingForm extends Component {
 
         console.log('shippingInfo: ', shippingInfo);
         return (
-        <div className='billingFormWrapper'>
-            <div >
-                <h3>Shipping Address</h3>
-                <div>
-                    {/* <CartCheckoutView /> */}
-                </div>
-            </div>
-            
-            <div>
-                <button onClick={this.handleToggle} type='checkBox'></button>Billing address same as shipping
+        <div className='shippingAndApoWrapper'>
+            <h1>2. PAYMENT</h1>
+            <div>      
+                <button onClick={this.handleToggle} type='checkBox'></button>Billing address same as shipping 
             </div>
 
             {toggleValue
@@ -88,91 +84,102 @@ class BillingForm extends Component {
             <div><Link to={{pathname:'/shippingoptions', state:{taxRate}}}><button type='submit' onClick={() => postBillingInformation(refId, shippingInfo[0].first_name, shippingInfo[0].last_name, (user ? user.id : null), shippingInfo[0].address1, (shippingInfo[0].address2 || null), shippingInfo[0].city, shippingInfo[0].state, shippingInfo[0].zip_code )}>SAVE & CONTINUE</button></Link></div>
             </div>
             :
-            <form>
-                <div>
-                    <input required placeholder='First Name' onChange={this.handleChange} name='firstName' value={firstName}></input>
-                    <label htmlFor='firstName'>first Name</label>
-                    <input required placeholder='Last Name' onChange={this.handleChange} name='lastName' value={lastName}></input>
-                    <label htmlFor='lastName'>Last Name</label>
+            <div className="shippingFormWrapper">
+            <form id="shippingForm" >
+                <div className="namesWrapper">
+                    <input id="shippingInput" className="ShippingName" required onChange={this.handleChange} name='firstName' placeholder="First Name" value={firstName}></input>
+                    <input id="shippingInput" className="ShippingName lastname" required onChange={this.handleChange} name='lastName' placeholder="Last Name" value={lastName}></input>
                 </div>
 
-                <div>
-                    <input required placeholder='Address' onChange={this.handleChange} name='address1' value={address1}></input>
-                    <label htmlFor='address1'>Street Address</label>
+                <div className="addressOneBox">
+                    <input id="shippingInput" className="addressOne" required onChange={this.handleChange} name='address1' placeholder="Street Address" value={address1}></input>
                 </div>
                 
-                <div>
-                    <input required placeholder='Optional - Company, C/O, Apt, Suite, Unit' onChange={this.handleChange} name='address2' value={address2}></input>
-                    <label htmlFor='address2' />
-                </div>
-                    <div>
-                        <input required placeholder='City' onChange={this.handleChange} name='city' value={city}></input>
-                        <label htmlFor='city'>City</label>
-                        <div>
-                    <select name={chosenState} onChange={this.handleStateChange}>
-                        <option>State</option>
-                        <option value='Alabama'>Alabama</option>
-                        <option value='Alaska'>Alaska</option>
-                        <option value='Arizona'>Arizona</option>
-                        <option value='Arkansas'>Arkansas</option>
-                        <option value='California'>California</option>
-                        <option value='Colorado'>Colorado</option>
-                        <option value='Connecticut'>Connecticut</option>
-                        <option value='Delaware'>Delaware</option>
-                        <option value='Florida'>Florida</option>
-                        <option value='Georgia'>Georgia</option>
-                        <option value='Hawaii'>Hawaii</option>
-                        <option value='Idaho'>Idaho</option>
-                        <option value='Illinois'>Illinois</option>
-                        <option value='Indiana'>Indiana</option>
-                        <option value='Iowa'>Iowa</option>
-                        <option value='Kansas'>Kansas</option>
-                        <option value='Kentucky'>Kentucky</option>
-                        <option value='Louisiana'>Louisiana</option>
-                        <option value='Maine'>Maine</option>
-                        <option value='Maryland'>Maryland</option>
-                        <option value='Massachusetts'>Massachusetts</option>
-                        <option value='Michigan'>Michigan</option>
-                        <option value='Minnesota'>Minnesota</option>
-                        <option value='Mississippi'>Mississippi</option>
-                        <option value='Missouri'>Missouri</option>
-                        <option value='Montana'>Montana</option>
-                        <option value='Nebraska'>Nebraska</option>
-                        <option value='Nevada'>Nevada</option>
-                        <option value='New Hampshire'>New Hampshire</option>
-                        <option value='New Jersey'>New Jersey</option>
-                        <option value='New Mexico'>New Mexico</option>
-                        <option value='New York'>New York</option>
-                        <option value='North Carolina'>North Carolina</option>
-                        <option value='North Dakota'>North Dakota</option>
-                        <option value='Ohio'>Ohio</option>
-                        <option value='Oklahoma'>Oklahoma</option>
-                        <option value='Oregon'>Oregon</option>
-                        <option value='Pennsylvania'>Pennsylvania</option>
-                        <option value='Rhode Island'>Rhode Island</option>
-                        <option value='South Carolina'>South Carolina</option>
-                        <option value='South Dakota'>South Dakota</option>
-                        <option value='Tennessee'>Tennessee</option>
-                        <option value='Texas'>Texas</option>
-                        <option value='Utah'>Utah</option>
-                        <option value='Vermont'>Vermont</option>
-                        <option value='Virginia'>Virginia</option>
-                        <option value='Washington'>Washington</option>
-                        <option value='West Virginia'>West Virginia</option>
-                        <option value='Wisconsin'>Wisconsin</option>
-                        <option value='Wyoming'>Wyoming</option>
-                        <option value='D.C.'>D.C.</option>
-                    </select>
-                </div>
-                    <input required placeholder='Postal Code' onChange={this.handleChange} pattern="[0-9]{5}" type='text' max={5} name='zipCode' value={zipCode}></input>
-                    <label htmlFor='zipCode'>Postal Code</label>
-
-                    <input required placeholder='Country' onChange={this.handleChange} type='text' name='country' value={country}></input>
-                    <label htmlFor='Country'>Country</label>
+                <div className="cityStatePostalWrapper">
+                    <input id="shippingInput" className="cityStatePostalInput" required onChange={this.handleChange} name='city' placeholder="City" value={city}></input>
+                <select className="stateSelector cityStatePostalInput" required value={JSON.stringify({stateName: chosenState, rate: taxRate})} onChange={this.handleShipping}>
+                    <option value>State</option>
+                    <option value='{"stateName":"Alabama","rate":"0.04"}'>Alabama</option>
+                    <option value='{"stateName":"Alaska","rate":"0"}'>Alaska</option>
+                    <option value='{"stateName":"Arizona","rate":"0.056"}'>Arizona</option>
+                    <option value='{"stateName":"Arkansas","rate":"0.065"}'>Arkansas</option>
+                    <option value='{"stateName":"California","rate":"0.075"}'>California</option>
+                    <option value='{"stateName":"Colorado","rate":"0.029"}'>Colorado</option>
+                    <option value='{"stateName":"Connecticut","rate":"0.0635"}'>Connecticut</option>
+                    <option value='{"stateName":"Delaware","rate":"0"}'>Delaware</option>
+                    <option value='{"stateName":"Florida","rate":"0.06"}'>Florida</option>
+                    <option value='{"stateName":"Georgia","rate":"0.04"}'>Georgia</option>
+                    <option value='{"stateName":"Hawaii","rate":"0.04"}'>Hawaii</option>
+                    <option value='{"stateName":"Idaho","rate":"0.06"}'>Idaho</option>
+                    <option value='{"stateName":"Illinois","rate":"0.0625"}'>Illinois</option>
+                    <option value='{"stateName":"Indiana","rate":"0.07"}'>Indiana</option>
+                    <option value='{"stateName":"Iowa","rate":"0.06"}'>Iowa</option>
+                    <option value='{"stateName":"Kansas","rate":"0.065"}'>Kansas</option>
+                    <option value='{"stateName":"Kentucky","rate":"0.06"}'>Kentucky</option>
+                    <option value='{"stateName":"Louisiana","rate":"0.04"}'>Louisiana</option>
+                    <option value='{"stateName":"Maine","rate":"0.055"}'>Maine</option>
+                    <option value='{"stateName":"Maryland","rate":"0.06"}'>Maryland</option>
+                    <option value='{"stateName":"Massachusetts","rate":"0.0625"}'>Massachusetts</option>
+                    <option value='{"stateName":"Michigan","rate":"0.06"}'>Michigan</option>
+                    <option value='{"stateName":"Minnesota","rate":"0.0688"}'>Minnesota</option>
+                    <option value='{"stateName":"Mississippi","rate":"0.07"}'>Mississippi</option>
+                    <option value='{"stateName":"Missouri","rate":"0.0423"}'>Missouri</option>
+                    <option value='{"stateName":"Montana","rate":"0"}'>Montana</option>
+                    <option value='{"stateName":"Nebraska","rate":"0.055"}'>Nebraska</option>
+                    <option value='{"stateName":"Nevada","rate":"0.0685"}'>Nevada</option>
+                    <option value='{"stateName":"New Hampshire","rate":"0"}'>New Hampshire</option>
+                    <option value='{"stateName":"New Jersey","rate":"0.07"}'>New Jersey</option>
+                    <option value='{"stateName":"New Mexico","rate":"0.0513"}'>New Mexico</option>
+                    <option value='{"stateName":"New York","rate":"0.04"}'>New York</option>
+                    <option value='{"stateName":"North Carolina","rate":"0.0475"}'>North Carolina</option>
+                    <option value='{"stateName":"North Dakota","rate":"0.05"}'>North Dakota</option>
+                    <option value='{"stateName":"Ohio","rate":"0.0575"}'>Ohio</option>
+                    <option value='{"stateName":"Oklahoma","rate":"0.045"}'>Oklahoma</option>
+                    <option value='{"stateName":"Oregon","rate":"0"}'>Oregon</option>
+                    <option value='{"stateName":"Pennsylvania","rate":"0.06"}'>Pennsylvania</option>
+                    <option value='{"stateName":"Rhode Island","rate":"0.07"}'>Rhode Island</option>
+                    <option value='{"stateName":"South Carolina","rate":"0.06"}'>South Carolina</option>
+                    <option value='{"stateName":"South Dakota","rate":"0.04"}'>South Dakota</option>
+                    <option value='{"stateName":"Tennessee","rate":"0.07"}'>Tennessee</option>
+                    <option value='{"stateName":"Texas","rate":"0.0625"}'>Texas</option>
+                    <option value='{"stateName":"Utah","rate":"0.0595"}'>Utah</option>
+                    <option value='{"stateName":"Vermont","rate":"0.06"}'>Vermont</option>
+                    <option value='{"stateName":"Virginia","rate":"0.053"}'>Virginia</option>
+                    <option value='{"stateName":"Washington","rate":"0.065"}'>Washington</option>
+                    <option value='{"stateName":"West Virginia","rate":"0.06"}'>West Virginia</option>
+                    <option value='{"stateName":"Wisconsin","rate":"0.05"}'>Wisconsin</option>
+                    <option value='{"stateName":"Wyoming","rate":"0.04"}'>Wyoming</option>
+                    <option value='{"stateName":"D.C.","rate":"0.0575"}'>D.C.</option>
+                </select>
+                <input id="shippingInput" className="cityStatePostalInput" required onChange={this.handleChange} pattern="[0-9]{5}" type='text' max={5} name='zipCode' placeholder="Postal Code" value={zipCode}></input>
                 </div>
 
-                <div>{/* <Link to={{pathname:'/shippingoptions', state:{taxRate}}}> */}<button type='submit' onClick={() => postBillingInformation(refId, firstName, lastName, (user ? user.id : null), address1, address2, city, chosenState, zipCode )}>SAVE & CONTINUE</button>{/* </Link> */}</div>
-            </form>
+                <div className="emailPhoneWrapper">
+                    <input id="shippingInput" className="ShippingName" required onChange={this.handleChange} type='email' name='email' placeholder="Email" value={email}></input>
+                    <input id="shippingInput" className="lastname ShippingName" required onChange={this.handleChange} type='tel' name='phone' placeholder="Phone" value={phone}></input>
+                </div>
+                <div className="bottomText"><p><i className="fas fa-lock"></i> Your privacy is important to us. We will only contact you if there is an issue with your order.</p></div>
+                <div className="footerButtonWrapper">
+                <Link to={{pathname:'/shippingoptions'}}>
+                <button type='submit' onClick={() => { this.props.setTaxRate(taxRate)
+                this.sendShippingInformation(  firstName, lastName, (user ? user.id : null), address1, address2, city, chosenState, zipCode , email, phone )
+                }}>SAVE & CONTINUE</button></Link>
+
+
+                {/* { this.props.location.pathname === '/checkout' ?
+                <>
+                <Link to={{pathname:'/shippingoptions'}}>
+                <button type='submit' onClick={() => this.sendShippingInformation(  firstName, lastName, (user ? user.id : null), address1, address2, city, chosenState, zipCode , email, phone )}>SAVE & CONTINUE</button></Link>
+                </>
+                :
+                <>
+                <a><button type='submit' onClick={() => {this.sendShippingInformation(  firstName, lastName, (user ? user.id : null), address1, address2, city, chosenState, zipCode , email, phone )
+                this.props.toggleEdit(this.state.parentToggle)}}>SAVE & CONTINUE</button></a>
+                </>
+                } */}
+                </div>
+            </form> 
+            </div>
             }
             
                 

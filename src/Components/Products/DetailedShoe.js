@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { withRouter } from 'react-router-dom';
+import YouMightAlsoLike from '../YouMightAlsoLike/YouMightAlsoLike';
 
 import { addToCart, selectedProduct } from './../../Redux/reducer';
 import { connect } from 'react-redux';
@@ -261,7 +262,7 @@ class DetailedShoe extends Component {
                 <ReviewWrapper />
                 </div> */}
 
-
+                    <YouMightAlsoLike />
                 </div>
          );
     }

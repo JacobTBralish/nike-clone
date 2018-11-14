@@ -1,0 +1,99 @@
+
+.youMightLikeGridWallContainer {
+    font-family: sans-serif;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    margin: 0px auto;
+    margin-top:16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.youMightLikeTitleLineContainer {
+    font-size: 0;
+    margin-left: -8px;
+    margin-right: -8px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: sans-serif;
+    vertical-align: baseline;
+
+        .youMightLikeTitleLine {
+            font-family: sans-serif;
+            position: relative;
+            min-height: 1px;
+            display: none;
+            font-size: 14px;
+            line-height: 1.714285714285714;
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+}
+
+.youMightLikeTitle {
+    text-align: center;
+    padding-left: 0px;
+    padding-bottom: 8px;
+    font-size: 20px;
+    letter-spacing: 0.01em;
+    line-height: 1.263157894736842;
+    // font-family: sans-serif;
+    
+
+}
+
+// .youMightLikeContainer {
+//     margin-left: auto;
+//     margin-right: auto;
+//     max-width: 1440px;
+
+    .youMightLikeContainer {
+        padding: 12px;
+        
+        position: relative;
+        display: flex;
+        text-align: left;
+        width: 244px;
+        height: 370px;
+        // margin-bottom: 34px;
+        background: #fff;
+        vertical-align: top;
+        border: white solid 1px;
+        &:hover {
+            border: 1px solid #eee;
+        }
+        .youMightLikeProductPrice {
+            font-weight: bold;
+            color: #666;
+            line-height: 1.5em;
+            // font-family: $TextFont;
+        }
+        .youMightLikeItemInfo {
+            // padding-top: 5px;
+            font-size: 0.75em;
+            line-height: 18px;
+            #youMightLikeProductTitle {
+                font-weight: 600;
+            }
+            #youMightLikeColorwayNumber {
+                border-bottom: 1px solid rgb(229, 229, 229);
+                line-height: 25px;
+                margin-bottom: 5px;
+            }
+            
+
+        }
+    
+        .youMightLikeImageContainer {
+            overflow: hidden;
+            width: 220px!important;
+            height: 220px!important;
+            max-width: 220px!important;
+            max-height: 220px!important;
+            margin: 0;
+            padding-bottom: 5px;
+        }
+    }
+// }

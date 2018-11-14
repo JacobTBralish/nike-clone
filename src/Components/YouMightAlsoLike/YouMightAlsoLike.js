@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { selectedProduct } from '../../Redux/reducer';
-
+import './YouMightAlsoLike.scss'
 class YouMightAlsoLike extends Component {
     constructor(props) {
         super(props);
@@ -13,7 +13,7 @@ class YouMightAlsoLike extends Component {
     componentDidMount() {
         let { randomItems } = this.state;
         let { products } = this.props;
-        // console.log('products: ', products);
+        console.log('products: ', products);
         
             var tmp = products.slice(products);
             for (var i = 0; i < 4; i++) {
@@ -28,12 +28,12 @@ class YouMightAlsoLike extends Component {
     }
     render() { 
         let { randomItems } = this.state;
-        // console.log('randomItems: ', randomItems);
+        console.log('randomItems: ', randomItems);
         // console.log('here it is', this.props.products);
 
         
 
-        let mappedItems = randomItems.length === 0 && randomItems.map((item, i) => {
+        let mappedItems = randomItems.length > 0 && randomItems.map((item, i) => {
             return <div className='youMightLikeContainer' key={i}>
                 <Link key={i} onClick={() => { selectedProduct([item])}} to={`/product/${encodeURIComponent(item.title)}`} >
                 <div className='youMightLikeImageContainer'>
@@ -44,8 +44,8 @@ class YouMightAlsoLike extends Component {
                     <p id='youMightLikeColorwayNumber'>{item.numberOfColors} Colors</p>
                 </div>
                     <p id='youMightLikeProductTitle'>{item.title}</p>
-                    <p id='youMightLikeProductType'>{item.subtitle}</p>
-                    <p id='youMightLikeProductPrice'>{item.localPrice}</p>
+                    <p id='youMightLikeLightFont'>{item.subtitle}</p>
+                    <p id='youMightLikeLightFont'>{item.localPrice}</p>
                 </div>
                 </Link>
             </div>

@@ -176,6 +176,7 @@ class ShippingOptions extends Component {
                     <div className="cartCheckoutParent">
                     <CartCheckoutView shippingCost={this.state.shippingCost}/>
                     </div>
+                    <div className="shippingAndBillWrapper">
                     <div  className="shippingAndApoWrapper">                        
                         <h1>1. SHIPPING</h1>
                         <div className="shippingInnerWrapper ">
@@ -226,7 +227,7 @@ class ShippingOptions extends Component {
                             </div>       
                             } 
                                 
-                                
+                                  
                             <div className="selectShippingSpeedWrapper">
                                 <h3>SELECT YOUR SHIPPING SPEED</h3>
                                 {/* <button id="shippingMethodTooltip">PLACEHOLDERRRRRRRR</button> */}
@@ -272,12 +273,12 @@ class ShippingOptions extends Component {
                             
                      </div>
                 </div>
-
+                    <BillingForm />
+                </div>
             
 
 
 
-                {/* <div><BillingForm /></div> */}
                 {/* <StripeCheckout 
                     name='Nike'
                     description='Just do it'
