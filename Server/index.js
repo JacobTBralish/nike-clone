@@ -267,9 +267,13 @@ app.post('save-stripe-token', async (req,res)=> {
 })
 
 const PORT = 5000;
-const path = require('path')
-app.get('*', (req, res)=>{
-  res.sendFile(path.join(__dirname, '../build/index.html'));
-})
+// const path = require('path')
+// app.get('*', (req, res)=>{
+//   res.sendFile(path.join(__dirname, '../build/index.html'));
+// })
+
+app.get('/', (req, res) => {
+    res.send('endpoint live')
+});
 app.listen(PORT, ()=> console.log(`Server listening on port ${PORT} 🏄`));
 
