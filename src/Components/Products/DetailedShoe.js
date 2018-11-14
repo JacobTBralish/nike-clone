@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { withRouter } from 'react-router-dom';
+import YouMightAlsoLike from '../YouMightAlsoLike/YouMightAlsoLike';
 
 import { addToCart, selectedProduct } from './../../Redux/reducer';
 import { connect } from 'react-redux';
@@ -12,16 +13,34 @@ import ReviewWrapper from './../ReviewWrapper/ReviewWrapper'
 class DetailedShoe extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            isOpen: false,
+            toggleValue: false
+        }
     }
 
     componentDidMount() {
         this.props.selectedProduct(this.props.product)
     } 
+    // handleShowDialog = () => {
+    //     console.log('before setState',this.state.isOpen);
+    //     console.log('bang before setState', !this.state.isOpen);
+    //     this.setState({ isOpen: !this.state.isOpen });
+    //     console.log('after setState',this.state.isOpen);
+    //   };
+      toggleEdit = () => {
+        this.setState((prevState) =>{
+        //  console.log('prevstate', prevState)
+            return {
+                toggleValue: !prevState.toggleValue,
+            }
+         })
+     }
 
     render() {
         let { addToCart, total, product, reviews, qty, cart } = this.props;
-        console.log('reviews: ', reviews);
-        console.log('product: ', product);
+        // console.log('reviews: ', reviews);
+        // console.log('product: ', product);
 
         // let mappedProduct = product.length ? product.map((detail, index) => {
         //     // detailPictureOne, detailPictureTwo, detailPictureThree, detailPictureFour, detailPictureFive, detailPictureSix, shoeInfoTitleOne, shoeInfoTitleTwo, shoeInfoTitleThree, shoeInfoBodyOne, shoeInfoBodyTwo, shoeInfoBodyThree
@@ -43,9 +62,10 @@ class DetailedShoe extends Component {
                         <div className="imageContainer">
                             {detailPictureOne !== undefined ?
                                 <> {detailPictureOne.includes('.webm') 
-                                ? <video className='imgResizer' loop="true" muted="" autoplay="true" src={detailPictureOne}></video>
-                                : <img className='imgResizer' src={detailPictureOne ? detailPictureOne : 'http://www.uoduckstore.com/c.3841022/sca-dev-montblanc/img/no_image_available.jpeg'} alt={`detailed photo one for ${title}`} />
+                                ? <video className='imgResizer' onClick={this.handle} loop="true" muted="" autoplay="true" src={detailPictureOne}></video>
+                                : <img className='imgResizer' onClick={this.toggleEdit} src={detailPictureOne ? detailPictureOne : 'http://www.uoduckstore.com/c.3841022/sca-dev-montblanc/img/no_image_available.jpeg'} alt={`detailed photo one for ${title}`} />
                                 } </> : null}
+                            {/* {this.state.isOpen ? console.log('Opened!') : console.log('notOpen!')} */}
 
                             {detailPictureTwo !== undefined ?    
                                 <> {detailPictureTwo.includes('.webm') 
@@ -242,7 +262,7 @@ class DetailedShoe extends Component {
                 <ReviewWrapper />
                 </div> */}
 
-
+                    <YouMightAlsoLike />
                 </div>
          );
     }

@@ -19,9 +19,9 @@ class Home extends Component {
                 <div>
                     <View1 info={{image: 'https://content.nike.com/content/dam/one-nike/en_us/season-2018-ho/Home/1101/VaporFly_HP_p1_d.jpg.transform/full-screen/VaporFly_HP_p1_d.jpg', h2Text: "LIKE YOU DREAMED. ONLY FASTER.", pText: "he Vaporfly 4% Flyknit is our fastest race-day shoe made even lighter.", linkText: "SHOP VAPORFLY 4% FLYKNIT"}}/>
                 </div>
-               <div>
+               <>
                     <View3 id='marginFix' info={{image: 'https://content.nike.com/content/dam/one-nike/en_us/season-2018-ho/Home/1101/AirMax270_VapormaxUlt_HP_P2_d.jpg.transform/full-screen/AirMax270_VapormaxUlt_HP_P2_d.jpg', h2Text: "THE BOLDER THE BETTER", h2Text2: "LEAVE THE GROUND BEHIND", pText: "This is the season to make your biggest statement.", pText2: "That walking on air feel is not just in your head.", linkText: "SHOP AIRMAX 270", linkText2: "SHOP VAPORMAX"}}/>
-                </div>
+                </>
                 <div>
                     <View1 info={{image: 'https://content.nike.com/content/dam/one-nike/en_us/season-2018-ho/Home/1101/Layers_HP_p3_d.jpg.transform/full-screen/Layers_HP_p3_d.jpg', h2Text: "WIN AT WINTER", pText: "You know the cold's coming, and we've got you covered.", linkText: "SHOP NEW OUTTERWEAR"}}/>
                 </div>

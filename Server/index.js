@@ -21,7 +21,7 @@ const review_controller = require('./controllers/review_controller')
 
 app.use(cors());
 app.use(bodyParser.json());
-// app.use( express.static( `${__dirname}/../build` ) );
+app.use( express.static( `${__dirname}/../build` ) );
 // This previous line is for using run build
 app.use(session({
     secret: process.env.SESSION_SECRET,
@@ -131,14 +131,13 @@ app.get('/auth/callback', (req,res) => {
             req.session.user = user;
             console.log('response.data.name: ', response.data);
             res.redirect('/');
-
         } else {
             console.log('response.data.name: ', response.data);
             const userArray = [
                   auth0Id,
+                  response.data.name,
                   response.data.given_name,
                   response.data.family_name,
-                  response.data.name,
                   response.data.picture,
                   response.data.gender,
                   response.data.email,
@@ -269,3 +268,9 @@ app.post('save-stripe-token', async (req,res)=> {
 
 const PORT = 5000;
 app.listen(PORT, ()=> console.log(`Server listening on port ${PORT} 🏄`));
+
+
+const path = require('path')
+app.get('*', (req, res)=>{
+  res.sendFile(path.join(__dirname, '../build/index.html'));
+})

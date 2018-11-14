@@ -7,7 +7,7 @@ import './View.scss';
 const View3 = (props) => {
     return ( 
         <div id='imageContainerFix'>
-            <img className='homeImage' src={`${props.info.image}`} alt=''></img>
+            <img id='homeImage' src={`${props.info.image}`} alt=''></img>
             <span className='content-row'>
                 <div className='imageContent3-1'>
                     <h2 id='h2Text3-1'>{props.info.h2Text}</h2>

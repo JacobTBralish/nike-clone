@@ -3,10 +3,11 @@ $TextFont:'Roboto', sans-serif;
 
 #imageContainerFix {
     position: relative;
-    margin: 15px 0;
-    height: 735px;
+    margin-bottom: 15px;
+    height: 100%;
+    width: 100%;
 
-    .homeImage {
+    #homeImage {
         width: 100%;
         height: 100%;
     }
@@ -29,10 +30,6 @@ $TextFont:'Roboto', sans-serif;
             // margin-top: 30px;
             padding: 50px 160px 60px 60px;
             
-            
-
-
-
             #homeVideoLink1 {
                 display: block;
                 font-family: $NikeFont;
@@ -41,7 +38,7 @@ $TextFont:'Roboto', sans-serif;
                 text-decoration: none;
                 padding: 0 20px;
                 cursor: pointer;
-                width: 150px;
+                width: 47%;
                 height: 40px;
                 border-radius: 3px;
                 align-items: center;
@@ -108,19 +105,18 @@ $TextFont:'Roboto', sans-serif;
 
         #homeImageLink1 {
             display: block;
-            font-family: $NikeFont;
+            font-family: "Oswald", sans-serif;
             background: white;
             color: black;
             text-decoration: none;
-            padding: 0 20px;
+            padding: 0px 20px;
             cursor: pointer;
-            width: 150px;
+            width: 47%;
             height: 40px;
             border-radius: 3px;
             align-items: center;
             padding-left: 5px;
             padding-right: 5px;
-            // margin: 0 auto;
             text-align: center;
             font-size: .9375em;
             line-height: 38px;
@@ -129,7 +125,7 @@ $TextFont:'Roboto', sans-serif;
             font-style: normal;
             bottom: 0;
             left: 0;
-            margin-top: 10px
+            margin-top: 10px;
         }
     }
 
@@ -369,18 +365,45 @@ $TextFont:'Roboto', sans-serif;
 
 .imageContainer {
     position: relative;
-    margin: 15px 0;
+    // margin: 15px 0;
+        margin-bottom: 15px;
+
 
     .homeImage {
         width: 100%;
-        height: 100%;
+        // height: 100%;
     }
 
     #homeVideo {
         width: 100%;
-        height: 100%; 
+        // height: 100%; 
     }
 
+    #homeVideoLink1 {
+        display: block;
+        font-family: $NikeFont;
+        background: black;
+        color: white;
+        text-decoration: none;
+        padding: 0 20px;
+        cursor: pointer;
+        width: 47%;
+        height: 40px;
+        border-radius: 3px;
+        align-items: center;
+        padding-left: 5px;
+        padding-right: 5px;
+        // margin: 0 auto;
+        text-align: center;
+        font-size: .9375em;
+        line-height: 38px;
+        font-size: .9375em;
+        font-weight: bold;
+        font-style: normal;
+        bottom: 0;
+        left: 0;
+        margin-top: 10px
+    }
         .videoContent1 {
             display: flex;
             flex-direction: column;
@@ -393,36 +416,8 @@ $TextFont:'Roboto', sans-serif;
             left: 0;
             // margin-top: 30px;
             padding: 50px 160px 60px 60px;
-            
-            
 
 
-
-            #homeVideoLink1 {
-                display: block;
-                font-family: $NikeFont;
-                background: black;
-                color: white;
-                text-decoration: none;
-                padding: 0 20px;
-                cursor: pointer;
-                width: 150px;
-                height: 40px;
-                border-radius: 3px;
-                align-items: center;
-                padding-left: 5px;
-                padding-right: 5px;
-                // margin: 0 auto;
-                text-align: center;
-                font-size: .9375em;
-                line-height: 38px;
-                font-size: .9375em;
-                font-weight: bold;
-                font-style: normal;
-                bottom: 0;
-                left: 0;
-                margin-top: 10px
-            }
 
             #h2Text1 {
                 color: black;
@@ -479,7 +474,7 @@ $TextFont:'Roboto', sans-serif;
             text-decoration: none;
             padding: 0 20px;
             cursor: pointer;
-            width: 180px;
+            width: 47%;
             height: 40px;
             border-radius: 3px;
             align-items: center;
