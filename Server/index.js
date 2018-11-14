@@ -267,10 +267,9 @@ app.post('save-stripe-token', async (req,res)=> {
 })
 
 const PORT = 5000;
-app.listen(PORT, ()=> console.log(`Server listening on port ${PORT} 🏄`));
-
-
 const path = require('path')
 app.get('*', (req, res)=>{
   res.sendFile(path.join(__dirname, '../build/index.html'));
 })
+app.listen(PORT, ()=> console.log(`Server listening on port ${PORT} 🏄`));
+
