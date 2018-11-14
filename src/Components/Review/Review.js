@@ -1,18 +1,31 @@
 import React, { Component } from 'react'
+import axios from 'axios';
+import './../ReviewWrapper/ReviewWrapper.scss'
 
 export default class Review extends Component {
     constructor () {
         super();
         this.state = {
             toggleValue: false,
-            Title: '',
-            Body: '',
-            Stars: 0,
+            newReviewTitle: '',
+            newBody: '',
+            stars: '',
         }
         this.toggleEdit = this.toggleEdit.bind(this)
         this.onChange = this.onChange.bind(this)
     }
     
+    handleEdit = (title, body, stars, id, itemName) => {
+        // console.log('CLICKED', itemName, title, body, stars, id)
+        axios.put(`/api/reviews/`, { title, body, stars, id, itemName })
+        .then(response => {
+            // console.log('handleEdit response ======>', response)
+            this.props.editReviews(response.data)
+            this.props.history.push(`/api/reviews/${this.props.match.props.id}`)
+        })
+        .catch(error => console.log('handleDelete', error))
+    }
+
     toggleEdit = () => {
         this.setState((prevState) =>{
         //  console.log('prevstate', prevState)
@@ -21,10 +34,15 @@ export default class Review extends Component {
             }
          })
      }
- 
-    onChange = e => {
-        // console.log(e.target.name, e.target.value)
+
+    onChange = (e) => {
+        console.log(e.target.name, e.target.value)
         this.setState({[e.target.name]: e.target.value});
+      }
+
+    handleRating = (e) => {
+        console.log(e.target.name, e.target.value)
+        this.setState({stars: e.target.value});
       }
 
     // componentDidMount() {
@@ -32,22 +50,23 @@ export default class Review extends Component {
     // }
 
     render() {
-        const {user, posterName, poster, body, dateval, title, stars, reviewId, handleDelete, handleEdit} = this.props
+        const {user, posterName, poster, body, dateval, title, stars, reviewId, handleDelete, handleEdit, product} = this.props
         // console.log('revId', reviewId, 'posId', poster)
-        // console.log('REVIEWS THIS.PROPS ===>', this.props)
-        const {toggleValue, Title, Body, Stars} = this.state
+        // console.log('REVIEWS THIS.PROPS ===>', product[0].title, this.state.newReviewTitle, this.state.newBody, this.state.stars, reviewId)
+        const {toggleValue, newBody, newReviewTitle} = this.state
         
         return (
             <div>
-                <h1>HELLO</h1>
                 { !toggleValue 
                 ?
-                <div> {/* ------------ DISPLAY REVIEW ----------- */}
-                    <span>{dateval}</span>
-                    <h1>{title}</h1>
-                    <p>Rating: {stars}/5</p>
-                    <p>{posterName}</p>
-                    <p>{body}</p>
+                <div className="singleReviewWrapper"> {/* ------------ DISPLAY REVIEW ----------- */}
+                    <div className="singleReviewInner">
+                        {/* <span>{dateval}</span> */}
+                        <h1>{title}</h1>
+                        <p>Rating: {`${stars}/5`}</p>
+                        <p>{posterName}</p>
+                        <p>{body}</p>
+                    </div>
 
                 {  user.id === poster 
                 ?
@@ -60,15 +79,16 @@ export default class Review extends Component {
                 : <div> {/* ---------- EDIT REVIEW ----------- */}
                     <div>
                         <label>Title</label>
-                        <input type="text" name="Title" value={Title} onChange={this.onChange}></input>
+                        <input type="text" name="newReviewTitle" value={newReviewTitle} onChange={this.onChange}></input>
                     </div>
                         <div>
                         <label>Body</label>
-                        <input type="text" name="Body" value={Body} onChange={this.onChange}></input>
+                        <textarea type="text" name="newBody" value={newBody} onChange={this.onChange}></textarea>
                     </div>
                     <div>
                         <label>Stars</label>
-                        <select name='Stars' onChange={this.onChange}>
+                        <select name='stars' onChange={this.handleRating}>
+                            <option>Rating</option>
                             <option value='1'>1</option>
                             <option value='2'>2</option>
                             <option value='3'>3</option>
@@ -77,11 +97,11 @@ export default class Review extends Component {
                     </select>
                     </div>
                     <div>
-                    <button onClick={() => {handleDelete(reviewId)
+                    <button onClick={() => {this.props.handleDelete(reviewId)
                         this.toggleEdit()
                         }}>Delete</button>
                 <button onClick={() => {
-                    handleEdit(Title, Body, Stars, reviewId)
+                    this.handleEdit( newReviewTitle, newBody, stars, reviewId, product[0].title)
                     this.toggleEdit()}}>Submit</button>
                     <button onClick={() => this.toggleEdit()}>Cancel</button>
                     </div>

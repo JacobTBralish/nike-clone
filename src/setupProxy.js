@@ -6,6 +6,8 @@ module.exports = function(app) {
     // '/send', 
     '/save-stripe-token', 
     '/auth/callback',
+    '/api/order',
+    '/api/email'
 
     ],{ target: 'http://localhost:5000/' }));
 };

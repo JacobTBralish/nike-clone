@@ -11,6 +11,7 @@ const sC = require('./controllers/shippingcontroller');
 const productC = require('./controllers/productconroller');
 const fs = require('fs')
 
+
 // const request = require('request');
 const cors = require('cors');
 
@@ -33,12 +34,66 @@ app.use(session({
 
 
 
-// axios.get('https://store.nike.com/html-services/gridwallData?gridwallPath=mens-lifestyle-shoes%2F7puZoneZoi3&country=US&lang_locale=en_US').then(response => {
-//     return fs.writeFile('./src/data/nikeMensLifeStyleShoes.js', JSON.stringify(response.data.stores), /* { flag: 'a+' }, */ (err) => {
+// axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=womens-shoes/7ptZoi3&pn=6').then(response => {
+//     return fs.writeFile('./src/data/AllWomensShoesPg6.json', JSON.stringify(response.data.sections[0].items), /* { flag: 'a+' }, */ (err) => {
 //         if (err){
 //             console.log(err)
-//             return response.data.stores
+//             return response.data.sections[0].items
 //         }
+//     })
+// })
+
+// axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=mens-clothing/1mdZ7pu&pn=15').then(response => {
+//     return fs.writeFile('./src/data/AllMensClothesPg15.json', JSON.stringify(response.data.sections[0].items), /* { flag: 'a+' }, */ (err) => {
+//         if (err){
+//             console.log(err)
+//             return response.data.sections[0].items
+//         }
+//     })
+// })
+
+
+// axios.get(url1).then(response => {
+//     // write data out here
+//     return axios.get(url2)
+// }).then(response => {
+//     // write data out here
+//     return axios.get(url3)
+// }).then()
+
+// axios.all([
+//     axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=mens-clothing/1mdZ7pu&pn=1'),
+//      axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=mens-clothing/1mdZ7pu&pn=2'),
+//      axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=mens-clothing/1mdZ7pu&pn=3'),
+//      axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=mens-clothing/1mdZ7pu&pn=4'),
+//      axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=mens-clothing/1mdZ7pu&pn=5'),
+//      axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=mens-clothing/1mdZ7pu&pn=6'),
+//      axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=mens-clothing/1mdZ7pu&pn=7'),
+//      axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=mens-clothing/1mdZ7pu&pn=8'),
+//      axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=mens-clothing/1mdZ7pu&pn=9'),
+//      axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=mens-clothing/1mdZ7pu&pn=10'),
+//      axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=mens-clothing/1mdZ7pu&pn=11'),
+//      axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=mens-clothing/1mdZ7pu&pn=12'),
+//      axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=mens-clothing/1mdZ7pu&pn=13'),
+//      axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=mens-clothing/1mdZ7pu&pn=14'),
+//      axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=mens-clothing/1mdZ7pu&pn=15')
+// ]).then(axios.spread( (res1, res2, res3, res4, res5, res6, res7, res8, res9, res10, res11, res12, res13, res14, res15) => {
+//                         return fs.writeFile('./src/data/AllMensClothesPg1-12.json', JSON.stringify(res1.data.sections[0].items, res2.data.sections[0].items, res3.data.sections[0].items, res4.data.sections[0].items, res5.data.sections[0].items, res6.data.sections[0].items, res7.data.sections[0].items, res8.data.sections[0].items, res9.data.sections[0].items, res10.data.sections[0].items, res11.data.sections[0].items, res12.data.sections[0].items, res13.data.sections[0].items, res14.data.sections[0].items, res15.data.sections[0].items), /* { flag: 'a+' }, */ (err) => {
+//                             if (err){
+//                                 console.log(err)
+//                                 return response.data.sections[0].items
+//                             }
+//                         })
+//                     }))
+
+// Promise.all([
+//     axios.get(url1),
+//     axios.get(url2)
+// ]).then((response1, response2, ... ) => {
+//      return fs.writeFile('./src/data/AllMensClothesPg1-15.json', JSON.stringify(response.data.sections[0].items), /* { flag: 'a+' }, */ (err) => {
+//                             if (err){
+//                                 console.log(err)
+//                                 return response15.data.sections[0].items
 //     })
 // })
 
@@ -72,13 +127,20 @@ app.get('/auth/callback', (req,res) => {
       return db.find_user_by_auth0_id(auth0Id).then(users => {
           console.log('find user has fired')
           if (users.length){console.log(users)
-              const user = users[0];
-              req.session.user = user;
-              res.redirect('/');
-          } else {
-              const userArray = [
+            const user = users[0];
+            req.session.user = user;
+            console.log('response.data.name: ', response.data);
+            res.redirect('/');
+
+        } else {
+            console.log('response.data.name: ', response.data);
+            const userArray = [
                   auth0Id,
+                  response.data.given_name,
+                  response.data.family_name,
                   response.data.name,
+                  response.data.picture,
+                  response.data.gender,
                   response.data.email,
               ];
               return db.create_user(userArray).then(newUser => {console.log(newUser,'create user has fired')
@@ -104,6 +166,31 @@ app.get('/auth/callback', (req,res) => {
   })
 })
 
+// =========================================== Mapbox ==================================================== \\
+
+// stylesService.getStyle({..})
+//   .send()
+//   .then(resp => {
+//     const style = resp.body;
+//     // Do something with the style.
+//   })
+
+// // Get the next page of results.
+// tilesetsService.listTilesets()
+//   .send()
+//   .then(resp => {
+//     if (resp.hasNextPage()) {
+//       const nextPageReq = resp.nextPage();
+//       nextPageReq.send().then();
+//     }
+//   })
+
+// // Check the headers.
+// tilesetsService.listTilesets()
+//   .send()
+//   .then(resp => {
+//     console.log(resp.headers);
+//   });
 
 // =========================================== Review Endpoints ================================== \\
 
@@ -117,7 +204,7 @@ app.get('/api/reviews/:itemName' , review_controller.reviews_by_name)
 // app.post('/api/cart-data/:id', cart_controller.addToCart)
 
 // =========================================== Product Endpoints ================================== \\
-app.get('/api/mensshoes', productC.getProduct);
+// app.get('/api/mensshoes', productC.getProduct);
 // app.get('/api/products/:id', pc.getProduct)
 
 
@@ -125,6 +212,12 @@ app.get('/api/mensshoes', productC.getProduct);
 app.post('/api/payment', paymentC.processPayment);
 // app.post('/api/order', pC.createOrder);
 app.post('/api/email', paymentC.sendConfirmation);
+
+// =========================================== Shipping & Billing Endpoints ================================== \\
+
+// app.post('/api/shippingInfo', sC.postShippingInformation);
+app.post('/api/email', paymentC.sendConfirmation);
+app.post('/api/order', paymentC.createOrder);
 
 // =========================================== Shipping & Billing Endpoints ================================== \\
 

@@ -1,105 +1,55 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom';
+import './NikePlus.scss'
+import { Link } from 'react-router-dom'
 
-export default class  extends Component {
+export default class NikePlus extends Component {
     render() {
         return (
-            <div>
-                {/* body wrapper */}
+            <div className="nike_plus_body_wrapper">
                 <div>
-                    {/* video wrapper */}
-                    {/* <video loop="true" muted src="" autoplay></video> */}
-                    <div>
-                        {/* vid overlay text */}
-                        <div>
-                            <h1>NikePlus</h1>
-                            <h1>Membership</h1>
+                    <video loop="true" muted="" id="1535600179485" src="https://www.nike.com/VO/XX_XX/e/content/dam/en_us/member-hub/august18_update/Nike_NEW-CUT_All-Sports_v06.mp4" data-embed="default" class="video-js video-asset"  autoplay="true">
+                    </video>
+                        <div className="overlay_div">
+                            <p className="boldyBold">NikePlus</p>
+                            <p className="boldyBold">Membership</p>
+                            <p className="noBoldyBold">Everything you</p>
+                            <p className="noBoldyBold">need to win.</p>
+                            <Link to="/">JOIN NIKEPLUS</Link>
                         </div>
-                        <div>
-                            <h1>Everything you</h1>
-                            <h1>needed to win.</h1>
+                <div className="greyBigBox">
+                    <p>JOIN THE GREATEST TEAM IN SPORTS.</p>
+                    <p>ACCESS THE EXCLUSIVE PRODUCTS, MOTIVATION AND PERSONAL REWARDS TO KEEP UPPING YOUR GAME.</p>
+                    <div className="outerCont">
+                        <div className="innerCont">
+                            <div className="veryInner">
+                                <div></div>
+                                <div className="pBold">Member Exclusive Products</div>
+                                <div className="pNah">Early access to our latest drops, exclusives just for you and your favorite products reserved in your size.</div>
+                            </div>
+                            <div className="veryInner">
+                                <div></div>
+                                <div className="pBold">Expert Guidance & Advice</div>
+                                <div className="pNah">Your Nike Experts are real athletes with real answers. Chat with them to get recommendations on training and products you can trust.</div>
+                            </div>
                         </div>
-                        <Link to='/'>DOWNLOAD THIE NIKE APP</Link>
-                    </div>
-                </div>
-                <div>
-                    <h1>YOU HAVE ACCESS TO THE EXCLUSIVE PRODUCTS, MOTIVATION AND PERSONAL REWARDS TO KEEP UPPING YOUR GAME.</h1>
-                    <div>
-                    <div> {/* icon */}
-                        <h1>Member Exclusive Products</h1>
-                        <p>Early access to our latest drops, exclusives just for you and your favorite products reserved in your size.</p>
-                    </div>
-                    <div> {/* icon */}
-                        <h1>Expert Guidance & Advice</h1>
-                        <p>Your Nike Experts are real athletes with real answers. Chat with them to get recommendations on training and products you can trust.</p>
-                    </div>
-                    <div> {/* icon */}
-                        <h1>Access to Sport, Anytime, Anywhere</h1>
-                        <p>100+ on-the-go workouts, weekly challenges and personalized training plans that adapt to your goals and schedule.</p>
-                    </div>
-                    <div> {/* icon */}
-                        <h1>Inspiring Experiences</h1>
-                        <p>From courtside to race day, get priority access to the events and sessions you don’t want to miss.</p>
-                    </div>
-                    </div>
-                </div>
-                <div>
-                    <div> {/* icon */}
-                        <h1>Fast, Free Shipping</h1>
-                        <p>Free shipping always. Plus Member-Only pricing on expedited orders.</p>
-                    </div>
-                    <div> {/* icon */}
-                        <h1>30-Day Wear Tests</h1>
-                        <p>Wear it, test it, keep what you like.</p>
-                    </div>
-                    <div> {/* icon */}
-                        <h1>In-Store All Star Treatment</h1>
-                        <p>Get express checkout, store-to-door delivery in select North America stores.</p>
-                    </div>
-                    <div> {/* icon */}
-                        <h1>Birthday Reward</h1>
-                        <p>We’ll help you celebrate your big day with a special NikePlus Unlock.</p>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <div>
-                            <h1>GET REWARDED</h1>
-                            <h1>FOR BEING ACTIVE.</h1>
-                        </div>
-                        <div>
-                            <p>NikePlus Unlocks are how we inspire and reward you on the journey to being your best. Find them in your profile in the Nike App.</p>
-                        </div>
-                        <Link to='/'>Only in the Nike App</Link>
-                    </div>
-                </div>
-                <div>
-                    <h1>ACCESS OUR FAMILY OF APPS TO GET THE MOST OUT OF NIKEPLUS.</h1>
-                    <div>
-                        <div> {/* icon */}
-                            <h1>Nike</h1>
-                            <p>Shop: Explore everything Nike has to offer, tailored to you.</p>
-                            <Link to="/">LEARN MORE</Link>
-                        </div>
-                        <div> {/* icon */}
-                            <h1>Nike Run Club</h1>
-                            <p>Run: Find the motivation you need to run better and more often.</p>
-                            <Link to="/">LEARN MORE</Link>
-                        </div>
-                    </div>
-                    <div>
-                        <div> {/* icon */}
-                            <h1>Nike Training Club</h1>
-                            <p>Train: Break a sweat to over 160 guided workouts.</p>
-                            <Link to="/">LEARN MORE</Link>
-                        </div>
-                        <div> {/* icon */}
-                            <h1>SNKRS</h1>
-                            <p>Collect: Get hooked up with the latest sneaker drops.</p>
-                            <Link to="/">LEARN MORE</Link>
+                        <div className="innerCont">
+                            <div className="veryInner">
+                                <div></div>
+                                <div className="pBold">Access to Sport, Anytime, Anywhere</div>
+                                <div className="pNah">100+ on-the-go workouts, weekly challenges and personalized training plans that adapt to your goals and schedule.</div>
+                            </div>
+                            <div className="veryInner">
+                                <div></div>
+                                <div className="pBold">Inspiring Experiences</div>
+                                <div className="pNah">From courtside to race day, get priority access to the events and sessions you don’t want to miss.</div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                </div>
+                {/* <div className="greyBigBox">
+
+                </div> */}
             </div>
         )
     }

@@ -1,0 +1,232 @@
+.find-store-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.station:before {
+  content: ' ';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: red;
+  border-radius: 8px;
+  margin: 0 8px;
+}
+.station {
+  border-radius: 20px;
+  padding-right: 12px;
+  margin: -12px;
+  color: transparent;
+  line-height: 24px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+.station span {
+  display: none;
+}
+.popup-box {
+display: flex;
+text-align: center
+}
+
+
+
+.store-locator {
+  // border: 1px solid blue;
+  display:flex;
+  flex-direction: row;
+  align-items: column;
+  justify-content: center;
+  // justify-content: space-between;
+  margin-bottom: 20px;
+  // height: 100px;
+}
+
+
+.locator-box {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.find-store-map {
+  // border: 1px solid red;
+  height:400px;
+  width: 25%;
+  background-color: black
+}
+
+.converse-img {
+  background-image: url('https://cdn.filepicker.io/api/file/CNbpWaVQfS3IrUM2swrG');
+  margin: auto;
+  // border: 3px solid green;
+  background-size: 100% 100%;
+  height: 100%;
+  width: 100%;
+}
+.nike-factory-img {
+  background-image: url('https://cdn.filepicker.io/api/file/JoG06ykQOyfiAKNPwHMp');
+  margin: auto;
+  // border: 3px solid green;
+  background-size: 100% 100%;
+  height: 100%;
+  width: 100%;
+}
+
+.hurley-img {
+  background-image: url('https://cdn.filepicker.io/api/file/8XP3Z3N6RXeg0p3Mz12A');
+  margin: auto;
+  // border: 3px solid green;
+  background-size: 100% 100%;
+  height: 100%;
+  width: 100%;
+}
+
+.all-stores {
+  background-image: url('https://cdn.filepicker.io/api/file/fvnjv5WPReybS5kbv4tg');
+  margin: auto;
+  // border: 3px solid green;
+  background-size: 100% 100%;
+  height: 100%;
+  width: 100%;
+}
+
+.nike-img {
+  background-image: url('https://cdn.filepicker.io/api/file/XZvksX0wTLOrOeNPwmYb');
+  margin: auto;
+
+  // border: 3px solid green;
+  background-size: 100% 100%;
+  height: 100%;
+  width: 100%;
+}
+
+.partner-store {
+  background-image: url('https://cdn.filepicker.io/api/file/Wn2Y9vnZRCBb3kOxq3yw');
+  margin: auto;
+  // border: 3px solid green;
+  background-size: 100% 100%;
+  height: 100%;
+  width: 100%;
+}
+
+.find-store {
+  // background-color: black;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  // margin: 0 auto
+}
+
+.nike-background-text-color {
+  color: white;
+  font-size: 12px
+}
+
+.nike-text-color {
+  color: grey;
+  font-size: 10px;
+  letter-spacing: 1px
+}
+
+.link-color {
+  color: grey;
+  font-size: 12px;
+}
+
+.text-box {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  height: 100px;
+  width: 60%;
+  margin-right: 50px;
+
+}
+
+.text-box-hurley {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  height: 100px;
+  width: 60%;
+  margin-left: 30px
+}
+
+.text-box-nike-factory {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  height: 100px;
+  width: 60%;
+  margin-right: 100px;
+}
+
+.text-box-all-stores {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  height: 100px;
+  width: 60%;
+  margin-right: 100px;
+}
+
+.text-box-Nike-partner-stores {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  height: 50px;
+  width: 60%;
+  margin-right: 100px;
+}
+
+.sidebar {
+  width: 33.3333%;
+}
+
+.map {
+  border-left: 1px solid #fff;
+  position: absolute;
+  left: 33.3333%;
+  width: 66.6666%;
+  top: 0;
+  bottom: 0;
+}
+
+.pad2 {
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.mapboxgl-popup{
+  z-index: 1;
+}
+
+.filtered-stores {
+  border: 1px solid black;
+  display: flex;
+  height: 100%;
+  width: 50%;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap
+}
+
+.store-name {
+  border: 1px solid red;
+  height: 100px
+}
+
+.map-box {
+  display: flex;
+  justify-content: center
+}

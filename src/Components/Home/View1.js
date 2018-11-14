@@ -5,7 +5,7 @@ import './View.scss';
 
 const View1 = (props) => {
     return ( 
-        <div className='imageContainer1'>
+    <div className='imageContainer'>
             <img className='homeImage' src={`${props.info.image}`} alt='' />
             <div className='imageContent1'>
                 <h2 id='h2Text1'>{props.info.h2Text}</h2>

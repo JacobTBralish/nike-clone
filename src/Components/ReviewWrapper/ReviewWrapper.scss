@@ -1,0 +1,59 @@
+.ReviewParentContainer {
+    // border: solid 1px orange;
+    .overall {
+        padding: 23px 0px;
+    }
+    .createReview {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 23px;
+        input, select {
+            line-height: 38px;
+            height: 38px;
+            // padding-left: 10px;
+            color: rgb(178, 178, 178);
+            // border:1px solid #ddd;
+        }
+        .spreader {
+            margin-right:10px;
+            width: 100px;
+            // margin-left: 10px;
+        }
+        button {
+            &:hover {
+                background: rgba(17,17,17,.75);
+            }
+            border: none;
+            background: #111;
+            color: white;
+            height: 100%;
+            text-align: center;
+            height: 38px;
+            width: 100px;
+            // margin-top: 30px;
+            // margin-bottom: 19px;
+        }
+        
+    }
+    .writeReview {
+        text-decoration: underline;
+        font-size: 0.85em;
+        padding: 23px 0px;
+    }
+    .singleReviewWrapper {
+        // border: solid 1px blue;
+
+
+        .singleReviewInner {
+            // border: solid 1px red;
+            font-size: 0.8em;
+            line-height: 20px;
+            >h1 {
+                font-weight: 600;
+            }
+
+        }
+    }
+}
