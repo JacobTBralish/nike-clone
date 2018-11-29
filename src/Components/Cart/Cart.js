@@ -5,7 +5,6 @@ import { deleteFromCart } from '../../Redux/reducer';
 import YouMightAlsoLike from '../YouMightAlsoLike/YouMightAlsoLike';
 import './Cart.scss'
 
-
 class Cart extends Component {
     constructor() {
         super();
