@@ -108,7 +108,7 @@ class Cart extends Component {
                     <div id="ch4_continueShopping" tabindex="10"><Link to="/all mens shoes" data-linkname="continue shopping">Continue Shopping</Link></div>
     {/* <!-- contact number & live chat --> */}
                     <div id="ch4_helpContainerTopNav">
-  	                    <div className="ch4_helpChatTop" tabindex="20"><a href="#" class="liveChat" onclick="window.open(&quot;http://help-us.nike.com/app/chat/chat_launch&quot;);" data-linkname="live chat">Live Chat</a></div>
+  	                    <div className="ch4_helpChatTop" tabindex="20"><a href="#" className="liveChat" onclick="window.open(&quot;http://help-us.nike.com/app/chat/chat_launch&quot;);" data-linkname="live chat">Live Chat</a></div>
                         <div className="ch4_helpContactTop" tabindex="15">1800 806 6453</div>
                         <div className="ch4_helpFeedbackTop" tabindex="12">
                             <a href="#" onclick="window.usabilla_live('setForm', 'US'); window.usabilla_live('click');" data-linkname="give feedback">Give Feedback</a>
@@ -126,7 +126,7 @@ class Cart extends Component {
 {/* <!-- Cart Items List -->
     <!-- /* Content Items */}
                         <div className="chrome">
-                            <h2 class="heading toUppercase">Your Cart ({`${cart.length}`})</h2>
+                            <h2 className="heading toUppercase">Your Cart ({`${cart.length}`})</h2>
                             <div id="content" className="content no-padding clearfix">
                                 <div className="ch4_contentItems">
                                     <ul className="bordered">
@@ -210,7 +210,7 @@ class Cart extends Component {
     <div className="ch4_helpTitle ch4_uppercase">NEED HELP?</div>
         <ul className="ch4_helpList">
             <li>
-                <a href="#" name="order_secure" data-linkname="need help:order_secure" class="ch4_helpTip">
+                <a href="#" name="order_secure" data-linkname="need help:order_secure" className="ch4_helpTip">
                     How is my order secure?
                 </a>
             </li>

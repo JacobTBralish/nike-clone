@@ -20,7 +20,7 @@ import AllMensShoes from './Data/AllMensShoesPg1-6.json';
 import AllNikeStores from './Components/FindStore/AllNikeStores';
 import AllMensClothes from './Data/AllMensClothesPg1-15.json';
 import AllWomensShoes from './Data/AllWomensShoesPg1-6.json';
-import NikeStores from './Components/FindStore/NikeStores';
+// import NikeStores from './Components/FindStore/NikeStores';
 
 export default (
     <Switch>

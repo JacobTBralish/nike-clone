@@ -6,7 +6,7 @@ import './View.scss';
 const VideoView = (props) => {
     return ( 
     <div className='imageContainer'>
-            <video id='homeVideo' src={`${props.info.video}`} autoPlay='true' loop='true'></video>
+            <video id='homeVideo' src={`${props.info.video}`} autoPlay={true} loop={true}></video>
             <div className='videoContent1'>
                 <h2 id='h2Text1'>{props.info.h2Text}</h2>
                 <p id='pText1'>{props.info.pText}</p>

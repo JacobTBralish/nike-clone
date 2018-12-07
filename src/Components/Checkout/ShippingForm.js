@@ -88,7 +88,7 @@ class ShippingForm extends Component {
                     <input id="shippingInput" className="addressOne" required onChange={this.handleChange} name='address1' placeholder="Street Address" value={address1}></input>
                 </div>
                 { !toggleValue ?
-                    <button id="addressTwoText" style={{background: "none", border: "none", color: 'darkGrey'}} onClick={this.handleToggle}><i class="fas fa-plus"></i> Add Company, C/O, Apt, Suite, Unit</button>
+                    <button id="addressTwoText" style={{background: "none", border: "none", color: 'darkGrey'}} onClick={this.handleToggle}><i className="fas fa-plus"></i> Add Company, C/O, Apt, Suite, Unit</button>
                 :
                 <div>
                     <label htmlFor='address2' />

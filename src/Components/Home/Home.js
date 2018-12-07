@@ -6,7 +6,7 @@ import Nike3rdImage from '../../Images/Nike3rdImage.jpg';
 import Nike4thImage from '../../Images/Nike4thImage.jpg';
 
 import View1 from './View1';
-import View2 from './View2';
+// import View2 from './View2';
 import View3 from './View3';
 import VideoView from './VideoView';
 

@@ -226,7 +226,7 @@ app.post('/api/billingInfo', sC.postBillingInformation);
 // ================================================ Auth0 Login ====================================== \\
 
 app.get('/api/user-data', (req, res) => {
-    // console.log(req.session.user)
+    console.log(req.session.user)
     res.json(req.session.user);
 });
 
@@ -246,7 +246,8 @@ app.post('save-stripe-token', async (req,res)=> {
     console.log('VALUES FROM STRIPE CONFIG', email, id, amount.toFixed(0));
 
     try {
-        let { status } = await Stripe.customers.create({
+        // TODO: Changed "Stripe" to "stripe"
+        let { status } = await stripe.customers.create({
             email,
             source: id
         }).then(customer => stripe.charges.create({
@@ -262,7 +263,7 @@ app.post('save-stripe-token', async (req,res)=> {
             console.log(error, "Error in create charge");
         })
     } catch (error) {
-        res.status(500).end
+        res.status(500).end()
     }
 })
 

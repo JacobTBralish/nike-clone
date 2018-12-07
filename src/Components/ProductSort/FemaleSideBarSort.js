@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export default class FemaleSideBarSort extends Component {
     render() {
         return (
-<div class="exp-left-nav-filters nsg-text--near-black">
+<div className="exp-left-nav-filters nsg-text--near-black">
 
                                         {/* header!!!!!!!!!!!!!! */}
                                     {/* <div class="exp-left-nav-header">
