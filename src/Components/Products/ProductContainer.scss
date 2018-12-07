@@ -20,7 +20,7 @@ $TextFont:'Roboto', sans-serif;
         flex-direction: row;
 
         @media(max-width: 1259px) and (min-width: 1024px){
-            width: 738px;
+            width: 820px;
          
         }
         @media (max-width: 1023px){
@@ -109,27 +109,34 @@ $TextFont:'Roboto', sans-serif;
     position: relative;
     display: inline-block;
     text-align: left;
-    width: 244px;
+    width: 240px;
     height: 314px;
     // float: left;
+    padding: 12px;
+    // margin: 6px;
     margin-bottom: 34px;
     background: #fff;
     vertical-align: top;
     // justify-content: center;
     // align-content: center;
+    border: white solid 1px;
+    &:hover {
+        border: rgb(180, 180, 180) solid 1px;
+
+    }
     
     .productImageContainer {
         overflow: hidden;
-        width: 220px;
+        // width: 220px;
         height: 220px;
-        max-width: 220px;
+        // max-width: 220px;
         max-height: 220px;
         margin: 0;
         
         
-        #productImage{
+        // #productImage{
             
-        }
+        // }
 
 
     }
@@ -141,25 +148,30 @@ $TextFont:'Roboto', sans-serif;
         font-size: 12px;
         position: relative;
         left: -12px;
+        width: 100%;
+        text-decoration: none;
+
 
         .colorwayContainer {
             margin: 5px 0;
             border-bottom: 1px solid #CCC;
+            text-decoration: none;
 
-            #colorwayNumber {
+            >#colorwayNumber {
             margin: 5px 0;
             font-family: $TextFont;
             // letter-spacing: .125em;
-
+            text-decoration: none!important;
             }
         }
         #productTitle {
             line-height: 13px;
             font-weight: bold;
             margin: 2px 0;
-            
+            text-decoration: none;
             #productCount {
                 color: #666;
+                text-decoration: none;
             }
         }
         
@@ -178,4 +190,8 @@ $TextFont:'Roboto', sans-serif;
             font-family: $TextFont;
         }
     }
+
 }
+    // .productContainer:hover {
+    //         border: $TextFont solid 1px;
+    //     }

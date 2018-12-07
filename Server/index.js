@@ -32,8 +32,6 @@ app.use(session({
     }
 }))
 
-
-
 // axios.get('https://store.nike.com/html-services/gridwallData?country=US&lang_locale=en_US&gridwallPath=womens-shoes/7ptZoi3&pn=6').then(response => {
 //     return fs.writeFile('./src/data/AllWomensShoesPg6.json', JSON.stringify(response.data.sections[0].items), /* { flag: 'a+' }, */ (err) => {
 //         if (err){
@@ -131,14 +129,13 @@ app.get('/auth/callback', (req,res) => {
             req.session.user = user;
             console.log('response.data.name: ', response.data);
             res.redirect('/');
-
         } else {
             console.log('response.data.name: ', response.data);
             const userArray = [
                   auth0Id,
+                  response.data.name,
                   response.data.given_name,
                   response.data.family_name,
-                  response.data.name,
                   response.data.picture,
                   response.data.gender,
                   response.data.email,
