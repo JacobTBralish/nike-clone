@@ -52,7 +52,7 @@ const MiddleNav = () => {
                         <li className='column-list-link' id="sanSer"><Link to='/all mens shoes'>All Shoes</Link></li>
                     </ul>
                 </div>
-                <div class="dropdown-content-column-no-line">
+                <div className="dropdown-content-column-no-line">
                     <Link className='column-list-item' className='column-list-item' to='/all mens clothes'>CLOTHING</Link>
                     <ul>
                         <li className='column-list-link' id="sanSer"><Link to='/mens tops & t-shirts'>Tops & T-Shirts</Link></li>
@@ -72,7 +72,7 @@ const MiddleNav = () => {
                     </ul>
 
                 </div>
-                <div class="dropdown-content-column-left-line-end">
+                <div className="dropdown-content-column-left-line-end">
                     <Link className='column-list-item' to='/'>SHOP COLLECTION</Link>
                     <ul>
                         <li className='column-list-link' id="sanSer"><Link to='/mensgolfshoes'>Golf</Link></li>
@@ -135,7 +135,7 @@ const MiddleNav = () => {
                         <li className='column-list-link' id="sanSer"><Link to='/allwomensshoes'>All Shoes</Link></li>
                     </ul>
                 </div>
-                <div class="dropdown-content-column-no-line">
+                <div className="dropdown-content-column-no-line">
                     <Link className='column-list-item' className='column-list-item' to='/'>CLOTHING</Link>
                     <ul>
                         <li className='column-list-link' id="sanSer"><Link to='/'>Plus Size</Link></li>
@@ -157,7 +157,7 @@ const MiddleNav = () => {
                     </ul>
 
                 </div>
-                <div class="dropdown-content-column-left-line-end">
+                <div className="dropdown-content-column-left-line-end">
                     <Link className='column-list-item' to='/'>SHOP COLLECTION</Link>
                     <ul>
                         <li className='column-list-link' id="sanSer"><Link to='/'>SNKRS Launch Calender</Link></li>
@@ -223,7 +223,7 @@ const MiddleNav = () => {
                         <li className='column-list-link' id="sanSer"><Link to='/'>All Clothing</Link></li>
                     </ul>
                 </div>
-                <div class="dropdown-content-column-no-line">
+                <div className="dropdown-content-column-no-line">
                     <Link className='column-list-item' className='column-list-item' to='/'>GIRLS SHOES</Link>
                     <ul>
                         <li className='column-list-link' id="sanSer"><Link to='/'>Big Kids (3.5Y - 7Y)</Link></li>
@@ -245,7 +245,7 @@ const MiddleNav = () => {
                         <li className='column-list-link' id="sanSer"><Link to='/'>All Clothing</Link></li>
                     </ul>
                 </div>
-                <div class="dropdown-content-column-left-line-end">
+                <div className="dropdown-content-column-left-line-end">
                     <Link className='column-list-item' to='/'>BABY & TODDLER</Link>
                     <ul>
                         <li className='column-list-link' id="sanSer"><Link to='/'>Baby Girl</Link></li>
@@ -305,7 +305,7 @@ const MiddleNav = () => {
                         <li className='column-list-link' id="sanSer"><Link to='/'>Pegasus</Link></li>
                     </ul>
                 </div>
-                <div class="dropdown-content-column-no-line">
+                <div className="dropdown-content-column-no-line">
                     <Link className='column-list-item' className='column-list-item' to='/'>WOMEN</Link>
                     <ul>
                         <li className='column-list-link' id="sanSer"><Link to='/'>EXP-X14</Link></li>
@@ -321,7 +321,7 @@ const MiddleNav = () => {
                         <li className='column-list-link' id="sanSer"><Link to='/'>Pegasus</Link></li>
                     </ul>
                 </div>
-                <div class="dropdown-content-column-left-line-end">
+                <div className="dropdown-content-column-left-line-end">
                     <Link className='column-list-item' to='/'>KIDS</Link>
                     <ul>
                         <li className='column-list-link' id="sanSer"><Link to='/'>EXP-X14</Link></li>
@@ -344,7 +344,7 @@ const MiddleNav = () => {
             </div>
         </div>
         <div className='searchInput'>
-        <i class="fas fa-search"></i><input placeholder='Search' id='navSearchBar'></input>
+        <i className="fas fa-search"></i><input placeholder='Search' id='navSearchBar'></input>
         </div>
     </div>
 </span> );

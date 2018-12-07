@@ -21,7 +21,7 @@ const review_controller = require('./controllers/review_controller')
 
 app.use(cors());
 app.use(bodyParser.json());
-// app.use( express.static( `${__dirname}/../build` ) );
+app.use( express.static( `${__dirname}/../build` ) );
 // This previous line is for using run build
 app.use(session({
     secret: process.env.SESSION_SECRET,
@@ -109,7 +109,7 @@ app.get('/auth/callback', (req,res) => {
             client_secret: process.env.AUTH0_CLIENT_SECRET,
             code: req.query.code,
             grant_type:'authorization_code',
-            redirect_uri: `http://${req.headers.host}/auth/callback`
+            redirect_uri: `https://${req.headers.host}/auth/callback`
         }
   function tradeCodeForAccessToken(){console.log('traded code for access token')
       return axios.post(`https://${process.env.REACT_APP_AUTH0_DOMAIN}/oauth/token`, payload)
@@ -123,6 +123,8 @@ app.get('/auth/callback', (req,res) => {
       console.log(auth0Id,'-------Auth0ID-------')
       const db = req.app.get('db');
       return db.find_user_by_auth0_id(auth0Id).then(users => {
+          req.session.cart = "pie";
+          console.log("req.session", req.session);
           console.log('find user has fired')
           if (users.length){console.log(users)
             const user = users[0];
@@ -224,7 +226,7 @@ app.post('/api/billingInfo', sC.postBillingInformation);
 // ================================================ Auth0 Login ====================================== \\
 
 app.get('/api/user-data', (req, res) => {
-    // console.log(req.session.user)
+    console.log(req.session.user)
     res.json(req.session.user);
 });
 
@@ -244,7 +246,8 @@ app.post('save-stripe-token', async (req,res)=> {
     console.log('VALUES FROM STRIPE CONFIG', email, id, amount.toFixed(0));
 
     try {
-        let { status } = await Stripe.customers.create({
+        // TODO: Changed "Stripe" to "stripe"
+        let { status } = await stripe.customers.create({
             email,
             source: id
         }).then(customer => stripe.charges.create({
@@ -260,9 +263,15 @@ app.post('save-stripe-token', async (req,res)=> {
             console.log(error, "Error in create charge");
         })
     } catch (error) {
-        res.status(500).end
+        res.status(500).end()
     }
 })
 
 const PORT = 5000;
 app.listen(PORT, ()=> console.log(`Server listening on port ${PORT} 🏄`));
+
+
+const path = require('path')
+app.get('*', (req, res)=>{
+  res.sendFile(path.join(__dirname, '../build/index.html'));
+})

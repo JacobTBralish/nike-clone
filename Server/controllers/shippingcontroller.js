@@ -1,5 +1,4 @@
 module.exports = {
-
     postShippingInformation: (req, res ) => {
         const db = req.app.get('db');
         let {refId, firstName, lastName, userId, address1, address2, city, chosenState, zipCode ,email ,phone} = req.body;
@@ -15,7 +14,7 @@ module.exports = {
         const db = req.app.get('db');
         let {refId, firstName, lastName, userId, address1, address2, city, chosenState, zipCode } = req.body;
         console.log('req.body-----in billing: ', req.body);
-        if (uderId = undefined){
+        if (userId === undefined){
             return null
         }
 

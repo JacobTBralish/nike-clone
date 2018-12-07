@@ -650,6 +650,20 @@
     "abTest": null
 }, {
     "inWallContentCard": false,
+    "detailPictureOne":"https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/tdcvgebskrkuzrhoqkkb/air-max-97-se-womens-shoe-TFX5c6.jpg",
+    "detailPictureTwo":"https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/a96d9rva74ym6yfereji/air-max-97-se-womens-shoe-TFX5c6.jpg",
+    "detailPictureThree":"https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/z6doyw9dwunzugaogvyh/air-max-97-se-womens-shoe-TFX5c6.jpg",
+    "detailPictureFour":"https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/n2pozglkv4p86nr2urgw/air-max-97-se-womens-shoe-TFX5c6.jpg",
+    "detailPictureFive":"https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/u2f3c1w3hltjbf5btxui/air-max-97-se-womens-shoe-TFX5c6.jpg",
+    "detailPictureSix":"https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/s9vgvhcfax6ss0zypiju/air-max-97-se-womens-shoe-TFX5c6.jpg",
+    "detailPictureSeven":"https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/pe2guaj2qd6zks1jr6xg/air-max-97-se-womens-shoe-TFX5c6.jpg",
+    "detailPictureEight":"https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/yxjrzicaczidniv2obsg/air-max-97-se-womens-shoe-TFX5c6.jpg",
+    "detailPictureNine":"https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/evbyjgr13opc8gik9pqy/air-max-97-se-womens-shoe-TFX5c6.jpg",
+    "shoeInfoTitleOne":"SLEEK COMFORT.",
+    "shoeInfoBodyOne":"The Nike Air Max 97 shook up the running world with its revolutionary full-length Nike Air Unit. The Nike Air 97 SE Women's Shoe refreshes the original design with leather, knit and mesh construction for a lighter feel and sleeker look",
+    "shoeInfoTitleTwo":"Air Max 97 Origins",
+    "shoeInfoBodyTwo":"Nike's revolutionary Air-Sole unit made its way into Nike footwear in 1978. In 1987, the Nike Air Max 1 debuted with visible air in its heel, allowing fans more than just the feel of Air-Sole comfort—suddenly they could see it. Two years after the Nike Air Max 95 brought visible air to the forefoot, the Nike Air Max 97 arrived with the very first full-length unit. The shoe made a huge splash in the running world, as anticipated by its ripple-effect design lines. It's still making waves over two decades later.",
+
     "rawPrice": 170,
     "localPrice": "$170",
     "overriddenLocalPrice": null,
@@ -690,6 +704,17 @@
     "abTest": null
 }, {
     "inWallContentCard": false,
+    "detailPictureOne":"https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/lhaexepets90qdnavwtd/classic-cortez-leather-womens-shoe-7S8qhr.jpg",
+"detailPictureTwo":"https://c.static-nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/fi6yaihxuwjvreqmaixy/classic-cortez-leather-womens-shoe-7S8qhr.jpg",
+"detailPictureThree":"https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/y19afzmv8vywvbaj9els/classic-cortez-leather-womens-shoe-7S8qhr.jpg",
+"detailPictureFour":"https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/vwyqu4xz0h9fltpgoicy/classic-cortez-leather-womens-shoe-7S8qhr.jpg",
+"detailPictureFive":"https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/xonamxiiuqjn0gawhkvl/classic-cortez-leather-womens-shoe-7S8qhr.jpg",
+"detailPictureSix":"https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/zdpebhtvou7bbzrvq2cp/classic-cortez-leather-womens-shoe-7S8qhr.jpg",
+"shoeInfoTitleOne":"CLASSIC COMFORT. VINTAGE STYLE.",
+"shoeInfoBodyOne":"The Nike Classic Cortez Leather Women's Shoe is Nike's original running shoe, designed by Bill Bowerman and released in 1972. This version features a leather and synthetic upper for a premium look and throwback style.",
+"shoeInfoTitleTwo":"Cortez Origins",
+"shoeInfoBodyTwo":"The Nike Cortez was Bill Bowerman's first masterpiece, built to be lighter and more weatherproof than any other shoe. In 1972, it put unprecedented cushioning under the fastest feet in the running world and quickly became the most popular training shoe in the country. It was an unmistakable icon—a walking billboard that told your story and declared your affiliation—and came to thrive with fierce style on the streets of Los Angeles. Since then, no shoe has expanded the definition of a running shoe quite like the Nike Cortez.",
+
     "rawPrice": 70,
     "localPrice": "$70",
     "overriddenLocalPrice": null,
@@ -708,7 +733,7 @@
     "comingSoon": false,
     "preorder": false,
     "pdpUrl": "https://www.nike.com/t/classic-cortez-leather-womens-shoe-ptRtDR/AV4618-200",
-    "spriteSheet": "https://images.nike.com/is/image/DotCom/pwp_sheet2?$NIKE_PWPx3$&$img0=AV4618_200&$img1=807471_010&$img2=AV4618_001",
+    "spriteSheet": "https://images.nike.com/is/image/DotCom/pwp_sheet2?$NIKE_PWPx3$&$img0=AV4618_300",
     "fullSize": true,
     "numberOfColors": 8,
     "showNumberOfColors": true,
@@ -850,6 +875,20 @@
     "abTest": null
 }, {
     "inWallContentCard": false,
+    
+"detailPictureOne":"https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/gul3iiwxo0gas6oaekqt/air-force-1-sage-low-womens-shoe-b0cz8K.jpg",
+"detailPictureTwo":"https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/lbcaicahrvozopserxsh/air-force-1-sage-low-womens-shoe-b0cz8K.jpg",
+"detailPictureThree":"https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/i1gaa6huen5qd9vkmraw/air-force-1-sage-low-womens-shoe-b0cz8K.jpg",
+"detailPictureFour":"https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/b7zxxt2a7tfpokmaydtl/air-force-1-sage-low-womens-shoe-b0cz8K.jpg",
+"detailPictureFive":"https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/oa3mt3lq9pmqnnqfjaov/air-force-1-sage-low-womens-shoe-b0cz8K.jpg",
+"detailPictureSix":"https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/o9rrhw85wew21uoikusb/air-force-1-sage-low-womens-shoe-b0cz8K.jpg",
+"shoeInfoTitleOne":"SOPHISTICATED STYLE FOR THE STREETS.",
+"shoeInfoBodyOne":"Taking both height and craft to new levels, the Nike Air Force 1 Sage Low features a platform midsole and a pared-down upper for a bold yet feminine look.",
+"shoeInfoTitleTwo":"Clean Look",
+"shoeInfoBodyTwo":"The luxe, pared-down upper features premium leather for a clean, sophisticated look. Stitch-and-turn construction creates a seamless look.",
+"shoeInfoTitleThree":"A Classic Reimagined",
+"shoeInfoBodyThree":"The classic Air Force 1 foam midsole is exaggerated to create a platform. Enlarged outsole teeth are a modern take on the traditional AF1 design.",
+
     "rawPrice": 100,
     "localPrice": "$100",
     "overriddenLocalPrice": null,
@@ -950,6 +989,20 @@
     "abTest": null
 }, {
     "inWallContentCard": false,
+"detailPictureOne":"https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/yictoifd3ate18zkchzf/air-force-1-jester-xx-womens-shoe-Bfbf7l.jpg",
+"detailPictureTwo":"https://c.static-nike.com/a/videos/q_90/onjryakd3thdfnwgugi3/video.webm",
+"detailPictureThree":"https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/y99bdwf3mbt8nsfifhkd/air-force-1-jester-xx-womens-shoe-Bfbf7l.jpg",
+"detailPictureFour":"https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/lbdno0nr8xnfvqtbjjm2/air-force-1-jester-xx-womens-shoe-Bfbf7l.jpg",
+"detailPictureFive":"https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/lnwmnoyc67bg4xqpsxdq/air-force-1-jester-xx-womens-shoe-Bfbf7l.jpg",
+"detailPictureSix":"https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/pzpkskb8owmpoybrxbvm/air-force-1-jester-xx-womens-shoe-Bfbf7l.jpg",
+"detailPictureSeven":"https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/l5mwccjli0daiijilyx0/air-force-1-jester-xx-womens-shoe-Bfbf7l.jpg",
+"detailPictureEight":"https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/f5d0f9iymfh5nhwpg3rz/air-force-1-jester-xx-womens-shoe-Bfbf7l.jpg",
+"shoeInfoTitleOne":"PLAYFUL UPDATE TO AN ICON",
+"shoeInfoBodyOne":"The Nike Air Force 1 Jester XX Women's Shoe is a mischievous reimagining of the iconic AF1. Logos appear to have fallen off before being haphazardly slapped back on, as if by an impish jester.",
+"shoeInfoTitleTwo":"Refined Containment",
+"shoeInfoBodyTwo":"Along with synthetics, premium leather distinguishes the upper with durable style that goes the distance and comfortably molds to your foot. A raised sidewall visually fuses the upper to the sole, creating a stacked platform look above reliably soft Nike Air cushioning.",
+"shoeInfoTitleThree":"Quirky Comfort",
+"shoeInfoBodyThree":"Seemingly slapped-on logos detour from their usual posts to add a touch of whimsy to the Air Force 1’s tried-and-true performance features. Dainty needle holes outline the classic Swoosh design trademark, which hovers between the upper and sole for a charmingly off-kilter look.",
     "rawPrice": 110,
     "localPrice": "$110",
     "overriddenLocalPrice": null,
@@ -1065,6 +1118,18 @@
     "abTest": null
 }, {
     "inWallContentCard": false,
+    "detailPictureOne":"https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/reh1lbb0lcy2jyzg66l4/air-max-270-womens-shoe-wDXq9H.jpg",
+"detailPictureTwo":"https://c.static-nike.com/a/videos/q_90/lwlxlvsag1e3oq8evvae/video.webm",
+"detailPictureThree":"https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/c0xklvp2w79mgaimthyq/air-max-270-womens-shoe-wDXq9H.jpg",
+"detailPictureFour":"https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/vrs7btmmyfyqiuifu79p/air-max-270-womens-shoe-wDXq9H.jpg",
+"detailPictureFive":"https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/zfqhywi9q1pzx0o5q5cw/air-max-270-womens-shoe-wDXq9H.jpg",
+"detailPictureSix":"https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/szjrw6dieoonirwqhbm9/air-max-270-womens-shoe-wDXq9H.jpg",
+"detailPictureSeven":"https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/uuyj8moe7oummrvt2hba/air-max-270-womens-shoe-wDXq9H.jpg",
+"shoeInfoTitleOne":"FEEL BIG AIR",
+"shoeInfoBodyOne":"The Nike Air Max 270 Women's Shoe is inspired by two icons of big Air: the Air Max 180 and Air Max 93. It features Nike’s biggest heel Air unit yet for a super-soft ride that feels as impossible as it looks.",
+"shoeInfoTitleTwo":"FLEXIBLE AND BREATHABLE",
+"shoeInfoBodyTwo":"The shoe's bootie construction feels snug and flexes with your foot. It's made with solid and mesh areas, giving you structure and ventilation where you need them most.",
+
     "rawPrice": 150,
     "localPrice": "$150",
     "overriddenLocalPrice": null,
@@ -1195,6 +1260,19 @@
     "abTest": null
 }, {
     "inWallContentCard": false,
+    "detailPictureOne":"https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/y4fkkyfnn1saclwsur2g/air-force-1-high-lx-leather-womens-shoe-LdWlS2.jpg",
+"detailPictureTwo":"https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/ewxnkq1y2olislpq9qvg/air-force-1-high-lx-leather-womens-shoe-LdWlS2.jpg",
+"detailPictureThree":"https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/wpgz1ht6woddb7epuiey/air-force-1-high-lx-leather-womens-shoe-LdWlS2.jpg",
+"detailPictureFour":"https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/uwvgebrs6sttqw8wp3fv/air-force-1-high-lx-leather-womens-shoe-LdWlS2.jpg",
+"detailPictureFive":"https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/uybfdos52vcbxzrolwou/air-force-1-high-lx-leather-womens-shoe-LdWlS2.jpg",
+"detailPictureSix":"https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/wphwezc7brlitsaxhjgb/air-force-1-high-lx-leather-womens-shoe-LdWlS2.jpg",
+"detailPictureSeven":"https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/vgcvccntfxean6ztripo/air-force-1-high-lx-leather-womens-shoe-LdWlS2.jpg",
+"detailPictureEight":"https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/nepwd3ofdkcx4c3yaukr/air-force-1-high-lx-leather-womens-shoe-LdWlS2.jpg",
+"shoeInfoTitleOne":"LEGENDARY STYLE. LX EDITION.",
+"shoeInfoBodyOne":"This special edition of the Nike Air Force 1 High Women's Shoe reimagines the iconic hoops shoe. It features durable leather atop classic Nike Air cushioning.",
+"shoeInfoTitleTwo":"AIR FORCE 1 ORIGINS",
+"shoeInfoBodyTwo":"This once hoops shoe was named after Air Force One—the aircraft that carries the U.S. President. In 1982, it was the first basketball shoe to house Nike Air, revolutionizing the game while rapidly gaining traction around the world, from the hardwood, to the blacktop, to the core of hip-hop culture. Today, the Air Force 1 stays true to its roots with soft, springy cushioning, but the Nike Air technology takes a backseat to the shoe’s status as an icon.",
+
     "rawPrice": 110,
     "localPrice": "$110",
     "overriddenLocalPrice": null,

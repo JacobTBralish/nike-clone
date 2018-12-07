@@ -394,7 +394,7 @@ class Settings extends Component {
                       <div id="block-sub-container" className="js-addressCountry container1 input-wrapper">
                         <label className="nsg-form--label" for="country">
                           Country/Region
-                          <span class="nsg-form--required">*</span>
+                          <span className="nsg-form--required">*</span>
                         </label>
                         <div id="override-input">
             <select id="comp-select" className="override-input" required="required" name="country">
@@ -736,23 +736,23 @@ class Settings extends Component {
 
 
                   </div>
-                  <div class="required-container">
-                    <span class="nsg-form--required">*</span> Required Fields
+                  <div className="required-container">
+                    <span className="nsg-form--required">*</span> Required Fields
                   </div>
 
                 <div className="divider bottom attribute-divider"></div>
                 <div className="divider top attribute-divider"></div>
 
-                <div class="save-container">
-                  <button type="button" class="nsg-button nsg-grad--dark-grey cancel-button">CANCEL</button>
-                  <button type="submit" class="nsg-button nsg-grad--nike-fuel save-button">SAVE</button>
+                <div className="save-container">
+                  <button type="button" className="nsg-button nsg-grad--dark-grey cancel-button">CANCEL</button>
+                  <button type="submit" className="nsg-button nsg-grad--nike-fuel save-button">SAVE</button>
                 </div>
 
                 <div className="divider bottom attribute-divider"></div>
                 <div className="divider top attribute-divider"></div>
 
-                <div class="deactivate-container">
-                    <button class="nsg-button nsg-grad--light-grey deactivate-open" type="button">Delete Account</button>
+                <div className="deactivate-container">
+                    <button className="nsg-button nsg-grad--light-grey deactivate-open" type="button">Delete Account</button>
                   </div>
 
           </div> 

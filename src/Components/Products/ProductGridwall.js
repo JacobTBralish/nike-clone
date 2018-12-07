@@ -14,6 +14,7 @@ class MensShoe extends Component {
         this.state = {
             product: [],
             isLoading: null,
+            // mensShoes: JSON.parse(localStorage.getItem("mensShoes")) || [],
             // randomItems: null
         }
     }
@@ -21,18 +22,22 @@ class MensShoe extends Component {
     
     componentDidMount() {
         // this.setState({isLoading: true})
-        let { name, fetch } = this.props;
-        let { randomItems } = this.state;
+        // TODO: "name" removed from this.props 
+        let { fetch } = this.props;
+        // try {
+        //     let fetched = fetch();
+        //     this.setState({ product:fetched  }, localStorage.setItem(""));
+        // }
+        // let { randomItems } = this.state;
         // console.log('this.props: ', this.props);
         this.props.getProducts(fetch)
-
     }
 
     componentWillReceiveProps(nextProps) {
+        // TODO: "name" removed from this.props 
         // console.log('nextProps: ', nextProps);
-        const { name, fetch } = nextProps;
+        const { fetch } = nextProps;
         this.props.getProducts(fetch)
-        
     }
 
     handleFilter = (arr, value) => {
@@ -52,19 +57,16 @@ class MensShoe extends Component {
     // noDataMessage = () => {
     //     alert('Sorry! We do not have any data for this categorie, try another category!')
     // }
-
-
     
     render() { 
         let { products, selectedProduct, name } = this.props;
         // console.log('name: ', name);
 
-        
         let filteredArray = this.handleFilter(products, (name || null))
         // console.log('filteredArray: ', filteredArray);
 
         let mappedShoes = filteredArray.map((item, index) => {
-            return <div className='productContainer'>
+            return <div key={index} className='productContainer'>
                 <Link key={index} onClick={() => { selectedProduct([item])}} to={`/product/${encodeURIComponent(item.title)}`} >
                 <div className='productImageContainer'>
                     <img id='productImage' src={item.spriteSheet} alt={item.title}></img>
@@ -107,7 +109,6 @@ class MensShoe extends Component {
                         <ProductSort myRef={this.toTopRef}/>
                     </div>
                 </div>
-                {/* {null ? <YouMightAlsoLike data={this.props.fetch}/> : null} */}
             </>
          );
     }

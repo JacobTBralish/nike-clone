@@ -6,7 +6,7 @@ import Nike3rdImage from '../../Images/Nike3rdImage.jpg';
 import Nike4thImage from '../../Images/Nike4thImage.jpg';
 
 import View1 from './View1';
-import View2 from './View2';
+// import View2 from './View2';
 import View3 from './View3';
 import VideoView from './VideoView';
 
@@ -16,7 +16,7 @@ class Home extends Component {
 
         return ( 
             <div className='homeContainer'>
-                <div>
+                {/* <div>
                     <View1 info={{image: 'https://content.nike.com/content/dam/one-nike/en_us/season-2018-ho/Home/1101/VaporFly_HP_p1_d.jpg.transform/full-screen/VaporFly_HP_p1_d.jpg', h2Text: "LIKE YOU DREAMED. ONLY FASTER.", pText: "he Vaporfly 4% Flyknit is our fastest race-day shoe made even lighter.", linkText: "SHOP VAPORFLY 4% FLYKNIT"}}/>
                 </div>
                <>
@@ -30,13 +30,13 @@ class Home extends Component {
                 </div>
                 <div>
                     <View1 info={{image: 'https://content.nike.com/content/dam/one-nike/en_us/season-2018-ho/Home/1101/YA_HP_p5_d.jpg.transform/full-screen/YA_HP_p5_d.jpg', h2Text: "HER TIME TO SHINE", pText: "Shiny metallic uppers make the perfect addition to her favorite shoes.", linkText: "SHOP GIRLS'"}}/>
-                </div>
+                </div> */}
 
 
 
 
 
-                {/* <div>
+                <div>
                     <VideoView info={{video: Nike1stVideo, h2Text: "'PLATINUM TINT': COMING 10.27", pText: 'The latest Air Jordan XI arrives in premium fashion.', linkText: 'LAUNCH DETAILS'}}/>
                 </div>
                 <div>
@@ -47,7 +47,7 @@ class Home extends Component {
                 </div>
                <div>
                     <View3 info={{image: Nike4thImage, h2Text: "THE WARDROBE STAPLE OF FALL", h2Text2: "TRENDING FOR HER: NORTHERN BRIGHTS", pText: "Warm, functional and easy to layer up or down, fleece has become the official fabric of fall.", pText2: "Magical icy-blue patterns across comfy jackets, tights and tees.", linkText: "SHOP FLEECE", linkText2: "SHOP COLLECTION"}}/>
-                </div> */}
+                </div>
             </div>
          );
     }

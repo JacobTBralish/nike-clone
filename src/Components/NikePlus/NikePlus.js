@@ -7,7 +7,7 @@ export default class NikePlus extends Component {
         return (
             <div className="nike_plus_body_wrapper">
                 <div>
-                    <video loop="true" muted="" id="1535600179485" src="https://www.nike.com/VO/XX_XX/e/content/dam/en_us/member-hub/august18_update/Nike_NEW-CUT_All-Sports_v06.mp4" data-embed="default" class="video-js video-asset"  autoplay="true">
+                    <video loop={true} muted="" id="1535600179485" src="https://www.nike.com/VO/XX_XX/e/content/dam/en_us/member-hub/august18_update/Nike_NEW-CUT_All-Sports_v06.mp4" data-embed="default" className="video-js video-asset" autoPlay={true}>
                     </video>
                         <div className="overlay_div">
                             <p className="boldyBold">NikePlus</p>

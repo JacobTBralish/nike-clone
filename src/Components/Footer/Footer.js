@@ -39,10 +39,10 @@ export default class Footer extends Component {
                     {/* SOCIAL LINKS NEED ICONS*/}
                     <ul>
                         <li /* className='socialList' */>
-                            <span><Link className='socialLink' to="https://twitter.com/Nike"><i class="fab fa-twitter"></i></Link></span>
-                            <span><Link className='socialLink' to="https://www.facebook.com/nike"><i class="fab fa-facebook-f"></i></Link></span>
-                            <span><Link className='socialLink' to="https://www.youtube.com/user/nike"><i class="fab fa-youtube"></i></Link></span>
-                            <span><Link className='socialLink' to="http://instagram.com/nike"><i class="fab fa-instagram"></i></Link></span>
+                            <span><Link className='socialLink' to="https://twitter.com/Nike"><i className="fab fa-twitter"></i></Link></span>
+                            <span><Link className='socialLink' to="https://www.facebook.com/nike"><i className="fab fa-facebook-f"></i></Link></span>
+                            <span><Link className='socialLink' to="https://www.youtube.com/user/nike"><i className="fab fa-youtube"></i></Link></span>
+                            <span><Link className='socialLink' to="http://instagram.com/nike"><i className="fab fa-instagram"></i></Link></span>
                         </li>
                     </ul>
                 </div>

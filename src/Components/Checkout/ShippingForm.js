@@ -80,18 +80,15 @@ class ShippingForm extends Component {
         <div className="shippingFormWrapper">
             <form id="shippingForm" >
                 <div className="namesWrapper">
-                    {/* <label htmlFor='firstName'>First Name</label> */}
                     <input id="shippingInput" className="ShippingName" required onChange={this.handleChange} name='firstName' placeholder="First Name" value={firstName}></input>
-                    {/* <label htmlFor='lastName'>Last Name</label> */}
                     <input id="shippingInput" className="ShippingName lastname" required onChange={this.handleChange} name='lastName' placeholder="Last Name" value={lastName}></input>
                 </div>
 
                 <div className="addressOneBox">
-                    {/* <label htmlFor='address1'>Street Address</label> */}
                     <input id="shippingInput" className="addressOne" required onChange={this.handleChange} name='address1' placeholder="Street Address" value={address1}></input>
                 </div>
                 { !toggleValue ?
-                    <button id="addressTwoText" style={{background: "none", border: "none", color: 'darkGrey'}} onClick={this.handleToggle}><i class="fas fa-plus"></i> Add Company, C/O, Apt, Suite, Unit</button>
+                    <button id="addressTwoText" style={{background: "none", border: "none", color: 'darkGrey'}} onClick={this.handleToggle}><i className="fas fa-plus"></i> Add Company, C/O, Apt, Suite, Unit</button>
                 :
                 <div>
                     <label htmlFor='address2' />
@@ -99,7 +96,6 @@ class ShippingForm extends Component {
                 </div>
                 }
                 <div className="cityStatePostalWrapper">
-                    {/* <label htmlFor='city'>City</label> */}
                     <input id="shippingInput" className="cityStatePostalInput" required onChange={this.handleChange} name='city' placeholder="City" value={city}></input>
                 <select className="stateSelector cityStatePostalInput" required value={JSON.stringify({stateName: chosenState, rate: taxRate})} onChange={this.handleShipping}>
                     <option value>State</option>
@@ -156,14 +152,11 @@ class ShippingForm extends Component {
                     <option value='{"stateName":"D.C.","rate":"0.0575"}'>D.C.</option>
                 </select>
                 <input id="shippingInput" className="cityStatePostalInput" required onChange={this.handleChange} pattern="[0-9]{5}" type='text' max={5} name='zipCode' placeholder="Postal Code" value={zipCode}></input>
-                {/* <label htmlFor='zipCode'>Postal Code</label> */}
                 </div>
 
                 <div className="emailPhoneWrapper">
                     <input id="shippingInput" className="ShippingName" required onChange={this.handleChange} type='email' name='email' placeholder="Email" value={email}></input>
-                    {/* <label htmlFor='email'>Email</label> */}
                     <input id="shippingInput" className="lastname ShippingName" required onChange={this.handleChange} type='tel' name='phone' placeholder="Phone" value={phone}></input>
-                    {/* <label htmlFor='phone'>Phone Number</label> */}
                 </div>
                 <div className="bottomText"><p><i className="fas fa-lock"></i> Your privacy is important to us. We will only contact you if there is an issue with your order.</p></div>
                 <div className="footerButtonWrapper">

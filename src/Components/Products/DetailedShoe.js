@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { withRouter } from 'react-router-dom';
+import YouMightAlsoLike from '../YouMightAlsoLike/YouMightAlsoLike';
 
 import { addToCart, selectedProduct } from './../../Redux/reducer';
 import { connect } from 'react-redux';
@@ -37,7 +38,8 @@ class DetailedShoe extends Component {
      }
 
     render() {
-        let { addToCart, total, product, reviews, qty, cart } = this.props;
+        let { addToCart, total, product,  } = this.props;
+        // TODO: removed "reviews, qty, cart" from this.props
         // console.log('reviews: ', reviews);
         // console.log('product: ', product);
 
@@ -54,61 +56,61 @@ class DetailedShoe extends Component {
 
         let mappedProduct = product.length ? product.map((detail, index) => {
 
-            // detailPictureOne, detailPictureTwo, detailPictureThree, detailPictureFour, detailPictureFive, detailPictureSix, shoeInfoTitleOne, shoeInfoTitleTwo, shoeInfoTitleThree, shoeInfoBodyOne, shoeInfoBodyTwo, shoeInfoBodyThree
-            let { spriteSheet, colorways, title, localPrice, subtitle, detailPictureOne, detailPictureTwo, detailPictureThree, detailPictureFour, detailPictureFive, detailPictureSix, detailPictureSeven, detailPictureEight, detailPictureNine, shoeInfoTitleOne, shoeInfoTitleTwo, shoeInfoTitleThree, shoeInfoTitleFour, shoeInfoBodyOne, shoeInfoBodyTwo, shoeInfoBodyThree, shoeInfoBodyFour
+            // TODO: removed spriteSheet from details 
+            let { colorways, title, localPrice, subtitle, detailPictureOne, detailPictureTwo, detailPictureThree, detailPictureFour, detailPictureFive, detailPictureSix, detailPictureSeven, detailPictureEight, detailPictureNine, shoeInfoTitleOne, shoeInfoTitleTwo, shoeInfoTitleThree, shoeInfoTitleFour, shoeInfoBodyOne, shoeInfoBodyTwo, shoeInfoBodyThree, shoeInfoBodyFour
             } = detail;
             return <div className="infoContainer" key={index}>
                         <div className="imageContainer">
                             {detailPictureOne !== undefined ?
                                 <> {detailPictureOne.includes('.webm') 
-                                ? <video className='imgResizer' onClick={this.handle} loop="true" muted="" autoplay="true" src={detailPictureOne}></video>
+                                ? <video className='imgResizer' onClick={this.handle} loop={true} muted="" autoPlay={true} src={detailPictureOne}></video>
                                 : <img className='imgResizer' onClick={this.toggleEdit} src={detailPictureOne ? detailPictureOne : 'http://www.uoduckstore.com/c.3841022/sca-dev-montblanc/img/no_image_available.jpeg'} alt={`detailed photo one for ${title}`} />
                                 } </> : null}
                             {/* {this.state.isOpen ? console.log('Opened!') : console.log('notOpen!')} */}
 
                             {detailPictureTwo !== undefined ?    
                                 <> {detailPictureTwo.includes('.webm') 
-                                ? <video className='imgResizer' loop="true" muted="" autoplay="true" src={detailPictureTwo}></video>
+                                ? <video className='imgResizer' loop={true} muted="" autoPlay={true} src={detailPictureTwo}></video>
                                 : <img className='imgResizer' src={detailPictureTwo ? detailPictureTwo : 'http://www.uoduckstore.com/c.3841022/sca-dev-montblanc/img/no_image_available.jpeg'} alt={`detailed photo one for ${title}`} /> 
                                 } </> : null}
 
                             {detailPictureThree !== undefined ?    
                                 <> {detailPictureThree.includes('.webm') 
-                                ? <video className='imgResizer' loop="true" muted="" autoplay="true" src={detailPictureThree}></video>
+                                ? <video className='imgResizer' loop={true} muted="" autoPlay={true} src={detailPictureThree}></video>
                                 : <img className='imgResizer' src={detailPictureThree ? detailPictureThree : 'http://www.uoduckstore.com/c.3841022/sca-dev-montblanc/img/no_image_available.jpeg'} alt={`detailed photo one for ${title}`} /> 
                                 } </> : null}
 
                             {detailPictureFour !== undefined ?        
                                 <> {detailPictureFour.includes('.webm') 
-                                ? <video className='imgResizer' loop="true" muted="" autoplay="true" src={detailPictureFour}></video>
+                                ? <video className='imgResizer' loop={true} muted="" autoPlay={true} src={detailPictureFour}></video>
                                 : <img className='imgResizer' src={detailPictureFour ? detailPictureFour : 'http://www.uoduckstore.com/c.3841022/sca-dev-montblanc/img/no_image_available.jpeg'} alt={`detailed photo one for ${title}`} /> 
                                 } </> : null}
 
                             {detailPictureFive !== undefined ?
                                 <> {detailPictureFive.includes('.webm') 
-                                ? <video className='imgResizer' loop="true" muted="" autoplay="true" src={detailPictureFive}></video>
+                                ? <video className='imgResizer' loop={true} muted="" autoPlay={true} src={detailPictureFive}></video>
                                 : <img className='imgResizer' src={detailPictureFive ? detailPictureFive : 'http://www.uoduckstore.com/c.3841022/sca-dev-montblanc/img/no_image_available.jpeg'} alt={`detailed photo one for ${title}`} />
                                 } </> : null}
 
                             {detailPictureSix !== undefined ?
                                 <> {detailPictureSix.includes('.webm') 
-                                ? <video className='imgResizer' loop="true" muted="" autoplay="true" src={detailPictureSix}></video>
+                                ? <video className='imgResizer' loop={true} muted="" autoPlay={true} src={detailPictureSix}></video>
                                 : <img className='imgResizer' src={detailPictureSix ? detailPictureSix : 'http://www.uoduckstore.com/c.3841022/sca-dev-montblanc/img/no_image_available.jpeg'} alt={`detailed photo one for ${title}`} />
                                 } </> : null}
 
                             {detailPictureSeven !== undefined ? 
                                 <> { detailPictureSeven.includes('.webm') 
-                                ? <video className='imgResizer' loop="true" muted="" autoplay="true" src={detailPictureSeven}></video>
+                                ? <video className='imgResizer' loop={true} muted="" autoPlay={true} src={detailPictureSeven}></video>
                                 : <img className='imgResizer' src={detailPictureSeven ? detailPictureSeven : 'http://www.uoduckstore.com/c.3841022/sca-dev-montblanc/img/no_image_available.jpeg'} alt={`detailed photo one for ${title}`} />
                                 } </> : null}
                             {detailPictureEight !== undefined ? 
                                 <> { detailPictureEight.includes('.webm') 
-                                ? <video className='imgResizer' loop="true" muted="" autoplay="true" src={detailPictureEight}></video>
+                                ? <video className='imgResizer' loop={true} muted="" autoPlay={true} src={detailPictureEight}></video>
                                 : <img className='imgResizer' src={detailPictureEight ? detailPictureEight : 'http://www.uoduckstore.com/c.3841022/sca-dev-montblanc/img/no_image_available.jpeg'} alt={`detailed photo one for ${title}`} />
                                 } </> : null}
                             {detailPictureNine !== undefined ? 
                                 <> { detailPictureNine.includes('.webm') 
-                                ? <video className='imgResizer' loop="true" muted="" autoplay="true" src={detailPictureNine}></video>
+                                ? <video className='imgResizer' loop={true} muted="" autoPlay={true} src={detailPictureNine}></video>
                                 : <img className='imgResizer' src={detailPictureNine ? detailPictureNine : 'http://www.uoduckstore.com/c.3841022/sca-dev-montblanc/img/no_image_available.jpeg'} alt={`detailed photo one for ${title}`} />
                                 } </> : null}
 
@@ -261,7 +263,7 @@ class DetailedShoe extends Component {
                 <ReviewWrapper />
                 </div> */}
 
-
+                    <YouMightAlsoLike />
                 </div>
          );
     }

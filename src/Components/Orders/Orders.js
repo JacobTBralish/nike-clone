@@ -14,7 +14,7 @@ class Orders extends Component {
 
 
     render() {
-        const {orders} = this.props
+        // const {orders} = this.props
         return (
             <div > {/* Component Parent Wrapper */}
                 <div> {/* Inner Wrapper */}                 
