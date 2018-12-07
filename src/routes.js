@@ -16,11 +16,13 @@ import FemaleSideBarSort from './Components/ProductSort/FemaleSideBarSort';
 import Account from './Components/AccountSettings/Account'
 // Product Imports
 import ProductGridwall from './Components/Products/ProductGridwall';
-import AllMensShoes from './Data/AllMensShoesPg1-6.json';
-import AllNikeStores from './Components/FindStore/AllNikeStores';
-import AllMensClothes from './Data/AllMensClothesPg1-15.json';
-import AllWomensShoes from './Data/AllWomensShoesPg1-6.json';
+// import AllMensShoes from './Data/AllMensShoesPg1-6.json';
+// import AllNikeStores from './Components/FindStore/AllNikeStores';
+// import AllMensClothes from './Data/AllMensClothesPg1-15.json';
+// import AllWomensShoes from './Data/AllWomensShoesPg1-6.json';
 // import NikeStores from './Components/FindStore/NikeStores';
+
+import {AllMensShoes, AllNikeStores, AllMensClothes, AllWomensShoes} from './APICalls';
 
 export default (
     <Switch>

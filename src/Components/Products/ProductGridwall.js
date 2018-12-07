@@ -20,17 +20,25 @@ class MensShoe extends Component {
     }
     
     
-    componentDidMount() {
+    async componentDidMount() {
         // this.setState({isLoading: true})
         // TODO: "name" removed from this.props 
         let { fetch } = this.props;
+        let fetched = await fetch();
         // try {
         //     let fetched = fetch();
         //     this.setState({ product:fetched  }, localStorage.setItem(""));
         // }
         // let { randomItems } = this.state;
         // console.log('this.props: ', this.props);
-        this.props.getProducts(fetch)
+        this.props.getProducts(fetched)
+    }
+
+    //WARNING! To be deprecated in React v17. Use new lifecycle static getDerivedStateFromProps instead.
+    getDerivedStateFromProps(nextProps) {
+        let {fetch} = nextProps;
+        let fetched = fetch();
+        this.props.getProducts(fetched);
     }
 
     componentWillReceiveProps(nextProps) {
@@ -69,7 +77,7 @@ class MensShoe extends Component {
             return <div key={index} className='productContainer'>
                 <Link key={index} onClick={() => { selectedProduct([item])}} to={`/product/${encodeURIComponent(item.title)}`} >
                 <div className='productImageContainer'>
-                    <img id='productImage' src={item.spriteSheet} alt={item.title}></img>
+                    <img id='productImage' src={item.spriteSheet} alt={item.title} />
                 </div>
                 <div className='gridwallItemInfo'>
                 <div className='colorwayContainer'>
